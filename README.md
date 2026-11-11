@@ -60,10 +60,10 @@ Override the device when needed:
 OPENRU_GPU_DEVICE_ID=0 docker compose run --rm sim python -m openru_x6.cli --help
 ```
 
-The Compose file does not preempt other workloads. E10 additionally mounts the
-host Docker socket so it can launch the pinned OCUDU nightly image; that socket
-provides powerful host-level Docker access and should only be used in a trusted
-lab environment.
+The Compose file does not preempt other workloads. It mounts the host Docker
+socket so E10 can launch the pinned OCUDU nightly image; that socket provides
+powerful host-level Docker access and should only be used in a trusted lab
+environment.
 
 ## Quick start
 
