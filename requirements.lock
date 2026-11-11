@@ -1,0 +1,9 @@
+pydantic==2.14.3
+pytest==9.2.0
+pytest-cov==7.0.0
+hypothesis==6.170.15
+pandas==3.1.1
+pyarrow==26.0.1
+psutil==7.2.2
+jinja2==3.1.6
+nvidia-ml-py==13.580.82

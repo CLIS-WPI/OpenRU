@@ -1,0 +1,4 @@
+schema_version: "1.0"
+id: E02
+title: "Energy optimization under traffic load"
+description: "Static full-power vs threshold/hysteresis vs predictive policy on identical traffic/channel traces; sole-coverage sleep prohibition."

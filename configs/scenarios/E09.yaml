@@ -1,0 +1,4 @@
+schema_version: "1.0"
+id: E09
+title: "GPU stress, model sensitivity and scaling limits"
+description: "Batch/VRAM/time scaling, abstract 400 MHz option, power-assumption sensitivity."

@@ -1,0 +1,4 @@
+schema_version: "1.0"
+id: E08
+title: "Fronthaul loss, jitter, compression and synchronization"
+description: "Abstract eCPRI-like packet model with observable sequence/late/loss failures."

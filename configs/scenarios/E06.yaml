@@ -1,0 +1,4 @@
+schema_version: "1.0"
+id: E06
+title: "ISAC sensing versus communication under equal budgets"
+description: "Comm-only, periodic and adaptive sensing at 1/2.5/5% cost; radar equation, clutter, detection, false alarms."

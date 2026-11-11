@@ -1,0 +1,103 @@
+schema_version: "1.0"
+smoke:
+  seeds: 2
+  seed_base: 100
+  notes: "2 seeds per basic scenario; fast validation"
+  e01:
+    chain_modes: [8, 64]
+    ue_counts: [16, 128]
+    slots: 3
+    precoders: ["mf", "zf", "rzf"]
+  e02:
+    loads: [0.0, 0.05, 0.1, 0.25, 1.0]
+    policies: ["static", "threshold", "predictive"]
+    slots: 120
+    users: 48
+    mean_arrival_mbps: 20.0
+  e03:
+    scenarios: ["baseline", "mobility", "csi_delay", "phase_error"]
+    slots: 10
+    users: 24
+  e04:
+    faults: ["pa_gain_loss", "tile_dead", "phase_drift", "fan_failure"]
+    policies: ["none", "threshold", "proposed"]
+    seeds_cal: [900, 901]
+    slots: 40
+    users: 24
+  e05:
+    command_trials: 5
+  e06:
+    budgets: [0.01, 0.05]
+    policies: ["comm_only", "periodic", "adaptive"]
+    slots: 120
+  e07:
+    scenarios: ["blocked_near", "blocked_far"]
+    modes: ["off", "random", "practical", "oracle"]
+    slots: 5
+  e08:
+    conditions: ["baseline", "loss_5pct", "sync_loss", "combined"]
+    slots: 20
+  e09:
+    matmul_sizes: [1024, 4096]
+    sensitivities: ["low", "base", "high"]
+    ue_counts: [64, 512]
+  e10:
+    timeout_s: 45
+  integration:
+    seeds: 5
+    seed_base: 500
+    slots: 60
+    users: 16
+
+full:
+  seeds: 20
+  seed_base: 100
+  notes: "20 paired seeds for main comparisons"
+  e01:
+    chain_modes: [8, 16, 32, 64]
+    ue_counts: [16, 32, 64, 128, 256, 500]
+    slots: 3
+    precoders: ["mf", "zf", "rzf"]
+  e02:
+    loads: [0.0, 0.05, 0.1, 0.25, 0.5, 1.0]
+    policies: ["static", "threshold", "predictive"]
+    slots: 200
+    users: 64
+    mean_arrival_mbps: 20.0
+  e03:
+    scenarios: ["baseline", "mobility", "vehicular", "blockage", "csi_delay", "phase_error", "quant3"]
+    slots: 16
+    users: 32
+  e04:
+    faults: ["pa_gain_loss", "pa_saturation", "antenna_vswr", "phase_drift", "tile_dead",
+             "noisy_receiver", "ptp_loss", "fan_failure", "overtemperature", "supply_droop",
+             "combo_pa_tile"]
+    policies: ["none", "threshold", "proposed"]
+    seeds_cal: [900, 901, 902, 903, 904]
+    slots: 50
+    users: 24
+  e05:
+    command_trials: 20
+  e06:
+    budgets: [0.01, 0.025, 0.05]
+    policies: ["comm_only", "periodic", "adaptive"]
+    slots: 240
+  e07:
+    scenarios: ["blocked_near", "blocked_far", "los"]
+    modes: ["off", "random", "practical", "oracle"]
+    slots: 8
+  e08:
+    conditions: ["baseline", "loss_1pct", "loss_5pct", "jitter", "compression_8bit",
+                  "sync_loss", "combined"]
+    slots: 30
+  e09:
+    matmul_sizes: [1024, 2048, 4096, 8192]
+    sensitivities: ["low", "base", "high"]
+    ue_counts: [64, 256, 1000]
+  e10:
+    timeout_s: 60
+  integration:
+    seeds: 20
+    seed_base: 500
+    slots: 60
+    users: 16

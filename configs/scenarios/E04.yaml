@@ -1,0 +1,4 @@
+schema_version: "1.0"
+id: E04
+title: "Hardware faults, diagnosis, isolation and recovery"
+description: "Physics-derived telemetry, threshold baseline vs calibrated statistical detector and safe recovery."

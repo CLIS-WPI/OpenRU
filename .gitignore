@@ -1,0 +1,72 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+env/
+ENV/
+
+# Test and coverage caches
+.pytest_cache/
+.hypothesis/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+.mypy_cache/
+.ruff_cache/
+.tox/
+
+# Local secrets and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/
+credentials/
+*.token
+
+# Generated experiment outputs and reports
+results/*
+!results/.gitkeep
+reports/generated/
+*.log
+
+# Large data, model weights, container images and archives
+data/
+datasets/
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.pt
+*.pth
+*.ckpt
+*.npy
+*.npz
+*.h5
+*.hdf5
+*.parquet
+*.csv
+*.png
+*.svg
+*.pdf
+!reports/templates/*
+
+# Editors and OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Docker overrides that may contain host-specific paths or secrets
+compose.override.yaml
+compose.override.yml

@@ -1,0 +1,88 @@
+schema_version: "1.0"
+# Component-level power / RF assumptions. Values are research assumptions, NOT measurements.
+# Each entry carries unit, low/high sensitivity range and provenance.
+assumptions:
+  pa_efficiency:
+    value: 0.25
+    unit: "ratio"
+    low: 0.15
+    high: 0.40
+    provenance: "engineering assumption for 8.4 GHz GaN PA; to be measured on prototype"
+  per_chain_electronics_w:
+    value: 0.9
+    unit: "W"
+    low: 0.5
+    high: 1.6
+    provenance: "TRX/LO/DAC/ADC + beamformer assumption"
+  per_feed_branch_w:
+    value: 0.12
+    unit: "W"
+    low: 0.05
+    high: 0.25
+    provenance: "phase shifter / feed network assumption"
+  dsp_fpga_w:
+    value: 140.0
+    unit: "W"
+    low: 90.0
+    high: 220.0
+    provenance: "DU/PHY + fronthaul NIC assumption"
+  always_on_w:
+    value: 25.0
+    unit: "W"
+    low: 15.0
+    high: 40.0
+    provenance: "control, clocking, management"
+  receiver_noise_figure_db:
+    value: 7.0
+    unit: "dB"
+    low: 4.0
+    high: 10.0
+    provenance: "RF front-end assumption"
+  phase_shifter_bits:
+    value: 5
+    unit: "bits"
+    low: 3
+    high: 6
+    provenance: "vector-modulator / phase-shifter assumption"
+  analog_phase_error_deg:
+    value: 5.0
+    unit: "deg"
+    low: 2.0
+    high: 15.0
+    provenance: "calibration residual assumption"
+  wakeup_delay_s:
+    value: 0.008
+    unit: "s"
+    low: 0.001
+    high: 0.020
+    provenance: "PA bias + clock + PLL settling assumption"
+  rf_settling_time_us:
+    value: 12.0
+    unit: "us"
+    low: 2.0
+    high: 50.0
+    provenance: "beam/switch settling assumption; NOT a measured hardware latency"
+  ris_element_efficiency:
+    value: 0.7
+    unit: "ratio"
+    low: 0.4
+    high: 0.9
+    provenance: "PIN-diode RIS insertion loss assumption"
+  ris_phase_bits:
+    value: 2
+    unit: "bits"
+    low: 1
+    high: 4
+    provenance: "quantized RIS phase assumption"
+  radar_cross_section_m2:
+    value: 1.0
+    unit: "m^2"
+    low: 0.1
+    high: 10.0
+    provenance: "pedestrian/vehicle RCS assumption"
+  thermal_resistance_k_per_w:
+    value: 0.45
+    unit: "K/W"
+    low: 0.2
+    high: 0.8
+    provenance: "lumped thermal abstraction, not CFD"

@@ -1,0 +1,35 @@
+schema_version: "1.0"
+states:
+  FULL_64: 64
+  BALANCED_32: 32
+  ECO_16: 16
+  COVERAGE_8: 8
+  SLEEP_0: 0
+always_on_w: 25.0
+dsp_fpga_w: 140.0
+per_chain_electronics_w: 0.9
+per_feed_branch_w: 0.12
+pa_efficiency: 0.25
+tx_power_included_in_pa: true
+cooling_fraction_of_dissipation: 0.35
+sleep_standby_w: 3.0
+wakeup_energy_j: 0.8
+wakeup_delay_s: 8.0e-3
+shutdown_delay_s: 2.0e-3
+min_on_dwell_s: 0.02
+min_off_dwell_s: 0.02
+hysteresis_fraction: 0.12
+predictive_horizon_slots: 8
+predictive_ewma_alpha: 0.25
+max_switches_per_second: 50.0
+allow_sleep_only_cell: true
+coverage_requires_min_chains: 8
+thermal:
+  ambient_c: 25.0
+  thermal_capacity_j_per_k: 900.0
+  thermal_resistance_k_per_w: 0.45
+  fan_resistance_multiplier: 1.0
+  fan_failure_multiplier: 3.0
+  throttle_c: 80.0
+  trip_c: 95.0
+  hot_spot_delta_c: 8.0

@@ -1,0 +1,7 @@
+# {{ suite }} report
+
+Overall: **{{ overall }}**
+
+{% for exp in experiments %}
+- {{ exp.id }}: {{ exp.status }} ({{ exp.runtime_s }} s) {{ exp.reason }}
+{% endfor %}

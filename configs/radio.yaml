@@ -1,0 +1,86 @@
+schema_version: "1.0"
+cell:
+  name: "OpenRU-X6-lab-cell"
+  carrier_freq_hz: 8.4e9          # research reference only; not a spectrum authorization claim
+  bandwidth_hz: 1.0e8             # 100 MHz baseline
+  n_rb_sim: 16                    # simulated subband granularity (not the 273-PRB grant grid)
+  n_prb: 273                      # 100 MHz at 30 kHz SCS: 273 PRBs x 12 subcarriers
+  resource_mode: "nr_grid"        # capacity_bound | nr_grid (TDD/control/DMRS/SSB accounted)
+  symbols_per_slot: 14
+  dl_symbols_per_slot: 11
+  tdd_dl_fraction: 0.75
+  control_overhead_fraction: 0.08
+  dmrs_overhead_fraction: 0.083
+  ssb_overhead_fraction: 0.01
+  subcarrier_spacing_hz: 3.0e4
+  slot_duration_s: 5.0e-4         # 30 kHz SCS numerology
+  n_rx_antennas: 2                # dual-polarized UE receiver
+  noise_figure_db: 7.0
+  implementation_margin_db: 2.0
+  temperature_k: 290.0
+
+array:
+  n_tiles: 16
+  chains_per_tile: 4
+  feeds_per_chain: 4
+  n_feeds: 256
+  n_chains: 64
+  tile_rows: 4
+  tile_cols: 4
+  site_rows_per_tile: 2
+  site_cols_per_tile: 4
+  feeds_per_site: 2               # dual-polarized radiator site = 2 feeds
+  element_spacing_lambda: 0.5
+  geometry: "planar_yz"           # array lies in the y-z plane, broadside +x
+  polarization: "dual"
+  bearing_deg: 0.0
+  downtilt_deg: 8.0
+
+mimo:
+  max_layers: 16
+  precoder: "rzf"                 # mf | zf | rzf
+  rzf_alpha: 0.01
+  total_tx_power_dbm: 43.0        # 20 W conducted, research assumption
+  per_chain_power_cap_dbm: 30.0
+  phase_shifter_bits: 5
+  analog_amplitude_error_db: 0.3
+  analog_phase_error_deg: 5.0
+  csi_delay_slots: 0
+  csi_phase_error_deg: 3.0
+  csi_amplitude_error_db: 0.5
+  calibration_phase_error_deg: 2.0
+  beam_grid_az_deg: 120.0
+  beam_grid_el_deg: 40.0
+  beam_grid_points: 17
+  rank_threshold: 0.05
+  bler_target: 0.1
+  max_harq_retx: 3
+
+channel:
+  model: "geometric_ray"
+  n_paths: 6
+  los_probability: 0.6
+  shadowing_std_db: 6.0
+  nlos_extra_loss_db: 10.0
+  pathloss_exponent_los: 2.0
+  pathloss_exponent_nlos: 3.3
+  angular_spread_deg: 8.0
+  delay_spread_ns: 120.0
+  doppler_max_hz: 120.0
+  min_distance_m: 20.0
+  max_distance_m: 400.0
+  bs_height_m: 25.0
+  ue_height_m: 1.5
+  indoor_fraction: 0.3
+  indoor_penetration_db: 12.0
+  blockage_probability: 0.15
+  blockage_attenuation_db: 25.0
+
+traffic:
+  model: "poisson_bursty"
+  mean_arrival_mbps: 20.0
+  burstiness: 2.0
+  qos_deadline_slots: 40
+  queue_max_bits: 2.0e7
+
+evidence_class: "SIMULATED"

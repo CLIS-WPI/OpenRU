@@ -1,0 +1,4 @@
+schema_version: "1.0"
+id: E01
+title: "Massive MIMO scaling"
+description: "8/16/32/64 active RF chains, 16..500 UEs, PF/RR, MF/ZF/RZF with identical channel realizations per seed."

@@ -1,0 +1,48 @@
+name: openru-x6
+
+services:
+  sim:
+    build:
+      context: .
+      args:
+        BASE_IMAGE: sionna:2.2.0
+    image: openru-x6-sim:0.1.0
+    working_dir: /workspace
+    environment:
+      - OPENRU_GPU_INDEX=0          # inside the container the pinned physical GPU is cuda:0
+      - OPENRU_IMAGE_REF=openru-x6-sim:0.1.0
+      - OPENRU_CONFIG_DIR=/workspace/configs
+      - PYTHONPATH=/workspace
+      - PYTHONUNBUFFERED=1
+      - MPLBACKEND=Agg
+    volumes:
+      - ./:/workspace
+      - /var/run/docker.sock:/var/run/docker.sock
+    group_add:
+      - "${OPENRU_DOCKER_GID:-998}"
+    ipc: host
+    shm_size: "8gb"
+    ulimits:
+      memlock: -1
+      stack: 67108864
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: ["${OPENRU_GPU_DEVICE_ID:-1}"]
+              capabilities: [gpu]
+
+  ocudu:
+    profiles: ["ocudu"]
+    image: registry.gitlab.com/ocudu/ocudu/ocudu_nightly_avx2:latest
+    working_dir: /workspace
+    entrypoint: ["/bin/bash", "-lc"]
+    volumes:
+      - ./:/workspace
+      - /var/run/docker.sock:/var/run/docker.sock
+    group_add:
+      - "${OPENRU_DOCKER_GID:-998}"
+    ipc: host
+    network_mode: host
+    cap_add: [SYS_NICE, IPC_LOCK]

@@ -1,0 +1,37 @@
+schema_version: "1.0"
+clock:
+  fpga_tick_ns: 4.0
+  scheduling_resolution_ns: 4.0
+  note: "Timestamp resolution is NOT physical RF switching time; settling is modeled separately."
+commands:
+  default_ttl_s: 0.05
+  max_future_s: 0.020
+  settling_time_us: 12.0
+  duplicate_window_s: 2.0
+  require_effective_timestamp: true
+roles:
+  rf_operator:
+    scopes: ["rf_chain_mask", "tile_isolation", "tx_power", "beam_profile", "calibration", "diagnostics", "query", "ris_profile", "energy_state"]
+  energy_manager:
+    scopes: ["energy_state", "query"]
+  safety_officer:
+    scopes: ["emergency_shutdown", "query", "diagnostics"]
+  auditor:
+    scopes: ["query"]
+  xapp:
+    scopes: ["query", "beam_profile", "energy_state"]
+resources:
+  - rf_chain_mask
+  - tile_isolation
+  - energy_state
+  - beam_profile
+  - tx_power
+  - calibration
+  - diagnostics
+  - ris_profile
+  - health
+  - emergency
+conflict_policy: "reject_newer_same_resource_if_pending"
+rollback_on_readback_mismatch: true
+audit_log_hmac: true
+audit_secret_env: "OPENRU_AUDIT_SECRET"
