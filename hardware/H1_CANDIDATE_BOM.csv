@@ -1,0 +1,23 @@
+block,part,manufacturer,qty_per_tile,unit_price_usd,price_basis,extended_usd,stock_status,status,notes,source
+Beamformer,ADAR1000ACCZN,Analog Devices,4,UNVERIFIED,,UNVERIFIED,"No Digi-Key listing; findchips ADI channel stock 0; broker-only (Win Source $3,545); one search snippet says Farnell 'No Longer Manufactured'",CANDIDATE - AVAILABILITY BLOCKER,8-16 GHz (8.4 near low edge; data at 9.5 GHz); 2.8 deg phase step; 4 PA_BIAS + LNA_BIAS DACs; glueless ADTR1107 control,ADAR1000 Rev B datasheet; findchips.com/search/ADAR1000ACCZN
+Front end (baseline),ADTR1107ACCZ,Analog Devices,16,195.69,Digi-Key qty 28 (kickoff $126.47 @1k NOT confirmed),3131.04,"Digi-Key 0 stock, 10 wk",CANDIDATE - REFERENCE ONLY,OP1dB 23 dBm Psat 25 dBm (6-14 GHz table); 5 V x 220 mA PA; misses sim per-feed power by 4.6-6.6 dB,digikey.com/en/products/detail/analog-devices-inc/ADTR1107ACCZ/12419087; ADTR1107 Rev C
+Front end (cost-down) PA,QPA0813,Qorvo,16,26.96,Digi-Key qty 250,431.36,"Digi-Key 0 stock 26 wk; RFMW 38",CANDIDATE - PRELIMINARY DATASHEET,8-11 GHz (Digi-Key title says 8.5-10.5: conflict); P1dB 28.5 dBm; 5 V 140 mA; no 8.4 GHz plot,digikey.com/en/products/detail/qorvo/QPA0813/29436045; rfmw.com
+Front end (cost-down) LNA,PMA3-14LN+,Mini-Circuits,16,20.39,Digi-Key qty 500,326.24,"20,447 in stock",CANDIDATE,NF 1.2 dB / gain 23.1 dB at 8 GHz; 6 V 67 mA (needs 6 V rail),minicircuits.com/pdfs/PMA3-14LN+.pdf
+Front end (cost-down) T/R switch,ADRF5019BCPZN,Analog Devices,16,12.19,Digi-Key qty 500,195.04,"3,672 in stock",CANDIDATE,IL 0.8-1.0 dB to 10 GHz; 27 dBm hot-switch (snippet); +3.3/-2.5 V,digikey.com/en/products/detail/analog-devices-inc/ADRF5019BCPZN/10659106
+Front end (cost-down) bias gate,load switch / bias sequencer,TBD,16,UNVERIFIED,,UNVERIFIED,,TBD,needed because discrete PA/LNA have no ADTR1107-style gate interface; sequencing must keep PA off on MCU fault,
+Converter mixer,LTC5552IUDB,Analog Devices,4,67.00,Digi-Key qty 1,268.00,"3,730 in stock",CANDIDATE - PREFERRED,RF 3-20 GHz; LO 0 dBm typ; CL 8 dB @10 GHz; used bidirectionally (upmix at 8.4 GHz UNVERIFIED),LTC5552 datasheet; digikey.com
+Converter mixer (alt),HMC773ALC3B,Analog Devices,4,136.22,Digi-Key (qty basis not shown),544.88,,ALTERNATIVE,LO 13 dBm per mixer -> needs ~20 dBm LO driver,HMC773ALC3B Rev D
+Converter switches,ADRF5019BCPZN,Analog Devices,8,12.19,Digi-Key qty 500,97.52,"3,672 in stock",CANDIDATE,RF-side and IF-side TDD switches for bidirectional mixer,as above
+RF filter,BFCN-8350+,Mini-Circuits,4,7.23,Digi-Key qty 1,28.92,"0 stock; 1,000 due 08-Dec-2026",CANDIDATE,8250-8450 MHz; IL 1.8 dB typ,minicircuits.com/pdfs/BFCN-8350+.pdf
+LO/image reject,HFCN-7150+,Mini-Circuits,4,5.40,Digi-Key qty 1,21.60,"2,433 in stock",CANDIDATE,HPF; ~19 dB at 6.65 GHz typ; cascade estimate only,minicircuits.com/pdfs/HFCN-7150+.pdf
+IF filter,1.75-1.85 GHz BPF,TBD,4,UNVERIFIED,,UNVERIFIED,,TBD,,
+LO synthesiser,ADF4371BCCZ,Analog Devices,1,474.90,Digi-Key qty 1 (findchips $272-475),474.90,findchips stock 0,CANDIDATE,RF8x 62.5-8000 MHz; ref 10-500 MHz; Rev 0 datasheet,ADF4371 Rev 0; findchips.com/search/ADF4371BCCZ
+LO reference,100 MHz VCXO locked to 10 MHz,TBD,1,UNVERIFIED,,UNVERIFIED,,TBD,ADXUD1A uses 100 MHz VCXO,developer.analog.com converter page
+LO distribution,1:4 splitter + LO buffer amp,TBD,1,UNVERIFIED,,UNVERIFIED,,TBD,target -6...+6 dBm per LTC5552,
+Control,MCU + SPI level shift + HW watchdog,TBD,1,UNVERIFIED,,UNVERIFIED,,TBD,see H1_CLOCK_CALIBRATION.md pin list,
+Telemetry,rail current/voltage monitor (e.g. LTC2992 as on Stingray),Analog Devices,TBD,UNVERIFIED,,UNVERIFIED,,TBD,,developer.analog.com Stingray page
+Antenna,8 dual-pol patches or 16 connectors,TBD,1,UNVERIFIED,,UNVERIFIED,,TBD - EM DESIGN REQUIRED,17.845 mm pitch; XPD/isolation unknown,
+Digital/IF,USRP N310,Ettus/NI,1,0,existing lab equipment (list $20826),0,owned,BENCH ONLY,4 TX/4 RX; random inter-pair phase per run,ettus.com/all-products/usrp-n310/
+SUMMARY,RF front ends ADTR1107 option,,16,,,3131.04,,,"at kickoff $126.47 -> $2,024",
+SUMMARY,RF front ends discrete option (PA+LNA+SPDT),,16,59.54,per branch,952.64,,,"~70% below ADTR1107 Digi-Key price; excludes bias gating parts",
+SUMMARY,known-price converter + LO parts (LTC5552 path),,,,,914.94,,,"mixers 268 + switches 97.52 + filters 50.52 + ADF4371 474.90; TBD parts excluded",

@@ -1,0 +1,29 @@
+path,stage,component,gain_db,nf_db,op1db_dbm,cum_gain_db,cum_nf_db,freq_of_data,evidence,source
+RX,1,feed trace + connector,-0.7,0.7,,-0.7,0.70,n/a,ASSUMPTION,engineering assumption; replace after H2 stackup/EM
+RX,2,ADTR1107 RX (LNA+SPDT),17.5,2.5,14,16.8,3.20,6-14 GHz table (not 8.4-specific),DATASHEET,ADTR1107 Rev C Table 3 p.4
+RX,3,ADAR1000 RX single-channel,10,8,,26.8,3.42,9.5 GHz (8.4 not tabulated),DATASHEET,ADAR1000 Rev B Table 1 p.6-7
+RX,4,RF trace to converter,-1.0,1.0,,25.8,3.43,n/a,ASSUMPTION,engineering assumption
+RX,5,RF SPDT ADRF5019,-1.0,1.0,,24.8,3.43,IL spec to 10 GHz,DISTRIBUTOR/SNIPPET,Digi-Key ADRF5019BCPZN; datasheet snippet
+RX,6,RF BPF BFCN-8350+,-1.8,1.8,,23.0,3.43,8250-8450 MHz passband,DATASHEET,minicircuits.com/pdfs/BFCN-8350+.pdf
+RX,7,mixer LTC5552 (down),-8.0,8.0,,15.0,3.48,RF 10 GHz IF 240 MHz; NF=CL assumed,DATASHEET+ASSUMPTION,LTC5552 datasheet AC table p.3
+RX,8,IF SPDT ADRF5019,-0.8,0.8,,14.2,3.50,to 8 GHz,DISTRIBUTOR/SNIPPET,Digi-Key ADRF5019BCPZN
+RX,9,IF BPF (part TBD),-1.0,1.0,,13.2,3.51,n/a,ASSUMPTION,TBD
+RX,10,USRP N310 RX (TX/RX port),30,6.8,,43.2,3.85,1.8 GHz max gain (2.0 GHz not tabulated),DATASHEET,USRP_N310_Datasheet_v3 p.2
+RX,note,feed-referred system NF = 3.85 dB vs sim assumption 7 dB; ADTR1107 dominates; converter LNA not required (adding PMA3-14LN+ gives 3.43 dB),,,,,,,DERIVED,Friis
+RX,note,feed-referred input compression ~ ADAR1000 IP1dB -16 dBm - 16.8 dB = -32.8 dBm per feed: bench signal levels must be attenuated accordingly,,,,,,,DERIVED,ADAR1000 Table 1 IP1dB at 9.5 GHz
+TX,1,USRP N310 TX out (avg),,,18,-10.0,,1.8-2.0 GHz; 18 dBm is max out 1-4 GHz,DATASHEET,USRP_N310_Datasheet_v3; -10 dBm avg chosen (~10 dB PAPR headroom to 0 dBm peak)
+TX,2,IF BPF (TBD) + IF SPDT,-1.8,,,-11.8,,n/a,ASSUMPTION,TBD + Digi-Key ADRF5019
+TX,3,mixer LTC5552 (up),-8.0,,,-19.8,,downmix CL at 10 GHz used; upmix at 8.4 GHz UNVERIFIED,DATASHEET+ASSUMPTION,LTC5552 datasheet
+TX,4,RF BPF BFCN-8350+ + RF SPDT + trace,-3.8,,,-23.6,,see RX rows,DATASHEET+ASSUMPTION,as RX
+TX,5,ADAR1000 TX single-channel (gain backed off ~2 dB),19,22,10,-4.6,,9.5 GHz: max gain 21 dB OP1dB 10 dBm,DATASHEET,ADAR1000 Rev B Table 1 p.5
+TX,6,ADTR1107 TX,21.5,9,23,,,6-14 GHz table,DATASHEET,ADTR1107 Rev C Table 1 p.3
+TX,7,feed trace + connector,-0.7,,,,,n/a,ASSUMPTION,
+TX,result,ADTR1107 avg out @8 dB backoff from OP1dB,,,,15.0,,,DERIVED,23-8; at feed 14.3 dBm; needs FE input -6.5 dBm (ADAR1000 out 16.5 dB below its OP1dB)
+TX,result,ADTR1107 avg out @10 dB backoff from OP1dB,,,,13.0,,,DERIVED,at feed 12.3 dBm
+TX,result,discrete QPA0813+ADRF5019 avg out @8 dB backoff,,,27.5,19.5,,QPA0813 data at >=8.5 GHz only (UNVERIFIED at 8.4),DERIVED,at feed 18.8 dBm; FE input +1.5 dBm (exceeds ADAR1000 linear range; needs driver or lower backoff)
+TX,result,discrete QPA0813+ADRF5019 avg out @10 dB backoff,,,27.5,17.5,,,DERIVED,at feed 16.8 dBm; FE input -0.5 dBm
+TX,requirement,sim per-feed average (64 chains active),,,,18.9,,,SIM,43 dBm - 10log10(64) - 6.02 dB; openru_x6/beamforming.py:169-183
+TX,gap,ADTR1107 shortfall vs sim per-feed,,,,-4.6 to -6.6 dB,,,DERIVED,tile at feeds 24.3-26.3 dBm vs sim 31.0 dBm
+TX,gap,discrete shortfall vs sim per-feed,,,,-0.1 to -2.1 dB,,,DERIVED,tile at feeds 28.8-30.8 dBm
+TX,note,backoff 8-10 dB from OP1dB is an assumption for 100 MHz OFDM without DPD; EVM/ACLR must be measured on the bench,,,,,,,ASSUMPTION,
+TX,note,LO leakage (6.6 GHz) and image (4.8 GHz) rejection: BFCN-8350+ ~20-24 dB at 6.05-6.75 GHz + HFCN-7150+ ~19 dB at 6.65 GHz -> ~40 dB cascade ESTIMATE (not datasheet),,,,,,,DERIVED,minicircuits BFCN-8350+/HFCN-7150+ typical data

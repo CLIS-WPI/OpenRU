@@ -56,6 +56,7 @@ datasets/
 *.hdf5
 *.parquet
 *.csv
+!hardware/*.csv
 *.png
 *.svg
 *.pdf
