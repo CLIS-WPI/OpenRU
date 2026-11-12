@@ -20,10 +20,10 @@ TX,6,ADTR1107 TX,21.5,9,23,,,6-14 GHz table,DATASHEET,ADTR1107 Rev C Table 1 p.3
 TX,7,feed trace + connector,-0.7,,,,,n/a,ASSUMPTION,
 TX,result,ADTR1107 avg out @8 dB backoff from OP1dB,,,,15.0,,,DERIVED,23-8; at feed 14.3 dBm; needs FE input -6.5 dBm (ADAR1000 out 16.5 dB below its OP1dB)
 TX,result,ADTR1107 avg out @10 dB backoff from OP1dB,,,,13.0,,,DERIVED,at feed 12.3 dBm
-TX,result,discrete QPA0813+ADRF5019 avg out @8 dB backoff,,,27.5,19.5,,QPA0813 data at >=8.5 GHz only (UNVERIFIED at 8.4),DERIVED,at feed 18.8 dBm; FE input +1.5 dBm (exceeds ADAR1000 linear range; needs driver or lower backoff)
-TX,result,discrete QPA0813+ADRF5019 avg out @10 dB backoff,,,27.5,17.5,,,DERIVED,at feed 16.8 dBm; FE input -0.5 dBm
+TX,result,discrete QPA0813+ADRF5019 avg out @8 dB backoff,,,18.0,10.0,,QPA0813 OP1dB 19 dBm (Qorvo table; 28.5 dBm is Psat) - corrected in H1.1,DERIVED,at feed 9.3 dBm; FE input -8 dBm. H1 wrongly used Psat 28.5 as P1dB
+TX,result,discrete QPA0813+ADRF5019 avg out @10 dB backoff,,,18.0,8.0,,,DERIVED,at feed 7.3 dBm; FE input -10 dBm
 TX,requirement,sim per-feed average (64 chains active),,,,18.9,,,SIM,43 dBm - 10log10(64) - 6.02 dB; openru_x6/beamforming.py:169-183
 TX,gap,ADTR1107 shortfall vs sim per-feed,,,,-4.6 to -6.6 dB,,,DERIVED,tile at feeds 24.3-26.3 dBm vs sim 31.0 dBm
-TX,gap,discrete shortfall vs sim per-feed,,,,-0.1 to -2.1 dB,,,DERIVED,tile at feeds 28.8-30.8 dBm
+TX,gap,discrete shortfall vs sim per-feed,,,,-9.6 to -11.6 dB,,,DERIVED,tile at feeds 19.3-21.3 dBm (corrected H1.1)
 TX,note,backoff 8-10 dB from OP1dB is an assumption for 100 MHz OFDM without DPD; EVM/ACLR must be measured on the bench,,,,,,,ASSUMPTION,
 TX,note,LO leakage (6.6 GHz) and image (4.8 GHz) rejection: BFCN-8350+ ~20-24 dB at 6.05-6.75 GHz + HFCN-7150+ ~19 dB at 6.65 GHz -> ~40 dB cascade ESTIMATE (not datasheet),,,,,,,DERIVED,minicircuits BFCN-8350+/HFCN-7150+ typical data

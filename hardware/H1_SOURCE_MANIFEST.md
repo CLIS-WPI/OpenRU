@@ -28,6 +28,25 @@ until re-checked in a browser. "Snippet" = search-result excerpt of a manufactur
 | QPF5005, MAMF-011015, Qorvo X-band kit | rfmw.com, digikey.com | distributor | integrated alternatives (rejected: cost or band) |
 | BFCN-8350+, BFCN-8450+, HFCN-7150+, ZVBP-8250-S+ | https://www.minicircuits.com/pdfs/<part>.pdf | direct | RF/LO/image filtering |
 
+## H1.1 additions (retrieved 2026-11-11)
+
+Access in H1.1: analog.com timed out then failed DNS; qorvo.com returned HTTP 429 on every attempt;
+Mouser, Arrow, Newark timed out; Octopart, Richardson, alldatasheet, everythingrf returned 403. None was
+bypassed. Tags as in `H1_1_BEAMFORMER_DECISION.md` (OFFICIAL\* = search-engine summary of a manufacturer page).
+
+| Part / topic | Source | Tag | Used for |
+|---|---|---|---|
+| ADAR1000 lifecycle | https://www.analog.com/en/products/adar1000.html — "Recommended for New Designs" (project lead read the live page; our tool saw an agreeing summary) | OFFICIAL\* | B1 |
+| ADAR1000 sample/buy, 16 business weeks | https://www.analog.com/en/products/adar1000/sample-buy.html | OFFICIAL\* | B1 |
+| ADAR1000 / -EVALZ / EVAL1Z stock | https://www.findchips.com/search/ADAR1000 ; https://www.digikey.com/en/products/detail/analog-devices-inc/ADAR1000-EVALZ/17826503 | DISTRIBUTOR | B1 |
+| Stingray power sequencing, thermal, connectors | https://developer.analog.com/docs/system-level/solutions/platforms/x-band/hardware/beamforming/index.html | OFFICIAL | sequencing reference |
+| ADTR1101 | https://www.analog.com/en/products/adtr1101.html (unreachable); specs via alldatasheet summary; Digi-Key/Findchips: no listing | UNVERIFIED | FEM comparison B |
+| ADTR1107 stock/price update | https://www.digikey.com/en/products/detail/analog-devices-inc/ADTR1107ACCZ/12419087 ; https://www.findchips.com/search/ADTR1107 | DISTRIBUTOR | FEM comparison A |
+| ADSY2301 | https://www.analog.com/en/products/adsy2301.html ; https://www.analog.com/en/resources/technical-articles/getting-started-scalable-x-band-aesa-tile.html (both unreachable; summaries only); Rev PrB preliminary | OFFICIAL\* | reference architecture |
+| QPX0252 | https://www.qorvo.com/products/p/QPX0252 (429); https://www.radiolocman.com/datasheet/data.html?di=694381 ; https://satnews.com/2026/10/03/qorvo-unveils-integrated-x-band-rf-front-end-solution-for-aesa-radar-systems/ ; https://www.semiconductor-today.com/news_items/2026/oct/qorvo-071026.shtml | OFFICIAL\* / trade press | beamformer comparison |
+| QPF5001 | https://store.qorvo.com/products/detail/qpf5001-qorvo/825899/ ; https://www.digikey.com/en/products/detail/qorvo/QPF5001/25855468 ; http://www.rf-design.co.za/?p=21892 | DISTRIBUTOR | FEM comparison C |
+| QPA0813 OP1dB vs Psat | http://www.rf-design.co.za/?p=27711 (copy of Qorvo table: OP1dB 19, PSat 28.5); https://store.qorvo.com/ProductDetail/QPA0813-Qorvo/862832/ ("P1dB 28.5" — mislabel) | DISTRIBUTOR | FEM comparison D; H1 correction |
+
 ## Re-verification checklist before schematics
 
 1. ADAR1000 lifecycle, lead time, 1k price (analog.com / ADI sales).
