@@ -119,9 +119,10 @@ def drivers(net):
 
 for net, must in (("BF_TR", ["U704.4", "UBF1.N6", "UBF2.N6", "UBF3.N6", "UBF4.N6"]),
                   ("TX_ALLOW", ["U703.4", "U704.2", "UBF1.B3", "UBF2.B3", "UBF3.B3", "UBF4.B3"]),
-                  ("PA_DRAIN_EN", ["U705.4", "U621.5", "U622.5", "U623.5", "U624.5"]),
+                  ("PA_ARMED", ["U909.5", "U705.1"]),
+                  ("PA_DRAIN_EN", ["R735.1", "R965.1", "U621.5", "U622.5", "U623.5", "U624.5"]),  # H2-C: U705 drives via R735; R965 pull-down
                   ("WDT_OK", ["U702.8", "U703.3", "U705.3"]),
-                  ("NEG_OK", ["U609.4", "U705.6"])):
+                  ("NEG_OK", ["U912.4", "U705.6", "U911.6"])):  # H2-C: NEG_OK = IL_EN . GATES_OK from U912
     have = drivers(net)
     miss = [m for m in must if m not in have]
     add("safety", net, ", ".join(must), ", ".join(have), not miss, "H2A safety chain (mcu/power sheets)")
@@ -160,8 +161,9 @@ for kind, item, ok, basis in h2b:
 # 5. unconnected pins must all be declared UNRESOLVED
 unc = sorted(k for k, n in pin_net.items() if n.startswith("unconnected-"))
 declared = {u["ref"] for u in log["unresolved"]}
+extra = json.load(open(sys.argv[4])) if len(sys.argv) > 4 else {}  # datasheet-permitted open pins (H2-C)
 for ref, pin in unc:
-    hit = any(ref == d or ref in d.replace("-", "/").split("/") for d in declared)
+    hit = f"{ref}.{pin}" in extra or any(ref == d or ref in d.replace("-", "/").split("/") for d in declared)
     add("unconnected", f"{ref}.{pin} ({pin_fn[(ref, pin)]})", "declared UNRESOLVED", "declared" if hit else "NOT declared", hit, "build_log.json")
 
 with open(out_csv, "w", newline="") as fh:

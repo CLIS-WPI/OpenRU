@@ -59,6 +59,7 @@ datasets/
 !hardware/*.csv
 !hardware/**/*.csv
 *.png
+!hardware/h2/sim/*.png
 *.svg
 *.pdf
 !hardware/h2/reports/*.pdf

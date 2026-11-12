@@ -1,0 +1,1523 @@
+check,item,expected,actual,result,basis
+symbol-pin,DC801.3,INPUT,INPUT,PASS,edc2124_pins.csv
+symbol-pin,DC801.7,COUPLED,COUPLED,PASS,edc2124_pins.csv
+symbol-pin,DC801.16,OUTPUT,OUTPUT,PASS,edc2124_pins.csv
+symbol-pin,DC801.1,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC801.2,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC801.4,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC801.5,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC801.6,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC801.8,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC801.9,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC801.10,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC801.11,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC801.12,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC801.13,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC801.14,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC801.15,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC801.17,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC801.18,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC801.19,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC801.20,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC801.21,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC801.22,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC801.23,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC801.24,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC801.EP,GND,GND,PASS,edc2124_pins.csv
+symbol-pin-count,DC801,25,25,PASS,edc2124_pins.csv
+symbol-pin,DC802.3,INPUT,INPUT,PASS,edc2124_pins.csv
+symbol-pin,DC802.7,COUPLED,COUPLED,PASS,edc2124_pins.csv
+symbol-pin,DC802.16,OUTPUT,OUTPUT,PASS,edc2124_pins.csv
+symbol-pin,DC802.1,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC802.2,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC802.4,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC802.5,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC802.6,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC802.8,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC802.9,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC802.10,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC802.11,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC802.12,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC802.13,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC802.14,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC802.15,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC802.17,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC802.18,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC802.19,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC802.20,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC802.21,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC802.22,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC802.23,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC802.24,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC802.EP,GND,GND,PASS,edc2124_pins.csv
+symbol-pin-count,DC802,25,25,PASS,edc2124_pins.csv
+symbol-pin,DC803.3,INPUT,INPUT,PASS,edc2124_pins.csv
+symbol-pin,DC803.7,COUPLED,COUPLED,PASS,edc2124_pins.csv
+symbol-pin,DC803.16,OUTPUT,OUTPUT,PASS,edc2124_pins.csv
+symbol-pin,DC803.1,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC803.2,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC803.4,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC803.5,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC803.6,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC803.8,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC803.9,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC803.10,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC803.11,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC803.12,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC803.13,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC803.14,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC803.15,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC803.17,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC803.18,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC803.19,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC803.20,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC803.21,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC803.22,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC803.23,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC803.24,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC803.EP,GND,GND,PASS,edc2124_pins.csv
+symbol-pin-count,DC803,25,25,PASS,edc2124_pins.csv
+symbol-pin,DC804.3,INPUT,INPUT,PASS,edc2124_pins.csv
+symbol-pin,DC804.7,COUPLED,COUPLED,PASS,edc2124_pins.csv
+symbol-pin,DC804.16,OUTPUT,OUTPUT,PASS,edc2124_pins.csv
+symbol-pin,DC804.1,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC804.2,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC804.4,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC804.5,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC804.6,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC804.8,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC804.9,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC804.10,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC804.11,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC804.12,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC804.13,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC804.14,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC804.15,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC804.17,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC804.18,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC804.19,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC804.20,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC804.21,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC804.22,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC804.23,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC804.24,GND,GND,PASS,edc2124_pins.csv
+symbol-pin,DC804.EP,GND,GND,PASS,edc2124_pins.csv
+symbol-pin-count,DC804,25,25,PASS,edc2124_pins.csv
+symbol-pin,FL101.1,RF_IN,RF_IN,PASS,bfcn1840_pins.csv
+symbol-pin,FL101.3,RF_OUT,RF_OUT,PASS,bfcn1840_pins.csv
+symbol-pin,FL101.2,GND,GND,PASS,bfcn1840_pins.csv
+symbol-pin,FL101.4,GND,GND,PASS,bfcn1840_pins.csv
+symbol-pin-count,FL101,4,4,PASS,bfcn1840_pins.csv
+symbol-pin,FL102.1,RF_IN,RF_IN,PASS,bfcn8350_pins.csv
+symbol-pin,FL102.3,RF_OUT,RF_OUT,PASS,bfcn8350_pins.csv
+symbol-pin,FL102.2,GND,GND,PASS,bfcn8350_pins.csv
+symbol-pin,FL102.4,GND,GND,PASS,bfcn8350_pins.csv
+symbol-pin-count,FL102,4,4,PASS,bfcn8350_pins.csv
+symbol-pin,FL103.1,RF_IN,RF_IN,PASS,hfcn7150_pins.csv
+symbol-pin,FL103.3,RF_OUT,RF_OUT,PASS,hfcn7150_pins.csv
+symbol-pin,FL103.2,GND,GND,PASS,hfcn7150_pins.csv
+symbol-pin,FL103.4,GND,GND,PASS,hfcn7150_pins.csv
+symbol-pin,FL103.5,GND,GND,PASS,hfcn7150_pins.csv
+symbol-pin,FL103.6,GND,GND,PASS,hfcn7150_pins.csv
+symbol-pin-count,FL103,6,6,PASS,hfcn7150_pins.csv
+symbol-pin,FL201.1,RF_IN,RF_IN,PASS,bfcn1840_pins.csv
+symbol-pin,FL201.3,RF_OUT,RF_OUT,PASS,bfcn1840_pins.csv
+symbol-pin,FL201.2,GND,GND,PASS,bfcn1840_pins.csv
+symbol-pin,FL201.4,GND,GND,PASS,bfcn1840_pins.csv
+symbol-pin-count,FL201,4,4,PASS,bfcn1840_pins.csv
+symbol-pin,FL202.1,RF_IN,RF_IN,PASS,bfcn8350_pins.csv
+symbol-pin,FL202.3,RF_OUT,RF_OUT,PASS,bfcn8350_pins.csv
+symbol-pin,FL202.2,GND,GND,PASS,bfcn8350_pins.csv
+symbol-pin,FL202.4,GND,GND,PASS,bfcn8350_pins.csv
+symbol-pin-count,FL202,4,4,PASS,bfcn8350_pins.csv
+symbol-pin,FL203.1,RF_IN,RF_IN,PASS,hfcn7150_pins.csv
+symbol-pin,FL203.3,RF_OUT,RF_OUT,PASS,hfcn7150_pins.csv
+symbol-pin,FL203.2,GND,GND,PASS,hfcn7150_pins.csv
+symbol-pin,FL203.4,GND,GND,PASS,hfcn7150_pins.csv
+symbol-pin,FL203.5,GND,GND,PASS,hfcn7150_pins.csv
+symbol-pin,FL203.6,GND,GND,PASS,hfcn7150_pins.csv
+symbol-pin-count,FL203,6,6,PASS,hfcn7150_pins.csv
+symbol-pin,FL301.1,RF_IN,RF_IN,PASS,bfcn1840_pins.csv
+symbol-pin,FL301.3,RF_OUT,RF_OUT,PASS,bfcn1840_pins.csv
+symbol-pin,FL301.2,GND,GND,PASS,bfcn1840_pins.csv
+symbol-pin,FL301.4,GND,GND,PASS,bfcn1840_pins.csv
+symbol-pin-count,FL301,4,4,PASS,bfcn1840_pins.csv
+symbol-pin,FL302.1,RF_IN,RF_IN,PASS,bfcn8350_pins.csv
+symbol-pin,FL302.3,RF_OUT,RF_OUT,PASS,bfcn8350_pins.csv
+symbol-pin,FL302.2,GND,GND,PASS,bfcn8350_pins.csv
+symbol-pin,FL302.4,GND,GND,PASS,bfcn8350_pins.csv
+symbol-pin-count,FL302,4,4,PASS,bfcn8350_pins.csv
+symbol-pin,FL303.1,RF_IN,RF_IN,PASS,hfcn7150_pins.csv
+symbol-pin,FL303.3,RF_OUT,RF_OUT,PASS,hfcn7150_pins.csv
+symbol-pin,FL303.2,GND,GND,PASS,hfcn7150_pins.csv
+symbol-pin,FL303.4,GND,GND,PASS,hfcn7150_pins.csv
+symbol-pin,FL303.5,GND,GND,PASS,hfcn7150_pins.csv
+symbol-pin,FL303.6,GND,GND,PASS,hfcn7150_pins.csv
+symbol-pin-count,FL303,6,6,PASS,hfcn7150_pins.csv
+symbol-pin,FL401.1,RF_IN,RF_IN,PASS,bfcn1840_pins.csv
+symbol-pin,FL401.3,RF_OUT,RF_OUT,PASS,bfcn1840_pins.csv
+symbol-pin,FL401.2,GND,GND,PASS,bfcn1840_pins.csv
+symbol-pin,FL401.4,GND,GND,PASS,bfcn1840_pins.csv
+symbol-pin-count,FL401,4,4,PASS,bfcn1840_pins.csv
+symbol-pin,FL402.1,RF_IN,RF_IN,PASS,bfcn8350_pins.csv
+symbol-pin,FL402.3,RF_OUT,RF_OUT,PASS,bfcn8350_pins.csv
+symbol-pin,FL402.2,GND,GND,PASS,bfcn8350_pins.csv
+symbol-pin,FL402.4,GND,GND,PASS,bfcn8350_pins.csv
+symbol-pin-count,FL402,4,4,PASS,bfcn8350_pins.csv
+symbol-pin,FL403.1,RF_IN,RF_IN,PASS,hfcn7150_pins.csv
+symbol-pin,FL403.3,RF_OUT,RF_OUT,PASS,hfcn7150_pins.csv
+symbol-pin,FL403.2,GND,GND,PASS,hfcn7150_pins.csv
+symbol-pin,FL403.4,GND,GND,PASS,hfcn7150_pins.csv
+symbol-pin,FL403.5,GND,GND,PASS,hfcn7150_pins.csv
+symbol-pin,FL403.6,GND,GND,PASS,hfcn7150_pins.csv
+symbol-pin-count,FL403,6,6,PASS,hfcn7150_pins.csv
+symbol-pin,U501.1,GND,GND,PASS,adf4371_pins.csv
+symbol-pin,U501.2,CPOUT,CPOUT,PASS,adf4371_pins.csv
+symbol-pin,U501.3,RS_SW,RS_SW,PASS,adf4371_pins.csv
+symbol-pin,U501.4,VCC_CAL,VCC_CAL,PASS,adf4371_pins.csv
+symbol-pin,U501.5,VTUNE,VTUNE,PASS,adf4371_pins.csv
+symbol-pin,U501.6,VCC_REG_OUT,VCC_REG_OUT,PASS,adf4371_pins.csv
+symbol-pin,U501.7,VCC_VCO,VCC_VCO,PASS,adf4371_pins.csv
+symbol-pin,U501.8,VCC_LDO,VCC_LDO,PASS,adf4371_pins.csv
+symbol-pin,U501.9,GND,GND,PASS,adf4371_pins.csv
+symbol-pin,U501.10,RF32N,RF32N,PASS,adf4371_pins.csv
+symbol-pin,U501.11,RF32P,RF32P,PASS,adf4371_pins.csv
+symbol-pin,U501.12,GND,GND,PASS,adf4371_pins.csv
+symbol-pin,U501.13,GND,GND,PASS,adf4371_pins.csv
+symbol-pin,U501.14,VCC_X4,VCC_X4,PASS,adf4371_pins.csv
+symbol-pin,U501.15,VDD_X4,VDD_X4,PASS,adf4371_pins.csv
+symbol-pin,U501.16,VCC_X1,VCC_X1,PASS,adf4371_pins.csv
+symbol-pin,U501.17,VDD_X1,VDD_X1,PASS,adf4371_pins.csv
+symbol-pin,U501.18,RF8P,RF8P,PASS,adf4371_pins.csv
+symbol-pin,U501.19,RF8N,RF8N,PASS,adf4371_pins.csv
+symbol-pin,U501.20,GND,GND,PASS,adf4371_pins.csv
+symbol-pin,U501.21,VCC_X2,VCC_X2,PASS,adf4371_pins.csv
+symbol-pin,U501.22,RFAUX8P,RFAUX8P,PASS,adf4371_pins.csv
+symbol-pin,U501.23,RFAUX8N,RFAUX8N,PASS,adf4371_pins.csv
+symbol-pin,U501.24,GND,GND,PASS,adf4371_pins.csv
+symbol-pin,U501.25,GND,GND,PASS,adf4371_pins.csv
+symbol-pin,U501.26,RF16P,RF16P,PASS,adf4371_pins.csv
+symbol-pin,U501.27,RF16N,RF16N,PASS,adf4371_pins.csv
+symbol-pin,U501.28,GND,GND,PASS,adf4371_pins.csv
+symbol-pin,U501.29,VCC_MUX,VCC_MUX,PASS,adf4371_pins.csv
+symbol-pin,U501.30,VCC_3V,VCC_3V,PASS,adf4371_pins.csv
+symbol-pin,U501.31,VDD_NDIV,VDD_NDIV,PASS,adf4371_pins.csv
+symbol-pin,U501.32,VDD_LS,VDD_LS,PASS,adf4371_pins.csv
+symbol-pin,U501.33,CS,CS,PASS,adf4371_pins.csv
+symbol-pin,U501.34,SDIO,SDIO,PASS,adf4371_pins.csv
+symbol-pin,U501.35,SCLK,SCLK,PASS,adf4371_pins.csv
+symbol-pin,U501.36,GND,GND,PASS,adf4371_pins.csv
+symbol-pin,U501.37,GND,GND,PASS,adf4371_pins.csv
+symbol-pin,U501.38,VCC_LDO_3V,VCC_LDO_3V,PASS,adf4371_pins.csv
+symbol-pin,U501.39,CE,CE,PASS,adf4371_pins.csv
+symbol-pin,U501.40,TEST,TEST,PASS,adf4371_pins.csv
+symbol-pin,U501.41,MUXOUT,MUXOUT,PASS,adf4371_pins.csv
+symbol-pin,U501.42,GND,GND,PASS,adf4371_pins.csv
+symbol-pin,U501.43,REFP,REFP,PASS,adf4371_pins.csv
+symbol-pin,U501.44,REFN,REFN,PASS,adf4371_pins.csv
+symbol-pin,U501.45,VCC_REF,VCC_REF,PASS,adf4371_pins.csv
+symbol-pin,U501.46,VDD_PFD,VDD_PFD,PASS,adf4371_pins.csv
+symbol-pin,U501.47,VDD_VP,VDD_VP,PASS,adf4371_pins.csv
+symbol-pin,U501.48,GND,GND,PASS,adf4371_pins.csv
+symbol-pin,U501.EP,GND,GND,PASS,adf4371_pins.csv
+symbol-pin-count,U501,49,49,PASS,adf4371_pins.csv
+symbol-pin,U502.2,RF_IN,RF_IN,PASS,ava183a_pins.csv
+symbol-pin,U502.5,RF_OUT,RF_OUT,PASS,ava183a_pins.csv
+symbol-pin,U502.8,VD1,VD1,PASS,ava183a_pins.csv
+symbol-pin,U502.7,VD2,VD2,PASS,ava183a_pins.csv
+symbol-pin,U502.EP,GND,GND,PASS,ava183a_pins.csv
+symbol-pin,U502.1,NU,NU,PASS,ava183a_pins.csv
+symbol-pin,U502.3,NU,NU,PASS,ava183a_pins.csv
+symbol-pin,U502.4,NU,NU,PASS,ava183a_pins.csv
+symbol-pin,U502.6,NU,NU,PASS,ava183a_pins.csv
+symbol-pin-count,U502,9,9,PASS,ava183a_pins.csv
+symbol-pin,U503.21,SUM,SUM,PASS,ep4rku_pins.csv
+symbol-pin,U503.14,P1,P1,PASS,ep4rku_pins.csv
+symbol-pin,U503.10,P2,P2,PASS,ep4rku_pins.csv
+symbol-pin,U503.31,P3,P3,PASS,ep4rku_pins.csv
+symbol-pin,U503.27,P4,P4,PASS,ep4rku_pins.csv
+symbol-pin,U503.9,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U503.11,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U503.13,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U503.15,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U503.20,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U503.22,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U503.26,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U503.28,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U503.30,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U503.32,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U503.EP,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U503.1,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U503.2,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U503.3,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U503.4,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U503.5,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U503.6,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U503.7,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U503.8,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U503.12,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U503.16,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U503.17,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U503.18,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U503.19,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U503.23,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U503.24,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U503.25,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U503.29,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin-count,U503,33,33,PASS,ep4rku_pins.csv
+symbol-pin,U801.21,SUM,SUM,PASS,ep4rku_pins.csv
+symbol-pin,U801.14,P1,P1,PASS,ep4rku_pins.csv
+symbol-pin,U801.10,P2,P2,PASS,ep4rku_pins.csv
+symbol-pin,U801.31,P3,P3,PASS,ep4rku_pins.csv
+symbol-pin,U801.27,P4,P4,PASS,ep4rku_pins.csv
+symbol-pin,U801.9,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U801.11,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U801.13,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U801.15,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U801.20,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U801.22,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U801.26,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U801.28,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U801.30,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U801.32,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U801.EP,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U801.1,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U801.2,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U801.3,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U801.4,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U801.5,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U801.6,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U801.7,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U801.8,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U801.12,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U801.16,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U801.17,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U801.18,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U801.19,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U801.23,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U801.24,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U801.25,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin,U801.29,GND,GND,PASS,ep4rku_pins.csv
+symbol-pin-count,U801,33,33,PASS,ep4rku_pins.csv
+symbol-pin,UBF1.A1,DET3,DET3,PASS,adar1000_pins.csv
+symbol-pin,UBF1.A2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.A3,TR_SW_NEG,TR_SW_NEG,PASS,adar1000_pins.csv
+symbol-pin,UBF1.A4,PA_BIAS4,PA_BIAS4,PASS,adar1000_pins.csv
+symbol-pin,UBF1.A5,PA_BIAS3,PA_BIAS3,PASS,adar1000_pins.csv
+symbol-pin,UBF1.A6,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.A7,RF_IO,RF_IO,PASS,adar1000_pins.csv
+symbol-pin,UBF1.A8,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.A9,PA_BIAS2,PA_BIAS2,PASS,adar1000_pins.csv
+symbol-pin,UBF1.A10,PA_BIAS1,PA_BIAS1,PASS,adar1000_pins.csv
+symbol-pin,UBF1.A11,LNA_BIAS,LNA_BIAS,PASS,adar1000_pins.csv
+symbol-pin,UBF1.A12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.A13,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.B1,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.B2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.B3,PA_ON,PA_ON,PASS,adar1000_pins.csv
+symbol-pin,UBF1.B4,TR_POL,TR_POL,PASS,adar1000_pins.csv
+symbol-pin,UBF1.B5,TR_SW_POS,TR_SW_POS,PASS,adar1000_pins.csv
+symbol-pin,UBF1.B6,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.B7,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.B8,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.B9,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.B10,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.B11,AVDD1,AVDD1,PASS,adar1000_pins.csv
+symbol-pin,UBF1.B12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.B13,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.C1,TX3,TX3,PASS,adar1000_pins.csv
+symbol-pin,UBF1.C2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.C12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.C13,RX2,RX2,PASS,adar1000_pins.csv
+symbol-pin,UBF1.D1,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.D2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.D12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.D13,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.E1,RX3,RX3,PASS,adar1000_pins.csv
+symbol-pin,UBF1.E2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.E12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.E13,TX2,TX2,PASS,adar1000_pins.csv
+symbol-pin,UBF1.F1,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.F2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.F12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.F13,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.G1,DET4,DET4,PASS,adar1000_pins.csv
+symbol-pin,UBF1.G2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.G12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.G13,DET2,DET2,PASS,adar1000_pins.csv
+symbol-pin,UBF1.H1,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.H2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.H12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.H13,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.J1,TX4,TX4,PASS,adar1000_pins.csv
+symbol-pin,UBF1.J2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.J12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.J13,RX1,RX1,PASS,adar1000_pins.csv
+symbol-pin,UBF1.K1,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.K2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.K12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.K13,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.L1,RX4,RX4,PASS,adar1000_pins.csv
+symbol-pin,UBF1.L2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.L12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.L13,TX1,TX1,PASS,adar1000_pins.csv
+symbol-pin,UBF1.M1,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.M2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.M3,CSB,CSB,PASS,adar1000_pins.csv
+symbol-pin,UBF1.M4,SDO,SDO,PASS,adar1000_pins.csv
+symbol-pin,UBF1.M5,SDIO,SDIO,PASS,adar1000_pins.csv
+symbol-pin,UBF1.M6,SCLK,SCLK,PASS,adar1000_pins.csv
+symbol-pin,UBF1.M7,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.M8,CREG1,CREG1,PASS,adar1000_pins.csv
+symbol-pin,UBF1.M9,CREG2,CREG2,PASS,adar1000_pins.csv
+symbol-pin,UBF1.M10,AVDD3,AVDD3,PASS,adar1000_pins.csv
+symbol-pin,UBF1.M11,AVDD3,AVDD3,PASS,adar1000_pins.csv
+symbol-pin,UBF1.M12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.M13,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.N1,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.N2,RX_LOAD,RX_LOAD,PASS,adar1000_pins.csv
+symbol-pin,UBF1.N3,TX_LOAD,TX_LOAD,PASS,adar1000_pins.csv
+symbol-pin,UBF1.N4,ADDR0,ADDR0,PASS,adar1000_pins.csv
+symbol-pin,UBF1.N5,ADDR1,ADDR1,PASS,adar1000_pins.csv
+symbol-pin,UBF1.N6,TR,TR,PASS,adar1000_pins.csv
+symbol-pin,UBF1.N7,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.N8,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.N9,CREG4,CREG4,PASS,adar1000_pins.csv
+symbol-pin,UBF1.N10,CREG3,CREG3,PASS,adar1000_pins.csv
+symbol-pin,UBF1.N11,AVDD3,AVDD3,PASS,adar1000_pins.csv
+symbol-pin,UBF1.N12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF1.N13,DET1,DET1,PASS,adar1000_pins.csv
+symbol-pin,UBF1.EP,GND,GND,PASS,adar1000_pins.csv
+symbol-pin-count,UBF1,89,89,PASS,adar1000_pins.csv
+symbol-pin,UBF2.A1,DET3,DET3,PASS,adar1000_pins.csv
+symbol-pin,UBF2.A2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.A3,TR_SW_NEG,TR_SW_NEG,PASS,adar1000_pins.csv
+symbol-pin,UBF2.A4,PA_BIAS4,PA_BIAS4,PASS,adar1000_pins.csv
+symbol-pin,UBF2.A5,PA_BIAS3,PA_BIAS3,PASS,adar1000_pins.csv
+symbol-pin,UBF2.A6,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.A7,RF_IO,RF_IO,PASS,adar1000_pins.csv
+symbol-pin,UBF2.A8,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.A9,PA_BIAS2,PA_BIAS2,PASS,adar1000_pins.csv
+symbol-pin,UBF2.A10,PA_BIAS1,PA_BIAS1,PASS,adar1000_pins.csv
+symbol-pin,UBF2.A11,LNA_BIAS,LNA_BIAS,PASS,adar1000_pins.csv
+symbol-pin,UBF2.A12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.A13,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.B1,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.B2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.B3,PA_ON,PA_ON,PASS,adar1000_pins.csv
+symbol-pin,UBF2.B4,TR_POL,TR_POL,PASS,adar1000_pins.csv
+symbol-pin,UBF2.B5,TR_SW_POS,TR_SW_POS,PASS,adar1000_pins.csv
+symbol-pin,UBF2.B6,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.B7,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.B8,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.B9,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.B10,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.B11,AVDD1,AVDD1,PASS,adar1000_pins.csv
+symbol-pin,UBF2.B12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.B13,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.C1,TX3,TX3,PASS,adar1000_pins.csv
+symbol-pin,UBF2.C2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.C12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.C13,RX2,RX2,PASS,adar1000_pins.csv
+symbol-pin,UBF2.D1,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.D2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.D12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.D13,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.E1,RX3,RX3,PASS,adar1000_pins.csv
+symbol-pin,UBF2.E2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.E12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.E13,TX2,TX2,PASS,adar1000_pins.csv
+symbol-pin,UBF2.F1,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.F2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.F12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.F13,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.G1,DET4,DET4,PASS,adar1000_pins.csv
+symbol-pin,UBF2.G2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.G12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.G13,DET2,DET2,PASS,adar1000_pins.csv
+symbol-pin,UBF2.H1,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.H2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.H12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.H13,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.J1,TX4,TX4,PASS,adar1000_pins.csv
+symbol-pin,UBF2.J2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.J12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.J13,RX1,RX1,PASS,adar1000_pins.csv
+symbol-pin,UBF2.K1,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.K2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.K12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.K13,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.L1,RX4,RX4,PASS,adar1000_pins.csv
+symbol-pin,UBF2.L2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.L12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.L13,TX1,TX1,PASS,adar1000_pins.csv
+symbol-pin,UBF2.M1,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.M2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.M3,CSB,CSB,PASS,adar1000_pins.csv
+symbol-pin,UBF2.M4,SDO,SDO,PASS,adar1000_pins.csv
+symbol-pin,UBF2.M5,SDIO,SDIO,PASS,adar1000_pins.csv
+symbol-pin,UBF2.M6,SCLK,SCLK,PASS,adar1000_pins.csv
+symbol-pin,UBF2.M7,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.M8,CREG1,CREG1,PASS,adar1000_pins.csv
+symbol-pin,UBF2.M9,CREG2,CREG2,PASS,adar1000_pins.csv
+symbol-pin,UBF2.M10,AVDD3,AVDD3,PASS,adar1000_pins.csv
+symbol-pin,UBF2.M11,AVDD3,AVDD3,PASS,adar1000_pins.csv
+symbol-pin,UBF2.M12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.M13,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.N1,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.N2,RX_LOAD,RX_LOAD,PASS,adar1000_pins.csv
+symbol-pin,UBF2.N3,TX_LOAD,TX_LOAD,PASS,adar1000_pins.csv
+symbol-pin,UBF2.N4,ADDR0,ADDR0,PASS,adar1000_pins.csv
+symbol-pin,UBF2.N5,ADDR1,ADDR1,PASS,adar1000_pins.csv
+symbol-pin,UBF2.N6,TR,TR,PASS,adar1000_pins.csv
+symbol-pin,UBF2.N7,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.N8,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.N9,CREG4,CREG4,PASS,adar1000_pins.csv
+symbol-pin,UBF2.N10,CREG3,CREG3,PASS,adar1000_pins.csv
+symbol-pin,UBF2.N11,AVDD3,AVDD3,PASS,adar1000_pins.csv
+symbol-pin,UBF2.N12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF2.N13,DET1,DET1,PASS,adar1000_pins.csv
+symbol-pin,UBF2.EP,GND,GND,PASS,adar1000_pins.csv
+symbol-pin-count,UBF2,89,89,PASS,adar1000_pins.csv
+symbol-pin,UBF3.A1,DET3,DET3,PASS,adar1000_pins.csv
+symbol-pin,UBF3.A2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.A3,TR_SW_NEG,TR_SW_NEG,PASS,adar1000_pins.csv
+symbol-pin,UBF3.A4,PA_BIAS4,PA_BIAS4,PASS,adar1000_pins.csv
+symbol-pin,UBF3.A5,PA_BIAS3,PA_BIAS3,PASS,adar1000_pins.csv
+symbol-pin,UBF3.A6,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.A7,RF_IO,RF_IO,PASS,adar1000_pins.csv
+symbol-pin,UBF3.A8,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.A9,PA_BIAS2,PA_BIAS2,PASS,adar1000_pins.csv
+symbol-pin,UBF3.A10,PA_BIAS1,PA_BIAS1,PASS,adar1000_pins.csv
+symbol-pin,UBF3.A11,LNA_BIAS,LNA_BIAS,PASS,adar1000_pins.csv
+symbol-pin,UBF3.A12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.A13,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.B1,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.B2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.B3,PA_ON,PA_ON,PASS,adar1000_pins.csv
+symbol-pin,UBF3.B4,TR_POL,TR_POL,PASS,adar1000_pins.csv
+symbol-pin,UBF3.B5,TR_SW_POS,TR_SW_POS,PASS,adar1000_pins.csv
+symbol-pin,UBF3.B6,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.B7,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.B8,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.B9,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.B10,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.B11,AVDD1,AVDD1,PASS,adar1000_pins.csv
+symbol-pin,UBF3.B12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.B13,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.C1,TX3,TX3,PASS,adar1000_pins.csv
+symbol-pin,UBF3.C2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.C12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.C13,RX2,RX2,PASS,adar1000_pins.csv
+symbol-pin,UBF3.D1,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.D2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.D12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.D13,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.E1,RX3,RX3,PASS,adar1000_pins.csv
+symbol-pin,UBF3.E2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.E12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.E13,TX2,TX2,PASS,adar1000_pins.csv
+symbol-pin,UBF3.F1,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.F2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.F12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.F13,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.G1,DET4,DET4,PASS,adar1000_pins.csv
+symbol-pin,UBF3.G2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.G12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.G13,DET2,DET2,PASS,adar1000_pins.csv
+symbol-pin,UBF3.H1,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.H2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.H12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.H13,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.J1,TX4,TX4,PASS,adar1000_pins.csv
+symbol-pin,UBF3.J2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.J12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.J13,RX1,RX1,PASS,adar1000_pins.csv
+symbol-pin,UBF3.K1,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.K2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.K12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.K13,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.L1,RX4,RX4,PASS,adar1000_pins.csv
+symbol-pin,UBF3.L2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.L12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.L13,TX1,TX1,PASS,adar1000_pins.csv
+symbol-pin,UBF3.M1,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.M2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.M3,CSB,CSB,PASS,adar1000_pins.csv
+symbol-pin,UBF3.M4,SDO,SDO,PASS,adar1000_pins.csv
+symbol-pin,UBF3.M5,SDIO,SDIO,PASS,adar1000_pins.csv
+symbol-pin,UBF3.M6,SCLK,SCLK,PASS,adar1000_pins.csv
+symbol-pin,UBF3.M7,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.M8,CREG1,CREG1,PASS,adar1000_pins.csv
+symbol-pin,UBF3.M9,CREG2,CREG2,PASS,adar1000_pins.csv
+symbol-pin,UBF3.M10,AVDD3,AVDD3,PASS,adar1000_pins.csv
+symbol-pin,UBF3.M11,AVDD3,AVDD3,PASS,adar1000_pins.csv
+symbol-pin,UBF3.M12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.M13,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.N1,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.N2,RX_LOAD,RX_LOAD,PASS,adar1000_pins.csv
+symbol-pin,UBF3.N3,TX_LOAD,TX_LOAD,PASS,adar1000_pins.csv
+symbol-pin,UBF3.N4,ADDR0,ADDR0,PASS,adar1000_pins.csv
+symbol-pin,UBF3.N5,ADDR1,ADDR1,PASS,adar1000_pins.csv
+symbol-pin,UBF3.N6,TR,TR,PASS,adar1000_pins.csv
+symbol-pin,UBF3.N7,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.N8,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.N9,CREG4,CREG4,PASS,adar1000_pins.csv
+symbol-pin,UBF3.N10,CREG3,CREG3,PASS,adar1000_pins.csv
+symbol-pin,UBF3.N11,AVDD3,AVDD3,PASS,adar1000_pins.csv
+symbol-pin,UBF3.N12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF3.N13,DET1,DET1,PASS,adar1000_pins.csv
+symbol-pin,UBF3.EP,GND,GND,PASS,adar1000_pins.csv
+symbol-pin-count,UBF3,89,89,PASS,adar1000_pins.csv
+symbol-pin,UBF4.A1,DET3,DET3,PASS,adar1000_pins.csv
+symbol-pin,UBF4.A2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.A3,TR_SW_NEG,TR_SW_NEG,PASS,adar1000_pins.csv
+symbol-pin,UBF4.A4,PA_BIAS4,PA_BIAS4,PASS,adar1000_pins.csv
+symbol-pin,UBF4.A5,PA_BIAS3,PA_BIAS3,PASS,adar1000_pins.csv
+symbol-pin,UBF4.A6,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.A7,RF_IO,RF_IO,PASS,adar1000_pins.csv
+symbol-pin,UBF4.A8,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.A9,PA_BIAS2,PA_BIAS2,PASS,adar1000_pins.csv
+symbol-pin,UBF4.A10,PA_BIAS1,PA_BIAS1,PASS,adar1000_pins.csv
+symbol-pin,UBF4.A11,LNA_BIAS,LNA_BIAS,PASS,adar1000_pins.csv
+symbol-pin,UBF4.A12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.A13,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.B1,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.B2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.B3,PA_ON,PA_ON,PASS,adar1000_pins.csv
+symbol-pin,UBF4.B4,TR_POL,TR_POL,PASS,adar1000_pins.csv
+symbol-pin,UBF4.B5,TR_SW_POS,TR_SW_POS,PASS,adar1000_pins.csv
+symbol-pin,UBF4.B6,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.B7,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.B8,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.B9,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.B10,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.B11,AVDD1,AVDD1,PASS,adar1000_pins.csv
+symbol-pin,UBF4.B12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.B13,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.C1,TX3,TX3,PASS,adar1000_pins.csv
+symbol-pin,UBF4.C2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.C12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.C13,RX2,RX2,PASS,adar1000_pins.csv
+symbol-pin,UBF4.D1,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.D2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.D12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.D13,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.E1,RX3,RX3,PASS,adar1000_pins.csv
+symbol-pin,UBF4.E2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.E12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.E13,TX2,TX2,PASS,adar1000_pins.csv
+symbol-pin,UBF4.F1,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.F2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.F12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.F13,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.G1,DET4,DET4,PASS,adar1000_pins.csv
+symbol-pin,UBF4.G2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.G12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.G13,DET2,DET2,PASS,adar1000_pins.csv
+symbol-pin,UBF4.H1,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.H2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.H12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.H13,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.J1,TX4,TX4,PASS,adar1000_pins.csv
+symbol-pin,UBF4.J2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.J12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.J13,RX1,RX1,PASS,adar1000_pins.csv
+symbol-pin,UBF4.K1,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.K2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.K12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.K13,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.L1,RX4,RX4,PASS,adar1000_pins.csv
+symbol-pin,UBF4.L2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.L12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.L13,TX1,TX1,PASS,adar1000_pins.csv
+symbol-pin,UBF4.M1,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.M2,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.M3,CSB,CSB,PASS,adar1000_pins.csv
+symbol-pin,UBF4.M4,SDO,SDO,PASS,adar1000_pins.csv
+symbol-pin,UBF4.M5,SDIO,SDIO,PASS,adar1000_pins.csv
+symbol-pin,UBF4.M6,SCLK,SCLK,PASS,adar1000_pins.csv
+symbol-pin,UBF4.M7,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.M8,CREG1,CREG1,PASS,adar1000_pins.csv
+symbol-pin,UBF4.M9,CREG2,CREG2,PASS,adar1000_pins.csv
+symbol-pin,UBF4.M10,AVDD3,AVDD3,PASS,adar1000_pins.csv
+symbol-pin,UBF4.M11,AVDD3,AVDD3,PASS,adar1000_pins.csv
+symbol-pin,UBF4.M12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.M13,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.N1,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.N2,RX_LOAD,RX_LOAD,PASS,adar1000_pins.csv
+symbol-pin,UBF4.N3,TX_LOAD,TX_LOAD,PASS,adar1000_pins.csv
+symbol-pin,UBF4.N4,ADDR0,ADDR0,PASS,adar1000_pins.csv
+symbol-pin,UBF4.N5,ADDR1,ADDR1,PASS,adar1000_pins.csv
+symbol-pin,UBF4.N6,TR,TR,PASS,adar1000_pins.csv
+symbol-pin,UBF4.N7,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.N8,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.N9,CREG4,CREG4,PASS,adar1000_pins.csv
+symbol-pin,UBF4.N10,CREG3,CREG3,PASS,adar1000_pins.csv
+symbol-pin,UBF4.N11,AVDD3,AVDD3,PASS,adar1000_pins.csv
+symbol-pin,UBF4.N12,GND,GND,PASS,adar1000_pins.csv
+symbol-pin,UBF4.N13,DET1,DET1,PASS,adar1000_pins.csv
+symbol-pin,UBF4.EP,GND,GND,PASS,adar1000_pins.csv
+symbol-pin-count,UBF4,89,89,PASS,adar1000_pins.csv
+symbol-pin,UFE1.1,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE1.2,RX_OUT,RX_OUT,PASS,adtr1107_pins.csv
+symbol-pin,UFE1.3,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE1.4,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE1.5,TX_IN,TX_IN,PASS,adtr1107_pins.csv
+symbol-pin,UFE1.6,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE1.7,VGG_PA,VGG_PA,PASS,adtr1107_pins.csv
+symbol-pin,UFE1.8,VDD_PA,VDD_PA,PASS,adtr1107_pins.csv
+symbol-pin,UFE1.9,NIC,NIC,PASS,adtr1107_pins.csv
+symbol-pin,UFE1.10,NIC,NIC,PASS,adtr1107_pins.csv
+symbol-pin,UFE1.11,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE1.12,CPLR_OUT,CPLR_OUT,PASS,adtr1107_pins.csv
+symbol-pin,UFE1.13,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE1.14,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE1.15,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE1.16,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE1.17,ANT,ANT,PASS,adtr1107_pins.csv
+symbol-pin,UFE1.18,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE1.19,VDD_SW,VDD_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE1.20,CTRL_SW,CTRL_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE1.21,VSS_SW,VSS_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE1.22,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE1.23,VGG_LNA,VGG_LNA,PASS,adtr1107_pins.csv
+symbol-pin,UFE1.24,VDD_LNA,VDD_LNA,PASS,adtr1107_pins.csv
+symbol-pin,UFE1.EP,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin-count,UFE1,25,25,PASS,adtr1107_pins.csv
+symbol-pin,UFE10.1,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE10.2,RX_OUT,RX_OUT,PASS,adtr1107_pins.csv
+symbol-pin,UFE10.3,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE10.4,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE10.5,TX_IN,TX_IN,PASS,adtr1107_pins.csv
+symbol-pin,UFE10.6,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE10.7,VGG_PA,VGG_PA,PASS,adtr1107_pins.csv
+symbol-pin,UFE10.8,VDD_PA,VDD_PA,PASS,adtr1107_pins.csv
+symbol-pin,UFE10.9,NIC,NIC,PASS,adtr1107_pins.csv
+symbol-pin,UFE10.10,NIC,NIC,PASS,adtr1107_pins.csv
+symbol-pin,UFE10.11,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE10.12,CPLR_OUT,CPLR_OUT,PASS,adtr1107_pins.csv
+symbol-pin,UFE10.13,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE10.14,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE10.15,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE10.16,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE10.17,ANT,ANT,PASS,adtr1107_pins.csv
+symbol-pin,UFE10.18,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE10.19,VDD_SW,VDD_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE10.20,CTRL_SW,CTRL_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE10.21,VSS_SW,VSS_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE10.22,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE10.23,VGG_LNA,VGG_LNA,PASS,adtr1107_pins.csv
+symbol-pin,UFE10.24,VDD_LNA,VDD_LNA,PASS,adtr1107_pins.csv
+symbol-pin,UFE10.EP,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin-count,UFE10,25,25,PASS,adtr1107_pins.csv
+symbol-pin,UFE11.1,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE11.2,RX_OUT,RX_OUT,PASS,adtr1107_pins.csv
+symbol-pin,UFE11.3,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE11.4,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE11.5,TX_IN,TX_IN,PASS,adtr1107_pins.csv
+symbol-pin,UFE11.6,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE11.7,VGG_PA,VGG_PA,PASS,adtr1107_pins.csv
+symbol-pin,UFE11.8,VDD_PA,VDD_PA,PASS,adtr1107_pins.csv
+symbol-pin,UFE11.9,NIC,NIC,PASS,adtr1107_pins.csv
+symbol-pin,UFE11.10,NIC,NIC,PASS,adtr1107_pins.csv
+symbol-pin,UFE11.11,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE11.12,CPLR_OUT,CPLR_OUT,PASS,adtr1107_pins.csv
+symbol-pin,UFE11.13,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE11.14,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE11.15,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE11.16,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE11.17,ANT,ANT,PASS,adtr1107_pins.csv
+symbol-pin,UFE11.18,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE11.19,VDD_SW,VDD_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE11.20,CTRL_SW,CTRL_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE11.21,VSS_SW,VSS_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE11.22,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE11.23,VGG_LNA,VGG_LNA,PASS,adtr1107_pins.csv
+symbol-pin,UFE11.24,VDD_LNA,VDD_LNA,PASS,adtr1107_pins.csv
+symbol-pin,UFE11.EP,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin-count,UFE11,25,25,PASS,adtr1107_pins.csv
+symbol-pin,UFE12.1,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE12.2,RX_OUT,RX_OUT,PASS,adtr1107_pins.csv
+symbol-pin,UFE12.3,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE12.4,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE12.5,TX_IN,TX_IN,PASS,adtr1107_pins.csv
+symbol-pin,UFE12.6,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE12.7,VGG_PA,VGG_PA,PASS,adtr1107_pins.csv
+symbol-pin,UFE12.8,VDD_PA,VDD_PA,PASS,adtr1107_pins.csv
+symbol-pin,UFE12.9,NIC,NIC,PASS,adtr1107_pins.csv
+symbol-pin,UFE12.10,NIC,NIC,PASS,adtr1107_pins.csv
+symbol-pin,UFE12.11,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE12.12,CPLR_OUT,CPLR_OUT,PASS,adtr1107_pins.csv
+symbol-pin,UFE12.13,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE12.14,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE12.15,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE12.16,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE12.17,ANT,ANT,PASS,adtr1107_pins.csv
+symbol-pin,UFE12.18,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE12.19,VDD_SW,VDD_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE12.20,CTRL_SW,CTRL_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE12.21,VSS_SW,VSS_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE12.22,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE12.23,VGG_LNA,VGG_LNA,PASS,adtr1107_pins.csv
+symbol-pin,UFE12.24,VDD_LNA,VDD_LNA,PASS,adtr1107_pins.csv
+symbol-pin,UFE12.EP,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin-count,UFE12,25,25,PASS,adtr1107_pins.csv
+symbol-pin,UFE13.1,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE13.2,RX_OUT,RX_OUT,PASS,adtr1107_pins.csv
+symbol-pin,UFE13.3,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE13.4,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE13.5,TX_IN,TX_IN,PASS,adtr1107_pins.csv
+symbol-pin,UFE13.6,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE13.7,VGG_PA,VGG_PA,PASS,adtr1107_pins.csv
+symbol-pin,UFE13.8,VDD_PA,VDD_PA,PASS,adtr1107_pins.csv
+symbol-pin,UFE13.9,NIC,NIC,PASS,adtr1107_pins.csv
+symbol-pin,UFE13.10,NIC,NIC,PASS,adtr1107_pins.csv
+symbol-pin,UFE13.11,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE13.12,CPLR_OUT,CPLR_OUT,PASS,adtr1107_pins.csv
+symbol-pin,UFE13.13,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE13.14,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE13.15,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE13.16,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE13.17,ANT,ANT,PASS,adtr1107_pins.csv
+symbol-pin,UFE13.18,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE13.19,VDD_SW,VDD_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE13.20,CTRL_SW,CTRL_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE13.21,VSS_SW,VSS_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE13.22,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE13.23,VGG_LNA,VGG_LNA,PASS,adtr1107_pins.csv
+symbol-pin,UFE13.24,VDD_LNA,VDD_LNA,PASS,adtr1107_pins.csv
+symbol-pin,UFE13.EP,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin-count,UFE13,25,25,PASS,adtr1107_pins.csv
+symbol-pin,UFE14.1,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE14.2,RX_OUT,RX_OUT,PASS,adtr1107_pins.csv
+symbol-pin,UFE14.3,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE14.4,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE14.5,TX_IN,TX_IN,PASS,adtr1107_pins.csv
+symbol-pin,UFE14.6,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE14.7,VGG_PA,VGG_PA,PASS,adtr1107_pins.csv
+symbol-pin,UFE14.8,VDD_PA,VDD_PA,PASS,adtr1107_pins.csv
+symbol-pin,UFE14.9,NIC,NIC,PASS,adtr1107_pins.csv
+symbol-pin,UFE14.10,NIC,NIC,PASS,adtr1107_pins.csv
+symbol-pin,UFE14.11,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE14.12,CPLR_OUT,CPLR_OUT,PASS,adtr1107_pins.csv
+symbol-pin,UFE14.13,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE14.14,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE14.15,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE14.16,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE14.17,ANT,ANT,PASS,adtr1107_pins.csv
+symbol-pin,UFE14.18,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE14.19,VDD_SW,VDD_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE14.20,CTRL_SW,CTRL_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE14.21,VSS_SW,VSS_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE14.22,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE14.23,VGG_LNA,VGG_LNA,PASS,adtr1107_pins.csv
+symbol-pin,UFE14.24,VDD_LNA,VDD_LNA,PASS,adtr1107_pins.csv
+symbol-pin,UFE14.EP,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin-count,UFE14,25,25,PASS,adtr1107_pins.csv
+symbol-pin,UFE15.1,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE15.2,RX_OUT,RX_OUT,PASS,adtr1107_pins.csv
+symbol-pin,UFE15.3,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE15.4,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE15.5,TX_IN,TX_IN,PASS,adtr1107_pins.csv
+symbol-pin,UFE15.6,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE15.7,VGG_PA,VGG_PA,PASS,adtr1107_pins.csv
+symbol-pin,UFE15.8,VDD_PA,VDD_PA,PASS,adtr1107_pins.csv
+symbol-pin,UFE15.9,NIC,NIC,PASS,adtr1107_pins.csv
+symbol-pin,UFE15.10,NIC,NIC,PASS,adtr1107_pins.csv
+symbol-pin,UFE15.11,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE15.12,CPLR_OUT,CPLR_OUT,PASS,adtr1107_pins.csv
+symbol-pin,UFE15.13,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE15.14,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE15.15,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE15.16,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE15.17,ANT,ANT,PASS,adtr1107_pins.csv
+symbol-pin,UFE15.18,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE15.19,VDD_SW,VDD_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE15.20,CTRL_SW,CTRL_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE15.21,VSS_SW,VSS_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE15.22,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE15.23,VGG_LNA,VGG_LNA,PASS,adtr1107_pins.csv
+symbol-pin,UFE15.24,VDD_LNA,VDD_LNA,PASS,adtr1107_pins.csv
+symbol-pin,UFE15.EP,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin-count,UFE15,25,25,PASS,adtr1107_pins.csv
+symbol-pin,UFE16.1,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE16.2,RX_OUT,RX_OUT,PASS,adtr1107_pins.csv
+symbol-pin,UFE16.3,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE16.4,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE16.5,TX_IN,TX_IN,PASS,adtr1107_pins.csv
+symbol-pin,UFE16.6,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE16.7,VGG_PA,VGG_PA,PASS,adtr1107_pins.csv
+symbol-pin,UFE16.8,VDD_PA,VDD_PA,PASS,adtr1107_pins.csv
+symbol-pin,UFE16.9,NIC,NIC,PASS,adtr1107_pins.csv
+symbol-pin,UFE16.10,NIC,NIC,PASS,adtr1107_pins.csv
+symbol-pin,UFE16.11,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE16.12,CPLR_OUT,CPLR_OUT,PASS,adtr1107_pins.csv
+symbol-pin,UFE16.13,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE16.14,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE16.15,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE16.16,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE16.17,ANT,ANT,PASS,adtr1107_pins.csv
+symbol-pin,UFE16.18,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE16.19,VDD_SW,VDD_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE16.20,CTRL_SW,CTRL_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE16.21,VSS_SW,VSS_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE16.22,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE16.23,VGG_LNA,VGG_LNA,PASS,adtr1107_pins.csv
+symbol-pin,UFE16.24,VDD_LNA,VDD_LNA,PASS,adtr1107_pins.csv
+symbol-pin,UFE16.EP,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin-count,UFE16,25,25,PASS,adtr1107_pins.csv
+symbol-pin,UFE2.1,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE2.2,RX_OUT,RX_OUT,PASS,adtr1107_pins.csv
+symbol-pin,UFE2.3,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE2.4,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE2.5,TX_IN,TX_IN,PASS,adtr1107_pins.csv
+symbol-pin,UFE2.6,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE2.7,VGG_PA,VGG_PA,PASS,adtr1107_pins.csv
+symbol-pin,UFE2.8,VDD_PA,VDD_PA,PASS,adtr1107_pins.csv
+symbol-pin,UFE2.9,NIC,NIC,PASS,adtr1107_pins.csv
+symbol-pin,UFE2.10,NIC,NIC,PASS,adtr1107_pins.csv
+symbol-pin,UFE2.11,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE2.12,CPLR_OUT,CPLR_OUT,PASS,adtr1107_pins.csv
+symbol-pin,UFE2.13,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE2.14,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE2.15,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE2.16,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE2.17,ANT,ANT,PASS,adtr1107_pins.csv
+symbol-pin,UFE2.18,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE2.19,VDD_SW,VDD_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE2.20,CTRL_SW,CTRL_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE2.21,VSS_SW,VSS_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE2.22,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE2.23,VGG_LNA,VGG_LNA,PASS,adtr1107_pins.csv
+symbol-pin,UFE2.24,VDD_LNA,VDD_LNA,PASS,adtr1107_pins.csv
+symbol-pin,UFE2.EP,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin-count,UFE2,25,25,PASS,adtr1107_pins.csv
+symbol-pin,UFE3.1,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE3.2,RX_OUT,RX_OUT,PASS,adtr1107_pins.csv
+symbol-pin,UFE3.3,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE3.4,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE3.5,TX_IN,TX_IN,PASS,adtr1107_pins.csv
+symbol-pin,UFE3.6,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE3.7,VGG_PA,VGG_PA,PASS,adtr1107_pins.csv
+symbol-pin,UFE3.8,VDD_PA,VDD_PA,PASS,adtr1107_pins.csv
+symbol-pin,UFE3.9,NIC,NIC,PASS,adtr1107_pins.csv
+symbol-pin,UFE3.10,NIC,NIC,PASS,adtr1107_pins.csv
+symbol-pin,UFE3.11,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE3.12,CPLR_OUT,CPLR_OUT,PASS,adtr1107_pins.csv
+symbol-pin,UFE3.13,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE3.14,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE3.15,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE3.16,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE3.17,ANT,ANT,PASS,adtr1107_pins.csv
+symbol-pin,UFE3.18,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE3.19,VDD_SW,VDD_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE3.20,CTRL_SW,CTRL_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE3.21,VSS_SW,VSS_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE3.22,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE3.23,VGG_LNA,VGG_LNA,PASS,adtr1107_pins.csv
+symbol-pin,UFE3.24,VDD_LNA,VDD_LNA,PASS,adtr1107_pins.csv
+symbol-pin,UFE3.EP,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin-count,UFE3,25,25,PASS,adtr1107_pins.csv
+symbol-pin,UFE4.1,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE4.2,RX_OUT,RX_OUT,PASS,adtr1107_pins.csv
+symbol-pin,UFE4.3,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE4.4,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE4.5,TX_IN,TX_IN,PASS,adtr1107_pins.csv
+symbol-pin,UFE4.6,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE4.7,VGG_PA,VGG_PA,PASS,adtr1107_pins.csv
+symbol-pin,UFE4.8,VDD_PA,VDD_PA,PASS,adtr1107_pins.csv
+symbol-pin,UFE4.9,NIC,NIC,PASS,adtr1107_pins.csv
+symbol-pin,UFE4.10,NIC,NIC,PASS,adtr1107_pins.csv
+symbol-pin,UFE4.11,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE4.12,CPLR_OUT,CPLR_OUT,PASS,adtr1107_pins.csv
+symbol-pin,UFE4.13,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE4.14,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE4.15,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE4.16,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE4.17,ANT,ANT,PASS,adtr1107_pins.csv
+symbol-pin,UFE4.18,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE4.19,VDD_SW,VDD_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE4.20,CTRL_SW,CTRL_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE4.21,VSS_SW,VSS_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE4.22,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE4.23,VGG_LNA,VGG_LNA,PASS,adtr1107_pins.csv
+symbol-pin,UFE4.24,VDD_LNA,VDD_LNA,PASS,adtr1107_pins.csv
+symbol-pin,UFE4.EP,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin-count,UFE4,25,25,PASS,adtr1107_pins.csv
+symbol-pin,UFE5.1,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE5.2,RX_OUT,RX_OUT,PASS,adtr1107_pins.csv
+symbol-pin,UFE5.3,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE5.4,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE5.5,TX_IN,TX_IN,PASS,adtr1107_pins.csv
+symbol-pin,UFE5.6,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE5.7,VGG_PA,VGG_PA,PASS,adtr1107_pins.csv
+symbol-pin,UFE5.8,VDD_PA,VDD_PA,PASS,adtr1107_pins.csv
+symbol-pin,UFE5.9,NIC,NIC,PASS,adtr1107_pins.csv
+symbol-pin,UFE5.10,NIC,NIC,PASS,adtr1107_pins.csv
+symbol-pin,UFE5.11,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE5.12,CPLR_OUT,CPLR_OUT,PASS,adtr1107_pins.csv
+symbol-pin,UFE5.13,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE5.14,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE5.15,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE5.16,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE5.17,ANT,ANT,PASS,adtr1107_pins.csv
+symbol-pin,UFE5.18,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE5.19,VDD_SW,VDD_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE5.20,CTRL_SW,CTRL_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE5.21,VSS_SW,VSS_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE5.22,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE5.23,VGG_LNA,VGG_LNA,PASS,adtr1107_pins.csv
+symbol-pin,UFE5.24,VDD_LNA,VDD_LNA,PASS,adtr1107_pins.csv
+symbol-pin,UFE5.EP,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin-count,UFE5,25,25,PASS,adtr1107_pins.csv
+symbol-pin,UFE6.1,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE6.2,RX_OUT,RX_OUT,PASS,adtr1107_pins.csv
+symbol-pin,UFE6.3,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE6.4,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE6.5,TX_IN,TX_IN,PASS,adtr1107_pins.csv
+symbol-pin,UFE6.6,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE6.7,VGG_PA,VGG_PA,PASS,adtr1107_pins.csv
+symbol-pin,UFE6.8,VDD_PA,VDD_PA,PASS,adtr1107_pins.csv
+symbol-pin,UFE6.9,NIC,NIC,PASS,adtr1107_pins.csv
+symbol-pin,UFE6.10,NIC,NIC,PASS,adtr1107_pins.csv
+symbol-pin,UFE6.11,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE6.12,CPLR_OUT,CPLR_OUT,PASS,adtr1107_pins.csv
+symbol-pin,UFE6.13,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE6.14,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE6.15,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE6.16,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE6.17,ANT,ANT,PASS,adtr1107_pins.csv
+symbol-pin,UFE6.18,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE6.19,VDD_SW,VDD_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE6.20,CTRL_SW,CTRL_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE6.21,VSS_SW,VSS_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE6.22,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE6.23,VGG_LNA,VGG_LNA,PASS,adtr1107_pins.csv
+symbol-pin,UFE6.24,VDD_LNA,VDD_LNA,PASS,adtr1107_pins.csv
+symbol-pin,UFE6.EP,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin-count,UFE6,25,25,PASS,adtr1107_pins.csv
+symbol-pin,UFE7.1,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE7.2,RX_OUT,RX_OUT,PASS,adtr1107_pins.csv
+symbol-pin,UFE7.3,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE7.4,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE7.5,TX_IN,TX_IN,PASS,adtr1107_pins.csv
+symbol-pin,UFE7.6,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE7.7,VGG_PA,VGG_PA,PASS,adtr1107_pins.csv
+symbol-pin,UFE7.8,VDD_PA,VDD_PA,PASS,adtr1107_pins.csv
+symbol-pin,UFE7.9,NIC,NIC,PASS,adtr1107_pins.csv
+symbol-pin,UFE7.10,NIC,NIC,PASS,adtr1107_pins.csv
+symbol-pin,UFE7.11,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE7.12,CPLR_OUT,CPLR_OUT,PASS,adtr1107_pins.csv
+symbol-pin,UFE7.13,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE7.14,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE7.15,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE7.16,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE7.17,ANT,ANT,PASS,adtr1107_pins.csv
+symbol-pin,UFE7.18,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE7.19,VDD_SW,VDD_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE7.20,CTRL_SW,CTRL_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE7.21,VSS_SW,VSS_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE7.22,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE7.23,VGG_LNA,VGG_LNA,PASS,adtr1107_pins.csv
+symbol-pin,UFE7.24,VDD_LNA,VDD_LNA,PASS,adtr1107_pins.csv
+symbol-pin,UFE7.EP,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin-count,UFE7,25,25,PASS,adtr1107_pins.csv
+symbol-pin,UFE8.1,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE8.2,RX_OUT,RX_OUT,PASS,adtr1107_pins.csv
+symbol-pin,UFE8.3,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE8.4,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE8.5,TX_IN,TX_IN,PASS,adtr1107_pins.csv
+symbol-pin,UFE8.6,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE8.7,VGG_PA,VGG_PA,PASS,adtr1107_pins.csv
+symbol-pin,UFE8.8,VDD_PA,VDD_PA,PASS,adtr1107_pins.csv
+symbol-pin,UFE8.9,NIC,NIC,PASS,adtr1107_pins.csv
+symbol-pin,UFE8.10,NIC,NIC,PASS,adtr1107_pins.csv
+symbol-pin,UFE8.11,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE8.12,CPLR_OUT,CPLR_OUT,PASS,adtr1107_pins.csv
+symbol-pin,UFE8.13,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE8.14,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE8.15,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE8.16,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE8.17,ANT,ANT,PASS,adtr1107_pins.csv
+symbol-pin,UFE8.18,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE8.19,VDD_SW,VDD_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE8.20,CTRL_SW,CTRL_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE8.21,VSS_SW,VSS_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE8.22,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE8.23,VGG_LNA,VGG_LNA,PASS,adtr1107_pins.csv
+symbol-pin,UFE8.24,VDD_LNA,VDD_LNA,PASS,adtr1107_pins.csv
+symbol-pin,UFE8.EP,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin-count,UFE8,25,25,PASS,adtr1107_pins.csv
+symbol-pin,UFE9.1,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE9.2,RX_OUT,RX_OUT,PASS,adtr1107_pins.csv
+symbol-pin,UFE9.3,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE9.4,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE9.5,TX_IN,TX_IN,PASS,adtr1107_pins.csv
+symbol-pin,UFE9.6,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE9.7,VGG_PA,VGG_PA,PASS,adtr1107_pins.csv
+symbol-pin,UFE9.8,VDD_PA,VDD_PA,PASS,adtr1107_pins.csv
+symbol-pin,UFE9.9,NIC,NIC,PASS,adtr1107_pins.csv
+symbol-pin,UFE9.10,NIC,NIC,PASS,adtr1107_pins.csv
+symbol-pin,UFE9.11,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE9.12,CPLR_OUT,CPLR_OUT,PASS,adtr1107_pins.csv
+symbol-pin,UFE9.13,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE9.14,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE9.15,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE9.16,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE9.17,ANT,ANT,PASS,adtr1107_pins.csv
+symbol-pin,UFE9.18,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE9.19,VDD_SW,VDD_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE9.20,CTRL_SW,CTRL_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE9.21,VSS_SW,VSS_SW,PASS,adtr1107_pins.csv
+symbol-pin,UFE9.22,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin,UFE9.23,VGG_LNA,VGG_LNA,PASS,adtr1107_pins.csv
+symbol-pin,UFE9.24,VDD_LNA,VDD_LNA,PASS,adtr1107_pins.csv
+symbol-pin,UFE9.EP,GND,GND,PASS,adtr1107_pins.csv
+symbol-pin-count,UFE9,25,25,PASS,adtr1107_pins.csv
+symbol-pin,UMX1.1,GND,GND,PASS,ltc5553_pins.csv
+symbol-pin,UMX1.2,IF,IF,PASS,ltc5553_pins.csv
+symbol-pin,UMX1.3,GND,GND,PASS,ltc5553_pins.csv
+symbol-pin,UMX1.4,GND,GND,PASS,ltc5553_pins.csv
+symbol-pin,UMX1.5,RF,RF,PASS,ltc5553_pins.csv
+symbol-pin,UMX1.6,GND,GND,PASS,ltc5553_pins.csv
+symbol-pin,UMX1.7,EN,EN,PASS,ltc5553_pins.csv
+symbol-pin,UMX1.8,GND,GND,PASS,ltc5553_pins.csv
+symbol-pin,UMX1.9,VCC,VCC,PASS,ltc5553_pins.csv
+symbol-pin,UMX1.10,GND,GND,PASS,ltc5553_pins.csv
+symbol-pin,UMX1.11,LO,LO,PASS,ltc5553_pins.csv
+symbol-pin,UMX1.12,GND,GND,PASS,ltc5553_pins.csv
+symbol-pin,UMX1.EP,GND,GND,PASS,ltc5553_pins.csv
+symbol-pin-count,UMX1,13,13,PASS,ltc5553_pins.csv
+symbol-pin,UMX2.1,GND,GND,PASS,ltc5553_pins.csv
+symbol-pin,UMX2.2,IF,IF,PASS,ltc5553_pins.csv
+symbol-pin,UMX2.3,GND,GND,PASS,ltc5553_pins.csv
+symbol-pin,UMX2.4,GND,GND,PASS,ltc5553_pins.csv
+symbol-pin,UMX2.5,RF,RF,PASS,ltc5553_pins.csv
+symbol-pin,UMX2.6,GND,GND,PASS,ltc5553_pins.csv
+symbol-pin,UMX2.7,EN,EN,PASS,ltc5553_pins.csv
+symbol-pin,UMX2.8,GND,GND,PASS,ltc5553_pins.csv
+symbol-pin,UMX2.9,VCC,VCC,PASS,ltc5553_pins.csv
+symbol-pin,UMX2.10,GND,GND,PASS,ltc5553_pins.csv
+symbol-pin,UMX2.11,LO,LO,PASS,ltc5553_pins.csv
+symbol-pin,UMX2.12,GND,GND,PASS,ltc5553_pins.csv
+symbol-pin,UMX2.EP,GND,GND,PASS,ltc5553_pins.csv
+symbol-pin-count,UMX2,13,13,PASS,ltc5553_pins.csv
+symbol-pin,UMX3.1,GND,GND,PASS,ltc5553_pins.csv
+symbol-pin,UMX3.2,IF,IF,PASS,ltc5553_pins.csv
+symbol-pin,UMX3.3,GND,GND,PASS,ltc5553_pins.csv
+symbol-pin,UMX3.4,GND,GND,PASS,ltc5553_pins.csv
+symbol-pin,UMX3.5,RF,RF,PASS,ltc5553_pins.csv
+symbol-pin,UMX3.6,GND,GND,PASS,ltc5553_pins.csv
+symbol-pin,UMX3.7,EN,EN,PASS,ltc5553_pins.csv
+symbol-pin,UMX3.8,GND,GND,PASS,ltc5553_pins.csv
+symbol-pin,UMX3.9,VCC,VCC,PASS,ltc5553_pins.csv
+symbol-pin,UMX3.10,GND,GND,PASS,ltc5553_pins.csv
+symbol-pin,UMX3.11,LO,LO,PASS,ltc5553_pins.csv
+symbol-pin,UMX3.12,GND,GND,PASS,ltc5553_pins.csv
+symbol-pin,UMX3.EP,GND,GND,PASS,ltc5553_pins.csv
+symbol-pin-count,UMX3,13,13,PASS,ltc5553_pins.csv
+symbol-pin,UMX4.1,GND,GND,PASS,ltc5553_pins.csv
+symbol-pin,UMX4.2,IF,IF,PASS,ltc5553_pins.csv
+symbol-pin,UMX4.3,GND,GND,PASS,ltc5553_pins.csv
+symbol-pin,UMX4.4,GND,GND,PASS,ltc5553_pins.csv
+symbol-pin,UMX4.5,RF,RF,PASS,ltc5553_pins.csv
+symbol-pin,UMX4.6,GND,GND,PASS,ltc5553_pins.csv
+symbol-pin,UMX4.7,EN,EN,PASS,ltc5553_pins.csv
+symbol-pin,UMX4.8,GND,GND,PASS,ltc5553_pins.csv
+symbol-pin,UMX4.9,VCC,VCC,PASS,ltc5553_pins.csv
+symbol-pin,UMX4.10,GND,GND,PASS,ltc5553_pins.csv
+symbol-pin,UMX4.11,LO,LO,PASS,ltc5553_pins.csv
+symbol-pin,UMX4.12,GND,GND,PASS,ltc5553_pins.csv
+symbol-pin,UMX4.EP,GND,GND,PASS,ltc5553_pins.csv
+symbol-pin-count,UMX4,13,13,PASS,ltc5553_pins.csv
+bf-fe,UBF1.TX1 <-> UFE1.TX_IN,same net,C1_TX1 / C1_TX1,PASS,H1_FEED_POLARIZATION_MAP sim_feed 0; ADTR1107 Fig 91 / ADAR1000 p44
+bf-fe,UBF1.RX1 <-> UFE1.RX_OUT,same net,C1_RX1 / C1_RX1,PASS,H1_FEED_POLARIZATION_MAP sim_feed 0; ADTR1107 Fig 91
+bf-fe,UBF1.PA_BIAS1 <-> UFE1.VGG_PA,same net,C1_PABIAS1 / C1_PABIAS1,PASS,H1_FEED_POLARIZATION_MAP sim_feed 0; ADTR1107 p26 / Fig 91
+bf-fe,UBF1.DET1 <-> UFE1.CPLR_OUT,same net,C1_DET1 / C1_DET1,PASS,H1_FEED_POLARIZATION_MAP sim_feed 0; ADTR1107 p26
+bf-fe,UBF1.TR_SW_POS <-> UFE1.CTRL_SW,same net,C1_TRSW / C1_TRSW,PASS,H1_FEED_POLARIZATION_MAP sim_feed 0; ADTR1107 p26
+bf-fe,UBF1.LNA_BIAS <-> UFE1.VGG_LNA,same net,C1_LNABIAS / C1_LNABIAS,PASS,H1_FEED_POLARIZATION_MAP sim_feed 0; ADTR1107 p26 (optional)
+feed,UFE1.ANT -> JF1,FEED sim0 site0 V,FEED sim0 site0 V on /RF_CHAIN_1/FE_1/C1_ANT1,PASS,H1_FEED_POLARIZATION_MAP sim_feed 0
+rail,UFE1.VDD_PA,+5V_PA_C1,+5V_PA_C1,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE1.VDD_LNA,+3V3_RF,+3V3_RF,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE1.VDD_SW,+3V3_RF,+3V3_RF,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE1.VSS_SW,-3V3_SW,-3V3_SW,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE1.GND,GND,GND,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE1.NIC,GND,GND,PASS,ADTR1107 Rev C Fig 89 / p24
+bf-fe,UBF1.TX2 <-> UFE2.TX_IN,same net,C1_TX2 / C1_TX2,PASS,H1_FEED_POLARIZATION_MAP sim_feed 1; ADTR1107 Fig 91 / ADAR1000 p44
+bf-fe,UBF1.RX2 <-> UFE2.RX_OUT,same net,C1_RX2 / C1_RX2,PASS,H1_FEED_POLARIZATION_MAP sim_feed 1; ADTR1107 Fig 91
+bf-fe,UBF1.PA_BIAS2 <-> UFE2.VGG_PA,same net,C1_PABIAS2 / C1_PABIAS2,PASS,H1_FEED_POLARIZATION_MAP sim_feed 1; ADTR1107 p26 / Fig 91
+bf-fe,UBF1.DET2 <-> UFE2.CPLR_OUT,same net,C1_DET2 / C1_DET2,PASS,H1_FEED_POLARIZATION_MAP sim_feed 1; ADTR1107 p26
+bf-fe,UBF1.TR_SW_POS <-> UFE2.CTRL_SW,same net,C1_TRSW / C1_TRSW,PASS,H1_FEED_POLARIZATION_MAP sim_feed 1; ADTR1107 p26
+bf-fe,UBF1.LNA_BIAS <-> UFE2.VGG_LNA,same net,C1_LNABIAS / C1_LNABIAS,PASS,H1_FEED_POLARIZATION_MAP sim_feed 1; ADTR1107 p26 (optional)
+feed,UFE2.ANT -> JF2,FEED sim1 site0 H,FEED sim1 site0 H on /RF_CHAIN_1/FE_1/C1_ANT2,PASS,H1_FEED_POLARIZATION_MAP sim_feed 1
+rail,UFE2.VDD_PA,+5V_PA_C1,+5V_PA_C1,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE2.VDD_LNA,+3V3_RF,+3V3_RF,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE2.VDD_SW,+3V3_RF,+3V3_RF,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE2.VSS_SW,-3V3_SW,-3V3_SW,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE2.GND,GND,GND,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE2.NIC,GND,GND,PASS,ADTR1107 Rev C Fig 89 / p24
+bf-fe,UBF1.TX3 <-> UFE3.TX_IN,same net,C1_TX3 / C1_TX3,PASS,H1_FEED_POLARIZATION_MAP sim_feed 2; ADTR1107 Fig 91 / ADAR1000 p44
+bf-fe,UBF1.RX3 <-> UFE3.RX_OUT,same net,C1_RX3 / C1_RX3,PASS,H1_FEED_POLARIZATION_MAP sim_feed 2; ADTR1107 Fig 91
+bf-fe,UBF1.PA_BIAS3 <-> UFE3.VGG_PA,same net,C1_PABIAS3 / C1_PABIAS3,PASS,H1_FEED_POLARIZATION_MAP sim_feed 2; ADTR1107 p26 / Fig 91
+bf-fe,UBF1.DET3 <-> UFE3.CPLR_OUT,same net,C1_DET3 / C1_DET3,PASS,H1_FEED_POLARIZATION_MAP sim_feed 2; ADTR1107 p26
+bf-fe,UBF1.TR_SW_POS <-> UFE3.CTRL_SW,same net,C1_TRSW / C1_TRSW,PASS,H1_FEED_POLARIZATION_MAP sim_feed 2; ADTR1107 p26
+bf-fe,UBF1.LNA_BIAS <-> UFE3.VGG_LNA,same net,C1_LNABIAS / C1_LNABIAS,PASS,H1_FEED_POLARIZATION_MAP sim_feed 2; ADTR1107 p26 (optional)
+feed,UFE3.ANT -> JF3,FEED sim2 site1 V,FEED sim2 site1 V on /RF_CHAIN_1/FE_1/C1_ANT3,PASS,H1_FEED_POLARIZATION_MAP sim_feed 2
+rail,UFE3.VDD_PA,+5V_PA_C1,+5V_PA_C1,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE3.VDD_LNA,+3V3_RF,+3V3_RF,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE3.VDD_SW,+3V3_RF,+3V3_RF,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE3.VSS_SW,-3V3_SW,-3V3_SW,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE3.GND,GND,GND,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE3.NIC,GND,GND,PASS,ADTR1107 Rev C Fig 89 / p24
+bf-fe,UBF1.TX4 <-> UFE4.TX_IN,same net,C1_TX4 / C1_TX4,PASS,H1_FEED_POLARIZATION_MAP sim_feed 3; ADTR1107 Fig 91 / ADAR1000 p44
+bf-fe,UBF1.RX4 <-> UFE4.RX_OUT,same net,C1_RX4 / C1_RX4,PASS,H1_FEED_POLARIZATION_MAP sim_feed 3; ADTR1107 Fig 91
+bf-fe,UBF1.PA_BIAS4 <-> UFE4.VGG_PA,same net,C1_PABIAS4 / C1_PABIAS4,PASS,H1_FEED_POLARIZATION_MAP sim_feed 3; ADTR1107 p26 / Fig 91
+bf-fe,UBF1.DET4 <-> UFE4.CPLR_OUT,same net,C1_DET4 / C1_DET4,PASS,H1_FEED_POLARIZATION_MAP sim_feed 3; ADTR1107 p26
+bf-fe,UBF1.TR_SW_POS <-> UFE4.CTRL_SW,same net,C1_TRSW / C1_TRSW,PASS,H1_FEED_POLARIZATION_MAP sim_feed 3; ADTR1107 p26
+bf-fe,UBF1.LNA_BIAS <-> UFE4.VGG_LNA,same net,C1_LNABIAS / C1_LNABIAS,PASS,H1_FEED_POLARIZATION_MAP sim_feed 3; ADTR1107 p26 (optional)
+feed,UFE4.ANT -> JF4,FEED sim3 site1 H,FEED sim3 site1 H on /RF_CHAIN_1/FE_1/C1_ANT4,PASS,H1_FEED_POLARIZATION_MAP sim_feed 3
+rail,UFE4.VDD_PA,+5V_PA_C1,+5V_PA_C1,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE4.VDD_LNA,+3V3_RF,+3V3_RF,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE4.VDD_SW,+3V3_RF,+3V3_RF,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE4.VSS_SW,-3V3_SW,-3V3_SW,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE4.GND,GND,GND,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE4.NIC,GND,GND,PASS,ADTR1107 Rev C Fig 89 / p24
+bf-fe,UBF2.TX1 <-> UFE5.TX_IN,same net,C2_TX1 / C2_TX1,PASS,H1_FEED_POLARIZATION_MAP sim_feed 4; ADTR1107 Fig 91 / ADAR1000 p44
+bf-fe,UBF2.RX1 <-> UFE5.RX_OUT,same net,C2_RX1 / C2_RX1,PASS,H1_FEED_POLARIZATION_MAP sim_feed 4; ADTR1107 Fig 91
+bf-fe,UBF2.PA_BIAS1 <-> UFE5.VGG_PA,same net,C2_PABIAS1 / C2_PABIAS1,PASS,H1_FEED_POLARIZATION_MAP sim_feed 4; ADTR1107 p26 / Fig 91
+bf-fe,UBF2.DET1 <-> UFE5.CPLR_OUT,same net,C2_DET1 / C2_DET1,PASS,H1_FEED_POLARIZATION_MAP sim_feed 4; ADTR1107 p26
+bf-fe,UBF2.TR_SW_POS <-> UFE5.CTRL_SW,same net,C2_TRSW / C2_TRSW,PASS,H1_FEED_POLARIZATION_MAP sim_feed 4; ADTR1107 p26
+bf-fe,UBF2.LNA_BIAS <-> UFE5.VGG_LNA,same net,C2_LNABIAS / C2_LNABIAS,PASS,H1_FEED_POLARIZATION_MAP sim_feed 4; ADTR1107 p26 (optional)
+feed,UFE5.ANT -> JF5,FEED sim4 site2 V,FEED sim4 site2 V on /RF_CHAIN_2/FE_2/C2_ANT1,PASS,H1_FEED_POLARIZATION_MAP sim_feed 4
+rail,UFE5.VDD_PA,+5V_PA_C2,+5V_PA_C2,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE5.VDD_LNA,+3V3_RF,+3V3_RF,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE5.VDD_SW,+3V3_RF,+3V3_RF,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE5.VSS_SW,-3V3_SW,-3V3_SW,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE5.GND,GND,GND,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE5.NIC,GND,GND,PASS,ADTR1107 Rev C Fig 89 / p24
+bf-fe,UBF2.TX2 <-> UFE6.TX_IN,same net,C2_TX2 / C2_TX2,PASS,H1_FEED_POLARIZATION_MAP sim_feed 5; ADTR1107 Fig 91 / ADAR1000 p44
+bf-fe,UBF2.RX2 <-> UFE6.RX_OUT,same net,C2_RX2 / C2_RX2,PASS,H1_FEED_POLARIZATION_MAP sim_feed 5; ADTR1107 Fig 91
+bf-fe,UBF2.PA_BIAS2 <-> UFE6.VGG_PA,same net,C2_PABIAS2 / C2_PABIAS2,PASS,H1_FEED_POLARIZATION_MAP sim_feed 5; ADTR1107 p26 / Fig 91
+bf-fe,UBF2.DET2 <-> UFE6.CPLR_OUT,same net,C2_DET2 / C2_DET2,PASS,H1_FEED_POLARIZATION_MAP sim_feed 5; ADTR1107 p26
+bf-fe,UBF2.TR_SW_POS <-> UFE6.CTRL_SW,same net,C2_TRSW / C2_TRSW,PASS,H1_FEED_POLARIZATION_MAP sim_feed 5; ADTR1107 p26
+bf-fe,UBF2.LNA_BIAS <-> UFE6.VGG_LNA,same net,C2_LNABIAS / C2_LNABIAS,PASS,H1_FEED_POLARIZATION_MAP sim_feed 5; ADTR1107 p26 (optional)
+feed,UFE6.ANT -> JF6,FEED sim5 site2 H,FEED sim5 site2 H on /RF_CHAIN_2/FE_2/C2_ANT2,PASS,H1_FEED_POLARIZATION_MAP sim_feed 5
+rail,UFE6.VDD_PA,+5V_PA_C2,+5V_PA_C2,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE6.VDD_LNA,+3V3_RF,+3V3_RF,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE6.VDD_SW,+3V3_RF,+3V3_RF,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE6.VSS_SW,-3V3_SW,-3V3_SW,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE6.GND,GND,GND,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE6.NIC,GND,GND,PASS,ADTR1107 Rev C Fig 89 / p24
+bf-fe,UBF2.TX3 <-> UFE7.TX_IN,same net,C2_TX3 / C2_TX3,PASS,H1_FEED_POLARIZATION_MAP sim_feed 6; ADTR1107 Fig 91 / ADAR1000 p44
+bf-fe,UBF2.RX3 <-> UFE7.RX_OUT,same net,C2_RX3 / C2_RX3,PASS,H1_FEED_POLARIZATION_MAP sim_feed 6; ADTR1107 Fig 91
+bf-fe,UBF2.PA_BIAS3 <-> UFE7.VGG_PA,same net,C2_PABIAS3 / C2_PABIAS3,PASS,H1_FEED_POLARIZATION_MAP sim_feed 6; ADTR1107 p26 / Fig 91
+bf-fe,UBF2.DET3 <-> UFE7.CPLR_OUT,same net,C2_DET3 / C2_DET3,PASS,H1_FEED_POLARIZATION_MAP sim_feed 6; ADTR1107 p26
+bf-fe,UBF2.TR_SW_POS <-> UFE7.CTRL_SW,same net,C2_TRSW / C2_TRSW,PASS,H1_FEED_POLARIZATION_MAP sim_feed 6; ADTR1107 p26
+bf-fe,UBF2.LNA_BIAS <-> UFE7.VGG_LNA,same net,C2_LNABIAS / C2_LNABIAS,PASS,H1_FEED_POLARIZATION_MAP sim_feed 6; ADTR1107 p26 (optional)
+feed,UFE7.ANT -> JF7,FEED sim6 site3 V,FEED sim6 site3 V on /RF_CHAIN_2/FE_2/C2_ANT3,PASS,H1_FEED_POLARIZATION_MAP sim_feed 6
+rail,UFE7.VDD_PA,+5V_PA_C2,+5V_PA_C2,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE7.VDD_LNA,+3V3_RF,+3V3_RF,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE7.VDD_SW,+3V3_RF,+3V3_RF,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE7.VSS_SW,-3V3_SW,-3V3_SW,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE7.GND,GND,GND,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE7.NIC,GND,GND,PASS,ADTR1107 Rev C Fig 89 / p24
+bf-fe,UBF2.TX4 <-> UFE8.TX_IN,same net,C2_TX4 / C2_TX4,PASS,H1_FEED_POLARIZATION_MAP sim_feed 7; ADTR1107 Fig 91 / ADAR1000 p44
+bf-fe,UBF2.RX4 <-> UFE8.RX_OUT,same net,C2_RX4 / C2_RX4,PASS,H1_FEED_POLARIZATION_MAP sim_feed 7; ADTR1107 Fig 91
+bf-fe,UBF2.PA_BIAS4 <-> UFE8.VGG_PA,same net,C2_PABIAS4 / C2_PABIAS4,PASS,H1_FEED_POLARIZATION_MAP sim_feed 7; ADTR1107 p26 / Fig 91
+bf-fe,UBF2.DET4 <-> UFE8.CPLR_OUT,same net,C2_DET4 / C2_DET4,PASS,H1_FEED_POLARIZATION_MAP sim_feed 7; ADTR1107 p26
+bf-fe,UBF2.TR_SW_POS <-> UFE8.CTRL_SW,same net,C2_TRSW / C2_TRSW,PASS,H1_FEED_POLARIZATION_MAP sim_feed 7; ADTR1107 p26
+bf-fe,UBF2.LNA_BIAS <-> UFE8.VGG_LNA,same net,C2_LNABIAS / C2_LNABIAS,PASS,H1_FEED_POLARIZATION_MAP sim_feed 7; ADTR1107 p26 (optional)
+feed,UFE8.ANT -> JF8,FEED sim7 site3 H,FEED sim7 site3 H on /RF_CHAIN_2/FE_2/C2_ANT4,PASS,H1_FEED_POLARIZATION_MAP sim_feed 7
+rail,UFE8.VDD_PA,+5V_PA_C2,+5V_PA_C2,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE8.VDD_LNA,+3V3_RF,+3V3_RF,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE8.VDD_SW,+3V3_RF,+3V3_RF,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE8.VSS_SW,-3V3_SW,-3V3_SW,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE8.GND,GND,GND,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE8.NIC,GND,GND,PASS,ADTR1107 Rev C Fig 89 / p24
+bf-fe,UBF3.TX1 <-> UFE9.TX_IN,same net,C3_TX1 / C3_TX1,PASS,H1_FEED_POLARIZATION_MAP sim_feed 32; ADTR1107 Fig 91 / ADAR1000 p44
+bf-fe,UBF3.RX1 <-> UFE9.RX_OUT,same net,C3_RX1 / C3_RX1,PASS,H1_FEED_POLARIZATION_MAP sim_feed 32; ADTR1107 Fig 91
+bf-fe,UBF3.PA_BIAS1 <-> UFE9.VGG_PA,same net,C3_PABIAS1 / C3_PABIAS1,PASS,H1_FEED_POLARIZATION_MAP sim_feed 32; ADTR1107 p26 / Fig 91
+bf-fe,UBF3.DET1 <-> UFE9.CPLR_OUT,same net,C3_DET1 / C3_DET1,PASS,H1_FEED_POLARIZATION_MAP sim_feed 32; ADTR1107 p26
+bf-fe,UBF3.TR_SW_POS <-> UFE9.CTRL_SW,same net,C3_TRSW / C3_TRSW,PASS,H1_FEED_POLARIZATION_MAP sim_feed 32; ADTR1107 p26
+bf-fe,UBF3.LNA_BIAS <-> UFE9.VGG_LNA,same net,C3_LNABIAS / C3_LNABIAS,PASS,H1_FEED_POLARIZATION_MAP sim_feed 32; ADTR1107 p26 (optional)
+feed,UFE9.ANT -> JF9,FEED sim32 site4 V,FEED sim32 site4 V on /RF_CHAIN_3/FE_3/C3_ANT1,PASS,H1_FEED_POLARIZATION_MAP sim_feed 32
+rail,UFE9.VDD_PA,+5V_PA_C3,+5V_PA_C3,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE9.VDD_LNA,+3V3_RF,+3V3_RF,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE9.VDD_SW,+3V3_RF,+3V3_RF,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE9.VSS_SW,-3V3_SW,-3V3_SW,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE9.GND,GND,GND,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE9.NIC,GND,GND,PASS,ADTR1107 Rev C Fig 89 / p24
+bf-fe,UBF3.TX2 <-> UFE10.TX_IN,same net,C3_TX2 / C3_TX2,PASS,H1_FEED_POLARIZATION_MAP sim_feed 33; ADTR1107 Fig 91 / ADAR1000 p44
+bf-fe,UBF3.RX2 <-> UFE10.RX_OUT,same net,C3_RX2 / C3_RX2,PASS,H1_FEED_POLARIZATION_MAP sim_feed 33; ADTR1107 Fig 91
+bf-fe,UBF3.PA_BIAS2 <-> UFE10.VGG_PA,same net,C3_PABIAS2 / C3_PABIAS2,PASS,H1_FEED_POLARIZATION_MAP sim_feed 33; ADTR1107 p26 / Fig 91
+bf-fe,UBF3.DET2 <-> UFE10.CPLR_OUT,same net,C3_DET2 / C3_DET2,PASS,H1_FEED_POLARIZATION_MAP sim_feed 33; ADTR1107 p26
+bf-fe,UBF3.TR_SW_POS <-> UFE10.CTRL_SW,same net,C3_TRSW / C3_TRSW,PASS,H1_FEED_POLARIZATION_MAP sim_feed 33; ADTR1107 p26
+bf-fe,UBF3.LNA_BIAS <-> UFE10.VGG_LNA,same net,C3_LNABIAS / C3_LNABIAS,PASS,H1_FEED_POLARIZATION_MAP sim_feed 33; ADTR1107 p26 (optional)
+feed,UFE10.ANT -> JF10,FEED sim33 site4 H,FEED sim33 site4 H on /RF_CHAIN_3/FE_3/C3_ANT2,PASS,H1_FEED_POLARIZATION_MAP sim_feed 33
+rail,UFE10.VDD_PA,+5V_PA_C3,+5V_PA_C3,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE10.VDD_LNA,+3V3_RF,+3V3_RF,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE10.VDD_SW,+3V3_RF,+3V3_RF,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE10.VSS_SW,-3V3_SW,-3V3_SW,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE10.GND,GND,GND,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE10.NIC,GND,GND,PASS,ADTR1107 Rev C Fig 89 / p24
+bf-fe,UBF3.TX3 <-> UFE11.TX_IN,same net,C3_TX3 / C3_TX3,PASS,H1_FEED_POLARIZATION_MAP sim_feed 34; ADTR1107 Fig 91 / ADAR1000 p44
+bf-fe,UBF3.RX3 <-> UFE11.RX_OUT,same net,C3_RX3 / C3_RX3,PASS,H1_FEED_POLARIZATION_MAP sim_feed 34; ADTR1107 Fig 91
+bf-fe,UBF3.PA_BIAS3 <-> UFE11.VGG_PA,same net,C3_PABIAS3 / C3_PABIAS3,PASS,H1_FEED_POLARIZATION_MAP sim_feed 34; ADTR1107 p26 / Fig 91
+bf-fe,UBF3.DET3 <-> UFE11.CPLR_OUT,same net,C3_DET3 / C3_DET3,PASS,H1_FEED_POLARIZATION_MAP sim_feed 34; ADTR1107 p26
+bf-fe,UBF3.TR_SW_POS <-> UFE11.CTRL_SW,same net,C3_TRSW / C3_TRSW,PASS,H1_FEED_POLARIZATION_MAP sim_feed 34; ADTR1107 p26
+bf-fe,UBF3.LNA_BIAS <-> UFE11.VGG_LNA,same net,C3_LNABIAS / C3_LNABIAS,PASS,H1_FEED_POLARIZATION_MAP sim_feed 34; ADTR1107 p26 (optional)
+feed,UFE11.ANT -> JF11,FEED sim34 site5 V,FEED sim34 site5 V on /RF_CHAIN_3/FE_3/C3_ANT3,PASS,H1_FEED_POLARIZATION_MAP sim_feed 34
+rail,UFE11.VDD_PA,+5V_PA_C3,+5V_PA_C3,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE11.VDD_LNA,+3V3_RF,+3V3_RF,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE11.VDD_SW,+3V3_RF,+3V3_RF,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE11.VSS_SW,-3V3_SW,-3V3_SW,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE11.GND,GND,GND,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE11.NIC,GND,GND,PASS,ADTR1107 Rev C Fig 89 / p24
+bf-fe,UBF3.TX4 <-> UFE12.TX_IN,same net,C3_TX4 / C3_TX4,PASS,H1_FEED_POLARIZATION_MAP sim_feed 35; ADTR1107 Fig 91 / ADAR1000 p44
+bf-fe,UBF3.RX4 <-> UFE12.RX_OUT,same net,C3_RX4 / C3_RX4,PASS,H1_FEED_POLARIZATION_MAP sim_feed 35; ADTR1107 Fig 91
+bf-fe,UBF3.PA_BIAS4 <-> UFE12.VGG_PA,same net,C3_PABIAS4 / C3_PABIAS4,PASS,H1_FEED_POLARIZATION_MAP sim_feed 35; ADTR1107 p26 / Fig 91
+bf-fe,UBF3.DET4 <-> UFE12.CPLR_OUT,same net,C3_DET4 / C3_DET4,PASS,H1_FEED_POLARIZATION_MAP sim_feed 35; ADTR1107 p26
+bf-fe,UBF3.TR_SW_POS <-> UFE12.CTRL_SW,same net,C3_TRSW / C3_TRSW,PASS,H1_FEED_POLARIZATION_MAP sim_feed 35; ADTR1107 p26
+bf-fe,UBF3.LNA_BIAS <-> UFE12.VGG_LNA,same net,C3_LNABIAS / C3_LNABIAS,PASS,H1_FEED_POLARIZATION_MAP sim_feed 35; ADTR1107 p26 (optional)
+feed,UFE12.ANT -> JF12,FEED sim35 site5 H,FEED sim35 site5 H on /RF_CHAIN_3/FE_3/C3_ANT4,PASS,H1_FEED_POLARIZATION_MAP sim_feed 35
+rail,UFE12.VDD_PA,+5V_PA_C3,+5V_PA_C3,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE12.VDD_LNA,+3V3_RF,+3V3_RF,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE12.VDD_SW,+3V3_RF,+3V3_RF,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE12.VSS_SW,-3V3_SW,-3V3_SW,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE12.GND,GND,GND,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE12.NIC,GND,GND,PASS,ADTR1107 Rev C Fig 89 / p24
+bf-fe,UBF4.TX1 <-> UFE13.TX_IN,same net,C4_TX1 / C4_TX1,PASS,H1_FEED_POLARIZATION_MAP sim_feed 36; ADTR1107 Fig 91 / ADAR1000 p44
+bf-fe,UBF4.RX1 <-> UFE13.RX_OUT,same net,C4_RX1 / C4_RX1,PASS,H1_FEED_POLARIZATION_MAP sim_feed 36; ADTR1107 Fig 91
+bf-fe,UBF4.PA_BIAS1 <-> UFE13.VGG_PA,same net,C4_PABIAS1 / C4_PABIAS1,PASS,H1_FEED_POLARIZATION_MAP sim_feed 36; ADTR1107 p26 / Fig 91
+bf-fe,UBF4.DET1 <-> UFE13.CPLR_OUT,same net,C4_DET1 / C4_DET1,PASS,H1_FEED_POLARIZATION_MAP sim_feed 36; ADTR1107 p26
+bf-fe,UBF4.TR_SW_POS <-> UFE13.CTRL_SW,same net,C4_TRSW / C4_TRSW,PASS,H1_FEED_POLARIZATION_MAP sim_feed 36; ADTR1107 p26
+bf-fe,UBF4.LNA_BIAS <-> UFE13.VGG_LNA,same net,C4_LNABIAS / C4_LNABIAS,PASS,H1_FEED_POLARIZATION_MAP sim_feed 36; ADTR1107 p26 (optional)
+feed,UFE13.ANT -> JF13,FEED sim36 site6 V,FEED sim36 site6 V on /RF_CHAIN_4/FE_4/C4_ANT1,PASS,H1_FEED_POLARIZATION_MAP sim_feed 36
+rail,UFE13.VDD_PA,+5V_PA_C4,+5V_PA_C4,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE13.VDD_LNA,+3V3_RF,+3V3_RF,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE13.VDD_SW,+3V3_RF,+3V3_RF,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE13.VSS_SW,-3V3_SW,-3V3_SW,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE13.GND,GND,GND,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE13.NIC,GND,GND,PASS,ADTR1107 Rev C Fig 89 / p24
+bf-fe,UBF4.TX2 <-> UFE14.TX_IN,same net,C4_TX2 / C4_TX2,PASS,H1_FEED_POLARIZATION_MAP sim_feed 37; ADTR1107 Fig 91 / ADAR1000 p44
+bf-fe,UBF4.RX2 <-> UFE14.RX_OUT,same net,C4_RX2 / C4_RX2,PASS,H1_FEED_POLARIZATION_MAP sim_feed 37; ADTR1107 Fig 91
+bf-fe,UBF4.PA_BIAS2 <-> UFE14.VGG_PA,same net,C4_PABIAS2 / C4_PABIAS2,PASS,H1_FEED_POLARIZATION_MAP sim_feed 37; ADTR1107 p26 / Fig 91
+bf-fe,UBF4.DET2 <-> UFE14.CPLR_OUT,same net,C4_DET2 / C4_DET2,PASS,H1_FEED_POLARIZATION_MAP sim_feed 37; ADTR1107 p26
+bf-fe,UBF4.TR_SW_POS <-> UFE14.CTRL_SW,same net,C4_TRSW / C4_TRSW,PASS,H1_FEED_POLARIZATION_MAP sim_feed 37; ADTR1107 p26
+bf-fe,UBF4.LNA_BIAS <-> UFE14.VGG_LNA,same net,C4_LNABIAS / C4_LNABIAS,PASS,H1_FEED_POLARIZATION_MAP sim_feed 37; ADTR1107 p26 (optional)
+feed,UFE14.ANT -> JF14,FEED sim37 site6 H,FEED sim37 site6 H on /RF_CHAIN_4/FE_4/C4_ANT2,PASS,H1_FEED_POLARIZATION_MAP sim_feed 37
+rail,UFE14.VDD_PA,+5V_PA_C4,+5V_PA_C4,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE14.VDD_LNA,+3V3_RF,+3V3_RF,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE14.VDD_SW,+3V3_RF,+3V3_RF,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE14.VSS_SW,-3V3_SW,-3V3_SW,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE14.GND,GND,GND,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE14.NIC,GND,GND,PASS,ADTR1107 Rev C Fig 89 / p24
+bf-fe,UBF4.TX3 <-> UFE15.TX_IN,same net,C4_TX3 / C4_TX3,PASS,H1_FEED_POLARIZATION_MAP sim_feed 38; ADTR1107 Fig 91 / ADAR1000 p44
+bf-fe,UBF4.RX3 <-> UFE15.RX_OUT,same net,C4_RX3 / C4_RX3,PASS,H1_FEED_POLARIZATION_MAP sim_feed 38; ADTR1107 Fig 91
+bf-fe,UBF4.PA_BIAS3 <-> UFE15.VGG_PA,same net,C4_PABIAS3 / C4_PABIAS3,PASS,H1_FEED_POLARIZATION_MAP sim_feed 38; ADTR1107 p26 / Fig 91
+bf-fe,UBF4.DET3 <-> UFE15.CPLR_OUT,same net,C4_DET3 / C4_DET3,PASS,H1_FEED_POLARIZATION_MAP sim_feed 38; ADTR1107 p26
+bf-fe,UBF4.TR_SW_POS <-> UFE15.CTRL_SW,same net,C4_TRSW / C4_TRSW,PASS,H1_FEED_POLARIZATION_MAP sim_feed 38; ADTR1107 p26
+bf-fe,UBF4.LNA_BIAS <-> UFE15.VGG_LNA,same net,C4_LNABIAS / C4_LNABIAS,PASS,H1_FEED_POLARIZATION_MAP sim_feed 38; ADTR1107 p26 (optional)
+feed,UFE15.ANT -> JF15,FEED sim38 site7 V,FEED sim38 site7 V on /RF_CHAIN_4/FE_4/C4_ANT3,PASS,H1_FEED_POLARIZATION_MAP sim_feed 38
+rail,UFE15.VDD_PA,+5V_PA_C4,+5V_PA_C4,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE15.VDD_LNA,+3V3_RF,+3V3_RF,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE15.VDD_SW,+3V3_RF,+3V3_RF,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE15.VSS_SW,-3V3_SW,-3V3_SW,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE15.GND,GND,GND,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE15.NIC,GND,GND,PASS,ADTR1107 Rev C Fig 89 / p24
+bf-fe,UBF4.TX4 <-> UFE16.TX_IN,same net,C4_TX4 / C4_TX4,PASS,H1_FEED_POLARIZATION_MAP sim_feed 39; ADTR1107 Fig 91 / ADAR1000 p44
+bf-fe,UBF4.RX4 <-> UFE16.RX_OUT,same net,C4_RX4 / C4_RX4,PASS,H1_FEED_POLARIZATION_MAP sim_feed 39; ADTR1107 Fig 91
+bf-fe,UBF4.PA_BIAS4 <-> UFE16.VGG_PA,same net,C4_PABIAS4 / C4_PABIAS4,PASS,H1_FEED_POLARIZATION_MAP sim_feed 39; ADTR1107 p26 / Fig 91
+bf-fe,UBF4.DET4 <-> UFE16.CPLR_OUT,same net,C4_DET4 / C4_DET4,PASS,H1_FEED_POLARIZATION_MAP sim_feed 39; ADTR1107 p26
+bf-fe,UBF4.TR_SW_POS <-> UFE16.CTRL_SW,same net,C4_TRSW / C4_TRSW,PASS,H1_FEED_POLARIZATION_MAP sim_feed 39; ADTR1107 p26
+bf-fe,UBF4.LNA_BIAS <-> UFE16.VGG_LNA,same net,C4_LNABIAS / C4_LNABIAS,PASS,H1_FEED_POLARIZATION_MAP sim_feed 39; ADTR1107 p26 (optional)
+feed,UFE16.ANT -> JF16,FEED sim39 site7 H,FEED sim39 site7 H on /RF_CHAIN_4/FE_4/C4_ANT4,PASS,H1_FEED_POLARIZATION_MAP sim_feed 39
+rail,UFE16.VDD_PA,+5V_PA_C4,+5V_PA_C4,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE16.VDD_LNA,+3V3_RF,+3V3_RF,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE16.VDD_SW,+3V3_RF,+3V3_RF,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE16.VSS_SW,-3V3_SW,-3V3_SW,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE16.GND,GND,GND,PASS,ADTR1107 Rev C Fig 89 / p24
+rail,UFE16.NIC,GND,GND,PASS,ADTR1107 Rev C Fig 89 / p24
+RF path,UMX1.RF <-> FL102.RF_IN,same net,/RF_CHAIN_1/CONV_1/C1_RF_MIX / /RF_CHAIN_1/CONV_1/C1_RF_MIX,PASS,LTC5553 RF -> BFCN-8350+
+RF path,FL102.RF_OUT <-> FL103.RF_IN,same net,/RF_CHAIN_1/CONV_1/C1_RF_BPF / /RF_CHAIN_1/CONV_1/C1_RF_BPF,PASS,BFCN-8350+ -> HFCN-7150+
+RF path,FL103.RF_OUT <-> DC801.INPUT,same net,C1_RFIO_MIX / C1_RFIO_MIX,PASS,HFCN-7150+ -> coupler INPUT
+RF path,DC801.OUTPUT <-> UBF1.RF_IO,same net,C1_RFIO_BF / C1_RFIO_BF,PASS,coupler OUTPUT -> ADAR1000 RF_IO
+IF path,FL101.RF_OUT <-> UMX1.IF,same net,/RF_CHAIN_1/CONV_1/C1_IF_MIX / /RF_CHAIN_1/CONV_1/C1_IF_MIX,PASS,BFCN-1840+ -> LTC5553 IF
+cal,DC801.COUPLED <-> U801.P1,same net,/CAL_AND_TEST_IO/CAL_INJ1 / /CAL_AND_TEST_IO/CAL_INJ1,PASS,coupler -> EP4RKU+ cal combiner
+LO,U503.P1 <-> C132.1,same net,C1_LO / C1_LO,PASS,LO splitter -> DC block
+LO,C132.2 <-> UMX1.LO,same net,/RF_CHAIN_1/CONV_1/C1_LO_MIX / /RF_CHAIN_1/CONV_1/C1_LO_MIX,PASS,DC block -> LTC5553 LO (5553f Fig 1 C1)
+IF path,J101 (N310 IF) <-> C131 DC block,same net,C1_IF_N310 / C1_IF_N310,PASS,chain IF interface
+bf-control,UBF1.AVDD3,+3V3_RF,+3V3_RF,PASS,ADAR1000 Rev B pin table
+bf-control,UBF1.AVDD1,-5V_BF,-5V_BF,PASS,ADAR1000 Rev B pin table
+bf-control,UBF1.GND,GND,GND,PASS,ADAR1000 Rev B pin table
+bf-control,UBF1.TR,BF_TR,BF_TR,PASS,ADAR1000 Rev B pin table
+bf-control,UBF1.PA_ON,TX_ALLOW,TX_ALLOW,PASS,ADAR1000 Rev B pin table
+bf-control,UBF1.TX_LOAD,BF_TX_LOAD,BF_TX_LOAD,PASS,ADAR1000 Rev B pin table
+bf-control,UBF1.RX_LOAD,BF_RX_LOAD,BF_RX_LOAD,PASS,ADAR1000 Rev B pin table
+bf-control,UBF1.SCLK,BF_SCLK,BF_SCLK,PASS,ADAR1000 Rev B pin table
+bf-control,UBF1.SDIO,BF_SDIO,BF_SDIO,PASS,ADAR1000 Rev B pin table
+bf-control,UBF1.CSB,BF_CS1_N,BF_CS1_N,PASS,ADAR1000 Rev B pin table
+bf-address,UBF1.ADDR0,GND,GND,PASS,unique chip ID per ADAR1000 (DS p32)
+bf-address,UBF1.ADDR1,GND,GND,PASS,unique chip ID per ADAR1000 (DS p32)
+mixer,UMX1.VCC,+3V3_RF,+3V3_RF,PASS,LTC5553 5553f
+mixer,UMX1.EN,MIX_EN,MIX_EN,PASS,LTC5553 5553f
+mixer,UMX1.GND,GND,GND,PASS,LTC5553 5553f
+RF path,UMX2.RF <-> FL202.RF_IN,same net,/RF_CHAIN_2/CONV_2/C2_RF_MIX / /RF_CHAIN_2/CONV_2/C2_RF_MIX,PASS,LTC5553 RF -> BFCN-8350+
+RF path,FL202.RF_OUT <-> FL203.RF_IN,same net,/RF_CHAIN_2/CONV_2/C2_RF_BPF / /RF_CHAIN_2/CONV_2/C2_RF_BPF,PASS,BFCN-8350+ -> HFCN-7150+
+RF path,FL203.RF_OUT <-> DC802.INPUT,same net,C2_RFIO_MIX / C2_RFIO_MIX,PASS,HFCN-7150+ -> coupler INPUT
+RF path,DC802.OUTPUT <-> UBF2.RF_IO,same net,C2_RFIO_BF / C2_RFIO_BF,PASS,coupler OUTPUT -> ADAR1000 RF_IO
+IF path,FL201.RF_OUT <-> UMX2.IF,same net,/RF_CHAIN_2/CONV_2/C2_IF_MIX / /RF_CHAIN_2/CONV_2/C2_IF_MIX,PASS,BFCN-1840+ -> LTC5553 IF
+cal,DC802.COUPLED <-> U801.P2,same net,/CAL_AND_TEST_IO/CAL_INJ2 / /CAL_AND_TEST_IO/CAL_INJ2,PASS,coupler -> EP4RKU+ cal combiner
+LO,U503.P2 <-> C232.1,same net,C2_LO / C2_LO,PASS,LO splitter -> DC block
+LO,C232.2 <-> UMX2.LO,same net,/RF_CHAIN_2/CONV_2/C2_LO_MIX / /RF_CHAIN_2/CONV_2/C2_LO_MIX,PASS,DC block -> LTC5553 LO (5553f Fig 1 C1)
+IF path,J201 (N310 IF) <-> C231 DC block,same net,C2_IF_N310 / C2_IF_N310,PASS,chain IF interface
+bf-control,UBF2.AVDD3,+3V3_RF,+3V3_RF,PASS,ADAR1000 Rev B pin table
+bf-control,UBF2.AVDD1,-5V_BF,-5V_BF,PASS,ADAR1000 Rev B pin table
+bf-control,UBF2.GND,GND,GND,PASS,ADAR1000 Rev B pin table
+bf-control,UBF2.TR,BF_TR,BF_TR,PASS,ADAR1000 Rev B pin table
+bf-control,UBF2.PA_ON,TX_ALLOW,TX_ALLOW,PASS,ADAR1000 Rev B pin table
+bf-control,UBF2.TX_LOAD,BF_TX_LOAD,BF_TX_LOAD,PASS,ADAR1000 Rev B pin table
+bf-control,UBF2.RX_LOAD,BF_RX_LOAD,BF_RX_LOAD,PASS,ADAR1000 Rev B pin table
+bf-control,UBF2.SCLK,BF_SCLK,BF_SCLK,PASS,ADAR1000 Rev B pin table
+bf-control,UBF2.SDIO,BF_SDIO,BF_SDIO,PASS,ADAR1000 Rev B pin table
+bf-control,UBF2.CSB,BF_CS2_N,BF_CS2_N,PASS,ADAR1000 Rev B pin table
+bf-address,UBF2.ADDR0,+1V8_DIG,+1V8_DIG,PASS,unique chip ID per ADAR1000 (DS p32)
+bf-address,UBF2.ADDR1,GND,GND,PASS,unique chip ID per ADAR1000 (DS p32)
+mixer,UMX2.VCC,+3V3_RF,+3V3_RF,PASS,LTC5553 5553f
+mixer,UMX2.EN,MIX_EN,MIX_EN,PASS,LTC5553 5553f
+mixer,UMX2.GND,GND,GND,PASS,LTC5553 5553f
+RF path,UMX3.RF <-> FL302.RF_IN,same net,/RF_CHAIN_3/CONV_3/C3_RF_MIX / /RF_CHAIN_3/CONV_3/C3_RF_MIX,PASS,LTC5553 RF -> BFCN-8350+
+RF path,FL302.RF_OUT <-> FL303.RF_IN,same net,/RF_CHAIN_3/CONV_3/C3_RF_BPF / /RF_CHAIN_3/CONV_3/C3_RF_BPF,PASS,BFCN-8350+ -> HFCN-7150+
+RF path,FL303.RF_OUT <-> DC803.INPUT,same net,C3_RFIO_MIX / C3_RFIO_MIX,PASS,HFCN-7150+ -> coupler INPUT
+RF path,DC803.OUTPUT <-> UBF3.RF_IO,same net,C3_RFIO_BF / C3_RFIO_BF,PASS,coupler OUTPUT -> ADAR1000 RF_IO
+IF path,FL301.RF_OUT <-> UMX3.IF,same net,/RF_CHAIN_3/CONV_3/C3_IF_MIX / /RF_CHAIN_3/CONV_3/C3_IF_MIX,PASS,BFCN-1840+ -> LTC5553 IF
+cal,DC803.COUPLED <-> U801.P3,same net,/CAL_AND_TEST_IO/CAL_INJ3 / /CAL_AND_TEST_IO/CAL_INJ3,PASS,coupler -> EP4RKU+ cal combiner
+LO,U503.P3 <-> C332.1,same net,C3_LO / C3_LO,PASS,LO splitter -> DC block
+LO,C332.2 <-> UMX3.LO,same net,/RF_CHAIN_3/CONV_3/C3_LO_MIX / /RF_CHAIN_3/CONV_3/C3_LO_MIX,PASS,DC block -> LTC5553 LO (5553f Fig 1 C1)
+IF path,J301 (N310 IF) <-> C331 DC block,same net,C3_IF_N310 / C3_IF_N310,PASS,chain IF interface
+bf-control,UBF3.AVDD3,+3V3_RF,+3V3_RF,PASS,ADAR1000 Rev B pin table
+bf-control,UBF3.AVDD1,-5V_BF,-5V_BF,PASS,ADAR1000 Rev B pin table
+bf-control,UBF3.GND,GND,GND,PASS,ADAR1000 Rev B pin table
+bf-control,UBF3.TR,BF_TR,BF_TR,PASS,ADAR1000 Rev B pin table
+bf-control,UBF3.PA_ON,TX_ALLOW,TX_ALLOW,PASS,ADAR1000 Rev B pin table
+bf-control,UBF3.TX_LOAD,BF_TX_LOAD,BF_TX_LOAD,PASS,ADAR1000 Rev B pin table
+bf-control,UBF3.RX_LOAD,BF_RX_LOAD,BF_RX_LOAD,PASS,ADAR1000 Rev B pin table
+bf-control,UBF3.SCLK,BF_SCLK,BF_SCLK,PASS,ADAR1000 Rev B pin table
+bf-control,UBF3.SDIO,BF_SDIO,BF_SDIO,PASS,ADAR1000 Rev B pin table
+bf-control,UBF3.CSB,BF_CS3_N,BF_CS3_N,PASS,ADAR1000 Rev B pin table
+bf-address,UBF3.ADDR0,GND,GND,PASS,unique chip ID per ADAR1000 (DS p32)
+bf-address,UBF3.ADDR1,+1V8_DIG,+1V8_DIG,PASS,unique chip ID per ADAR1000 (DS p32)
+mixer,UMX3.VCC,+3V3_RF,+3V3_RF,PASS,LTC5553 5553f
+mixer,UMX3.EN,MIX_EN,MIX_EN,PASS,LTC5553 5553f
+mixer,UMX3.GND,GND,GND,PASS,LTC5553 5553f
+RF path,UMX4.RF <-> FL402.RF_IN,same net,/RF_CHAIN_4/CONV_4/C4_RF_MIX / /RF_CHAIN_4/CONV_4/C4_RF_MIX,PASS,LTC5553 RF -> BFCN-8350+
+RF path,FL402.RF_OUT <-> FL403.RF_IN,same net,/RF_CHAIN_4/CONV_4/C4_RF_BPF / /RF_CHAIN_4/CONV_4/C4_RF_BPF,PASS,BFCN-8350+ -> HFCN-7150+
+RF path,FL403.RF_OUT <-> DC804.INPUT,same net,C4_RFIO_MIX / C4_RFIO_MIX,PASS,HFCN-7150+ -> coupler INPUT
+RF path,DC804.OUTPUT <-> UBF4.RF_IO,same net,C4_RFIO_BF / C4_RFIO_BF,PASS,coupler OUTPUT -> ADAR1000 RF_IO
+IF path,FL401.RF_OUT <-> UMX4.IF,same net,/RF_CHAIN_4/CONV_4/C4_IF_MIX / /RF_CHAIN_4/CONV_4/C4_IF_MIX,PASS,BFCN-1840+ -> LTC5553 IF
+cal,DC804.COUPLED <-> U801.P4,same net,/CAL_AND_TEST_IO/CAL_INJ4 / /CAL_AND_TEST_IO/CAL_INJ4,PASS,coupler -> EP4RKU+ cal combiner
+LO,U503.P4 <-> C432.1,same net,C4_LO / C4_LO,PASS,LO splitter -> DC block
+LO,C432.2 <-> UMX4.LO,same net,/RF_CHAIN_4/CONV_4/C4_LO_MIX / /RF_CHAIN_4/CONV_4/C4_LO_MIX,PASS,DC block -> LTC5553 LO (5553f Fig 1 C1)
+IF path,J401 (N310 IF) <-> C431 DC block,same net,C4_IF_N310 / C4_IF_N310,PASS,chain IF interface
+bf-control,UBF4.AVDD3,+3V3_RF,+3V3_RF,PASS,ADAR1000 Rev B pin table
+bf-control,UBF4.AVDD1,-5V_BF,-5V_BF,PASS,ADAR1000 Rev B pin table
+bf-control,UBF4.GND,GND,GND,PASS,ADAR1000 Rev B pin table
+bf-control,UBF4.TR,BF_TR,BF_TR,PASS,ADAR1000 Rev B pin table
+bf-control,UBF4.PA_ON,TX_ALLOW,TX_ALLOW,PASS,ADAR1000 Rev B pin table
+bf-control,UBF4.TX_LOAD,BF_TX_LOAD,BF_TX_LOAD,PASS,ADAR1000 Rev B pin table
+bf-control,UBF4.RX_LOAD,BF_RX_LOAD,BF_RX_LOAD,PASS,ADAR1000 Rev B pin table
+bf-control,UBF4.SCLK,BF_SCLK,BF_SCLK,PASS,ADAR1000 Rev B pin table
+bf-control,UBF4.SDIO,BF_SDIO,BF_SDIO,PASS,ADAR1000 Rev B pin table
+bf-control,UBF4.CSB,BF_CS4_N,BF_CS4_N,PASS,ADAR1000 Rev B pin table
+bf-address,UBF4.ADDR0,+1V8_DIG,+1V8_DIG,PASS,unique chip ID per ADAR1000 (DS p32)
+bf-address,UBF4.ADDR1,+1V8_DIG,+1V8_DIG,PASS,unique chip ID per ADAR1000 (DS p32)
+mixer,UMX4.VCC,+3V3_RF,+3V3_RF,PASS,LTC5553 5553f
+mixer,UMX4.EN,MIX_EN,MIX_EN,PASS,LTC5553 5553f
+mixer,UMX4.GND,GND,GND,PASS,LTC5553 5553f
+safety,BF_TR,"U704.4, UBF1.N6, UBF2.N6, UBF3.N6, UBF4.N6","J702.3, U701.12, U704.4, UBF1.N6, UBF2.N6, UBF3.N6, UBF4.N6",PASS,H2A safety chain (mcu/power sheets)
+safety,TX_ALLOW,"U703.4, U704.2, UBF1.B3, UBF2.B3, UBF3.B3, UBF4.B3","U703.4, U704.2, UBF1.B3, UBF2.B3, UBF3.B3, UBF4.B3",PASS,H2A safety chain (mcu/power sheets)
+safety,PA_ARMED,"U909.5, U705.1","U705.1, U909.5",PASS,H2A safety chain (mcu/power sheets)
+safety,PA_DRAIN_EN,"R735.1, R965.1, U621.5, U622.5, U623.5, U624.5","D961.1, R735.1, R965.1, R996.1, R997.1, R998.1, R999.1, U621.5, U622.5, U623.5, U624.5",PASS,H2A safety chain (mcu/power sheets)
+safety,WDT_OK,"U702.8, U703.3, U705.3","R702.1, U701.11, U702.8, U703.3, U705.3, U911.3",PASS,H2A safety chain (mcu/power sheets)
+safety,NEG_OK,"U912.4, U705.6, U911.6","U701.8, U705.6, U911.6, U912.4",PASS,H2A safety chain (mcu/power sheets)
+safety-default,MCU_TX_EN pull-down,resistor to GND,R710,PASS,default-off at reset
+safety-default,MCU_PA_EN pull-down,resistor to GND,"R711,R964",PASS,default-off at reset
+safety-default,MIX_EN pull-down,resistor to GND,R712,PASS,default-off at reset
+safety-default,PLL_CE pull-down,resistor to GND,R713,PASS,default-off at reset
+safety-default,PWR_EN_3V3 pull-down,resistor to GND,R714,PASS,default-off at reset
+safety-default,PWR_EN_NEG pull-down,resistor to GND,R715,PASS,default-off at reset
+safety-default,PWR_EN_5VPA pull-down,resistor to GND,R716,PASS,default-off at reset
+safety-default,PWR_EN_LO pull-down,resistor to GND,R717,PASS,default-off at reset
+safety-default,BF_TX_LOAD pull-down,resistor to GND,R718,PASS,default-off at reset
+safety-default,BF_RX_LOAD pull-down,resistor to GND,R719,PASS,default-off at reset
+safety-default,TDD_TR_IN pull-down,resistor to GND,R720,PASS,default-off at reset
+safety-default,TX_PERMIT_IN pull-down,resistor to GND,R721,PASS,default-off at reset
+safety,chain 1 PA drain,+5V_PA_C1 from U621 VOUT only,+5V_PA_C1 / +5V_PA_C1,PASS,PA drain gated per chain
+safety,chain 2 PA drain,+5V_PA_C2 from U622 VOUT only,+5V_PA_C2 / +5V_PA_C2,PASS,PA drain gated per chain
+safety,chain 3 PA drain,+5V_PA_C3 from U623 VOUT only,+5V_PA_C3 / +5V_PA_C3,PASS,PA drain gated per chain
+safety,chain 4 PA drain,+5V_PA_C4 from U624 VOUT only,+5V_PA_C4 / +5V_PA_C4,PASS,PA drain gated per chain
+loop filter,CPOUT-C1-R2-R3,connected as specified,ok,PASS,tools/loop_filter.py (DERIVED)
+loop filter,R2-C2 series,connected as specified,ok,PASS,3rd-order passive
+loop filter,R3-C3-VTUNE,connected as specified,ok,PASS,3rd-order passive
+loop filter,C1/C2/C3 to GND,connected as specified,ok,PASS,3rd-order passive
+LO amp bias,VD1-C4(0.1u)-L1,connected as specified,ok,PASS,AVA-183A+ Fig 2
+LO amp bias,VD2-C3-C2-C1-L1-+5V_LO,connected as specified,ok,PASS,AVA-183A+ Fig 2
+watchdog,"CWD 10k to VDD, CRST 10k to VDD",connected as specified,ok,PASS,TPS3430 Table 6.6
+watchdog,SET0 = SET1 = GND (cannot be disabled),connected as specified,ok,PASS,TPS3430 Table 6.6
+PA switch,U621 QOD tied to VOUT,connected as specified,ok,PASS,TPS22810 pin table option 2
+PA switch,U621 CT 2200 pF to GND,connected as specified,ok,PASS,TPS22810 test condition
+PA switch,U621 CIN 1 uF on VIN,connected as specified,ok,PASS,TPS22810 CIN
+PA switch,U622 QOD tied to VOUT,connected as specified,ok,PASS,TPS22810 pin table option 2
+PA switch,U622 CT 2200 pF to GND,connected as specified,ok,PASS,TPS22810 test condition
+PA switch,U622 CIN 1 uF on VIN,connected as specified,ok,PASS,TPS22810 CIN
+PA switch,U623 QOD tied to VOUT,connected as specified,ok,PASS,TPS22810 pin table option 2
+PA switch,U623 CT 2200 pF to GND,connected as specified,ok,PASS,TPS22810 test condition
+PA switch,U623 CIN 1 uF on VIN,connected as specified,ok,PASS,TPS22810 CIN
+PA switch,U624 QOD tied to VOUT,connected as specified,ok,PASS,TPS22810 pin table option 2
+PA switch,U624 CT 2200 pF to GND,connected as specified,ok,PASS,TPS22810 test condition
+PA switch,U624 CIN 1 uF on VIN,connected as specified,ok,PASS,TPS22810 CIN
+unconnected,U501.10 (RF32N),declared UNRESOLVED,declared,PASS,build_log.json
+unconnected,U501.11 (RF32P),declared UNRESOLVED,declared,PASS,build_log.json
+unconnected,U501.26 (RF16P),declared UNRESOLVED,declared,PASS,build_log.json
+unconnected,U501.27 (RF16N),declared UNRESOLVED,declared,PASS,build_log.json
+unconnected,U501.3 (RS_SW),declared UNRESOLVED,declared,PASS,build_log.json
+unconnected,U501.6 (VCC_REG_OUT),declared UNRESOLVED,declared,PASS,build_log.json
+unconnected,U502.1 (NU),declared UNRESOLVED,declared,PASS,build_log.json
+unconnected,U502.3 (NU),declared UNRESOLVED,declared,PASS,build_log.json
+unconnected,U502.4 (NU),declared UNRESOLVED,declared,PASS,build_log.json
+unconnected,U502.6 (NU),declared UNRESOLVED,declared,PASS,build_log.json
+unconnected,U652.1 (RT),declared UNRESOLVED,declared,PASS,build_log.json
+unconnected,U653.4 (NC),declared UNRESOLVED,declared,PASS,build_log.json
+unconnected,U654.1 (RT),declared UNRESOLVED,declared,PASS,build_log.json
+unconnected,U655.11 (0.2V),declared UNRESOLVED,declared,PASS,build_log.json
+unconnected,U655.12 (0.1V),declared UNRESOLVED,declared,PASS,build_log.json
+unconnected,U655.4 (6.4V),declared UNRESOLVED,declared,PASS,build_log.json
+unconnected,U655.5 (6.4V),declared UNRESOLVED,declared,PASS,build_log.json
+unconnected,U655.8 (1.6V),declared UNRESOLVED,declared,PASS,build_log.json
+unconnected,U655.9 (0.8V),declared UNRESOLVED,declared,PASS,build_log.json
+unconnected,U656.10 (0.4V),declared UNRESOLVED,declared,PASS,build_log.json
+unconnected,U656.4 (6.4V),declared UNRESOLVED,declared,PASS,build_log.json
+unconnected,U656.5 (6.4V),declared UNRESOLVED,declared,PASS,build_log.json
+unconnected,U656.6 (3.2V),declared UNRESOLVED,declared,PASS,build_log.json
+unconnected,U656.9 (0.8V),declared UNRESOLVED,declared,PASS,build_log.json
+unconnected,U657.12 (NC),declared UNRESOLVED,declared,PASS,build_log.json
+unconnected,U657.20 (NC),declared UNRESOLVED,declared,PASS,build_log.json
+unconnected,U657.7 (BSW),declared UNRESOLVED,declared,PASS,build_log.json
+unconnected,U701.29 (PC6),declared UNRESOLVED,declared,PASS,build_log.json
+unconnected,U701.33 (PA11),declared UNRESOLVED,declared,PASS,build_log.json
+unconnected,U701.34 (PA12),declared UNRESOLVED,declared,PASS,build_log.json
+unconnected,U701.39 (PC10),declared UNRESOLVED,declared,PASS,build_log.json
+unconnected,U701.4 (PC15),declared UNRESOLVED,declared,PASS,build_log.json
+unconnected,U701.40 (PC11),declared UNRESOLVED,declared,PASS,build_log.json
+unconnected,U701.47 (PB9),declared UNRESOLVED,declared,PASS,build_log.json
+unconnected,U701.5 (PF0),declared UNRESOLVED,declared,PASS,build_log.json
+unconnected,U701.6 (PF1),declared UNRESOLVED,declared,PASS,build_log.json
+unconnected,U702.9 (NC),declared UNRESOLVED,declared,PASS,build_log.json
+unconnected,U909.3 (~{Q}),declared UNRESOLVED,declared,PASS,build_log.json
+unconnected,U910.1 (NC),declared UNRESOLVED,declared,PASS,build_log.json
+unconnected,U914.4 (CT),declared UNRESOLVED,declared,PASS,build_log.json
+unconnected,U920.13 (VREF),declared UNRESOLVED,declared,PASS,build_log.json
+unconnected,U920.2 (CT4),declared UNRESOLVED,declared,PASS,build_log.json
+unconnected,U920.3 (CT3),declared UNRESOLVED,declared,PASS,build_log.json
+unconnected,U921.4 (NC),declared UNRESOLVED,declared,PASS,build_log.json

@@ -2085,6 +2085,537 @@
 		)
 	)
 )
+	(symbol
+	(lib_name "C")
+	(lib_id "Device:C")
+	(at 101.6 250.19 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "7d739f7e-c67c-4fd7-bea2-5546ff4bc987")
+	(property "Reference" "C240"
+		(at 101.6 246.38 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Value" "10nF 10V X7R"
+		(at 101.6 254 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(at 101.6 250.19 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(property "Datasheet" "~"
+		(at 101.6 250.19 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(pin "1"
+	(uuid "0c2052c3-496f-43c4-9c8b-61348f4395dc")
+)
+	(pin "2"
+	(uuid "c4d92fd2-5885-4227-9053-01fa640e5e4d")
+)
+	(instances
+		(project "openru_x6_tile"
+			(path "/0ed2e684-b2ac-44a6-8267-ea5cd8bcad13"
+				(reference "C240")
+				(unit 1)
+			)
+		)
+	)
+)
+	(symbol
+	(lib_name "C")
+	(lib_id "Device:C")
+	(at 116.84 250.19 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "e5987a32-b834-4300-aa80-61450e23dd74")
+	(property "Reference" "C241"
+		(at 116.84 246.38 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Value" "100pF 50V C0G"
+		(at 116.84 254 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(at 116.84 250.19 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(property "Datasheet" "~"
+		(at 116.84 250.19 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(pin "1"
+	(uuid "750d6dcb-d5e3-49ce-a4ef-fa1030e97cfc")
+)
+	(pin "2"
+	(uuid "f2dcfcf3-10e6-475a-855f-13443652b2e5")
+)
+	(instances
+		(project "openru_x6_tile"
+			(path "/0ed2e684-b2ac-44a6-8267-ea5cd8bcad13"
+				(reference "C241")
+				(unit 1)
+			)
+		)
+	)
+)
+	(symbol
+	(lib_name "C")
+	(lib_id "Device:C")
+	(at 132.08 250.19 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "4f4e0344-4246-4bea-bda4-09e3ee2a88e7")
+	(property "Reference" "C242"
+		(at 132.08 246.38 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Value" "1µF 10V X7R"
+		(at 132.08 254 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(at 132.08 250.19 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(property "Datasheet" "~"
+		(at 132.08 250.19 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(pin "1"
+	(uuid "a26cc3db-efd1-476d-98da-232a3e7742e8")
+)
+	(pin "2"
+	(uuid "597f3313-52ea-46f9-9fb9-e2f47b19ac85")
+)
+	(instances
+		(project "openru_x6_tile"
+			(path "/0ed2e684-b2ac-44a6-8267-ea5cd8bcad13"
+				(reference "C242")
+				(unit 1)
+			)
+		)
+	)
+)
+	(symbol
+	(lib_name "C")
+	(lib_id "Device:C")
+	(at 147.32 250.19 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "2dbbc626-0d4d-4867-bc6d-59640943f195")
+	(property "Reference" "C243"
+		(at 147.32 246.38 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Value" "10nF 10V X7R"
+		(at 147.32 254 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(at 147.32 250.19 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(property "Datasheet" "~"
+		(at 147.32 250.19 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(pin "1"
+	(uuid "f53ccd34-cf28-4e8a-8ef9-8960ebbd621b")
+)
+	(pin "2"
+	(uuid "86ea31c9-a7ef-4e86-b7ad-36e47856e4ef")
+)
+	(instances
+		(project "openru_x6_tile"
+			(path "/0ed2e684-b2ac-44a6-8267-ea5cd8bcad13"
+				(reference "C243")
+				(unit 1)
+			)
+		)
+	)
+)
+	(symbol
+	(lib_name "C")
+	(lib_id "Device:C")
+	(at 162.56 250.19 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "5913ae93-a9a7-42fe-84d9-840c0d1e9394")
+	(property "Reference" "C244"
+		(at 162.56 246.38 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Value" "100pF 50V C0G"
+		(at 162.56 254 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(at 162.56 250.19 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(property "Datasheet" "~"
+		(at 162.56 250.19 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(pin "1"
+	(uuid "17b3c0f7-e6ce-4157-80c7-11230d1e909a")
+)
+	(pin "2"
+	(uuid "fa6e60f1-7d01-4974-9507-cccc47528aeb")
+)
+	(instances
+		(project "openru_x6_tile"
+			(path "/0ed2e684-b2ac-44a6-8267-ea5cd8bcad13"
+				(reference "C244")
+				(unit 1)
+			)
+		)
+	)
+)
+	(symbol
+	(lib_name "C")
+	(lib_id "Device:C")
+	(at 59.69 60.96 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "bba1e7cd-dcf2-41d9-9679-4122af33da57")
+	(property "Reference" "C250"
+		(at 59.69 57.15 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Value" "4.7µF 10V X5R"
+		(at 59.69 64.77 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(at 59.69 60.96 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(property "Datasheet" "~"
+		(at 59.69 60.96 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(pin "1"
+	(uuid "4875621a-53eb-418e-8bc1-430a9b1f971e")
+)
+	(pin "2"
+	(uuid "706e8aac-20ca-4cff-bf93-ebe1068febd2")
+)
+	(instances
+		(project "openru_x6_tile"
+			(path "/0ed2e684-b2ac-44a6-8267-ea5cd8bcad13"
+				(reference "C250")
+				(unit 1)
+			)
+		)
+	)
+)
+	(symbol
+	(lib_name "C")
+	(lib_id "Device:C")
+	(at 149.86 60.96 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "a8605890-2b6b-4796-917a-c65feddad403")
+	(property "Reference" "C251"
+		(at 149.86 57.15 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Value" "4.7µF 10V X5R"
+		(at 149.86 64.77 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(at 149.86 60.96 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(property "Datasheet" "~"
+		(at 149.86 60.96 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(pin "1"
+	(uuid "ae85f103-f19f-49ca-9d1b-5a6272bd006d")
+)
+	(pin "2"
+	(uuid "e3bcc584-784b-4ae8-88e0-e0532572be02")
+)
+	(instances
+		(project "openru_x6_tile"
+			(path "/0ed2e684-b2ac-44a6-8267-ea5cd8bcad13"
+				(reference "C251")
+				(unit 1)
+			)
+		)
+	)
+)
+	(symbol
+	(lib_name "C")
+	(lib_id "Device:C")
+	(at 240.03 60.96 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "a7778781-72d4-442b-9c2b-dac3f18243c3")
+	(property "Reference" "C252"
+		(at 240.03 57.15 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Value" "4.7µF 10V X5R"
+		(at 240.03 64.77 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(at 240.03 60.96 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(property "Datasheet" "~"
+		(at 240.03 60.96 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(pin "1"
+	(uuid "3ee507b5-4d63-4857-b72f-ae8a8f706adb")
+)
+	(pin "2"
+	(uuid "0742b58a-3ec2-4bfd-a53c-9f3ba9259a49")
+)
+	(instances
+		(project "openru_x6_tile"
+			(path "/0ed2e684-b2ac-44a6-8267-ea5cd8bcad13"
+				(reference "C252")
+				(unit 1)
+			)
+		)
+	)
+)
+	(symbol
+	(lib_name "C")
+	(lib_id "Device:C")
+	(at 330.2 60.96 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "6c8b5737-5dc0-4ced-9339-1b79c4b66ec7")
+	(property "Reference" "C253"
+		(at 330.2 57.15 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Value" "4.7µF 10V X5R"
+		(at 330.2 64.77 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(at 330.2 60.96 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(property "Datasheet" "~"
+		(at 330.2 60.96 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(pin "1"
+	(uuid "deb879c3-f634-4af0-866f-2225e0f7c14c")
+)
+	(pin "2"
+	(uuid "2a261a7f-fb70-4a4c-8a3d-e101f717e53e")
+)
+	(instances
+		(project "openru_x6_tile"
+			(path "/0ed2e684-b2ac-44a6-8267-ea5cd8bcad13"
+				(reference "C253")
+				(unit 1)
+			)
+		)
+	)
+)
 	(text "UNRESOLVED: VDD_PA / VDD_LNA / VDD_SW / VSS_SW bypass values not in ADTR1107 Rev C (Fig 89 shows only 10 nF on VGG_PA)."
 	(at 210 20 0)
 	(effects
@@ -2102,6 +2633,15 @@
 		)
 	)
 	(uuid "1eef01d7-ca0b-4a01-9ad3-6be5cf3a0f99")
+)
+	(text "decoupling per ADI Stingray 02_059522 Rev B (per-tile set); per-pin values not documented"
+	(at 101.6 271.78 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+	)
+	(uuid "12543168-397f-4a29-8ea4-3cbc7a03ffaa")
 )
 	(wire
 	(pts
@@ -2823,6 +3363,186 @@
 	)
 	(uuid "20a299e4-61d4-4948-be82-081c0324214a")
 )
+	(wire
+	(pts
+		(xy 101.6 246.38) (xy 101.6 243.84)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "af11963a-bfea-4d15-bbe6-7c22beebde45")
+)
+	(wire
+	(pts
+		(xy 116.84 246.38) (xy 116.84 243.84)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "a45cbde3-54f9-46b4-8e3c-efd019788210")
+)
+	(wire
+	(pts
+		(xy 132.08 246.38) (xy 132.08 243.84)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "f9a84452-503e-4af8-9c4e-8d2aa203f717")
+)
+	(wire
+	(pts
+		(xy 147.32 246.38) (xy 147.32 243.84)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "bb10b20c-9c43-4a51-a739-5cd55e14eec4")
+)
+	(wire
+	(pts
+		(xy 162.56 246.38) (xy 162.56 243.84)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "2ec7a34f-0b85-4447-873d-647a54c3279a")
+)
+	(wire
+	(pts
+		(xy 59.69 57.15) (xy 59.69 54.61)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "46335da1-143f-4bd6-bcd9-6e28d327a9f5")
+)
+	(wire
+	(pts
+		(xy 149.86 57.15) (xy 149.86 54.61)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "b82850c1-9ccd-443b-b6f9-23353e4f0f40")
+)
+	(wire
+	(pts
+		(xy 240.03 57.15) (xy 240.03 54.61)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "f9b9798b-8f76-4f90-b615-efac6433dcec")
+)
+	(wire
+	(pts
+		(xy 330.2 57.15) (xy 330.2 54.61)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "9c6a049a-c096-4318-96c8-2b0675f29834")
+)
+	(wire
+	(pts
+		(xy 101.6 254) (xy 101.6 256.54)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "57d72ed9-c273-4d30-95ba-e6e816094314")
+)
+	(wire
+	(pts
+		(xy 116.84 254) (xy 116.84 256.54)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "e3167dcd-56f6-4d8b-bf5b-b2473823dc53")
+)
+	(wire
+	(pts
+		(xy 132.08 254) (xy 132.08 256.54)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "e363716f-d5b8-4871-a5db-c1556a05e232")
+)
+	(wire
+	(pts
+		(xy 147.32 254) (xy 147.32 256.54)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "3f4b3fb0-b6ff-4edb-bfe0-58c1e688234c")
+)
+	(wire
+	(pts
+		(xy 162.56 254) (xy 162.56 256.54)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "009774fa-95d8-445c-b0b5-8286dfb52e0d")
+)
+	(wire
+	(pts
+		(xy 59.69 64.77) (xy 59.69 67.31)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "5d87ee26-93bd-4f5a-8109-847fca604f92")
+)
+	(wire
+	(pts
+		(xy 149.86 64.77) (xy 149.86 67.31)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "38a4b28b-3a66-4dc8-8eef-1e51093a7b99")
+)
+	(wire
+	(pts
+		(xy 240.03 64.77) (xy 240.03 67.31)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "71bbd1ac-7059-4033-bcb8-756ad4e46420")
+)
+	(wire
+	(pts
+		(xy 330.2 64.77) (xy 330.2 67.31)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "4da662ab-6fca-4ffb-ba1a-759cefaf3435")
+)
 	(global_label "C2_TX1"
 		(shape passive)
 		(at 36.83 107.95 180)
@@ -3526,6 +4246,204 @@
 			(justify left)
 		)
 		(uuid "88f7607c-07be-4f7a-8b0f-1f142a39e735")
+	)
+	(global_label "-3V3_SW"
+		(shape passive)
+		(at 101.6 243.84 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "36ef3de7-8ef4-48ca-9532-c2f302a70dc2")
+	)
+	(global_label "-3V3_SW"
+		(shape passive)
+		(at 116.84 243.84 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "cce3135e-6e48-4e15-8150-e15817fc7989")
+	)
+	(global_label "+5V_PA_C2"
+		(shape passive)
+		(at 132.08 243.84 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b69f9edf-c98a-4c2f-adc8-737d1e6c430d")
+	)
+	(global_label "+5V_PA_C2"
+		(shape passive)
+		(at 147.32 243.84 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e8bc0fd9-13ed-4710-8bbc-bb225c7a8246")
+	)
+	(global_label "+5V_PA_C2"
+		(shape passive)
+		(at 162.56 243.84 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "07f7af1f-bf61-4031-9f2b-e449b61e72a4")
+	)
+	(global_label "+5V_PA_C2"
+		(shape passive)
+		(at 59.69 54.61 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "db742166-4833-412d-8b93-71ce90fc158b")
+	)
+	(global_label "+5V_PA_C2"
+		(shape passive)
+		(at 149.86 54.61 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "37398547-b6dd-4f8c-a404-5e48ec69cd0b")
+	)
+	(global_label "+5V_PA_C2"
+		(shape passive)
+		(at 240.03 54.61 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "33711f97-6577-41b9-a1d6-9fe04020f1f7")
+	)
+	(global_label "+5V_PA_C2"
+		(shape passive)
+		(at 330.2 54.61 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "fe84e975-5945-4d83-b80a-71b9ad30894a")
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 101.6 256.54 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "90fdf633-a7dc-43b6-8a2e-1c6488ac99c4")
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 116.84 256.54 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "c1750f03-dc58-4e5c-a65b-53013f51a8ce")
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 132.08 256.54 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "c2ced3fc-ee9a-4d89-bed8-728f045fe542")
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 147.32 256.54 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "f4c051e1-3ebf-4826-9bf3-96ea4a7ae8bd")
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 162.56 256.54 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "bd9c3383-b19b-4a54-893b-6be98bc8de1e")
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 59.69 67.31 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "303ee645-4135-4d74-87b4-01a5c9c69d8e")
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 149.86 67.31 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "7a392769-088c-42d1-be6d-1e9947ab9ff2")
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 240.03 67.31 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "60152301-21bc-48d4-95b9-916a2d7f5635")
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 330.2 67.31 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d6ce8010-bb4a-4e28-985c-ad52e8669529")
 	)
 	(label "C2_ANT1"
 		(at 36.83 113.03 180)

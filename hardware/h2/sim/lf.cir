@@ -1,0 +1,9 @@
+ADF4371 loop filter transimpedance (CPOUT current -> VTUNE)
+I1 0 cp AC 1
+C1 cp 0 120p
+R2 cp rc 5.6k
+C2 rc 0 820p
+R3 cp vt 2.2k
+C3 vt 0 22p
+.ac dec 200 1k 100Meg
+.end

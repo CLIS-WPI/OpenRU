@@ -1,0 +1,26 @@
+* S4A_NEG_COLLAPSE_ENN -- BEHAVIOURAL, datasheet timing (see H2C_SEQUENCING_SIM.md)
+* -5V_BF collapse: PWR_EN_NEG (TPS65131 ENN) dropped at 142.0 ms while transmitting.
+* Common: VIN 0->12 V in 1 ms; MCU at 8 ms asserts PWR_EN_3V3/5VPA/NEG; PA_BIAS OFF -1.75 V at 140.0 ms,
+* MCU_PA_EN at 140.2 ms, gates ON -1.1 V at 141.0 ms unless stated.
+.include h2c_plant.inc
+VVIN vin 0 PWL(0 0 1m 12)
+VE3 fw_en3v3  0 PWL(0 0 8m 0 8.001m 1)
+VE5 fw_en5vpa 0 PWL(0 0 8m 0 8.001m 1)
+VEN fw_enneg  0 PWL(0 0 8m 0 8.001m 1 142m 1 142.001m 0)
+VWD fw_wdt    0 PWL(0 0 8m 0 8.001m 1)
+VKL ldo5_kill 0 0
+VRK rf_kill   0 0
+VTLW tlw 0 0
+VFR1 fr_aux 0 0
+VFR2 fr_18 0 0
+VFR3 fr_rf 0 0
+VFR4 fr_pa 0 0
+VFR5 fr_n5 0 0
+VFR6 fr_n3 0 0
+VPA fw_pa_en  0 PWL(0 0 140.2m 0 140.201m 1)
+VD1 dac1 0 PWL(0 0 140m 0 140.001m -1.75 141m -1.75 141.001m -1.1)
+VD2 dac2 0 PWL(0 0 140m 0 140.001m -1.75 141m -1.75 141.001m -1.1)
+VD3 dac3 0 PWL(0 0 140m 0 140.001m -1.75 141m -1.75 141.001m -1.1)
+VD4 dac4 0 PWL(0 0 140m 0 140.001m -1.75 141m -1.75 141.001m -1.1)
+.tran 1u 147m 0 5u
+.end
