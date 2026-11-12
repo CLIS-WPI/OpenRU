@@ -1,0 +1,1 @@
+runs with FET turn-on after release: 32; min rising BBM margin 3.21 us (S2_arm_edge, tmin_fast_tpd55_vio6)

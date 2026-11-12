@@ -1,0 +1,11 @@
+timer tau 4.028..4.620 us; crowbar delay 2.778..3.218 us; crowbar fully on <= 3.422 us
+BBM falling edge >= 1.278 us (delay_min 2.778 - tSD_max 1.5)
+BBM rising edge >= 2.713 us (SHDN 0.515->0.8 V takes >= 2.947 us; crowbar off <= 0.234 us)
+discharge tau 5.380 us (C 23.77 uF, R 0.2263 ohm); 5.5 V->0.5 V 12.90 us; peak 24.3 A; E 360 uJ
+A  rail UV/OV (TPS3703)              46.50 us  margin  3.50
+A  gate lost (TLV3202 + NMOS)        16.60 us  margin 33.40
+A  TPS1663 OVP (+5V_PA OV)           31.23 us  margin 18.77
+A  from FLT / WDO assertion          16.70 us  margin 33.30
+A  +5V_IL abrupt loss (CD path)      16.90 us  margin 33.10
+B  rail UV/OV (TPS3703)              38.74 us + TPS22918 tOFF (NO MAX)  ; QOD part 8.64 us
+B  gate lost (TLV3202 + NMOS)         8.84 us + TPS22918 tOFF (NO MAX)  ; QOD part 8.64 us

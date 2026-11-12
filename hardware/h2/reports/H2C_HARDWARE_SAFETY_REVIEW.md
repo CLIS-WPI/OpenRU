@@ -117,3 +117,8 @@ Exit criteria for layout preparation:
 4. Get ADI's answer on S1 and on PA_BIAS behaviour during AVDD3 collapse.
 5. Select MPNs and footprints for L650/L651.
 6. Confirm ERC (§ H2C_ERC_REPORT) has no new unresolved findings.
+
+> **H2-D erratum (2026-11-12):** the independent audit (`design/h2d/AUDIT_FMEA.md` finding DU1) shows that the TPS3430
+> WDO is *high* (not asserted) for VDD between VPOR and 1.6 V and during power-up (TPS3430 §7.4.2). The H2-C behavioural
+> model assumed WDT_OK = 0 below 1.65 V, so the "0/920 nominal-logic" ordering result above is **not valid evidence**.
+> See `H2D_SAFETY_ARCHITECTURE_REVIEW.md`.
