@@ -1,0 +1,4 @@
+schema_version: "1.0"
+id: "P1B"
+title: "P1 workstream P1B"
+description: "P1 scientific-validation workstream; parameters are supplied in configs/suites.yaml under long_horizon.p1b."

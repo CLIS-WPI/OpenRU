@@ -101,3 +101,59 @@ full:
     seed_base: 500
     slots: 60
     users: 16
+
+long_horizon:
+  seeds: 20
+  seed_base: 2000
+  notes: "P1 scientific-validation suite; separate from smoke/full. Runtime-reduction choices are recorded in P1 artifacts."
+  p1a:
+    screening_slots: 250
+    screening_seeds: 1
+    pivotal_slots_short: 500
+    long_horizon_slots: 20000
+    long_horizon_profile_chains: [64]
+    long_horizon_profile_users: 16
+    long_horizon_profile_load: 1.0
+    long_horizon_profile_spread_deg: 20.0
+    pivotal_profile_seeds: 1
+    pivotal_seeds: 20
+    chain_modes: [32, 64]
+    ue_counts: [64, 128]
+    loads: [0.25, 1.0]
+    spatial_spreads_deg: [2.0, 20.0]
+    conditions: [baseline, mobility, stale_csi]
+    pivotal_chain_modes: [32, 64]
+    pivotal_ue_counts: [64]
+    pivotal_loads: [1.0]
+    pivotal_spreads_deg: [2.0, 20.0]
+    pivotal_conditions: [baseline]
+    n_boot: 1000
+  p1b:
+    slots: 80
+    users: 128
+    seeds: [7001, 7002]
+    snr_db: [0.0, 2.0, 4.0, 6.0, 8.0]
+  p1c:
+    slots: 160
+    users: 128
+    seeds: [7101, 7102, 7103]
+    chain_modes: [32, 64]
+    xpd_db: [10.0, 20.0, 30.0]
+    xpr_db: [20.0]
+  p1d:
+    slots: 400
+    users: 16
+    seeds: [7201, 7202, 7203, 7204, 7205, 7206, 7207, 7208]
+    policies: ["static", "threshold", "predictive", "constrained"]
+    constraints:
+      - {id: "strict", max_deadline_miss: 0.02, max_p99_completed_slots: 40.0, min_p5_goodput_mbps: 0.1, max_energy_j: 3000.0, coverage_requires_min_chains: 32}
+      - {id: "nominal", max_deadline_miss: 0.05, max_p99_completed_slots: 60.0, min_p5_goodput_mbps: 0.05, max_energy_j: 3000.0, coverage_requires_min_chains: 16}
+      - {id: "relaxed", max_deadline_miss: 0.10, max_p99_completed_slots: 100.0, min_p5_goodput_mbps: 0.01, max_energy_j: 3000.0, coverage_requires_min_chains: 8}
+  p1e:
+    slots: 40
+    users: 24
+    cal_seeds: [9001, 9002, 9003, 9004]
+    validation_seeds: [9101, 9102]
+    eval_seeds: [9201, 9202, 9203, 9204, 9205, 9206, 9207, 9208]
+    faults: ["pa_gain_loss", "phase_drift", "tile_dead", "noisy_receiver", "thermal_gradient", "supply_transient", "multi_tile"]
+    sensor_faults: ["missing", "frozen", "biased", "stale", "quantized", "inconsistent"]

@@ -17,7 +17,8 @@ import numpy as np
 import torch
 
 from .config import RadioConfig
-from .rf import FeedMap, array_response, direction_from_angles
+from .polarization import jones_matrices
+from .rf import FeedMap, array_response, array_response_geometry, direction_from_angles
 
 K_BOLTZMANN = 1.380649e-23
 
@@ -158,15 +159,23 @@ class ChannelModel:
         amp = amp.copy()
         amp[:, 0] *= np.where(blocked & c["los"], 10 ** (-self.cfg.channel.blockage_attenuation_db / 20.0), 1.0)
         u = direction_from_angles(az_l, el_l).reshape(-1, 3)
-        a = array_response(self.fm, u).reshape(U, L, F)
-        a_t = torch.as_tensor(a, dtype=torch.complex64, device=dev)
-        g_t = torch.as_tensor(amp, dtype=torch.complex64, device=dev).unsqueeze(-1) * \
-            torch.as_tensor(np.exp(1j * c["rx_phase"]), dtype=torch.complex64, device=dev)
+        geom = array_response_geometry(self.fm, u).reshape(U, L, F)
+        g_t = (torch.as_tensor(amp, dtype=torch.complex64, device=dev).unsqueeze(-1) *
+               torch.as_tensor(np.exp(1j * c["rx_phase"]), dtype=torch.complex64, device=dev))
         rb = torch.arange(R, device=dev, dtype=torch.float32)
         tau = torch.as_tensor(c["tau"], dtype=torch.float32, device=dev)
         d = torch.exp(-2j * np.pi * rb[None, None, :] *
                       (self.subband_spacing_hz * tau[..., None]))  # [U,L,R]
-        H = torch.einsum("ulr,ulf,ulb->urfb", g_t, a_t, d)
+        if self.cfg.polarization.model == "jones":
+            J = jones_matrices(self.cfg.polarization, U, L, self.n_rx, rng)
+            J = J[..., self.fm.feed_pol]  # [U,L,Rx,F]
+            h_coeff = torch.as_tensor(geom, dtype=torch.complex64, device=dev)[..., None, :] * \
+                torch.as_tensor(J, dtype=torch.complex64, device=dev)
+            H = torch.einsum("ulrf,ulr,ulb->urfb", h_coeff, g_t, d)
+        else:
+            a = (geom * np.where(self.fm.feed_pol == 0, 1.0 + 0j, 1j)).astype(np.complex128)
+            a_t = torch.as_tensor(a, dtype=torch.complex64, device=dev)
+            H = torch.einsum("ulr,ulf,ulb->urfb", g_t, a_t, d)
         return ChannelRealization(
             H=H, positions=positions.copy(),
             directions_az_el=np.stack([az, el], axis=1),

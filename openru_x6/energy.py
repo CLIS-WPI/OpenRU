@@ -261,8 +261,8 @@ class EnergyPolicy:
         self.forecast = 0.0
         self.history: list[float] = []
 
-    def update(self, load_fraction: float, queue_fraction: float, now_s: float,
-               thermal_throttle: bool = False, dt_s: float = 5e-4) -> None:
+    def observe(self, load_fraction: float, queue_fraction: float) -> None:
+        """Update causal load/queue observations and forecast; never sees future."""
         self.load_ewma = (1 - self.cfg.predictive_ewma_alpha) * self.load_ewma + \
             self.cfg.predictive_ewma_alpha * load_fraction
         self.history.append(float(load_fraction))
@@ -274,29 +274,50 @@ class EnergyPolicy:
             slope = float(np.polyfit(x, np.asarray(self.history), 1)[0])
         self.forecast = float(np.clip(self.load_ewma + self.cfg.predictive_horizon_slots * slope,
                                       0.0, 1.0))
+
+    def target_for(self, load_fraction: float, queue_fraction: float,
+                   thermal_throttle: bool = False,
+                   constraints: dict[str, Any] | None = None) -> str:
+        """Return the policy target without mutating the energy manager.
+
+        ``constraints`` is used by the P1 closed-loop controller to sweep
+        minimum-chain/QoS floors.  A target is not a claim that the resulting
+        service meets the constraint; that is evaluated from the run metrics.
+        """
+        constraints = constraints or {}
+        min_chains = int(constraints.get("coverage_requires_min_chains",
+                                         self.cfg.coverage_requires_min_chains))
         if self.kind == "static":
             target = "FULL_64"
         elif (not self.mgr.sole_coverage and self.cfg.allow_sleep_only_cell
               and load_fraction < 0.01 and queue_fraction < 0.01):
             target = "SLEEP_0"
-        elif self.kind == "predictive":
+        elif self.kind in ("predictive", "constrained"):
             # Look-ahead uses only past queue observations and the configured
             # horizon; it is not an oracle and never sees future arrivals.
             pred = max(load_fraction, self.load_ewma, self.forecast)
-            target = required_state_for_load(pred, self.cfg.coverage_requires_min_chains)
+            pred = max(pred, float(constraints.get("min_load_for_full", 0.0)))
+            target = required_state_for_load(pred, max(8, min_chains))
         else:  # threshold with hysteresis
             current = self.mgr.state
             cur_ch = state_chains_from_name(current)
             need = load_fraction * 64
             h = self.cfg.hysteresis_fraction
             if need > cur_ch * (1 + h / 2):
-                target = required_state_for_load(load_fraction, self.cfg.coverage_requires_min_chains)
+                target = required_state_for_load(load_fraction, max(8, min_chains))
             elif need < cur_ch * (1 - h / 2):
-                target = required_state_for_load(max(load_fraction, 0.0), self.cfg.coverage_requires_min_chains)
+                target = required_state_for_load(max(load_fraction, 0.0), max(8, min_chains))
             else:
                 target = current
         if thermal_throttle:
             target = "COVERAGE_8" if target != "SLEEP_0" else target
+        return target
+
+    def update(self, load_fraction: float, queue_fraction: float, now_s: float,
+               thermal_throttle: bool = False, dt_s: float = 5e-4,
+               constraints: dict[str, Any] | None = None) -> None:
+        self.observe(load_fraction, queue_fraction)
+        target = self.target_for(load_fraction, queue_fraction, thermal_throttle, constraints)
         self.mgr.request(target, now_s, load_fraction)
 
     def step(self, dt_s: float, tx_power_w: float, load_fraction: float,

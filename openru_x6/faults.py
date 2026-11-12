@@ -17,7 +17,7 @@ from .rf import RFHardware
 FAULT_TYPES = [
     "pa_gain_loss", "pa_saturation", "antenna_vswr", "phase_drift", "tile_dead",
     "noisy_receiver", "ptp_loss", "fronthaul_degraded", "fan_failure",
-    "overtemperature", "supply_droop",
+    "overtemperature", "supply_droop", "thermal_gradient", "supply_transient",
 ]
 
 
@@ -105,6 +105,11 @@ class FaultInjector:
         elif s.kind == "supply_droop":
             self.hw.tile_supply_v[s.tile] = 48.0 - s.magnitude
             self.hw.chain_gain_db[ch] -= 0.5 * s.magnitude
+        elif s.kind == "thermal_gradient":
+            self.thermal.temp_c[s.tile] = max(self.thermal.temp_c[s.tile], 35.0 + s.magnitude)
+        elif s.kind == "supply_transient":
+            self.hw.tile_supply_v[s.tile] = 48.0 - s.magnitude
+            self.hw.chain_gain_db[ch] -= 0.2 * s.magnitude
         elif s.kind == "fronthaul_degraded":
             pass  # handled by the fronthaul link model
 

@@ -20,11 +20,14 @@
 - Normal self-healing actions go through the control plane. Only the independent
   emergency mute retains direct hardware actuation as a fail-safe path; E05 is
   a role-policy simulator, not credential/mTLS/secure-element evidence.
-- Telemetry seeding/drift/quantization are behavioral models. Missing, biased
-  and failed-sensor cases and full per-fault held-out confusion matrices remain
-  validation work, not established hardware robustness.
+- Telemetry seeding/drift/quantization are behavioral models. P1 adds missing,
+  biased, frozen, stale, quantized and inconsistent sensor cases plus held-out
+  fault families, but these remain simulation sensitivity tests, not established
+  hardware robustness.
 - Completed-service P99 can exceed the deadline because late service is
   included. Expired/dropped/queued censoring is reported separately; it is not
   a claim that all users meet their deadline.
-- A successful build or a `PASS` in a reduced suite does not establish complete
-  verification; mandatory full-suite status is authoritative.
+- P1 is a reduced local suite. Its 500-slot paired comparisons and single
+  20,000-slot profile are explicitly not a deployment-scale matrix. A `PASS` in
+  a reduced suite does not establish complete verification; mandatory full-suite
+  status is authoritative.

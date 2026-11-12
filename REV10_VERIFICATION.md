@@ -45,3 +45,30 @@ Artifacts: `results/pytest.log`, `results/tests.xml`, `results/coverage.xml`, `r
 **Scientific validation gate: NOT MET.** Extended E01/E02/E04 and combined adaptive INTEGRATION work remains.
 
 **PCB / hardware release: NO-GO.** No OFH interoperability, RF measurement, EM/thermal signoff or calibrated dual-polarized array validation exists in this repository.
+
+
+## P1 follow-on (separate reduced suite)
+
+P1 is implemented on branch `p1-scientific-validation` as the separate
+`long_horizon` suite; `smoke` and `full` membership is unchanged. Latest local
+P1 run: **5/5 PASS**, 9,454 rows, 1,221.8 s, digest `d432664706af1f75`.
+
+Fresh container regression after the P1 changes: smoke 6/6 PASS (2,681 rows,
+34.2 s, digest `cf44501c4f9daa81`), full 12/12 PASS (99,041 rows, 592.5 s,
+digest `2200ad495a88f95c`). Deterministic metrics match the Rev10 baseline; only
+GPU timing, stochastic Sionna BLER and the OCUDU test-mode PDSCH count vary.
+The config digest changed because the new default simple-polarization
+configuration is now part of the serialized radio config.
+
+- P1-A: 64 vs 32 chains, 20 paired seeds at 500 slots: +0.276 dB mean goodput,
+  energy per bit +186.9 nJ/bit (804.7 to 980.1). The 20,000-slot profile is one
+  run and is not extrapolated.
+- P1-B: NR grid and zero-resource boundaries audited; Sionna coded-link
+  cross-check executed (`PHY_VALIDATED` for that check only).
+- P1-C: optional Jones/XPD sweep; scalar channel remains default. No calibrated
+  antenna/polarization claim.
+- P1-D: all 48 constrained runs infeasible under tested QoS thresholds.
+- P1-E: sensor-degraded recall 0.744; 28/48 healthy sensor-fault cases false
+  alarmed (105,000/hour in-harness). These are negative reliability findings.
+
+P1 does not change the Rev10 decision: **PCB / hardware release remains NO-GO.**

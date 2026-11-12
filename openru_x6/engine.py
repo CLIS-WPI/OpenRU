@@ -100,6 +100,7 @@ class RunResult:
     fault_events: list[dict[str, Any]] = field(default_factory=list)
     healing: dict[str, Any] = field(default_factory=dict)
     energy: dict[str, Any] = field(default_factory=dict)
+    healing_trace: list[dict[str, Any]] = field(default_factory=list)
 
     def as_metrics(self, experiment: str, scenario: str, seed: int, policy: str,
                    store: Any, config_digest: str = "") -> None:
@@ -123,7 +124,9 @@ class SimulationEngine:
             faults: list[FaultSpec] | None = None, healing: bool = False,
             healing_detector: StatisticalDetector | None = None,
             threshold_detector: Any | None = None,
-            collect_telemetry: bool = True) -> RunResult:
+            collect_telemetry: bool = True,
+            telemetry_transform: Callable[[dict[str, Any], int], dict[str, Any]] | None = None,
+            energy_constraints: dict[str, Any] | None = None) -> RunResult:
         radio, e_cfg, ctx = self.radio, self.energy_cfg, self.ctx
         fault_sig = sum(sum(ord(ch) for ch in spec.kind) + spec.onset_slot + spec.tile
                         for spec in (faults or []))
@@ -241,6 +244,7 @@ class SimulationEngine:
         served_total = 0.0
         slots: list[dict[str, Any]] = []
         telem_hist: list[dict[str, Any]] = []
+        healing_trace: list[dict[str, Any]] = []
         sinr_hist: list[float] = []
         bler_hist: list[float] = []
         layer_hist: list[float] = []
@@ -279,7 +283,8 @@ class SimulationEngine:
             injector.step(slot, dt)
             # --- energy decision -----------------------------------------
             if forced_chains is None:
-                policy.update(load_obs, load_obs, slot * dt, thermal.throttled, dt_s=dt)
+                policy.update(load_obs, load_obs, slot * dt, thermal.throttled, dt_s=dt,
+                              constraints=energy_constraints)
             else:
                 policy.mgr.state = _state_for_count(forced_chains)
                 policy.mgr.target_state = policy.mgr.state
@@ -347,13 +352,25 @@ class SimulationEngine:
             temp_hist.append(float(temp.max()))
             # --- telemetry / diagnostics ---------------------------------
             tel = hw.telemetry() if collect_telemetry else {}
+            if collect_telemetry and telemetry_transform is not None:
+                tel = telemetry_transform(tel, slot)
             if collect_telemetry:
                 telem_hist.append({"slot": slot, **{k: v for k, v in tel.items()
                                                     if k in ("active_chains", "state")},
                                    "per_tile": tel["per_tile"]})
             if healer is not None and collect_telemetry:
-                healer.step(slot, tel, {"load_fraction": load_obs},
-                            executor=execute_recovery)
+                diag = healer.step(slot, tel, {"load_fraction": load_obs},
+                                   executor=execute_recovery)
+                healing_trace.append({
+                    "slot": slot,
+                    "detected": bool(diag.detected),
+                    "tile": int(diag.tile),
+                    "suspected_fault": str(diag.suspected_fault),
+                    "confidence": float(diag.confidence),
+                    "score": float(diag.score),
+                    "actual_faults": [s.spec.kind for s in injector.states if s.active],
+                    "actual_tiles": [s.ground_truth_tile for s in injector.states if s.active],
+                })
             qos = queue.qos_violation_fraction() if queue is not None else 0.0
             qos_hist.append(qos)
             slots.append({
@@ -452,7 +469,8 @@ class SimulationEngine:
                          "active_slots": int(s.applied_slots)} for s in injector.states]
         return RunResult(summary=summary, slots=slots, per_user_bits=per_user_bits,
                          telemetry=telem_hist, fault_events=fault_events,
-                         healing=healing_summary, energy=energy_summary)
+                         healing=healing_summary, energy=energy_summary,
+                         healing_trace=healing_trace)
 
 
 def _state_for_count(n: int) -> str:
