@@ -82,6 +82,9 @@ docker compose run --rm sim python -m openru_x6.cli run-suite \
 
 docker compose run --rm sim python -m openru_x6.cli run-suite \
   --suite full --out results/full
+
+docker compose run --rm sim python -m openru_x6.cli run-suite \
+  --suite long_horizon --out results/long_horizon
 ```
 
 Run the complete local pipeline (build, GPU check, tests, coverage, smoke and
@@ -133,7 +136,7 @@ Every metric is labelled:
 
 ## Latest verified results
 
-Rev10 local H100 run, 2026-11-11:
+Published Rev10 baseline (pre-P1), local H100 run, 2026-11-11:
 
 | Item | Result |
 |---|---|
@@ -143,8 +146,23 @@ Rev10 local H100 run, 2026-11-11:
 | Full config digest | `1d89961ada5a68e3` |
 | Smoke config digest | `e00ba9df0f1b575a` |
 | Image | `sha256:927fd2d6cc07b27cce32c6e435db285c8f57eeb6675c5a584c275900afb5a4dd` |
-| E04 full | 1,024 recovery actions attempted and verified; 0 rolled back, failed or unrouted |
-| INTEGRATION full | 20/20 seeds detected and isolated; zero unauthorized/unsafe commands; audit valid |
+
+P1 branch correction regression, fresh container run, 2026-11-11:
+
+| Item | Result |
+|---|---|
+| Tests | **52 passed** in the pinned container; 51 non-property tests passed locally |
+| Smoke suite | 6/6 PASS, 2,681 metric rows, 33.1 s, digest `cf44501c4f9daa81` |
+| Full suite | 12/12 PASS, 99,041 metric rows, 596.6 s, digest `2200ad495a88f95c` |
+| P1 reduced suite | 5/5 PASS, 9,455 metric rows, 906.0 s, digest `d432664706af1f75` |
+| Image | unchanged `sha256:927fd2d6cc07b27cce32c6e435db285c8f57eeb6675c5a584c275900afb5a4dd` |
+| E04 full | PASS; 1,024 actions attempted and verified, 0 rolled back/failed/unrouted |
+| INTEGRATION full | PASS; 20/20 seeds detected and isolated; audit valid |
+
+All deterministic smoke/full metrics are unchanged from the Rev10 baseline. Only
+GPU timing, stochastic Sionna BLER and the OCUDU test-mode PDSCH count vary
+between runs. The config digest changed because the new default
+`simple` polarization configuration is now part of the serialized radio config.
 
 Important scientific result: the low-load predictive energy policy saved
 **17.43%** energy, but reduced goodput by **1.37 Mbps**, increased the
@@ -156,7 +174,15 @@ At 128 UEs the modeled 64-chain mode delivered 1,154.98 Mbps at 455.90 W versus
 cases. Goodput and modeled power rose by approximately the same proportion; this
 is **not** an energy-efficiency or hardware-cost justification for 64 chains.
 
-See `REV10_VERIFICATION.md` and `docs/VALIDATION.md` for the validation summary.
+P1 results are deliberately mixed: corrected paired 500-slot runs show 64 chains
+raising mean goodput from 503.54 to 525.67 Mbps (+0.187 dB) but also raising
+energy per bit from 700.6 to 875.1 nJ/bit. Only **24 of the 48 P1-D runs were
+QoS-constrained**, and **0/24 met the tested constraints**; P1-E's healthy
+sensor-fault cases produced **28/48 false alarms (58.3%)**, while its
+105,000/hour figure is a short-run extrapolation, not a measured rate. These are
+reported as negative findings, not smoothed away. See `docs/P1_VALIDATION.md` and
+`docs/P1_FINAL_DECISION.md`. P1 is a separate, reduced local suite; it does not
+replace the published Rev10 full-suite baseline.
 
 ## Reproducibility
 
@@ -171,20 +197,22 @@ See `REV10_VERIFICATION.md` and `docs/VALIDATION.md` for the validation summary.
 
 ## Known limitations and open issues
 
-- **E01 horizon:** the full suite still runs only 3 slots (1.5 ms). Long-horizon
-  scheduling, fairness, queueing and mobility claims are not established.
+- **E01 horizon:** the published full suite still runs only 3 slots (1.5 ms).
+  P1 adds a disclosed reduced long-horizon investigation, but does not establish
+  deployment-scale long-horizon scheduling, fairness or mobility claims.
 - **32T32R vs 64T64R:** no decisive energy-efficiency advantage has been shown.
-- **E02 QoS:** the predictive energy policy is not QoS-constrained. A proper
-  Pareto sweep over permitted deadline-miss/latency loss is still required.
+- **E02/P1-D QoS:** P1 adds a closed-loop constraint sweep, but the published
+  predictive policy is not QoS-neutral. Deployment Pareto claims still require
+  broader traffic traces and scheduler-fairness validation.
 - **INTEGRATION:** it exercises a scripted energy transition plus a fault, not a
   fully coupled adaptive energy + fault + wake + traffic control loop.
-- **Diagnostics:** conspicuous injected faults are detected reliably, but
-  unknown fault mechanisms, missing/biased/frozen sensors, sensor outages and
-  domain shift remain untested. Recall 1.00 is not physical diagnostic accuracy.
-- **Dual polarization:** the model does not yet implement calibrated XPD/XPR,
-  polarization-dependent path responses or cross-polar scattering.
-- **NR resource semantics:** TDD/symbol overhead factors and the separate 0.88
-  efficiency factor still need auditing against a known physical-layer reference.
+- **Diagnostics:** P1 adds held-out unknown-fault and missing/biased/frozen/
+  stale/quantized/inconsistent sensor cases. These are simulation-only; recall
+  and false-alarm figures are not physical diagnostic accuracy.
+- **Dual polarization:** P1 adds a configurable 2x2 Jones/XPD/XPR model, but it is
+  not calibrated to an antenna chamber, PCB or measured cross-polar pattern.
+- **NR resource semantics:** P1 audits the 273-PRB/98.28-MHz grid and the
+  separate 0.88 coded-link factor. The audit is not a 3GPP conformance test.
 - **Security:** E05 is role-policy simulation. There is no mTLS credential proof,
   persistent anti-replay store, secure element or board-level command attestation.
 - **OCUDU/OFH:** E10 is DU/PHY `ru_dummy` + `test_mode` only. `ru_emu` and O-RAN

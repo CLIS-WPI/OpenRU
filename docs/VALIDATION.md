@@ -91,3 +91,17 @@ Run `bash scripts/run_all.sh`. It writes `results/build.log`,
 `results/gpu_verify.log`, `results/tests.xml`, `results/coverage.xml`,
 `results/smoke/`, and `results/full/`. The full run is expected to take several
 minutes on an H100; E02 is the dominant cost.
+
+
+## P1 scientific validation
+
+P1 is implemented by the separate `long_horizon` suite and documented in
+`docs/P1_VALIDATION.md`. Its mandatory set is P1A-P1E; the published `smoke` and
+`full` suites are unchanged. P1-A reports paired 20-seed 500-slot comparisons and
+a separate 20,000-slot timing profile; it does not claim a 20-seed 20,000-slot
+matrix. P1-B separates the NR resource audit from the Sionna coded-link check.
+P1-C keeps the scalar channel default and adds an optional Jones/XPD sweep. P1-D
+routes closed-loop energy/recovery actions through `ControlPlane`. P1-E uses
+disjoint calibration/evaluation seeds and does not give labels to the detector.
+No P1 output is `HARDWARE_MEASURED`. See `docs/P1_FINAL_DECISION.md` for the
+bounded software, 4T4R architecture and PCB-fabrication decisions.

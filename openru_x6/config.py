@@ -117,6 +117,24 @@ class TrafficConfig(StrictModel):
     queue_max_bits: float = 2.0e7
 
 
+class PolarizationConfig(StrictModel):
+    """Optional dual-polarized channel abstraction.
+
+    ``simple`` preserves the original scalar feed response. ``jones`` uses a
+    per-path 2x2 complex polarimetric matrix with XPD/XPR, correlated fading,
+    orientation mismatch and calibration errors. This is a behavioural model,
+    not measured antenna or PCB polarization data.
+    """
+
+    model: Literal["simple", "jones"] = "simple"
+    xpd_db: float = 20.0
+    xpr_db: float = 20.0
+    correlation: float = Field(ge=0, le=1, default=0.5)
+    orientation_std_deg: float = Field(ge=0, default=5.0)
+    calibration_amplitude_error_db: float = Field(ge=0, default=0.1)
+    calibration_phase_error_deg: float = Field(ge=0, default=1.0)
+
+
 class RadioConfig(StrictModel):
     schema_version: str = "1.0"
     cell: CellConfig
@@ -124,6 +142,7 @@ class RadioConfig(StrictModel):
     mimo: MimoConfig
     channel: ChannelConfig
     traffic: TrafficConfig
+    polarization: PolarizationConfig = Field(default_factory=PolarizationConfig)
     evidence_class: str = "SIMULATED"
 
 

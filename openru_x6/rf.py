@@ -116,14 +116,18 @@ def direction_from_angles(az_deg: np.ndarray | float, el_deg: np.ndarray | float
     return u
 
 
-def array_response(fm: FeedMap, directions: np.ndarray) -> np.ndarray:
-    """Complex feed response [..., F] for unit direction vectors [..., 3]."""
+def array_response_geometry(fm: FeedMap, directions: np.ndarray) -> np.ndarray:
+    """Geometry-only complex feed response [..., F] for unit directions [..., 3]."""
     u = np.asarray(directions, dtype=np.float64)
     k = 2.0 * np.pi / fm.wavelength_m
     proj = fm.feed_positions[:, 1] * u[..., None, 1] + fm.feed_positions[:, 2] * u[..., None, 2]
-    phase = k * proj
+    return np.exp(1j * k * proj)
+
+
+def array_response(fm: FeedMap, directions: np.ndarray) -> np.ndarray:
+    """Complex feed response [..., F] using the legacy scalar polarization model."""
     pol = np.where(fm.feed_pol == 0, 1.0 + 0j, 1j)
-    return np.exp(1j * phase) * pol
+    return array_response_geometry(fm, directions) * pol
 
 
 def quantize_phase(phi: np.ndarray, bits: int) -> np.ndarray:

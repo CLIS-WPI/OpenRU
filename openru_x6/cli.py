@@ -10,7 +10,8 @@ import traceback
 from pathlib import Path
 
 from .config import config_digest, load_energy, load_radio, load_security
-from .experiments import EXPERIMENTS, REQUIRED_FULL, REQUIRED_SMOKE
+from .experiments import (EXPERIMENTS, REQUIRED_FULL, REQUIRED_SMOKE,
+                          SUITE_REQUIRED, experiments_for_suite)
 from .experiments.common import load_suite
 from .gpu import environment_report
 from .metrics import ExperimentResult, MetricsStore, write_json
@@ -42,7 +43,7 @@ def cmd_run_suite(args: argparse.Namespace) -> int:
     selected = [x.strip() for x in (args.only or "").split(",") if x.strip()]
     results: list[ExperimentResult] = []
     print(f"[openru] suite={suite_name} out={out} config={digest} python={platform.python_version()}")
-    for exp_id, module in EXPERIMENTS:
+    for exp_id, module in experiments_for_suite(suite_name):
         if selected and exp_id not in selected:
             continue
         print(f"[openru] running {exp_id} ...", flush=True)
@@ -65,7 +66,7 @@ def cmd_run_suite(args: argparse.Namespace) -> int:
               f"{' - ' + res.reason if res.reason else ''}", flush=True)
 
     csv, _pq = store.save(out)
-    required = REQUIRED_FULL if suite_name == "full" else REQUIRED_SMOKE
+    required = SUITE_REQUIRED.get(suite_name, REQUIRED_FULL)
     by_id = {r.id: r for r in results}
     mandatory = {k: (by_id.get(k).status if by_id.get(k) else "NOT_RUN") for k in required}
     failed_required = [k for k, v in mandatory.items() if v != "PASS"]
@@ -114,7 +115,7 @@ def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(prog="openru_x6", description="OpenRU-X6 simulation lab")
     sub = p.add_subparsers(dest="command", required=True)
     r = sub.add_parser("run-suite", help="run an experiment suite")
-    r.add_argument("--suite", choices=["smoke", "full"], required=True)
+    r.add_argument("--suite", choices=["smoke", "full", "long_horizon"], required=True)
     r.add_argument("--out", required=True)
     r.add_argument("--only", default="", help="comma-separated experiment ids")
     r.set_defaults(func=cmd_run_suite)

@@ -45,3 +45,42 @@ Artifacts: `results/pytest.log`, `results/tests.xml`, `results/coverage.xml`, `r
 **Scientific validation gate: NOT MET.** Extended E01/E02/E04 and combined adaptive INTEGRATION work remains.
 
 **PCB / hardware release: NO-GO.** No OFH interoperability, RF measurement, EM/thermal signoff or calibrated dual-polarized array validation exists in this repository.
+
+
+## P1 follow-on (separate reduced suite)
+
+P1 is implemented on branch `p1-scientific-validation` as the separate
+`long_horizon` suite; `smoke` and `full` membership is unchanged. Latest
+corrected P1 run: **5/5 PASS**, 9,455 rows, 906.0 s, digest
+`d432664706af1f75`.
+
+Fresh container regression after the P1 corrections: smoke 6/6 PASS (2,681 rows,
+33.1 s, digest `cf44501c4f9daa81`), full 12/12 PASS (99,041 rows, 596.6 s,
+digest `2200ad495a88f95c`), and **52 tests passed**. Deterministic metrics match
+the Rev10 baseline; only GPU timing, stochastic Sionna BLER and the OCUDU
+test-mode PDSCH count vary. The config digest changed because the new default
+simple-polarization configuration is now part of the serialized radio config.
+
+- P1-A: 64 vs 32 chains, 20 paired seeds at 500 slots: 503.54 to 525.67 Mbps
+  (+0.187 dB mean goodput); energy per bit rose +174.5 nJ/bit (700.6 to 875.1).
+  The 20,000-slot profile is one run and is not extrapolated.
+- P1-B: NR grid and zero-resource boundaries audited; 98.28 MHz, 273 PRBs,
+  0.492 resource factor, delivered/capacity 0.374. The small Sionna coded-link
+  cross-check is `PHY_VALIDATED` for that check only; it is conservative at high
+  SNR and is not RF or NR conformance evidence.
+- P1-C: optional Jones/XPD sweep; corrected mean 590.29 Mbps versus 675.66 Mbps
+  simple reference. Scalar channel remains default. No calibrated
+  antenna/polarization claim.
+- P1-D: 48 total runs, of which **24 were QoS-constrained and 0/24 were
+  feasible**. Mean constrained deadline miss 0.311, mean P99 173 slots, mean
+  service interruption 18 slots, mean energy 41.18 J. All 48 injected faults
+  were detected and recovered through authorized commands.
+- P1-E: sensor-degraded recall 0.744; **28/48 healthy sensor-fault cases false
+  alarmed (58.3%)**. The 105,000/hour value is an arithmetic extrapolation from
+  short simulated cases, not an operational rate. These are negative reliability
+  findings.
+
+P1 does not change the Rev10 decision: **PCB / hardware release remains NO-GO.**
+The bounded software validation is a PASS, but the next hardware step is limited
+to a 4T4R/16-feed architecture and component-selection study. See
+`docs/P1_FINAL_DECISION.md`.

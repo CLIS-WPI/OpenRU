@@ -20,11 +20,24 @@
 - Normal self-healing actions go through the control plane. Only the independent
   emergency mute retains direct hardware actuation as a fail-safe path; E05 is
   a role-policy simulator, not credential/mTLS/secure-element evidence.
-- Telemetry seeding/drift/quantization are behavioral models. Missing, biased
-  and failed-sensor cases and full per-fault held-out confusion matrices remain
-  validation work, not established hardware robustness.
+- Telemetry seeding/drift/quantization are behavioral models. P1 adds missing,
+  biased, frozen, stale, quantized and inconsistent sensor cases plus held-out
+  fault families, but these remain simulation sensitivity tests, not established
+  hardware robustness.
 - Completed-service P99 can exceed the deadline because late service is
   included. Expired/dropped/queued censoring is reported separately; it is not
   a claim that all users meet their deadline.
-- A successful build or a `PASS` in a reduced suite does not establish complete
-  verification; mandatory full-suite status is authoritative.
+- P1 is a reduced local suite. Its 500-slot paired comparisons and single
+  20,000-slot profile are explicitly not a deployment-scale matrix. A `PASS` in
+  a reduced suite does not establish complete verification; mandatory full-suite
+  status is authoritative.
+- P1-D found **0/24 feasible** QoS-constrained runs, and P1-E found **28/48
+  (58.3%)** false alarms on healthy cases with sensor faults. These are negative
+  findings: the tested scheduler and detector are not deployment-ready. The
+  105,000/hour P1-E value is a short-run extrapolation, not a measured rate.
+- P1-C's Jones/XPD sweep uses simulated, uncalibrated polarization parameters.
+  P1-B's Sionna check is a small AWGN coded-link cross-check, not RF or 5G NR
+  conformance evidence. Neither supports a 64T64R hardware selection.
+- The first physical prototype, if funded, should be a **4T4R/16-feed tile**.
+  PCB fabrication remains **NO-GO** until RFIC selection, stackup, SI/PI, RF EM,
+  thermal, supplier review, bench measurement and calibration are complete.
