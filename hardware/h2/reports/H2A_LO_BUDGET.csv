@@ -1,0 +1,8 @@
+case,ADF4371 setting,RF8P single-ended dBm (ASSUMPTION/PLOT),after 10 pF + trace,AVA-183A+ out (gain interp. 5-8 GHz; P1dB ~17.6-18),after 3 dB pad,per LTC5553 LO (EP4RKU+ 9.4 dB + 1 dB trace),vs LTC5553 LO range -6..+6 dBm (abs max +10)
+nominal,RF_OUT_POWER=-1 dBm setting,0.0,-0.3,13.2,10.2,-0.2,OK
+power-up default,"RF_OUT_POWER=5 dBm (reset default, RF_EN=1)",4.0,3.7,17.2,14.2,3.8,OK
+low,RF_OUT_POWER=-4 dBm setting,-5.0,-5.3,7.6,4.6,-5.8,OK
+
+note,"RF8P single-ended level at 6.6 GHz is not tabulated in ADF4371 Rev 0 (Fig 13 shows ~+6..7 dBm de-embedded, differential combined); AVA-183A+ has no spec between 5 and 8 GHz -> both need bench confirmation (C4)"
+note,"EP4RKU+ phase unbalance 1.9 deg typ / 19 deg max and amplitude 0.2/1.2 dB -> static, removed by the CAL-port calibration"
+note,"DC: ADF4371 ~0.9-1.3 W (AIDD 190-260 mA @3.3 V + VCO 135-180 mA @5 V + RF8 65 mA), AVA-183A+ 131-166 mA @5 V"

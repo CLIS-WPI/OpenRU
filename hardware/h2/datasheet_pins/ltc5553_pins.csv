@@ -1,0 +1,14 @@
+pin,name,kicad_type,description,ds_page
+1,GND,power_in,"Ground; must be soldered to RF ground (Pin Functions: GND Pins 1, 3, 4, 6, 8, 10, 12, Exposed Pad Pin 13)",8
+2,IF,bidirectional,"Single-ended IF port; internally to IF transformer primary, low DC resistance to ground (~6.2 ohm); series DC block 'should be used' if DC present; matched 500MHz to 9GHz",8
+3,GND,power_in,Ground,8
+4,GND,power_in,Ground,8
+5,RF,bidirectional,"Single-ended RF port; internally to RF transformer primary, DC-grounded (~2.5 ohm); series DC block 'must be used' to avoid damage if DC present; matched 3GHz to 20GHz",8
+6,GND,power_in,Ground,8
+7,EN,input,"Enable; >1.2V on, <0.3V off; internal 376k pull-down (floating = disabled); never exceed VCC+0.3V",8
+8,GND,power_in,Ground,8
+9,VCC,power_in,"Supply 3.3V regulated (3.0-3.6V), bypass cap close to pin; 132mA typ",8
+10,GND,power_in,Ground,8
+11,LO,input,"LO input, 50 ohm 1-20GHz; series DC block must be used (C1=18pF); pin DC ~1.6V",8
+12,GND,power_in,Ground,8
+EP,GND,power_in,"Exposed pad, printed pin 13, GND; must be soldered to PCB (electrical + thermal)",2

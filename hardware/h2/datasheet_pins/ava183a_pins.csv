@@ -1,0 +1,10 @@
+pin,name,kicad_type,description,ds_page
+2,RF_IN,passive,RF-IN,AVA-183A+ REV.D ECO-024424 Pads
+5,RF_OUT,passive,RF-OUT,AVA-183A+ REV.D ECO-024424 Pads
+8,VD1,power_in,DC VD1,AVA-183A+ REV.D ECO-024424 Pads
+7,VD2,power_in,DC VD2,AVA-183A+ REV.D ECO-024424 Pads
+EP,GND,power_in,GND paddle,AVA-183A+ REV.D ECO-024424 Pads
+1,NU,unconnected,NOT USED,AVA-183A+ REV.D ECO-024424 Pads
+3,NU,unconnected,NOT USED,AVA-183A+ REV.D ECO-024424 Pads
+4,NU,unconnected,NOT USED,AVA-183A+ REV.D ECO-024424 Pads
+6,NU,unconnected,NOT USED,AVA-183A+ REV.D ECO-024424 Pads

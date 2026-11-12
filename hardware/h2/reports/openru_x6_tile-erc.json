@@ -1,0 +1,452 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-12T17:20:26+0000",
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "9.0.9",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/d8f54b6a-6767-4ac2-9a4f-de0da41c3086",
+            "violations": []
+        },
+        {
+            "path": "/RF_CHAIN_1/",
+            "uuid_path": "/d8f54b6a-6767-4ac2-9a4f-de0da41c3086/189cdf4c-c39d-4318-9c6e-8c06f6adf5ec",
+            "violations": []
+        },
+        {
+            "path": "/RF_CHAIN_1/BF_1/",
+            "uuid_path": "/d8f54b6a-6767-4ac2-9a4f-de0da41c3086/189cdf4c-c39d-4318-9c6e-8c06f6adf5ec/2e59a73d-f487-4bea-bd07-c9b85d477dd1",
+            "violations": []
+        },
+        {
+            "path": "/RF_CHAIN_1/FE_1/",
+            "uuid_path": "/d8f54b6a-6767-4ac2-9a4f-de0da41c3086/189cdf4c-c39d-4318-9c6e-8c06f6adf5ec/c2bb89f0-debb-408b-9a5e-7bcc12416b6d",
+            "violations": []
+        },
+        {
+            "path": "/RF_CHAIN_1/CONV_1/",
+            "uuid_path": "/d8f54b6a-6767-4ac2-9a4f-de0da41c3086/189cdf4c-c39d-4318-9c6e-8c06f6adf5ec/7f182b89-3e02-424b-b969-0fb60246157c",
+            "violations": []
+        },
+        {
+            "path": "/RF_CHAIN_2/",
+            "uuid_path": "/d8f54b6a-6767-4ac2-9a4f-de0da41c3086/804723a8-c580-4fa0-9722-cffe054a6449",
+            "violations": []
+        },
+        {
+            "path": "/RF_CHAIN_2/BF_2/",
+            "uuid_path": "/d8f54b6a-6767-4ac2-9a4f-de0da41c3086/804723a8-c580-4fa0-9722-cffe054a6449/205d6cb1-84a1-4685-9e39-5602e2bb8aa8",
+            "violations": []
+        },
+        {
+            "path": "/RF_CHAIN_2/FE_2/",
+            "uuid_path": "/d8f54b6a-6767-4ac2-9a4f-de0da41c3086/804723a8-c580-4fa0-9722-cffe054a6449/b5f20ef8-20e9-4dd7-ab49-db3710692c1b",
+            "violations": []
+        },
+        {
+            "path": "/RF_CHAIN_2/CONV_2/",
+            "uuid_path": "/d8f54b6a-6767-4ac2-9a4f-de0da41c3086/804723a8-c580-4fa0-9722-cffe054a6449/b620a692-4d79-4cb1-aeca-73132796f0c8",
+            "violations": []
+        },
+        {
+            "path": "/RF_CHAIN_3/",
+            "uuid_path": "/d8f54b6a-6767-4ac2-9a4f-de0da41c3086/94092c30-a743-46dc-9508-33d944a947de",
+            "violations": []
+        },
+        {
+            "path": "/RF_CHAIN_3/BF_3/",
+            "uuid_path": "/d8f54b6a-6767-4ac2-9a4f-de0da41c3086/94092c30-a743-46dc-9508-33d944a947de/bdded140-db32-4563-8c53-b90ffa0c58bd",
+            "violations": []
+        },
+        {
+            "path": "/RF_CHAIN_3/FE_3/",
+            "uuid_path": "/d8f54b6a-6767-4ac2-9a4f-de0da41c3086/94092c30-a743-46dc-9508-33d944a947de/8305d0de-67c3-4ede-84b3-936e9583cdaa",
+            "violations": []
+        },
+        {
+            "path": "/RF_CHAIN_3/CONV_3/",
+            "uuid_path": "/d8f54b6a-6767-4ac2-9a4f-de0da41c3086/94092c30-a743-46dc-9508-33d944a947de/daf0d01c-4f74-4242-a76b-91a075f68b61",
+            "violations": []
+        },
+        {
+            "path": "/RF_CHAIN_4/",
+            "uuid_path": "/d8f54b6a-6767-4ac2-9a4f-de0da41c3086/c26fc9d7-49d5-4ad7-8e24-f7864e699d0b",
+            "violations": []
+        },
+        {
+            "path": "/RF_CHAIN_4/BF_4/",
+            "uuid_path": "/d8f54b6a-6767-4ac2-9a4f-de0da41c3086/c26fc9d7-49d5-4ad7-8e24-f7864e699d0b/5f0a1089-7c57-46bb-b1e9-54e8febd8a8c",
+            "violations": []
+        },
+        {
+            "path": "/RF_CHAIN_4/FE_4/",
+            "uuid_path": "/d8f54b6a-6767-4ac2-9a4f-de0da41c3086/c26fc9d7-49d5-4ad7-8e24-f7864e699d0b/00e8334a-c3ce-4a70-98b6-88cc1f9afa0e",
+            "violations": []
+        },
+        {
+            "path": "/RF_CHAIN_4/CONV_4/",
+            "uuid_path": "/d8f54b6a-6767-4ac2-9a4f-de0da41c3086/c26fc9d7-49d5-4ad7-8e24-f7864e699d0b/da860dfb-94c9-4915-88f2-3448bd286426",
+            "violations": []
+        },
+        {
+            "path": "/LO_SYNTH/",
+            "uuid_path": "/d8f54b6a-6767-4ac2-9a4f-de0da41c3086/331283df-5332-496e-82cb-45e339408373",
+            "violations": [
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U501 Pin 3 [RS_SW, Passive, Line]",
+                            "pos": {
+                                "x": 0.889,
+                                "y": 1.1938
+                            },
+                            "uuid": "b994a73b-859d-42ee-a38e-40779a2a6fb2"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U501 Pin 5 [VTUNE, Input, Line]",
+                            "pos": {
+                                "x": 0.889,
+                                "y": 1.2192
+                            },
+                            "uuid": "3c4fe599-c046-4304-a543-582025ffc9fc"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Input pin not driven by any Output pins",
+                    "items": [
+                        {
+                            "description": "Symbol U501 Pin 5 [VTUNE, Input, Line]",
+                            "pos": {
+                                "x": 0.889,
+                                "y": 1.2192
+                            },
+                            "uuid": "3c4fe599-c046-4304-a543-582025ffc9fc"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_driven"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U501 Pin 2 [CPOUT, Output, Line]",
+                            "pos": {
+                                "x": 1.4986,
+                                "y": 1.1684
+                            },
+                            "uuid": "552b774a-c0ca-4a68-b7b7-82c8afadaa42"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U502 Pin 8 [VD1, Power input, Line]",
+                            "pos": {
+                                "x": 2.9718,
+                                "y": 1.0414
+                            },
+                            "uuid": "a75f8b78-8ede-4667-94dd-865493a8d45c"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol U502 Pin 8 [VD1, Power input, Line]",
+                            "pos": {
+                                "x": 2.9718,
+                                "y": 1.0414
+                            },
+                            "uuid": "a75f8b78-8ede-4667-94dd-865493a8d45c"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U502 Pin 7 [VD2, Power input, Line]",
+                            "pos": {
+                                "x": 3.0226,
+                                "y": 1.0414
+                            },
+                            "uuid": "7467a9f6-de79-4850-b841-315f239cb991"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol U502 Pin 7 [VD2, Power input, Line]",
+                            "pos": {
+                                "x": 3.0226,
+                                "y": 1.0414
+                            },
+                            "uuid": "7467a9f6-de79-4850-b841-315f239cb991"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                }
+            ]
+        },
+        {
+            "path": "/CAL_AND_TEST_IO/",
+            "uuid_path": "/d8f54b6a-6767-4ac2-9a4f-de0da41c3086/487a0203-ae76-44de-a2a1-48fc285aa44d",
+            "violations": []
+        },
+        {
+            "path": "/POWER_SEQUENCING/",
+            "uuid_path": "/d8f54b6a-6767-4ac2-9a4f-de0da41c3086/c45b9794-29a2-4f67-a1a4-774ea20979cd",
+            "violations": [
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U621 Pin 2 [QOD, Open collector, Line]",
+                            "pos": {
+                                "x": 3.0988,
+                                "y": 1.7018
+                            },
+                            "uuid": "3e07e9e4-81cc-47be-81b7-d0e04f2520f4"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U621 Pin 3 [CT, Output, Line]",
+                            "pos": {
+                                "x": 3.0988,
+                                "y": 1.7272
+                            },
+                            "uuid": "ac50893c-49d1-42c7-a8a7-20ea002f7c55"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U622 Pin 2 [QOD, Open collector, Line]",
+                            "pos": {
+                                "x": 3.3528,
+                                "y": 1.7018
+                            },
+                            "uuid": "557e7da0-213f-47de-9cae-4437914e3bc3"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U622 Pin 3 [CT, Output, Line]",
+                            "pos": {
+                                "x": 3.3528,
+                                "y": 1.7272
+                            },
+                            "uuid": "90aa70cc-3e2b-4c7a-88e2-cf18de45e077"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U623 Pin 2 [QOD, Open collector, Line]",
+                            "pos": {
+                                "x": 3.6068,
+                                "y": 1.7018
+                            },
+                            "uuid": "16c76e1d-f555-48c9-84f4-2917261cfe9f"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U623 Pin 3 [CT, Output, Line]",
+                            "pos": {
+                                "x": 3.6068,
+                                "y": 1.7272
+                            },
+                            "uuid": "3c37f4d1-de61-4ff9-bd60-4d90f252371d"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U624 Pin 2 [QOD, Open collector, Line]",
+                            "pos": {
+                                "x": 3.8481,
+                                "y": 1.7018
+                            },
+                            "uuid": "3bec7b73-f6d7-4958-8a8f-1eb4e896cb72"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U624 Pin 3 [CT, Output, Line]",
+                            "pos": {
+                                "x": 3.8481,
+                                "y": 1.7272
+                            },
+                            "uuid": "d981b1b8-908e-48c6-8e03-05a1f1d92adc"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                }
+            ]
+        },
+        {
+            "path": "/MCU_SAFETY/",
+            "uuid_path": "/d8f54b6a-6767-4ac2-9a4f-de0da41c3086/cc5639e9-275f-47c9-990b-ebc8a747e0c2",
+            "violations": [
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U702 Pin 4 [CRST, Passive, Line]",
+                            "pos": {
+                                "x": 0.6985,
+                                "y": 0.9779
+                            },
+                            "uuid": "4116bef7-ca4d-46fb-9e03-3508ec093d65"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U702 Pin 2 [CWD, Passive, Line]",
+                            "pos": {
+                                "x": 0.6985,
+                                "y": 1.0033
+                            },
+                            "uuid": "859f1319-636f-4c28-aae0-0688c391ae9e"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U702 Pin 3 [SET0, Input, Line]",
+                            "pos": {
+                                "x": 0.6985,
+                                "y": 1.0287
+                            },
+                            "uuid": "b7bbcfe6-d13f-49f2-a31d-63f33d52c5ac"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Input pin not driven by any Output pins",
+                    "items": [
+                        {
+                            "description": "Symbol U702 Pin 3 [SET0, Input, Line]",
+                            "pos": {
+                                "x": 0.6985,
+                                "y": 1.0287
+                            },
+                            "uuid": "b7bbcfe6-d13f-49f2-a31d-63f33d52c5ac"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_driven"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U702 Pin 6 [SET1, Input, Line]",
+                            "pos": {
+                                "x": 0.6985,
+                                "y": 1.0541
+                            },
+                            "uuid": "11f74704-9298-4584-86ac-0e0ff20f1346"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Input pin not driven by any Output pins",
+                    "items": [
+                        {
+                            "description": "Symbol U702 Pin 6 [SET1, Input, Line]",
+                            "pos": {
+                                "x": 0.6985,
+                                "y": 1.0541
+                            },
+                            "uuid": "11f74704-9298-4584-86ac-0e0ff20f1346"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_driven"
+                }
+            ]
+        }
+    ],
+    "source": "openru_x6_tile.kicad_sch"
+}

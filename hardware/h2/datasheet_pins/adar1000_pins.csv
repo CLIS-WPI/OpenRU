@@ -1,0 +1,90 @@
+pin,name,kicad_type,description,ds_page
+A1,DET3,passive,Ch3 RF power detector input; internally ac-coupled; enable Reg0x030 bit1; -20 to +10 dBm; if unused disable and 50 ohm terminate or ground,12
+A2,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+A3,TR_SW_NEG,output,Gate control output for external T/R switch (0 V or -5 V); floating at power-up/soft reset,12
+A4,PA_BIAS4,output,Ch4 external PA gate bias DAC output 0 to -4.8 V; ON reg 0x02C / OFF reg 0x049; assumes BIAS_ON default (0x00 = 0 V) at power-up/soft reset,12
+A5,PA_BIAS3,output,Ch3 external PA gate bias DAC output 0 to -4.8 V; ON reg 0x02B / OFF reg 0x048; assumes BIAS_ON default (0x00 = 0 V) at power-up/soft reset,12
+A6,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+A7,RF_IO,passive,"Common RF port: input in TX, output in RX; ac-coupled on-chip; 0 V dc via on-chip shunt inductor; 50 ohm",13
+A8,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+A9,PA_BIAS2,output,Ch2 external PA gate bias DAC output 0 to -4.8 V; ON reg 0x02A / OFF reg 0x047; assumes BIAS_ON default (0x00 = 0 V) at power-up/soft reset,13
+A10,PA_BIAS1,output,Ch1 external PA gate bias DAC output 0 to -4.8 V; ON reg 0x029 / OFF reg 0x046; assumes BIAS_ON default (0x00 = 0 V) at power-up/soft reset,13
+A11,LNA_BIAS,output,External LNA gate bias DAC output 0 to -4.8 V; ON reg 0x02D / OFF reg 0x04A; floats unless Reg0x030 bit4=1; floating at power-up/soft reset,13
+A12,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+A13,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+B1,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+B2,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+B3,PA_ON,input,PA enable input (TR-pin control mode); low forces PA_BIASx to OFF values; internal 100 kohm pull-up to 1.8 V LDO,13
+B4,TR_POL,output,Gate control output for external polarization switch (0 V or -5 V),13
+B5,TR_SW_POS,output,Positive gate control output for external T/R switch (0 V or 3.3 V); floating at power-up/soft reset,13
+B6,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+B7,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+B8,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+B9,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+B10,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+B11,AVDD1,power_in,-5 V supply; sinks PA_BIASx/LNA_BIAS currents; may be grounded if bias outputs unused; power AVDD3 before or with AVDD1,13
+B12,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+B13,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+C1,TX3,passive,Ch3 TX output; ac-coupled via on-chip balun and series cap,13
+C2,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+C12,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+C13,RX2,passive,Ch2 RX input; ac-coupled via on-chip balun,13
+D1,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+D2,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+D12,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+D13,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+E1,RX3,passive,Ch3 RX input; ac-coupled via on-chip balun,13
+E2,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+E12,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+E13,TX2,passive,Ch2 TX output; ac-coupled via on-chip balun and series cap,13
+F1,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+F2,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+F12,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+F13,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+G1,DET4,passive,Ch4 RF power detector input; enable Reg0x030 bit0; -20 to +10 dBm; if unused disable and 50 ohm terminate or ground,13
+G2,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+G12,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+G13,DET2,passive,Ch2 RF power detector input; enable Reg0x030 bit2; -20 to +10 dBm; if unused disable and 50 ohm terminate or ground,13
+H1,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+H2,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+H12,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+H13,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+J1,TX4,passive,Ch4 TX output; ac-coupled via on-chip balun and series cap,13
+J2,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+J12,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+J13,RX1,passive,Ch1 RX input; ac-coupled via on-chip balun,13
+K1,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+K2,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+K12,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+K13,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+L1,RX4,passive,Ch4 RX input; ac-coupled via on-chip balun,13
+L2,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+L12,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+L13,TX1,passive,Ch1 TX output; ac-coupled via on-chip balun and series cap,13
+M1,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+M2,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+M3,CSB,input,"SPI chip select, active low (1.8 V CMOS); write data latched when CSB goes high",13
+M4,SDO,output,"SPI serial data output (1.8 V CMOS), enabled when SDO ACTIVE bit=1 (4-wire); not tristated when shared (readback error) - see SDO Readback Problem",13
+M5,SDIO,bidirectional,"SPI serial data in/out (1.8 V CMOS); 4-wire if SDO ACTIVE=1, 3-wire if SDO ACTIVE=0",13
+M6,SCLK,input,SPI clock (1.8 V CMOS); write data sampled on rising edge; read data changes on falling edge,13
+M7,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+M8,CREG1,passive,Decoupling for 1.8 V LDO reference; 1 uF to ground plane,14
+M9,CREG2,passive,Decoupling for 2.8 V LDO output; 1 uF to ground plane,14
+M10,AVDD3,power_in,3.3 V supply input; power before or with AVDD1,14
+M11,AVDD3,power_in,3.3 V supply input; power before or with AVDD1,14
+M12,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+M13,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+N1,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+N2,RX_LOAD,input,"Load RX registers (1.8 V CMOS); rising edge transfers RX holding->working regs; no internal pull-down, pull to GND if unused; OR'ed with LDRX_OVERRIDE",14
+N3,TX_LOAD,input,"Load TX registers (1.8 V CMOS); rising edge transfers TX holding->working regs; no internal pull-down, pull to GND if unused; OR'ed with LDTX_OVERRIDE",14
+N4,ADDR0,input,"Chip address bit 0 (1.8 V CMOS), SPI header bit 13",14
+N5,ADDR1,input,"Chip address bit 1 (1.8 V CMOS), SPI header bit 14",14
+N6,TR,input,"TX/RX mode select (1.8 V CMOS); low = receive, high = transmit",14
+N7,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+N8,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+N9,CREG4,passive,Decoupling for 1.8 V LDO output; 1 uF to ground plane,14
+N10,CREG3,passive,Decoupling for 2.8 V LDO reference; 1 uF to ground plane,14
+N11,AVDD3,power_in,3.3 V supply input; power before or with AVDD1,14
+N12,GND,power_in,RF ground; tie all to low-impedance ground plane,12
+N13,DET1,passive,Ch1 RF power detector input; enable Reg0x030 bit3; -20 to +10 dBm; if unused disable and 50 ohm terminate or ground,14
+EP,EPAD,power_in,Exposed pad; connect to low-impedance ground plane,14

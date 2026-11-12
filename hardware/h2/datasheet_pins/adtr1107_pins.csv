@@ -1,0 +1,26 @@
+pin,name,kicad_type,description,ds_page
+1,GND,power_in,"Ground. Solder these pins to a low impedance ground plane.",7
+2,RX_OUT,passive,"Receive Path Output. This pin is dc-coupled to ground and ac matched to 50 Ω.",7
+3,GND,power_in,"Ground. Solder these pins to a low impedance ground plane.",7
+4,GND,power_in,"Ground. Solder these pins to a low impedance ground plane.",7
+5,TX_IN,passive,"Transmit Path Input. This pin is dc-coupled to ground and ac matched to 50 Ω.",7
+6,GND,power_in,"Ground. Solder these pins to a low impedance ground plane.",7
+7,VGG_PA,input,"Power Amplifier Gate Bias. This pin is used to set the desired quiescent current of the amplifier.",7
+8,VDD_PA,power_in,"Power Amplifier Drain Bias Voltage.",7
+9,NIC,passive,"No Internal Connection. Solder these pins to a low impedance ground plane.",7
+10,NIC,passive,"No Internal Connection. Solder these pins to a low impedance ground plane.",7
+11,GND,power_in,"Ground. Solder these pins to a low impedance ground plane.",7
+12,CPLR_OUT,output,"Transmit Path Coupled Port. This port is used in connection with a detector to monitor transmitted power.",7
+13,GND,power_in,"Ground. Solder these pins to a low impedance ground plane.",7
+14,GND,power_in,"Ground. Solder these pins to a low impedance ground plane.",7
+15,GND,power_in,"Ground. Solder these pins to a low impedance ground plane.",7
+16,GND,power_in,"Ground. Solder these pins to a low impedance ground plane.",7
+17,ANT,passive,"RF Common Port. This pin is dc-coupled to 0 V and ac matched to 50 Ω.",7
+18,GND,power_in,"Ground. Solder these pins to a low impedance ground plane.",7
+19,VDD_SW,power_in,"SPDT Switch Positive Bias Voltage.",7
+20,CTRL_SW,input,"Switch Digital Control. This pin controls the state of the SPDT switch.",7
+21,VSS_SW,power_in,"SPDT Switch Negative Bias Voltage.",7
+22,GND,power_in,"Ground. Solder these pins to a low impedance ground plane.",7
+23,VGG_LNA,input,"LNA Gate Voltage Bias. This pin is used to set the desired quiescent current of the LNA. If this pin is supplied with 0 V or is connected to ground, the LNA runs in self bias mode at a typical current of 80 mA.",7
+24,VDD_LNA,power_in,"LNA Drain Voltage Bias.",7
+EP,EPAD,power_in,"Exposed Pad. Must be connected to RF/dc ground.",7

@@ -1,0 +1,27 @@
+path,stage,gain_db,nf_db,op1db_dbm,cum_gain_or_level,cum_nf_db,evidence,source
+RX,feed trace + connector,-0.7,0.7,,-0.7,0.7,ASSUMPTION,replace after H2 stackup/EM
+RX,ADTR1107 RX (switch+LNA),17.5,2.5,,16.8,3.2,DATASHEET,"ADTR1107 Rev C Table 3, 6-14 GHz"
+RX,ADAR1000 RX single channel,10.0,8.0,,26.8,3.42,DATASHEET,ADAR1000 Rev B Table 1 at 9.5 GHz (8.4 GHz not tabulated)
+RX,RF trace BF->coupler,-0.5,0.5,,26.3,3.43,ASSUMPTION,
+RX,EDC21-24+ mainline,-0.7,0.7,,25.6,3.43,DATASHEET,EDC21-24+ REV.A 8-10 GHz typ
+RX,HFCN-7150+,-1.5,1.5,,24.1,3.43,DATASHEET,HFCN-7150+ REV.J 8.5-10.5 GHz max (7.9-11 GHz: 2.0 max)
+RX,BFCN-8350+,-1.8,1.8,,22.3,3.43,DATASHEET,BFCN-8350+ REV.D 8250-8450 MHz typ
+RX,LTC5553 downconversion,-8.0,10.9,,14.3,3.56,PLOT+DATASHEET,CL ~8.0 dB plot at RF 8.4 GHz; NF 10.9 dB table at RF 10 GHz/IF 1890 MHz
+RX,BFCN-1840+,-1.9,1.9,,12.4,3.6,DATASHEET,BFCN-1840+ REV.E 1750-1880 MHz typ 2.09-1.73 dB
+RX,IF trace + DC block + coax,-0.5,0.5,,11.9,3.61,ASSUMPTION,
+RX,USRP N310 RX (TX/RX port),30.0,6.8,,41.9,4.05,DATASHEET,"N310 datasheet v3, 1.8 GHz"
+RX,RESULT feed-referred NF (one element),,,,,4.05,DERIVED,Friis; H1 (LTC5552 + 2 SPDT) gave 3.85 dB
+RX,RESULT input compression per feed,,,,,,DERIVED,ADAR1000 RX IP1dB -16 dBm (9.5 GHz) - 16.8 dB = -32.8 dBm per feed; bench inputs must stay below
+RX,RESULT mixer input at ADAR1000 compression (4 coherent elements),,,,,,DERIVED,-4.5 dBm vs LTC5553 input P1dB ~16 dBm -> mixer is not the RX compression limit
+TX,target avg per feed (PROTOTYPE envelope),,,,,,REQUIREMENT,H1_1_POWER_ENVELOPES.md
+TX,USRP N310 TX/RX out (avg),,,,-7.6,,DERIVED,N310 max 18 dBm at 1-4 GHz (datasheet v3) -> 25.6 dB headroom for ~10 dB PAPR
+TX,IF trace + DC block + BFCN-1840+,,,,-10.0,,DATASHEET+ASSUMPTION,1.9 + 0.5 dB
+TX,LTC5553 IF input (avg),,,,-10.0,,DESIGN CHOICE,"26 dB below upmix input P1dB 14.8 dBm (plot, IF 1.8 GHz); IM3 ~ 2x(25-(-10)) = 70 dBc"
+TX,LTC5553 RF out (avg),,,,-20.0,,PLOT,"upmix CL ~10.0 dB at IF 1.8 GHz (plot read, RF 9.8 GHz)"
+TX,"ADAR1000 RF_IO in (after BPF, HPF, coupler, trace)",,,,-24.5,,DATASHEET+ASSUMPTION,-4.5 dB
+TX,ADAR1000 required RF_IO->TXx gain,,,,13.7,,DERIVED,max single-channel gain 21 dB at 9.5 GHz -> 7.3 dB of gain backed off (attenuator/VGA range at 8.4 GHz UNVERIFIED)
+TX,ADAR1000 TXx out = ADTR1107 TX_IN (avg),,,,-10.8,,DERIVED,20.8 dB below ADAR1000 OP1dB 10 dBm (9.5 GHz)
+TX,ADTR1107 ANT out (avg),,,,10.7,,DATASHEET,gain 21.5 dB; 12.3 dB below OP1dB 23 dBm typ (10.3 dB below 21 dBm min)
+TX,feed (avg),,,,10.0,,DERIVED,PROTOTYPE >= 10 dBm met if OFDM EVM/ACLR allows ~12 dB back-off (bench C2)
+TX,LO leakage at ADAR1000 RF_IO,,,,-65.8,,DATASHEET+DERIVED,"LTC5553 LO-RF < -25 dBm (upmix, whole band); BFCN-8350+ ~22 dB (interp. 20.0@6.05/23.97@6.75 GHz) + HFCN-7150+ 18.85 dB @6.65 GHz -> 41 dBc below wanted at RF_IO"
+TX,NOTE,,,,,,ASSUMPTION,converter T/R switches of H1 (2x ADRF5019) removed: passive LTC5553 is used bidirectionally and the N310 TX/RX port switches internally

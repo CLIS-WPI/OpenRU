@@ -1,0 +1,26 @@
+pin,name,kicad_type,description,ds_page
+3,INPUT,passive,INPUT,EDC21-24+ REV.A ECO-012570 Pad Connections
+7,COUPLED,passive,COUPLED,EDC21-24+ REV.A ECO-012570 Pad Connections
+16,OUTPUT,passive,OUTPUT,EDC21-24+ REV.A ECO-012570 Pad Connections
+1,GND,power_in,Ground,EDC21-24+ REV.A ECO-012570 Pad Connections
+2,GND,power_in,Ground,EDC21-24+ REV.A ECO-012570 Pad Connections
+4,GND,power_in,Ground,EDC21-24+ REV.A ECO-012570 Pad Connections
+5,GND,power_in,Ground,EDC21-24+ REV.A ECO-012570 Pad Connections
+6,GND,power_in,Ground,EDC21-24+ REV.A ECO-012570 Pad Connections
+8,GND,power_in,Ground,EDC21-24+ REV.A ECO-012570 Pad Connections
+9,GND,power_in,Ground,EDC21-24+ REV.A ECO-012570 Pad Connections
+10,GND,power_in,Ground,EDC21-24+ REV.A ECO-012570 Pad Connections
+11,GND,power_in,Ground,EDC21-24+ REV.A ECO-012570 Pad Connections
+12,GND,power_in,Ground,EDC21-24+ REV.A ECO-012570 Pad Connections
+13,GND,power_in,Ground,EDC21-24+ REV.A ECO-012570 Pad Connections
+14,GND,power_in,Ground,EDC21-24+ REV.A ECO-012570 Pad Connections
+15,GND,power_in,Ground,EDC21-24+ REV.A ECO-012570 Pad Connections
+17,GND,power_in,Ground,EDC21-24+ REV.A ECO-012570 Pad Connections
+18,GND,power_in,Ground,EDC21-24+ REV.A ECO-012570 Pad Connections
+19,GND,power_in,Ground,EDC21-24+ REV.A ECO-012570 Pad Connections
+20,GND,power_in,Ground,EDC21-24+ REV.A ECO-012570 Pad Connections
+21,GND,power_in,Ground,EDC21-24+ REV.A ECO-012570 Pad Connections
+22,GND,power_in,Ground,EDC21-24+ REV.A ECO-012570 Pad Connections
+23,GND,power_in,Ground,EDC21-24+ REV.A ECO-012570 Pad Connections
+24,GND,power_in,Ground,EDC21-24+ REV.A ECO-012570 Pad Connections
+EP,GND,power_in,Ground,EDC21-24+ REV.A ECO-012570 Pad Connections

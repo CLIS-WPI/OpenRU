@@ -1,0 +1,435 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "f74b4b54-f4f9-456b-9f6c-d3810552eed6")
+	(paper "A3")
+	(lib_symbols
+		(symbol "Conn_Coaxial"
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "J"
+			(at 0.254 3.048 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_Coaxial"
+			(at 2.921 0 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "BNC SMA SMB SMC LEMO coaxial connector CINCH RCA MCX MMCX U.FL UMRF"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "*BNC* *SMA* *SMB* *SMC* *Cinch* *LEMO* *UMRF* *MCX* *U.FL*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "Conn_Coaxial_0_1"
+			(polyline
+				(pts
+					(xy -2.54 0) (xy -0.508 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 1.778 0)
+				(mid 0.222 -1.8079)
+				(end -1.778 -0.508)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -1.778 0.508)
+				(mid 0.2221 1.8084)
+				(end 1.778 0)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center 0 0)
+				(radius 0.508)
+				(stroke
+					(width 0.2032)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 -2.54) (xy 0 -1.778)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "Conn_Coaxial_1_1"
+			(pin passive line
+				(at -5.08 0 0)
+				(length 2.54)
+				(name "In"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -5.08 90)
+				(length 2.54)
+				(name "Ext"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	))
+	(sheet
+		(at 39.37 39.37)
+		(size 25.4 10.16)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "5f0a1089-7c57-46bb-b1e9-54e8febd8a8c")
+		(property "Sheetname" "BF_4"
+			(at 39.37 38.6584 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "bf4.kicad_sch"
+			(at 39.37 50.1146 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "openru_x6_tile"
+				(path "/d8f54b6a-6767-4ac2-9a4f-de0da41c3086/c26fc9d7-49d5-4ad7-8e24-f7864e699d0b"
+					(page "15")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 100.33 39.37)
+		(size 25.4 10.16)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "00e8334a-c3ce-4a70-98b6-88cc1f9afa0e")
+		(property "Sheetname" "FE_4"
+			(at 100.33 38.6584 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "fe4.kicad_sch"
+			(at 100.33 50.1146 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "openru_x6_tile"
+				(path "/d8f54b6a-6767-4ac2-9a4f-de0da41c3086/c26fc9d7-49d5-4ad7-8e24-f7864e699d0b"
+					(page "16")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 160.02 39.37)
+		(size 25.4 10.16)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "da860dfb-94c9-4915-88f2-3448bd286426")
+		(property "Sheetname" "CONV_4"
+			(at 160.02 38.6584 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "conv4.kicad_sch"
+			(at 160.02 50.1146 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "openru_x6_tile"
+				(path "/d8f54b6a-6767-4ac2-9a4f-de0da41c3086/c26fc9d7-49d5-4ad7-8e24-f7864e699d0b"
+					(page "17")
+				)
+			)
+		)
+	)
+	(symbol
+	(lib_name "Conn_Coaxial")
+	(lib_id "Connector:Conn_Coaxial")
+	(at 119.38 139.7 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "a6e6b71a-b382-4915-9e71-18278123b4c9")
+	(property "Reference" "J401"
+		(at 119.38 135.89 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Value" "SMA IF4 (N310 ch3)"
+		(at 119.38 143.51 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 119.38 139.7 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(property "Datasheet" "~"
+		(at 119.38 139.7 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(pin "1"
+	(uuid "94ebdcc4-55b0-41d5-8c94-2d700090d52c")
+)
+	(pin "2"
+	(uuid "d0202c60-21df-4d42-bb73-3a18ba2f0fb7")
+)
+	(instances
+		(project "openru_x6_tile"
+			(path "/d8f54b6a-6767-4ac2-9a4f-de0da41c3086/c26fc9d7-49d5-4ad7-8e24-f7864e699d0b"
+				(reference "J401")
+				(unit 1)
+			)
+		)
+		(project "openru_x6_tile"
+			(path "/d8f54b6a-6767-4ac2-9a4f-de0da41c3086/c26fc9d7-49d5-4ad7-8e24-f7864e699d0b"
+				(reference "J401")
+				(unit 1)
+			)
+		)
+	)
+)
+	(text "RF chain 4 (topology A): N310 ch3 IF 1.8 GHz <-> LTC5553 <-> 8.4 GHz <-> cal coupler <-> ADAR1000 UBF4 <-> 4x ADTR1107 <-> 4 feeds."
+	(at 210 20 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+	)
+	(uuid "ad9a0bde-6a90-4776-b08d-1dcabe0d6ee6")
+)
+	(text "SMA footprint (edge-launch vs vertical) UNRESOLVED."
+	(at 210 160 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+	)
+	(uuid "5c9afdc1-aa93-486c-926e-101833b380e2")
+)
+	(wire
+	(pts
+		(xy 114.3 139.7) (xy 111.76 139.7)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "62a2d007-cf48-4f1d-beb8-6351b85e8f55")
+)
+	(wire
+	(pts
+		(xy 119.38 144.78) (xy 119.38 147.32)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "3f678af5-5f9c-4390-967c-5241ffe26fad")
+)
+	(global_label "C4_IF_N310"
+		(shape passive)
+		(at 111.76 139.7 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "26cb8825-c471-4f6b-8ce3-ba32291a748d")
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 119.38 147.32 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "03921bdf-46e3-4514-ac12-8195e3af3a7a")
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

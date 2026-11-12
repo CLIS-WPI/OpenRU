@@ -57,9 +57,11 @@ datasets/
 *.parquet
 *.csv
 !hardware/*.csv
+!hardware/**/*.csv
 *.png
 *.svg
 *.pdf
+!hardware/h2/reports/*.pdf
 !reports/templates/*
 
 # Editors and OS

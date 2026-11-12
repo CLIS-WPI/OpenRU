@@ -1,0 +1,50 @@
+pin,name,kicad_type,description,ds_page
+1,GND,power_in,Ground Return,9
+2,CPOUT,output,Charge Pump Output to external loop filter (filter output goes to VTUNE),9
+3,RS_SW,passive,Loop Filter Switch for switching loop filter resistors in fastlock applications,9
+4,VCC_CAL,power_in,Power supply for internal calibration monitor; 3.15-3.45 V; same as AVDD,9
+5,VTUNE,input,Control input to the VCO; derived from filtering CPOUT,9
+6,VCC_REG_OUT,passive,VCO regulator output; decouple to GND with 10 uF and short to VCC_VCO; leave open if external LDO on VCC_VCO,9
+7,VCC_VCO,power_in,VCO power supply 4.75-5.25 V; decouple close to pin,9
+8,VCC_LDO,power_in,Supply to VCO regulator 4.75-5.25 V; short to VCC_VCO if external regulator used,9
+9,GND,power_in,Ground Return,9
+10,RF32N,output,Quadrupler output (16-32 GHz); AC or DC couple; may be left open if unused,9
+11,RF32P,output,Complementary quadrupler output; AC or DC couple; may be left open if unused,9
+12,GND,power_in,Ground Return,9
+13,GND,power_in,Ground Return,9
+14,VCC_X4,power_in,Power supply for quadrupler RF output; same as AVDD,9
+15,VDD_X4,power_in,Digital supply for quadrupler circuit; same as AVDD,9
+16,VCC_X1,power_in,Power supply for main RF output; same as AVDD (RF8 pull-up inductors go here),9
+17,VDD_X1,power_in,Digital supply for main RF circuit; same as AVDD,9
+18,RF8P,output,Main RF output (62.5-8000 MHz); AC couple; programmable level,9
+19,RF8N,output,Complementary main RF output; AC couple; programmable level,9
+20,GND,power_in,Ground Return,9
+21,VCC_X2,power_in,Power supply for doubled RF output; same as AVDD,9
+22,RFAUX8P,output,Auxiliary RF output; AC couple; can be powered off,9
+23,RFAUX8N,output,Complementary auxiliary RF output; AC couple; can be powered off,10
+24,GND,power_in,Ground Return,9
+25,GND,power_in,Ground Return,9
+26,RF16P,output,Doubled VCO output (8-16 GHz); AC or DC couple; may be left open if unused,10
+27,RF16N,output,Complementary doubled VCO output; AC or DC couple; may be left open if unused,10
+28,GND,power_in,Ground Return,9
+29,VCC_MUX,power_in,Power supply for VCO mux; same as AVDD,10
+30,VCC_3V,power_in,Analog power supply; same as AVDD,10
+31,VDD_NDIV,power_in,N divider power supply; same as AVDD,10
+32,VDD_LS,power_in,Level shifter power supply; same as AVDD,10
+33,CS,input,Chip Select CMOS input; data latched on CS rising,10
+34,SDIO,bidirectional,Serial data input/output (input-only in 4-wire mode),10
+35,SCLK,input,Serial clock input CMOS,10
+36,GND,power_in,Ground Return,9
+37,GND,power_in,Ground Return,9
+38,VCC_LDO_3V,power_in,Regulator input for 1.8 V digital logic; same as AVDD,10
+39,CE,input,Chip Enable; connect to 3.3 V or AVDD,10
+40,TEST,passive,Factory test pin; connect to ground,10
+41,MUXOUT,output,Mux output: lock detect / R or N divider / readback in 4-wire SPI,10
+42,GND,power_in,Ground Return,9
+43,REFP,input,Reference input; AC couple (single-ended drive goes here),10
+44,REFN,input,Complementary reference input; AC couple to GND if unused; 100 ohm differential impedance,10
+45,VCC_REF,power_in,Reference buffer supply; same as AVDD,10
+46,VDD_PFD,power_in,PFD supply; same as AVDD,10
+47,VDD_VP,power_in,Charge pump supply; same as AVDD; 1 uF decoupling to GND required,10
+48,GND,power_in,Ground Return,9
+EP,GND,power_in,Exposed pad; must be soldered to PCB metal plate and to GND,10

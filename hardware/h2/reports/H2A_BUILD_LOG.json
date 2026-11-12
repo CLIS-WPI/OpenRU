@@ -1,0 +1,2157 @@
+{
+ "unresolved": [
+  {
+   "sheet": "chain1.kicad_sch",
+   "ref": "J101",
+   "item": "footprint",
+   "reason": "SMA connector type/footprint not selected"
+  },
+  {
+   "sheet": "bf1.kicad_sch",
+   "ref": "UBF1",
+   "item": "AVDD1/AVDD3 decoupling",
+   "reason": "values not in ADAR1000 Rev B; need ADAR1000-EVALZ schematic"
+  },
+  {
+   "sheet": "bf1.kicad_sch",
+   "ref": "UBF1",
+   "item": "footprint",
+   "reason": "88-terminal LGA CC-88-1 land pattern only as image in DS; use ADI footprint"
+  },
+  {
+   "sheet": "fe1.kicad_sch",
+   "ref": "JF1",
+   "item": "antenna interface",
+   "reason": "feed connector/antenna EM design not done (H1 M6)"
+  },
+  {
+   "sheet": "fe1.kicad_sch",
+   "ref": "JF2",
+   "item": "antenna interface",
+   "reason": "feed connector/antenna EM design not done (H1 M6)"
+  },
+  {
+   "sheet": "fe1.kicad_sch",
+   "ref": "JF3",
+   "item": "antenna interface",
+   "reason": "feed connector/antenna EM design not done (H1 M6)"
+  },
+  {
+   "sheet": "fe1.kicad_sch",
+   "ref": "JF4",
+   "item": "antenna interface",
+   "reason": "feed connector/antenna EM design not done (H1 M6)"
+  },
+  {
+   "sheet": "fe1.kicad_sch",
+   "ref": "UFE1-UFE4",
+   "item": "VDD_PA/VDD_LNA/VDD_SW/VSS_SW decoupling",
+   "reason": "values not in ADTR1107 Rev C; need ADTR1107-EVAL schematic"
+  },
+  {
+   "sheet": "fe1.kicad_sch",
+   "ref": "UFE1-UFE4",
+   "item": "LNA supply in TX",
+   "reason": "ADTR1107 TX power-up sequence sets VDD_LNA = 0 V; design keeps 3.3 V and pinches gate via LNA_BIAS (ADAR1000 p45). Needs ADI confirmation"
+  },
+  {
+   "sheet": "conv1.kicad_sch",
+   "ref": "UMX1",
+   "item": "footprint",
+   "reason": "UDB 12-lead 3x2 QFN; use ADI land pattern"
+  },
+  {
+   "sheet": "chain2.kicad_sch",
+   "ref": "J201",
+   "item": "footprint",
+   "reason": "SMA connector type/footprint not selected"
+  },
+  {
+   "sheet": "bf2.kicad_sch",
+   "ref": "UBF2",
+   "item": "AVDD1/AVDD3 decoupling",
+   "reason": "values not in ADAR1000 Rev B; need ADAR1000-EVALZ schematic"
+  },
+  {
+   "sheet": "bf2.kicad_sch",
+   "ref": "UBF2",
+   "item": "footprint",
+   "reason": "88-terminal LGA CC-88-1 land pattern only as image in DS; use ADI footprint"
+  },
+  {
+   "sheet": "fe2.kicad_sch",
+   "ref": "JF5",
+   "item": "antenna interface",
+   "reason": "feed connector/antenna EM design not done (H1 M6)"
+  },
+  {
+   "sheet": "fe2.kicad_sch",
+   "ref": "JF6",
+   "item": "antenna interface",
+   "reason": "feed connector/antenna EM design not done (H1 M6)"
+  },
+  {
+   "sheet": "fe2.kicad_sch",
+   "ref": "JF7",
+   "item": "antenna interface",
+   "reason": "feed connector/antenna EM design not done (H1 M6)"
+  },
+  {
+   "sheet": "fe2.kicad_sch",
+   "ref": "JF8",
+   "item": "antenna interface",
+   "reason": "feed connector/antenna EM design not done (H1 M6)"
+  },
+  {
+   "sheet": "fe2.kicad_sch",
+   "ref": "UFE5-UFE8",
+   "item": "VDD_PA/VDD_LNA/VDD_SW/VSS_SW decoupling",
+   "reason": "values not in ADTR1107 Rev C; need ADTR1107-EVAL schematic"
+  },
+  {
+   "sheet": "fe2.kicad_sch",
+   "ref": "UFE5-UFE8",
+   "item": "LNA supply in TX",
+   "reason": "ADTR1107 TX power-up sequence sets VDD_LNA = 0 V; design keeps 3.3 V and pinches gate via LNA_BIAS (ADAR1000 p45). Needs ADI confirmation"
+  },
+  {
+   "sheet": "conv2.kicad_sch",
+   "ref": "UMX2",
+   "item": "footprint",
+   "reason": "UDB 12-lead 3x2 QFN; use ADI land pattern"
+  },
+  {
+   "sheet": "chain3.kicad_sch",
+   "ref": "J301",
+   "item": "footprint",
+   "reason": "SMA connector type/footprint not selected"
+  },
+  {
+   "sheet": "bf3.kicad_sch",
+   "ref": "UBF3",
+   "item": "AVDD1/AVDD3 decoupling",
+   "reason": "values not in ADAR1000 Rev B; need ADAR1000-EVALZ schematic"
+  },
+  {
+   "sheet": "bf3.kicad_sch",
+   "ref": "UBF3",
+   "item": "footprint",
+   "reason": "88-terminal LGA CC-88-1 land pattern only as image in DS; use ADI footprint"
+  },
+  {
+   "sheet": "fe3.kicad_sch",
+   "ref": "JF9",
+   "item": "antenna interface",
+   "reason": "feed connector/antenna EM design not done (H1 M6)"
+  },
+  {
+   "sheet": "fe3.kicad_sch",
+   "ref": "JF10",
+   "item": "antenna interface",
+   "reason": "feed connector/antenna EM design not done (H1 M6)"
+  },
+  {
+   "sheet": "fe3.kicad_sch",
+   "ref": "JF11",
+   "item": "antenna interface",
+   "reason": "feed connector/antenna EM design not done (H1 M6)"
+  },
+  {
+   "sheet": "fe3.kicad_sch",
+   "ref": "JF12",
+   "item": "antenna interface",
+   "reason": "feed connector/antenna EM design not done (H1 M6)"
+  },
+  {
+   "sheet": "fe3.kicad_sch",
+   "ref": "UFE9-UFE12",
+   "item": "VDD_PA/VDD_LNA/VDD_SW/VSS_SW decoupling",
+   "reason": "values not in ADTR1107 Rev C; need ADTR1107-EVAL schematic"
+  },
+  {
+   "sheet": "fe3.kicad_sch",
+   "ref": "UFE9-UFE12",
+   "item": "LNA supply in TX",
+   "reason": "ADTR1107 TX power-up sequence sets VDD_LNA = 0 V; design keeps 3.3 V and pinches gate via LNA_BIAS (ADAR1000 p45). Needs ADI confirmation"
+  },
+  {
+   "sheet": "conv3.kicad_sch",
+   "ref": "UMX3",
+   "item": "footprint",
+   "reason": "UDB 12-lead 3x2 QFN; use ADI land pattern"
+  },
+  {
+   "sheet": "chain4.kicad_sch",
+   "ref": "J401",
+   "item": "footprint",
+   "reason": "SMA connector type/footprint not selected"
+  },
+  {
+   "sheet": "bf4.kicad_sch",
+   "ref": "UBF4",
+   "item": "AVDD1/AVDD3 decoupling",
+   "reason": "values not in ADAR1000 Rev B; need ADAR1000-EVALZ schematic"
+  },
+  {
+   "sheet": "bf4.kicad_sch",
+   "ref": "UBF4",
+   "item": "footprint",
+   "reason": "88-terminal LGA CC-88-1 land pattern only as image in DS; use ADI footprint"
+  },
+  {
+   "sheet": "fe4.kicad_sch",
+   "ref": "JF13",
+   "item": "antenna interface",
+   "reason": "feed connector/antenna EM design not done (H1 M6)"
+  },
+  {
+   "sheet": "fe4.kicad_sch",
+   "ref": "JF14",
+   "item": "antenna interface",
+   "reason": "feed connector/antenna EM design not done (H1 M6)"
+  },
+  {
+   "sheet": "fe4.kicad_sch",
+   "ref": "JF15",
+   "item": "antenna interface",
+   "reason": "feed connector/antenna EM design not done (H1 M6)"
+  },
+  {
+   "sheet": "fe4.kicad_sch",
+   "ref": "JF16",
+   "item": "antenna interface",
+   "reason": "feed connector/antenna EM design not done (H1 M6)"
+  },
+  {
+   "sheet": "fe4.kicad_sch",
+   "ref": "UFE13-UFE16",
+   "item": "VDD_PA/VDD_LNA/VDD_SW/VSS_SW decoupling",
+   "reason": "values not in ADTR1107 Rev C; need ADTR1107-EVAL schematic"
+  },
+  {
+   "sheet": "fe4.kicad_sch",
+   "ref": "UFE13-UFE16",
+   "item": "LNA supply in TX",
+   "reason": "ADTR1107 TX power-up sequence sets VDD_LNA = 0 V; design keeps 3.3 V and pinches gate via LNA_BIAS (ADAR1000 p45). Needs ADI confirmation"
+  },
+  {
+   "sheet": "conv4.kicad_sch",
+   "ref": "UMX4",
+   "item": "footprint",
+   "reason": "UDB 12-lead 3x2 QFN; use ADI land pattern"
+  },
+  {
+   "sheet": "lo.kicad_sch",
+   "ref": "U501",
+   "item": "loop filter CPOUT->VTUNE, RS_SW",
+   "reason": "no reference loop filter in ADF4371 Rev 0; design with ADIsimPLL for 10 MHz PFD / 6.6 GHz"
+  },
+  {
+   "sheet": "lo.kicad_sch",
+   "ref": "U502",
+   "item": "VD1/VD2 bias network (L1 3.3 nH, C1-C4, ML1-ML7)",
+   "reason": "AVA-183A+ Fig 2 values known but node-by-node wiring not verified; pins left open. Gain/P1dB not specified 5-8 GHz"
+  },
+  {
+   "sheet": "lo.kicad_sch",
+   "ref": "U501/U502/U503",
+   "item": "footprints",
+   "reason": "LGA-48 CC-48-4 (EP size ambiguous in DS), DQ849, DG1677-2: use vendor land patterns"
+  },
+  {
+   "sheet": "power.kicad_sch",
+   "ref": "U601",
+   "item": "regulator for +3V3_RF_SRC",
+   "reason": "+3.3 V RF, >= 4 A (4x ADAR1000 350 mA TX + 16x ADTR1107 LNA 80 mA + 4x LTC5553 150 mA). ADI suggests LT8609S (ADAR1000 DS Table 26, 4 devices)"
+  },
+  {
+   "sheet": "power.kicad_sch",
+   "ref": "U602",
+   "item": "regulator for +5V_PA",
+   "reason": "+5 V PA drain, >= 5 A (16x 220 mA quiescent + RF drive)"
+  },
+  {
+   "sheet": "power.kicad_sch",
+   "ref": "U603",
+   "item": "regulator for +1V8_DIG",
+   "reason": "+1.8 V always-on logic/MCU (ADAR1000 SPI is 1.8 V CMOS, abs max 2.0 V)"
+  },
+  {
+   "sheet": "power.kicad_sch",
+   "ref": "U604",
+   "item": "regulator for +3V3_LO",
+   "reason": "+3.3 V ADF4371 AVDD, low noise (DS recommends ADM7150 / LT3045)"
+  },
+  {
+   "sheet": "power.kicad_sch",
+   "ref": "U605",
+   "item": "regulator for +5V_LO",
+   "reason": "+5 V ADF4371 VCC_VCO/VCC_LDO + AVA-183A+, low noise (ADM7150 / LT3045 per DS)"
+  },
+  {
+   "sheet": "power.kicad_sch",
+   "ref": "U606",
+   "item": "regulator for +3V3_AUX",
+   "reason": "+3.3 V always-on telemetry (INA226 VS)"
+  },
+  {
+   "sheet": "power.kicad_sch",
+   "ref": "U607",
+   "item": "regulator for -5V_BF",
+   "reason": "-5 V ADAR1000 AVDD1 (-50 mA max per chip, PA bias fully loaded) -> ~-0.2 A; ADI suggests LT1931/LT3462 (DS p45, Table 26)"
+  },
+  {
+   "sheet": "power.kicad_sch",
+   "ref": "U608",
+   "item": "regulator for -3V3_SW",
+   "reason": "-3.3 V ADTR1107 VSS_SW (16x 120 uA); negative LDO from -5 V (e.g. LT3094 class)"
+  },
+  {
+   "sheet": "power.kicad_sch",
+   "ref": "U609",
+   "item": "negative-rail window monitor",
+   "reason": "hardware NEG_OK so PA drain cannot be on with -5 V/-3.3 V absent; comparator/supervisor not yet selected"
+  },
+  {
+   "sheet": "power.kicad_sch",
+   "ref": "U621",
+   "item": "CT (slew) capacitor and QOD resistor",
+   "reason": "values need TI TPS22810 DS; pins left open"
+  },
+  {
+   "sheet": "power.kicad_sch",
+   "ref": "U622",
+   "item": "CT (slew) capacitor and QOD resistor",
+   "reason": "values need TI TPS22810 DS; pins left open"
+  },
+  {
+   "sheet": "power.kicad_sch",
+   "ref": "U623",
+   "item": "CT (slew) capacitor and QOD resistor",
+   "reason": "values need TI TPS22810 DS; pins left open"
+  },
+  {
+   "sheet": "power.kicad_sch",
+   "ref": "U624",
+   "item": "CT (slew) capacitor and QOD resistor",
+   "reason": "values need TI TPS22810 DS; pins left open"
+  },
+  {
+   "sheet": "power.kicad_sch",
+   "ref": "U610-U614",
+   "item": "INA226 address straps / shunt values",
+   "reason": "A1:A0 = GND/VS combinations from memory of TI address table - verify in TI INA226 DS; 10 mOhm shunt is a design choice"
+  },
+  {
+   "sheet": "power.kicad_sch",
+   "ref": "U615",
+   "item": "PCA9306 VREF2/EN 200k bias and pull-ups",
+   "reason": "standard TI application from memory - verify in TI PCA9306 DS"
+  },
+  {
+   "sheet": "mcu.kicad_sch",
+   "ref": "U701",
+   "item": "MCU pin / alternate-function map",
+   "reason": "SPI1 PA5/6/7, I2C1 PA15/PB7, TIM capture on PB3 etc. are provisional - verify with STM32CubeMX / ST DS before sign-off"
+  },
+  {
+   "sheet": "mcu.kicad_sch",
+   "ref": "U701",
+   "item": "MCU decoupling",
+   "reason": "VDD/VDDA/VREF+ bypass per ST STM32G431 DS not yet placed"
+  },
+  {
+   "sheet": "mcu.kicad_sch",
+   "ref": "U702",
+   "item": "TPS3430 CWD/CRST/SET0/SET1 timing",
+   "reason": "window timing selection needs TI TPS3430 DS; pins left open. VDD range vs 1.8 V to verify"
+  },
+  {
+   "sheet": "mcu.kicad_sch",
+   "ref": "U706/U707",
+   "item": "TMP117 placement",
+   "reason": "must sit on the FE heat spreader; one per tile half. Thermal design open (H1 M5)"
+  }
+ ],
+ "decisions": [
+  {
+   "sheet": "bf1.kicad_sch",
+   "ref": "UBF1",
+   "decision": "ADDR1:ADDR0 = 00 (chip ID 0); four chips share SCLK/SDIO, one CSB each",
+   "basis": "ADAR1000 Rev B p14, p32: up to 4 chips per bus, header bits[14:13]"
+  },
+  {
+   "sheet": "bf1.kicad_sch",
+   "ref": "R101",
+   "decision": "50 ohm series resistor SDO -> shared MISO",
+   "basis": "ADAR1000 Rev B p49 Fig 106 recommendation"
+  },
+  {
+   "sheet": "bf1.kicad_sch",
+   "ref": "C101-C104",
+   "decision": "1 uF on each CREG1-4",
+   "basis": "ADAR1000 Rev B p14"
+  },
+  {
+   "sheet": "fe1.kicad_sch",
+   "ref": "C111-C114",
+   "decision": "10 nF on each VGG_PA",
+   "basis": "ADTR1107 Rev C Fig 89"
+  },
+  {
+   "sheet": "fe1.kicad_sch",
+   "ref": "R120",
+   "decision": "100k pull-up on CTRL_SW net -> RX (CTRL_SW high) while TR_SW_POS floats at power-up",
+   "basis": "ADAR1000 Rev B p41 (TR_SW_POS floating at power-up); ADTR1107 Rev C Table 8 (high = receive). Value is a design choice (33 uA load)"
+  },
+  {
+   "sheet": "fe1.kicad_sch",
+   "ref": "R121",
+   "decision": "10k to GND on VGG_LNA net -> 0 V self-bias while LNA_BIAS is high-Z; LNA_BIAS can still pull to -2 V (0.8 mA for 4 gates)",
+   "basis": "ADTR1107 Rev C p24 self-bias at VGG_LNA = 0 V; ADAR1000 Rev B p41 LNA_BIAS floating at power-up, p45 OFF = 0x68 (~-2 V). Value is a design choice"
+  },
+  {
+   "sheet": "conv1.kicad_sch",
+   "ref": "C131",
+   "decision": "18 pF DC block on N310 IF line",
+   "basis": "LTC5553 IF port DC-grounded (~6.2 ohm), abs max +-0.1 V DC; DC block needed if source carries DC (DS p8/p10). N310 port DC state UNRESOLVED"
+  },
+  {
+   "sheet": "conv1.kicad_sch",
+   "ref": "C132-C134",
+   "decision": "LO DC block 18 pF; VCC 18 pF + 1 uF",
+   "basis": "LTC5553 5553f Fig 1 test circuit (C1, C2, C3)"
+  },
+  {
+   "sheet": "conv1.kicad_sch",
+   "ref": "UMX1",
+   "decision": "EN driven by MIX_EN (MCU GPIO + pull-down); internal 376k pull-down -> mixer off at reset",
+   "basis": "LTC5553 5553f EN spec"
+  },
+  {
+   "sheet": "bf2.kicad_sch",
+   "ref": "UBF2",
+   "decision": "ADDR1:ADDR0 = 01 (chip ID 1); four chips share SCLK/SDIO, one CSB each",
+   "basis": "ADAR1000 Rev B p14, p32: up to 4 chips per bus, header bits[14:13]"
+  },
+  {
+   "sheet": "bf2.kicad_sch",
+   "ref": "R201",
+   "decision": "50 ohm series resistor SDO -> shared MISO",
+   "basis": "ADAR1000 Rev B p49 Fig 106 recommendation"
+  },
+  {
+   "sheet": "bf2.kicad_sch",
+   "ref": "C201-C204",
+   "decision": "1 uF on each CREG1-4",
+   "basis": "ADAR1000 Rev B p14"
+  },
+  {
+   "sheet": "fe2.kicad_sch",
+   "ref": "C211-C214",
+   "decision": "10 nF on each VGG_PA",
+   "basis": "ADTR1107 Rev C Fig 89"
+  },
+  {
+   "sheet": "fe2.kicad_sch",
+   "ref": "R220",
+   "decision": "100k pull-up on CTRL_SW net -> RX (CTRL_SW high) while TR_SW_POS floats at power-up",
+   "basis": "ADAR1000 Rev B p41 (TR_SW_POS floating at power-up); ADTR1107 Rev C Table 8 (high = receive). Value is a design choice (33 uA load)"
+  },
+  {
+   "sheet": "fe2.kicad_sch",
+   "ref": "R221",
+   "decision": "10k to GND on VGG_LNA net -> 0 V self-bias while LNA_BIAS is high-Z; LNA_BIAS can still pull to -2 V (0.8 mA for 4 gates)",
+   "basis": "ADTR1107 Rev C p24 self-bias at VGG_LNA = 0 V; ADAR1000 Rev B p41 LNA_BIAS floating at power-up, p45 OFF = 0x68 (~-2 V). Value is a design choice"
+  },
+  {
+   "sheet": "conv2.kicad_sch",
+   "ref": "C231",
+   "decision": "18 pF DC block on N310 IF line",
+   "basis": "LTC5553 IF port DC-grounded (~6.2 ohm), abs max +-0.1 V DC; DC block needed if source carries DC (DS p8/p10). N310 port DC state UNRESOLVED"
+  },
+  {
+   "sheet": "conv2.kicad_sch",
+   "ref": "C232-C234",
+   "decision": "LO DC block 18 pF; VCC 18 pF + 1 uF",
+   "basis": "LTC5553 5553f Fig 1 test circuit (C1, C2, C3)"
+  },
+  {
+   "sheet": "conv2.kicad_sch",
+   "ref": "UMX2",
+   "decision": "EN driven by MIX_EN (MCU GPIO + pull-down); internal 376k pull-down -> mixer off at reset",
+   "basis": "LTC5553 5553f EN spec"
+  },
+  {
+   "sheet": "bf3.kicad_sch",
+   "ref": "UBF3",
+   "decision": "ADDR1:ADDR0 = 10 (chip ID 2); four chips share SCLK/SDIO, one CSB each",
+   "basis": "ADAR1000 Rev B p14, p32: up to 4 chips per bus, header bits[14:13]"
+  },
+  {
+   "sheet": "bf3.kicad_sch",
+   "ref": "R301",
+   "decision": "50 ohm series resistor SDO -> shared MISO",
+   "basis": "ADAR1000 Rev B p49 Fig 106 recommendation"
+  },
+  {
+   "sheet": "bf3.kicad_sch",
+   "ref": "C301-C304",
+   "decision": "1 uF on each CREG1-4",
+   "basis": "ADAR1000 Rev B p14"
+  },
+  {
+   "sheet": "fe3.kicad_sch",
+   "ref": "C311-C314",
+   "decision": "10 nF on each VGG_PA",
+   "basis": "ADTR1107 Rev C Fig 89"
+  },
+  {
+   "sheet": "fe3.kicad_sch",
+   "ref": "R320",
+   "decision": "100k pull-up on CTRL_SW net -> RX (CTRL_SW high) while TR_SW_POS floats at power-up",
+   "basis": "ADAR1000 Rev B p41 (TR_SW_POS floating at power-up); ADTR1107 Rev C Table 8 (high = receive). Value is a design choice (33 uA load)"
+  },
+  {
+   "sheet": "fe3.kicad_sch",
+   "ref": "R321",
+   "decision": "10k to GND on VGG_LNA net -> 0 V self-bias while LNA_BIAS is high-Z; LNA_BIAS can still pull to -2 V (0.8 mA for 4 gates)",
+   "basis": "ADTR1107 Rev C p24 self-bias at VGG_LNA = 0 V; ADAR1000 Rev B p41 LNA_BIAS floating at power-up, p45 OFF = 0x68 (~-2 V). Value is a design choice"
+  },
+  {
+   "sheet": "conv3.kicad_sch",
+   "ref": "C331",
+   "decision": "18 pF DC block on N310 IF line",
+   "basis": "LTC5553 IF port DC-grounded (~6.2 ohm), abs max +-0.1 V DC; DC block needed if source carries DC (DS p8/p10). N310 port DC state UNRESOLVED"
+  },
+  {
+   "sheet": "conv3.kicad_sch",
+   "ref": "C332-C334",
+   "decision": "LO DC block 18 pF; VCC 18 pF + 1 uF",
+   "basis": "LTC5553 5553f Fig 1 test circuit (C1, C2, C3)"
+  },
+  {
+   "sheet": "conv3.kicad_sch",
+   "ref": "UMX3",
+   "decision": "EN driven by MIX_EN (MCU GPIO + pull-down); internal 376k pull-down -> mixer off at reset",
+   "basis": "LTC5553 5553f EN spec"
+  },
+  {
+   "sheet": "bf4.kicad_sch",
+   "ref": "UBF4",
+   "decision": "ADDR1:ADDR0 = 11 (chip ID 3); four chips share SCLK/SDIO, one CSB each",
+   "basis": "ADAR1000 Rev B p14, p32: up to 4 chips per bus, header bits[14:13]"
+  },
+  {
+   "sheet": "bf4.kicad_sch",
+   "ref": "R401",
+   "decision": "50 ohm series resistor SDO -> shared MISO",
+   "basis": "ADAR1000 Rev B p49 Fig 106 recommendation"
+  },
+  {
+   "sheet": "bf4.kicad_sch",
+   "ref": "C401-C404",
+   "decision": "1 uF on each CREG1-4",
+   "basis": "ADAR1000 Rev B p14"
+  },
+  {
+   "sheet": "fe4.kicad_sch",
+   "ref": "C411-C414",
+   "decision": "10 nF on each VGG_PA",
+   "basis": "ADTR1107 Rev C Fig 89"
+  },
+  {
+   "sheet": "fe4.kicad_sch",
+   "ref": "R420",
+   "decision": "100k pull-up on CTRL_SW net -> RX (CTRL_SW high) while TR_SW_POS floats at power-up",
+   "basis": "ADAR1000 Rev B p41 (TR_SW_POS floating at power-up); ADTR1107 Rev C Table 8 (high = receive). Value is a design choice (33 uA load)"
+  },
+  {
+   "sheet": "fe4.kicad_sch",
+   "ref": "R421",
+   "decision": "10k to GND on VGG_LNA net -> 0 V self-bias while LNA_BIAS is high-Z; LNA_BIAS can still pull to -2 V (0.8 mA for 4 gates)",
+   "basis": "ADTR1107 Rev C p24 self-bias at VGG_LNA = 0 V; ADAR1000 Rev B p41 LNA_BIAS floating at power-up, p45 OFF = 0x68 (~-2 V). Value is a design choice"
+  },
+  {
+   "sheet": "conv4.kicad_sch",
+   "ref": "C431",
+   "decision": "18 pF DC block on N310 IF line",
+   "basis": "LTC5553 IF port DC-grounded (~6.2 ohm), abs max +-0.1 V DC; DC block needed if source carries DC (DS p8/p10). N310 port DC state UNRESOLVED"
+  },
+  {
+   "sheet": "conv4.kicad_sch",
+   "ref": "C432-C434",
+   "decision": "LO DC block 18 pF; VCC 18 pF + 1 uF",
+   "basis": "LTC5553 5553f Fig 1 test circuit (C1, C2, C3)"
+  },
+  {
+   "sheet": "conv4.kicad_sch",
+   "ref": "UMX4",
+   "decision": "EN driven by MIX_EN (MCU GPIO + pull-down); internal 376k pull-down -> mixer off at reset",
+   "basis": "LTC5553 5553f EN spec"
+  },
+  {
+   "sheet": "lo.kicad_sch",
+   "ref": "C501/C502",
+   "decision": "1 uF on 5 V VCO supply; 1 uF on VDD_VP; VCC_REG_OUT open; VCC_VCO and VCC_LDO on external 5 V LDO",
+   "basis": "ADF4371 Rev 0 p9-10, p24"
+  },
+  {
+   "sheet": "lo.kicad_sch",
+   "ref": "R501",
+   "decision": "1k series on MUXOUT",
+   "basis": "MUXOUT may drive 3.3 V (LEV_SEL default) into 1.8 V MCU pin before firmware sets LEV_SEL; current limit. Design choice"
+  },
+  {
+   "sheet": "lo.kicad_sch",
+   "ref": "C503/C504",
+   "decision": "Single-ended 10 MHz on REFP (ac-coupled), REFN ac-coupled to GND; PFD 10 MHz integer-N (N=660 for 6.6 GHz)",
+   "basis": "ADF4371 Rev 0 p10, p19 (SE 10-500 MHz). Cap value 100 nF is a design choice"
+  },
+  {
+   "sheet": "lo.kicad_sch",
+   "ref": "L501/L502/C505/C506/R502",
+   "decision": "RF8P/N: 7.5 nH pull-up to VCC_X1 rail, 10 pF ac coupling; unused RF8N terminated in 50 ohm",
+   "basis": "ADF4371 Rev 0 p21, p24, Fig 44, Table 1"
+  },
+  {
+   "sheet": "lo.kicad_sch",
+   "ref": "J501",
+   "decision": "RFAUX8 routed to an LO monitor SMA (off by default, PDB_AUX = 0)",
+   "basis": "ADF4371 Rev 0 REG0072; RFAUX8 treated like RF8 (p9)"
+  },
+  {
+   "sheet": "lo.kicad_sch",
+   "ref": "U501",
+   "decision": "RF16x / RF32x left open",
+   "basis": "ADF4371 Rev 0 pin table: 'If unused, this pin can be left open'"
+  },
+  {
+   "sheet": "lo.kicad_sch",
+   "ref": "R504-R506",
+   "decision": "3 dB pi attenuator (294/17.4/294 ohm) after LO buffer to keep LTC5553 LO in -6..+6 dBm and below +10 dBm abs max",
+   "basis": "computed (see reports/H2A_LO_BUDGET.csv)"
+  },
+  {
+   "sheet": "cal.kicad_sch",
+   "ref": "DC801-DC804/U801",
+   "decision": "One 21 dB coupler per chain between converter and ADAR1000 RF_IO; coupled ports combined by EP4RKU+ to one CAL SMA. RX cal: tone into CAL appears at coupler INPUT (mixer side) of all 4 chains simultaneously -> measures relative phase of N310+LO+converter paths after every start/retune. TX cal: each chain's forward wave sampled at CAL",
+   "basis": "EDC21-24+ REV.A (coupling 21 dB typ 8-10 GHz, directivity 19 dB typ); EP4RKU+ REV.C (phase unbalance 1.9 deg typ, 19 deg max -> must itself be calibrated once)"
+  },
+  {
+   "sheet": "cal.kicad_sch",
+   "ref": "R801",
+   "decision": "50 ohm termination of the 10 MHz reference input (ADF4371 REFP is high impedance)",
+   "basis": "ADF4371 Rev 0 Fig 35 (2.5k/85k input); value is a design choice. Level from shared 10 MHz distribution UNRESOLVED"
+  },
+  {
+   "sheet": "cal.kicad_sch",
+   "ref": "U802",
+   "decision": "PPS received by 74LVC1G125 at 1.8 V (LVC inputs tolerate 3.3/5 V) -> MCU timer capture",
+   "basis": "74LVC1G125 is a KiCad-library part; input tolerance from TI LVC family - verify in TI DS. N310 PPS level UNRESOLVED"
+  },
+  {
+   "sheet": "power.kicad_sch",
+   "ref": "U621-U624",
+   "decision": "One TPS22810 per chain on the PA drain, enable = PA_DRAIN_EN (hardware AND of MCU_PA_EN, WDT_OK, NEG_OK); EN pulled low -> drain OFF at reset",
+   "basis": "ADTR1107 Rev C p24 (gate before drain) + ADAR1000 Rev B p41/p44-45 (PA_BIAS 0 V at power-up). TPS22810 is a KiCad-library part; EN threshold vs 1.8 V logic to verify in TI DS"
+  },
+  {
+   "sheet": "mcu.kicad_sch",
+   "ref": "R710-R721",
+   "decision": "100k pull-down on every enable, load and TDD input -> radio powers up muted (TX off, PA drain off, mixers/PLL off, RX beams not loaded)",
+   "basis": "MCU GPIOs are high-Z in reset; ADAR1000 TX_LOAD/RX_LOAD need external pull-down (DS p14)"
+  },
+  {
+   "sheet": "mcu.kicad_sch",
+   "ref": "U703/U704/U705",
+   "decision": "TX_ALLOW = MCU_TX_EN & WDT_OK & TX_PERMIT_IN; BF_TR = TDD_TR_IN & TX_ALLOW (to all 4 ADAR1000 TR); TX_ALLOW also drives ADAR1000 PA_ON (forces PA_BIAS OFF when low); PA_DRAIN_EN = MCU_PA_EN & WDT_OK & NEG_OK",
+   "basis": "ADAR1000 Rev B p13-14 (TR high = TX; PA_ON low forces OFF bias in TR mode), TR switching 180 ns; ADTR1107 tON 10 ns"
+  },
+  {
+   "sheet": "mcu.kicad_sch",
+   "ref": "J702",
+   "decision": "TDD TR from N310 front-panel GPIO (3.3 V) into 1.8 V LVC gate; TX_PERMIT_IN is an external interlock (open = TX inhibited); BF_TR brought out for timing check",
+   "basis": "N310 GPIO level/ATR mapping UNRESOLVED (UHD GPIO docs)"
+  }
+ ],
+ "placed": {
+  "J101": {
+   "lib_id": "Connector:Conn_Coaxial",
+   "value": "SMA IF1 (N310 ch0)",
+   "sheet": "chain1.kicad_sch",
+   "mpn": "SMA IF1 (N310 ch0)",
+   "footprint": ""
+  },
+  "UBF1": {
+   "lib_id": "openru_x6:ADAR1000",
+   "value": "ADAR1000ACCZN",
+   "sheet": "bf1.kicad_sch",
+   "mpn": "ADAR1000ACCZN",
+   "footprint": ""
+  },
+  "R101": {
+   "lib_id": "Device:R",
+   "value": "50",
+   "sheet": "bf1.kicad_sch",
+   "mpn": "50",
+   "footprint": "Resistor_SMD:R_0402_1005Metric"
+  },
+  "C101": {
+   "lib_id": "Device:C",
+   "value": "1uF",
+   "sheet": "bf1.kicad_sch",
+   "mpn": "1uF",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric"
+  },
+  "C102": {
+   "lib_id": "Device:C",
+   "value": "1uF",
+   "sheet": "bf1.kicad_sch",
+   "mpn": "1uF",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric"
+  },
+  "C103": {
+   "lib_id": "Device:C",
+   "value": "1uF",
+   "sheet": "bf1.kicad_sch",
+   "mpn": "1uF",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric"
+  },
+  "C104": {
+   "lib_id": "Device:C",
+   "value": "1uF",
+   "sheet": "bf1.kicad_sch",
+   "mpn": "1uF",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric"
+  },
+  "UFE1": {
+   "lib_id": "openru_x6:ADTR1107",
+   "value": "ADTR1107ACCZ",
+   "sheet": "fe1.kicad_sch",
+   "mpn": "ADTR1107ACCZ",
+   "footprint": ""
+  },
+  "C111": {
+   "lib_id": "Device:C",
+   "value": "10nF",
+   "sheet": "fe1.kicad_sch",
+   "mpn": "10nF",
+   "footprint": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  "JF1": {
+   "lib_id": "Connector:Conn_Coaxial",
+   "value": "FEED sim0 site0 V",
+   "sheet": "fe1.kicad_sch",
+   "mpn": "FEED sim0 site0 V",
+   "footprint": ""
+  },
+  "UFE2": {
+   "lib_id": "openru_x6:ADTR1107",
+   "value": "ADTR1107ACCZ",
+   "sheet": "fe1.kicad_sch",
+   "mpn": "ADTR1107ACCZ",
+   "footprint": ""
+  },
+  "C112": {
+   "lib_id": "Device:C",
+   "value": "10nF",
+   "sheet": "fe1.kicad_sch",
+   "mpn": "10nF",
+   "footprint": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  "JF2": {
+   "lib_id": "Connector:Conn_Coaxial",
+   "value": "FEED sim1 site0 H",
+   "sheet": "fe1.kicad_sch",
+   "mpn": "FEED sim1 site0 H",
+   "footprint": ""
+  },
+  "UFE3": {
+   "lib_id": "openru_x6:ADTR1107",
+   "value": "ADTR1107ACCZ",
+   "sheet": "fe1.kicad_sch",
+   "mpn": "ADTR1107ACCZ",
+   "footprint": ""
+  },
+  "C113": {
+   "lib_id": "Device:C",
+   "value": "10nF",
+   "sheet": "fe1.kicad_sch",
+   "mpn": "10nF",
+   "footprint": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  "JF3": {
+   "lib_id": "Connector:Conn_Coaxial",
+   "value": "FEED sim2 site1 V",
+   "sheet": "fe1.kicad_sch",
+   "mpn": "FEED sim2 site1 V",
+   "footprint": ""
+  },
+  "UFE4": {
+   "lib_id": "openru_x6:ADTR1107",
+   "value": "ADTR1107ACCZ",
+   "sheet": "fe1.kicad_sch",
+   "mpn": "ADTR1107ACCZ",
+   "footprint": ""
+  },
+  "C114": {
+   "lib_id": "Device:C",
+   "value": "10nF",
+   "sheet": "fe1.kicad_sch",
+   "mpn": "10nF",
+   "footprint": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  "JF4": {
+   "lib_id": "Connector:Conn_Coaxial",
+   "value": "FEED sim3 site1 H",
+   "sheet": "fe1.kicad_sch",
+   "mpn": "FEED sim3 site1 H",
+   "footprint": ""
+  },
+  "R120": {
+   "lib_id": "Device:R",
+   "value": "100k",
+   "sheet": "fe1.kicad_sch",
+   "mpn": "100k",
+   "footprint": "Resistor_SMD:R_0402_1005Metric"
+  },
+  "R121": {
+   "lib_id": "Device:R",
+   "value": "10k",
+   "sheet": "fe1.kicad_sch",
+   "mpn": "10k",
+   "footprint": "Resistor_SMD:R_0402_1005Metric"
+  },
+  "UMX1": {
+   "lib_id": "openru_x6:LTC5553",
+   "value": "LTC5553IUDB",
+   "sheet": "conv1.kicad_sch",
+   "mpn": "LTC5553IUDB#PBF",
+   "footprint": ""
+  },
+  "FL101": {
+   "lib_id": "openru_x6:BFCN-1840+",
+   "value": "BFCN-1840+",
+   "sheet": "conv1.kicad_sch",
+   "mpn": "BFCN-1840+",
+   "footprint": ""
+  },
+  "FL102": {
+   "lib_id": "openru_x6:BFCN-8350+",
+   "value": "BFCN-8350+",
+   "sheet": "conv1.kicad_sch",
+   "mpn": "BFCN-8350+",
+   "footprint": ""
+  },
+  "FL103": {
+   "lib_id": "openru_x6:HFCN-7150+",
+   "value": "HFCN-7150+",
+   "sheet": "conv1.kicad_sch",
+   "mpn": "HFCN-7150+",
+   "footprint": ""
+  },
+  "C131": {
+   "lib_id": "Device:C",
+   "value": "18pF",
+   "sheet": "conv1.kicad_sch",
+   "mpn": "GJM1555C1H180FB01",
+   "footprint": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  "C132": {
+   "lib_id": "Device:C",
+   "value": "18pF",
+   "sheet": "conv1.kicad_sch",
+   "mpn": "0402ZK180GBS",
+   "footprint": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  "C133": {
+   "lib_id": "Device:C",
+   "value": "18pF",
+   "sheet": "conv1.kicad_sch",
+   "mpn": "GJM1555C1H180FB01",
+   "footprint": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  "C134": {
+   "lib_id": "Device:C",
+   "value": "1uF",
+   "sheet": "conv1.kicad_sch",
+   "mpn": "GRM188R71A105KA61",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric"
+  },
+  "J201": {
+   "lib_id": "Connector:Conn_Coaxial",
+   "value": "SMA IF2 (N310 ch1)",
+   "sheet": "chain2.kicad_sch",
+   "mpn": "SMA IF2 (N310 ch1)",
+   "footprint": ""
+  },
+  "UBF2": {
+   "lib_id": "openru_x6:ADAR1000",
+   "value": "ADAR1000ACCZN",
+   "sheet": "bf2.kicad_sch",
+   "mpn": "ADAR1000ACCZN",
+   "footprint": ""
+  },
+  "R201": {
+   "lib_id": "Device:R",
+   "value": "50",
+   "sheet": "bf2.kicad_sch",
+   "mpn": "50",
+   "footprint": "Resistor_SMD:R_0402_1005Metric"
+  },
+  "C201": {
+   "lib_id": "Device:C",
+   "value": "1uF",
+   "sheet": "bf2.kicad_sch",
+   "mpn": "1uF",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric"
+  },
+  "C202": {
+   "lib_id": "Device:C",
+   "value": "1uF",
+   "sheet": "bf2.kicad_sch",
+   "mpn": "1uF",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric"
+  },
+  "C203": {
+   "lib_id": "Device:C",
+   "value": "1uF",
+   "sheet": "bf2.kicad_sch",
+   "mpn": "1uF",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric"
+  },
+  "C204": {
+   "lib_id": "Device:C",
+   "value": "1uF",
+   "sheet": "bf2.kicad_sch",
+   "mpn": "1uF",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric"
+  },
+  "UFE5": {
+   "lib_id": "openru_x6:ADTR1107",
+   "value": "ADTR1107ACCZ",
+   "sheet": "fe2.kicad_sch",
+   "mpn": "ADTR1107ACCZ",
+   "footprint": ""
+  },
+  "C211": {
+   "lib_id": "Device:C",
+   "value": "10nF",
+   "sheet": "fe2.kicad_sch",
+   "mpn": "10nF",
+   "footprint": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  "JF5": {
+   "lib_id": "Connector:Conn_Coaxial",
+   "value": "FEED sim4 site2 V",
+   "sheet": "fe2.kicad_sch",
+   "mpn": "FEED sim4 site2 V",
+   "footprint": ""
+  },
+  "UFE6": {
+   "lib_id": "openru_x6:ADTR1107",
+   "value": "ADTR1107ACCZ",
+   "sheet": "fe2.kicad_sch",
+   "mpn": "ADTR1107ACCZ",
+   "footprint": ""
+  },
+  "C212": {
+   "lib_id": "Device:C",
+   "value": "10nF",
+   "sheet": "fe2.kicad_sch",
+   "mpn": "10nF",
+   "footprint": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  "JF6": {
+   "lib_id": "Connector:Conn_Coaxial",
+   "value": "FEED sim5 site2 H",
+   "sheet": "fe2.kicad_sch",
+   "mpn": "FEED sim5 site2 H",
+   "footprint": ""
+  },
+  "UFE7": {
+   "lib_id": "openru_x6:ADTR1107",
+   "value": "ADTR1107ACCZ",
+   "sheet": "fe2.kicad_sch",
+   "mpn": "ADTR1107ACCZ",
+   "footprint": ""
+  },
+  "C213": {
+   "lib_id": "Device:C",
+   "value": "10nF",
+   "sheet": "fe2.kicad_sch",
+   "mpn": "10nF",
+   "footprint": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  "JF7": {
+   "lib_id": "Connector:Conn_Coaxial",
+   "value": "FEED sim6 site3 V",
+   "sheet": "fe2.kicad_sch",
+   "mpn": "FEED sim6 site3 V",
+   "footprint": ""
+  },
+  "UFE8": {
+   "lib_id": "openru_x6:ADTR1107",
+   "value": "ADTR1107ACCZ",
+   "sheet": "fe2.kicad_sch",
+   "mpn": "ADTR1107ACCZ",
+   "footprint": ""
+  },
+  "C214": {
+   "lib_id": "Device:C",
+   "value": "10nF",
+   "sheet": "fe2.kicad_sch",
+   "mpn": "10nF",
+   "footprint": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  "JF8": {
+   "lib_id": "Connector:Conn_Coaxial",
+   "value": "FEED sim7 site3 H",
+   "sheet": "fe2.kicad_sch",
+   "mpn": "FEED sim7 site3 H",
+   "footprint": ""
+  },
+  "R220": {
+   "lib_id": "Device:R",
+   "value": "100k",
+   "sheet": "fe2.kicad_sch",
+   "mpn": "100k",
+   "footprint": "Resistor_SMD:R_0402_1005Metric"
+  },
+  "R221": {
+   "lib_id": "Device:R",
+   "value": "10k",
+   "sheet": "fe2.kicad_sch",
+   "mpn": "10k",
+   "footprint": "Resistor_SMD:R_0402_1005Metric"
+  },
+  "UMX2": {
+   "lib_id": "openru_x6:LTC5553",
+   "value": "LTC5553IUDB",
+   "sheet": "conv2.kicad_sch",
+   "mpn": "LTC5553IUDB#PBF",
+   "footprint": ""
+  },
+  "FL201": {
+   "lib_id": "openru_x6:BFCN-1840+",
+   "value": "BFCN-1840+",
+   "sheet": "conv2.kicad_sch",
+   "mpn": "BFCN-1840+",
+   "footprint": ""
+  },
+  "FL202": {
+   "lib_id": "openru_x6:BFCN-8350+",
+   "value": "BFCN-8350+",
+   "sheet": "conv2.kicad_sch",
+   "mpn": "BFCN-8350+",
+   "footprint": ""
+  },
+  "FL203": {
+   "lib_id": "openru_x6:HFCN-7150+",
+   "value": "HFCN-7150+",
+   "sheet": "conv2.kicad_sch",
+   "mpn": "HFCN-7150+",
+   "footprint": ""
+  },
+  "C231": {
+   "lib_id": "Device:C",
+   "value": "18pF",
+   "sheet": "conv2.kicad_sch",
+   "mpn": "GJM1555C1H180FB01",
+   "footprint": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  "C232": {
+   "lib_id": "Device:C",
+   "value": "18pF",
+   "sheet": "conv2.kicad_sch",
+   "mpn": "0402ZK180GBS",
+   "footprint": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  "C233": {
+   "lib_id": "Device:C",
+   "value": "18pF",
+   "sheet": "conv2.kicad_sch",
+   "mpn": "GJM1555C1H180FB01",
+   "footprint": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  "C234": {
+   "lib_id": "Device:C",
+   "value": "1uF",
+   "sheet": "conv2.kicad_sch",
+   "mpn": "GRM188R71A105KA61",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric"
+  },
+  "J301": {
+   "lib_id": "Connector:Conn_Coaxial",
+   "value": "SMA IF3 (N310 ch2)",
+   "sheet": "chain3.kicad_sch",
+   "mpn": "SMA IF3 (N310 ch2)",
+   "footprint": ""
+  },
+  "UBF3": {
+   "lib_id": "openru_x6:ADAR1000",
+   "value": "ADAR1000ACCZN",
+   "sheet": "bf3.kicad_sch",
+   "mpn": "ADAR1000ACCZN",
+   "footprint": ""
+  },
+  "R301": {
+   "lib_id": "Device:R",
+   "value": "50",
+   "sheet": "bf3.kicad_sch",
+   "mpn": "50",
+   "footprint": "Resistor_SMD:R_0402_1005Metric"
+  },
+  "C301": {
+   "lib_id": "Device:C",
+   "value": "1uF",
+   "sheet": "bf3.kicad_sch",
+   "mpn": "1uF",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric"
+  },
+  "C302": {
+   "lib_id": "Device:C",
+   "value": "1uF",
+   "sheet": "bf3.kicad_sch",
+   "mpn": "1uF",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric"
+  },
+  "C303": {
+   "lib_id": "Device:C",
+   "value": "1uF",
+   "sheet": "bf3.kicad_sch",
+   "mpn": "1uF",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric"
+  },
+  "C304": {
+   "lib_id": "Device:C",
+   "value": "1uF",
+   "sheet": "bf3.kicad_sch",
+   "mpn": "1uF",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric"
+  },
+  "UFE9": {
+   "lib_id": "openru_x6:ADTR1107",
+   "value": "ADTR1107ACCZ",
+   "sheet": "fe3.kicad_sch",
+   "mpn": "ADTR1107ACCZ",
+   "footprint": ""
+  },
+  "C311": {
+   "lib_id": "Device:C",
+   "value": "10nF",
+   "sheet": "fe3.kicad_sch",
+   "mpn": "10nF",
+   "footprint": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  "JF9": {
+   "lib_id": "Connector:Conn_Coaxial",
+   "value": "FEED sim32 site4 V",
+   "sheet": "fe3.kicad_sch",
+   "mpn": "FEED sim32 site4 V",
+   "footprint": ""
+  },
+  "UFE10": {
+   "lib_id": "openru_x6:ADTR1107",
+   "value": "ADTR1107ACCZ",
+   "sheet": "fe3.kicad_sch",
+   "mpn": "ADTR1107ACCZ",
+   "footprint": ""
+  },
+  "C312": {
+   "lib_id": "Device:C",
+   "value": "10nF",
+   "sheet": "fe3.kicad_sch",
+   "mpn": "10nF",
+   "footprint": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  "JF10": {
+   "lib_id": "Connector:Conn_Coaxial",
+   "value": "FEED sim33 site4 H",
+   "sheet": "fe3.kicad_sch",
+   "mpn": "FEED sim33 site4 H",
+   "footprint": ""
+  },
+  "UFE11": {
+   "lib_id": "openru_x6:ADTR1107",
+   "value": "ADTR1107ACCZ",
+   "sheet": "fe3.kicad_sch",
+   "mpn": "ADTR1107ACCZ",
+   "footprint": ""
+  },
+  "C313": {
+   "lib_id": "Device:C",
+   "value": "10nF",
+   "sheet": "fe3.kicad_sch",
+   "mpn": "10nF",
+   "footprint": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  "JF11": {
+   "lib_id": "Connector:Conn_Coaxial",
+   "value": "FEED sim34 site5 V",
+   "sheet": "fe3.kicad_sch",
+   "mpn": "FEED sim34 site5 V",
+   "footprint": ""
+  },
+  "UFE12": {
+   "lib_id": "openru_x6:ADTR1107",
+   "value": "ADTR1107ACCZ",
+   "sheet": "fe3.kicad_sch",
+   "mpn": "ADTR1107ACCZ",
+   "footprint": ""
+  },
+  "C314": {
+   "lib_id": "Device:C",
+   "value": "10nF",
+   "sheet": "fe3.kicad_sch",
+   "mpn": "10nF",
+   "footprint": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  "JF12": {
+   "lib_id": "Connector:Conn_Coaxial",
+   "value": "FEED sim35 site5 H",
+   "sheet": "fe3.kicad_sch",
+   "mpn": "FEED sim35 site5 H",
+   "footprint": ""
+  },
+  "R320": {
+   "lib_id": "Device:R",
+   "value": "100k",
+   "sheet": "fe3.kicad_sch",
+   "mpn": "100k",
+   "footprint": "Resistor_SMD:R_0402_1005Metric"
+  },
+  "R321": {
+   "lib_id": "Device:R",
+   "value": "10k",
+   "sheet": "fe3.kicad_sch",
+   "mpn": "10k",
+   "footprint": "Resistor_SMD:R_0402_1005Metric"
+  },
+  "UMX3": {
+   "lib_id": "openru_x6:LTC5553",
+   "value": "LTC5553IUDB",
+   "sheet": "conv3.kicad_sch",
+   "mpn": "LTC5553IUDB#PBF",
+   "footprint": ""
+  },
+  "FL301": {
+   "lib_id": "openru_x6:BFCN-1840+",
+   "value": "BFCN-1840+",
+   "sheet": "conv3.kicad_sch",
+   "mpn": "BFCN-1840+",
+   "footprint": ""
+  },
+  "FL302": {
+   "lib_id": "openru_x6:BFCN-8350+",
+   "value": "BFCN-8350+",
+   "sheet": "conv3.kicad_sch",
+   "mpn": "BFCN-8350+",
+   "footprint": ""
+  },
+  "FL303": {
+   "lib_id": "openru_x6:HFCN-7150+",
+   "value": "HFCN-7150+",
+   "sheet": "conv3.kicad_sch",
+   "mpn": "HFCN-7150+",
+   "footprint": ""
+  },
+  "C331": {
+   "lib_id": "Device:C",
+   "value": "18pF",
+   "sheet": "conv3.kicad_sch",
+   "mpn": "GJM1555C1H180FB01",
+   "footprint": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  "C332": {
+   "lib_id": "Device:C",
+   "value": "18pF",
+   "sheet": "conv3.kicad_sch",
+   "mpn": "0402ZK180GBS",
+   "footprint": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  "C333": {
+   "lib_id": "Device:C",
+   "value": "18pF",
+   "sheet": "conv3.kicad_sch",
+   "mpn": "GJM1555C1H180FB01",
+   "footprint": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  "C334": {
+   "lib_id": "Device:C",
+   "value": "1uF",
+   "sheet": "conv3.kicad_sch",
+   "mpn": "GRM188R71A105KA61",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric"
+  },
+  "J401": {
+   "lib_id": "Connector:Conn_Coaxial",
+   "value": "SMA IF4 (N310 ch3)",
+   "sheet": "chain4.kicad_sch",
+   "mpn": "SMA IF4 (N310 ch3)",
+   "footprint": ""
+  },
+  "UBF4": {
+   "lib_id": "openru_x6:ADAR1000",
+   "value": "ADAR1000ACCZN",
+   "sheet": "bf4.kicad_sch",
+   "mpn": "ADAR1000ACCZN",
+   "footprint": ""
+  },
+  "R401": {
+   "lib_id": "Device:R",
+   "value": "50",
+   "sheet": "bf4.kicad_sch",
+   "mpn": "50",
+   "footprint": "Resistor_SMD:R_0402_1005Metric"
+  },
+  "C401": {
+   "lib_id": "Device:C",
+   "value": "1uF",
+   "sheet": "bf4.kicad_sch",
+   "mpn": "1uF",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric"
+  },
+  "C402": {
+   "lib_id": "Device:C",
+   "value": "1uF",
+   "sheet": "bf4.kicad_sch",
+   "mpn": "1uF",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric"
+  },
+  "C403": {
+   "lib_id": "Device:C",
+   "value": "1uF",
+   "sheet": "bf4.kicad_sch",
+   "mpn": "1uF",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric"
+  },
+  "C404": {
+   "lib_id": "Device:C",
+   "value": "1uF",
+   "sheet": "bf4.kicad_sch",
+   "mpn": "1uF",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric"
+  },
+  "UFE13": {
+   "lib_id": "openru_x6:ADTR1107",
+   "value": "ADTR1107ACCZ",
+   "sheet": "fe4.kicad_sch",
+   "mpn": "ADTR1107ACCZ",
+   "footprint": ""
+  },
+  "C411": {
+   "lib_id": "Device:C",
+   "value": "10nF",
+   "sheet": "fe4.kicad_sch",
+   "mpn": "10nF",
+   "footprint": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  "JF13": {
+   "lib_id": "Connector:Conn_Coaxial",
+   "value": "FEED sim36 site6 V",
+   "sheet": "fe4.kicad_sch",
+   "mpn": "FEED sim36 site6 V",
+   "footprint": ""
+  },
+  "UFE14": {
+   "lib_id": "openru_x6:ADTR1107",
+   "value": "ADTR1107ACCZ",
+   "sheet": "fe4.kicad_sch",
+   "mpn": "ADTR1107ACCZ",
+   "footprint": ""
+  },
+  "C412": {
+   "lib_id": "Device:C",
+   "value": "10nF",
+   "sheet": "fe4.kicad_sch",
+   "mpn": "10nF",
+   "footprint": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  "JF14": {
+   "lib_id": "Connector:Conn_Coaxial",
+   "value": "FEED sim37 site6 H",
+   "sheet": "fe4.kicad_sch",
+   "mpn": "FEED sim37 site6 H",
+   "footprint": ""
+  },
+  "UFE15": {
+   "lib_id": "openru_x6:ADTR1107",
+   "value": "ADTR1107ACCZ",
+   "sheet": "fe4.kicad_sch",
+   "mpn": "ADTR1107ACCZ",
+   "footprint": ""
+  },
+  "C413": {
+   "lib_id": "Device:C",
+   "value": "10nF",
+   "sheet": "fe4.kicad_sch",
+   "mpn": "10nF",
+   "footprint": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  "JF15": {
+   "lib_id": "Connector:Conn_Coaxial",
+   "value": "FEED sim38 site7 V",
+   "sheet": "fe4.kicad_sch",
+   "mpn": "FEED sim38 site7 V",
+   "footprint": ""
+  },
+  "UFE16": {
+   "lib_id": "openru_x6:ADTR1107",
+   "value": "ADTR1107ACCZ",
+   "sheet": "fe4.kicad_sch",
+   "mpn": "ADTR1107ACCZ",
+   "footprint": ""
+  },
+  "C414": {
+   "lib_id": "Device:C",
+   "value": "10nF",
+   "sheet": "fe4.kicad_sch",
+   "mpn": "10nF",
+   "footprint": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  "JF16": {
+   "lib_id": "Connector:Conn_Coaxial",
+   "value": "FEED sim39 site7 H",
+   "sheet": "fe4.kicad_sch",
+   "mpn": "FEED sim39 site7 H",
+   "footprint": ""
+  },
+  "R420": {
+   "lib_id": "Device:R",
+   "value": "100k",
+   "sheet": "fe4.kicad_sch",
+   "mpn": "100k",
+   "footprint": "Resistor_SMD:R_0402_1005Metric"
+  },
+  "R421": {
+   "lib_id": "Device:R",
+   "value": "10k",
+   "sheet": "fe4.kicad_sch",
+   "mpn": "10k",
+   "footprint": "Resistor_SMD:R_0402_1005Metric"
+  },
+  "UMX4": {
+   "lib_id": "openru_x6:LTC5553",
+   "value": "LTC5553IUDB",
+   "sheet": "conv4.kicad_sch",
+   "mpn": "LTC5553IUDB#PBF",
+   "footprint": ""
+  },
+  "FL401": {
+   "lib_id": "openru_x6:BFCN-1840+",
+   "value": "BFCN-1840+",
+   "sheet": "conv4.kicad_sch",
+   "mpn": "BFCN-1840+",
+   "footprint": ""
+  },
+  "FL402": {
+   "lib_id": "openru_x6:BFCN-8350+",
+   "value": "BFCN-8350+",
+   "sheet": "conv4.kicad_sch",
+   "mpn": "BFCN-8350+",
+   "footprint": ""
+  },
+  "FL403": {
+   "lib_id": "openru_x6:HFCN-7150+",
+   "value": "HFCN-7150+",
+   "sheet": "conv4.kicad_sch",
+   "mpn": "HFCN-7150+",
+   "footprint": ""
+  },
+  "C431": {
+   "lib_id": "Device:C",
+   "value": "18pF",
+   "sheet": "conv4.kicad_sch",
+   "mpn": "GJM1555C1H180FB01",
+   "footprint": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  "C432": {
+   "lib_id": "Device:C",
+   "value": "18pF",
+   "sheet": "conv4.kicad_sch",
+   "mpn": "0402ZK180GBS",
+   "footprint": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  "C433": {
+   "lib_id": "Device:C",
+   "value": "18pF",
+   "sheet": "conv4.kicad_sch",
+   "mpn": "GJM1555C1H180FB01",
+   "footprint": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  "C434": {
+   "lib_id": "Device:C",
+   "value": "1uF",
+   "sheet": "conv4.kicad_sch",
+   "mpn": "GRM188R71A105KA61",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric"
+  },
+  "U501": {
+   "lib_id": "openru_x6:ADF4371",
+   "value": "ADF4371BCCZ",
+   "sheet": "lo.kicad_sch",
+   "mpn": "ADF4371BCCZ",
+   "footprint": ""
+  },
+  "C501": {
+   "lib_id": "Device:C",
+   "value": "1uF",
+   "sheet": "lo.kicad_sch",
+   "mpn": "1uF",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric"
+  },
+  "C502": {
+   "lib_id": "Device:C",
+   "value": "1uF",
+   "sheet": "lo.kicad_sch",
+   "mpn": "1uF",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric"
+  },
+  "R501": {
+   "lib_id": "Device:R",
+   "value": "1k",
+   "sheet": "lo.kicad_sch",
+   "mpn": "1k",
+   "footprint": "Resistor_SMD:R_0402_1005Metric"
+  },
+  "C503": {
+   "lib_id": "Device:C",
+   "value": "100nF",
+   "sheet": "lo.kicad_sch",
+   "mpn": "100nF",
+   "footprint": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  "C504": {
+   "lib_id": "Device:C",
+   "value": "100nF",
+   "sheet": "lo.kicad_sch",
+   "mpn": "100nF",
+   "footprint": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  "L501": {
+   "lib_id": "Device:L",
+   "value": "7.5nH",
+   "sheet": "lo.kicad_sch",
+   "mpn": "7.5nH",
+   "footprint": "Inductor_SMD:L_0402_1005Metric"
+  },
+  "L502": {
+   "lib_id": "Device:L",
+   "value": "7.5nH",
+   "sheet": "lo.kicad_sch",
+   "mpn": "7.5nH",
+   "footprint": "Inductor_SMD:L_0402_1005Metric"
+  },
+  "C505": {
+   "lib_id": "Device:C",
+   "value": "10pF",
+   "sheet": "lo.kicad_sch",
+   "mpn": "10pF",
+   "footprint": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  "C506": {
+   "lib_id": "Device:C",
+   "value": "10pF",
+   "sheet": "lo.kicad_sch",
+   "mpn": "10pF",
+   "footprint": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  "R502": {
+   "lib_id": "Device:R",
+   "value": "49.9",
+   "sheet": "lo.kicad_sch",
+   "mpn": "49.9",
+   "footprint": "Resistor_SMD:R_0402_1005Metric"
+  },
+  "L503": {
+   "lib_id": "Device:L",
+   "value": "7.5nH",
+   "sheet": "lo.kicad_sch",
+   "mpn": "7.5nH",
+   "footprint": "Inductor_SMD:L_0402_1005Metric"
+  },
+  "L504": {
+   "lib_id": "Device:L",
+   "value": "7.5nH",
+   "sheet": "lo.kicad_sch",
+   "mpn": "7.5nH",
+   "footprint": "Inductor_SMD:L_0402_1005Metric"
+  },
+  "C507": {
+   "lib_id": "Device:C",
+   "value": "10pF",
+   "sheet": "lo.kicad_sch",
+   "mpn": "10pF",
+   "footprint": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  "C508": {
+   "lib_id": "Device:C",
+   "value": "10pF",
+   "sheet": "lo.kicad_sch",
+   "mpn": "10pF",
+   "footprint": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  "R503": {
+   "lib_id": "Device:R",
+   "value": "49.9",
+   "sheet": "lo.kicad_sch",
+   "mpn": "49.9",
+   "footprint": "Resistor_SMD:R_0402_1005Metric"
+  },
+  "J501": {
+   "lib_id": "Connector:Conn_Coaxial",
+   "value": "SMA LO_MON (RFAUX8)",
+   "sheet": "lo.kicad_sch",
+   "mpn": "SMA LO_MON (RFAUX8)",
+   "footprint": ""
+  },
+  "U502": {
+   "lib_id": "openru_x6:AVA-183A+",
+   "value": "AVA-183A+",
+   "sheet": "lo.kicad_sch",
+   "mpn": "AVA-183A+",
+   "footprint": ""
+  },
+  "R504": {
+   "lib_id": "Device:R",
+   "value": "294",
+   "sheet": "lo.kicad_sch",
+   "mpn": "294",
+   "footprint": "Resistor_SMD:R_0402_1005Metric"
+  },
+  "R505": {
+   "lib_id": "Device:R",
+   "value": "17.4",
+   "sheet": "lo.kicad_sch",
+   "mpn": "17.4",
+   "footprint": "Resistor_SMD:R_0402_1005Metric"
+  },
+  "R506": {
+   "lib_id": "Device:R",
+   "value": "294",
+   "sheet": "lo.kicad_sch",
+   "mpn": "294",
+   "footprint": "Resistor_SMD:R_0402_1005Metric"
+  },
+  "U503": {
+   "lib_id": "openru_x6:EP4RKU+",
+   "value": "EP4RKU+",
+   "sheet": "lo.kicad_sch",
+   "mpn": "EP4RKU+",
+   "footprint": ""
+  },
+  "J801": {
+   "lib_id": "Connector:Conn_Coaxial",
+   "value": "SMA CAL (inject / sample)",
+   "sheet": "cal.kicad_sch",
+   "mpn": "SMA CAL (inject / sample)",
+   "footprint": ""
+  },
+  "U801": {
+   "lib_id": "openru_x6:EP4RKU+",
+   "value": "EP4RKU+",
+   "sheet": "cal.kicad_sch",
+   "mpn": "EP4RKU+",
+   "footprint": ""
+  },
+  "DC801": {
+   "lib_id": "openru_x6:EDC21-24+",
+   "value": "EDC21-24+",
+   "sheet": "cal.kicad_sch",
+   "mpn": "EDC21-24+",
+   "footprint": ""
+  },
+  "DC802": {
+   "lib_id": "openru_x6:EDC21-24+",
+   "value": "EDC21-24+",
+   "sheet": "cal.kicad_sch",
+   "mpn": "EDC21-24+",
+   "footprint": ""
+  },
+  "DC803": {
+   "lib_id": "openru_x6:EDC21-24+",
+   "value": "EDC21-24+",
+   "sheet": "cal.kicad_sch",
+   "mpn": "EDC21-24+",
+   "footprint": ""
+  },
+  "DC804": {
+   "lib_id": "openru_x6:EDC21-24+",
+   "value": "EDC21-24+",
+   "sheet": "cal.kicad_sch",
+   "mpn": "EDC21-24+",
+   "footprint": ""
+  },
+  "J802": {
+   "lib_id": "Connector:Conn_Coaxial",
+   "value": "SMA REF 10 MHz IN",
+   "sheet": "cal.kicad_sch",
+   "mpn": "SMA REF 10 MHz IN",
+   "footprint": ""
+  },
+  "R801": {
+   "lib_id": "Device:R",
+   "value": "49.9",
+   "sheet": "cal.kicad_sch",
+   "mpn": "49.9",
+   "footprint": "Resistor_SMD:R_0402_1005Metric"
+  },
+  "J803": {
+   "lib_id": "Connector:Conn_Coaxial",
+   "value": "SMA PPS IN",
+   "sheet": "cal.kicad_sch",
+   "mpn": "SMA PPS IN",
+   "footprint": ""
+  },
+  "R802": {
+   "lib_id": "Device:R",
+   "value": "100",
+   "sheet": "cal.kicad_sch",
+   "mpn": "100",
+   "footprint": "Resistor_SMD:R_0402_1005Metric"
+  },
+  "R803": {
+   "lib_id": "Device:R",
+   "value": "10k",
+   "sheet": "cal.kicad_sch",
+   "mpn": "10k",
+   "footprint": "Resistor_SMD:R_0402_1005Metric"
+  },
+  "U802": {
+   "lib_id": "74xGxx:74LVC1G125",
+   "value": "74LVC1G125",
+   "sheet": "cal.kicad_sch",
+   "mpn": "74LVC1G125",
+   "footprint": "Package_TO_SOT_SMD:SOT-23-5"
+  },
+  "J601": {
+   "lib_id": "Connector_Generic:Conn_01x02",
+   "value": "VIN 12V bench",
+   "sheet": "power.kicad_sch",
+   "mpn": "VIN 12V bench",
+   "footprint": ""
+  },
+  "U601": {
+   "lib_id": "openru_x6:TBD_REG_POS",
+   "value": "UNRESOLVED_REG",
+   "sheet": "power.kicad_sch",
+   "mpn": "UNRESOLVED_REG",
+   "footprint": ""
+  },
+  "U602": {
+   "lib_id": "openru_x6:TBD_REG_POS",
+   "value": "UNRESOLVED_REG",
+   "sheet": "power.kicad_sch",
+   "mpn": "UNRESOLVED_REG",
+   "footprint": ""
+  },
+  "U603": {
+   "lib_id": "openru_x6:TBD_REG_POS",
+   "value": "UNRESOLVED_REG",
+   "sheet": "power.kicad_sch",
+   "mpn": "UNRESOLVED_REG",
+   "footprint": ""
+  },
+  "U604": {
+   "lib_id": "openru_x6:TBD_REG_POS",
+   "value": "UNRESOLVED_REG",
+   "sheet": "power.kicad_sch",
+   "mpn": "UNRESOLVED_REG",
+   "footprint": ""
+  },
+  "U605": {
+   "lib_id": "openru_x6:TBD_REG_POS",
+   "value": "UNRESOLVED_REG",
+   "sheet": "power.kicad_sch",
+   "mpn": "UNRESOLVED_REG",
+   "footprint": ""
+  },
+  "U606": {
+   "lib_id": "openru_x6:TBD_REG_POS",
+   "value": "UNRESOLVED_REG",
+   "sheet": "power.kicad_sch",
+   "mpn": "UNRESOLVED_REG",
+   "footprint": ""
+  },
+  "U607": {
+   "lib_id": "openru_x6:TBD_REG_NEG",
+   "value": "UNRESOLVED_NEG_REG",
+   "sheet": "power.kicad_sch",
+   "mpn": "UNRESOLVED_NEG_REG",
+   "footprint": ""
+  },
+  "U608": {
+   "lib_id": "openru_x6:TBD_REG_NEG",
+   "value": "UNRESOLVED_NEG_REG",
+   "sheet": "power.kicad_sch",
+   "mpn": "UNRESOLVED_NEG_REG",
+   "footprint": ""
+  },
+  "U609": {
+   "lib_id": "openru_x6:TBD_NEG_RAIL_MON",
+   "value": "UNRESOLVED_NEG_MON",
+   "sheet": "power.kicad_sch",
+   "mpn": "UNRESOLVED_NEG_MON",
+   "footprint": ""
+  },
+  "R601": {
+   "lib_id": "Device:R",
+   "value": "10k",
+   "sheet": "power.kicad_sch",
+   "mpn": "10k",
+   "footprint": "Resistor_SMD:R_0402_1005Metric"
+  },
+  "R602": {
+   "lib_id": "Device:R",
+   "value": "10m",
+   "sheet": "power.kicad_sch",
+   "mpn": "10m",
+   "footprint": "Resistor_SMD:R_1206_3216Metric"
+  },
+  "R611": {
+   "lib_id": "Device:R",
+   "value": "10m",
+   "sheet": "power.kicad_sch",
+   "mpn": "10m",
+   "footprint": "Resistor_SMD:R_1206_3216Metric"
+  },
+  "U621": {
+   "lib_id": "Power_Management:TPS22810DRV",
+   "value": "TPS22810DRV",
+   "sheet": "power.kicad_sch",
+   "mpn": "TPS22810DRVR",
+   "footprint": ""
+  },
+  "R612": {
+   "lib_id": "Device:R",
+   "value": "10m",
+   "sheet": "power.kicad_sch",
+   "mpn": "10m",
+   "footprint": "Resistor_SMD:R_1206_3216Metric"
+  },
+  "U622": {
+   "lib_id": "Power_Management:TPS22810DRV",
+   "value": "TPS22810DRV",
+   "sheet": "power.kicad_sch",
+   "mpn": "TPS22810DRVR",
+   "footprint": ""
+  },
+  "R613": {
+   "lib_id": "Device:R",
+   "value": "10m",
+   "sheet": "power.kicad_sch",
+   "mpn": "10m",
+   "footprint": "Resistor_SMD:R_1206_3216Metric"
+  },
+  "U623": {
+   "lib_id": "Power_Management:TPS22810DRV",
+   "value": "TPS22810DRV",
+   "sheet": "power.kicad_sch",
+   "mpn": "TPS22810DRVR",
+   "footprint": ""
+  },
+  "R614": {
+   "lib_id": "Device:R",
+   "value": "10m",
+   "sheet": "power.kicad_sch",
+   "mpn": "10m",
+   "footprint": "Resistor_SMD:R_1206_3216Metric"
+  },
+  "U624": {
+   "lib_id": "Power_Management:TPS22810DRV",
+   "value": "TPS22810DRV",
+   "sheet": "power.kicad_sch",
+   "mpn": "TPS22810DRVR",
+   "footprint": ""
+  },
+  "U610": {
+   "lib_id": "Sensor_Energy:INA226",
+   "value": "INA226",
+   "sheet": "power.kicad_sch",
+   "mpn": "INA226AIDGSR",
+   "footprint": ""
+  },
+  "U611": {
+   "lib_id": "Sensor_Energy:INA226",
+   "value": "INA226",
+   "sheet": "power.kicad_sch",
+   "mpn": "INA226AIDGSR",
+   "footprint": ""
+  },
+  "U612": {
+   "lib_id": "Sensor_Energy:INA226",
+   "value": "INA226",
+   "sheet": "power.kicad_sch",
+   "mpn": "INA226AIDGSR",
+   "footprint": ""
+  },
+  "U613": {
+   "lib_id": "Sensor_Energy:INA226",
+   "value": "INA226",
+   "sheet": "power.kicad_sch",
+   "mpn": "INA226AIDGSR",
+   "footprint": ""
+  },
+  "U614": {
+   "lib_id": "Sensor_Energy:INA226",
+   "value": "INA226",
+   "sheet": "power.kicad_sch",
+   "mpn": "INA226AIDGSR",
+   "footprint": ""
+  },
+  "U615": {
+   "lib_id": "Interface:PCA9306",
+   "value": "PCA9306",
+   "sheet": "power.kicad_sch",
+   "mpn": "PCA9306",
+   "footprint": "Package_SO:VSSOP-8_2.3x2mm_P0.5mm"
+  },
+  "R603": {
+   "lib_id": "Device:R",
+   "value": "200k",
+   "sheet": "power.kicad_sch",
+   "mpn": "200k",
+   "footprint": "Resistor_SMD:R_0402_1005Metric"
+  },
+  "R604": {
+   "lib_id": "Device:R",
+   "value": "4.7k",
+   "sheet": "power.kicad_sch",
+   "mpn": "4.7k",
+   "footprint": "Resistor_SMD:R_0402_1005Metric"
+  },
+  "R605": {
+   "lib_id": "Device:R",
+   "value": "4.7k",
+   "sheet": "power.kicad_sch",
+   "mpn": "4.7k",
+   "footprint": "Resistor_SMD:R_0402_1005Metric"
+  },
+  "R606": {
+   "lib_id": "Device:R",
+   "value": "10k",
+   "sheet": "power.kicad_sch",
+   "mpn": "10k",
+   "footprint": "Resistor_SMD:R_0402_1005Metric"
+  },
+  "U701": {
+   "lib_id": "MCU_ST_STM32G4:STM32G431C_6-8-B_Ux",
+   "value": "STM32G431CBU6",
+   "sheet": "mcu.kicad_sch",
+   "mpn": "STM32G431CBU6",
+   "footprint": "Package_DFN_QFN:QFN-48-1EP_7x7mm_P0.5mm_EP5.6x5.6mm"
+  },
+  "R701": {
+   "lib_id": "Device:R",
+   "value": "10k",
+   "sheet": "mcu.kicad_sch",
+   "mpn": "10k",
+   "footprint": "Resistor_SMD:R_0402_1005Metric"
+  },
+  "C701": {
+   "lib_id": "Device:C",
+   "value": "100nF",
+   "sheet": "mcu.kicad_sch",
+   "mpn": "100nF",
+   "footprint": "Capacitor_SMD:C_0402_1005Metric"
+  },
+  "J701": {
+   "lib_id": "Connector_Generic:Conn_01x05",
+   "value": "SWD",
+   "sheet": "mcu.kicad_sch",
+   "mpn": "SWD",
+   "footprint": ""
+  },
+  "R710": {
+   "lib_id": "Device:R",
+   "value": "100k",
+   "sheet": "mcu.kicad_sch",
+   "mpn": "100k",
+   "footprint": "Resistor_SMD:R_0402_1005Metric"
+  },
+  "R711": {
+   "lib_id": "Device:R",
+   "value": "100k",
+   "sheet": "mcu.kicad_sch",
+   "mpn": "100k",
+   "footprint": "Resistor_SMD:R_0402_1005Metric"
+  },
+  "R712": {
+   "lib_id": "Device:R",
+   "value": "100k",
+   "sheet": "mcu.kicad_sch",
+   "mpn": "100k",
+   "footprint": "Resistor_SMD:R_0402_1005Metric"
+  },
+  "R713": {
+   "lib_id": "Device:R",
+   "value": "100k",
+   "sheet": "mcu.kicad_sch",
+   "mpn": "100k",
+   "footprint": "Resistor_SMD:R_0402_1005Metric"
+  },
+  "R714": {
+   "lib_id": "Device:R",
+   "value": "100k",
+   "sheet": "mcu.kicad_sch",
+   "mpn": "100k",
+   "footprint": "Resistor_SMD:R_0402_1005Metric"
+  },
+  "R715": {
+   "lib_id": "Device:R",
+   "value": "100k",
+   "sheet": "mcu.kicad_sch",
+   "mpn": "100k",
+   "footprint": "Resistor_SMD:R_0402_1005Metric"
+  },
+  "R716": {
+   "lib_id": "Device:R",
+   "value": "100k",
+   "sheet": "mcu.kicad_sch",
+   "mpn": "100k",
+   "footprint": "Resistor_SMD:R_0402_1005Metric"
+  },
+  "R717": {
+   "lib_id": "Device:R",
+   "value": "100k",
+   "sheet": "mcu.kicad_sch",
+   "mpn": "100k",
+   "footprint": "Resistor_SMD:R_0402_1005Metric"
+  },
+  "R718": {
+   "lib_id": "Device:R",
+   "value": "100k",
+   "sheet": "mcu.kicad_sch",
+   "mpn": "100k",
+   "footprint": "Resistor_SMD:R_0402_1005Metric"
+  },
+  "R719": {
+   "lib_id": "Device:R",
+   "value": "100k",
+   "sheet": "mcu.kicad_sch",
+   "mpn": "100k",
+   "footprint": "Resistor_SMD:R_0402_1005Metric"
+  },
+  "R720": {
+   "lib_id": "Device:R",
+   "value": "100k",
+   "sheet": "mcu.kicad_sch",
+   "mpn": "100k",
+   "footprint": "Resistor_SMD:R_0402_1005Metric"
+  },
+  "R721": {
+   "lib_id": "Device:R",
+   "value": "100k",
+   "sheet": "mcu.kicad_sch",
+   "mpn": "100k",
+   "footprint": "Resistor_SMD:R_0402_1005Metric"
+  },
+  "R730": {
+   "lib_id": "Device:R",
+   "value": "100k",
+   "sheet": "mcu.kicad_sch",
+   "mpn": "100k",
+   "footprint": "Resistor_SMD:R_0402_1005Metric"
+  },
+  "R731": {
+   "lib_id": "Device:R",
+   "value": "100k",
+   "sheet": "mcu.kicad_sch",
+   "mpn": "100k",
+   "footprint": "Resistor_SMD:R_0402_1005Metric"
+  },
+  "R732": {
+   "lib_id": "Device:R",
+   "value": "100k",
+   "sheet": "mcu.kicad_sch",
+   "mpn": "100k",
+   "footprint": "Resistor_SMD:R_0402_1005Metric"
+  },
+  "R733": {
+   "lib_id": "Device:R",
+   "value": "100k",
+   "sheet": "mcu.kicad_sch",
+   "mpn": "100k",
+   "footprint": "Resistor_SMD:R_0402_1005Metric"
+  },
+  "R734": {
+   "lib_id": "Device:R",
+   "value": "100k",
+   "sheet": "mcu.kicad_sch",
+   "mpn": "100k",
+   "footprint": "Resistor_SMD:R_0402_1005Metric"
+  },
+  "U702": {
+   "lib_id": "Power_Supervisor:TPS3430WDRC",
+   "value": "TPS3430WDRC",
+   "sheet": "mcu.kicad_sch",
+   "mpn": "TPS3430WDRCR",
+   "footprint": ""
+  },
+  "R702": {
+   "lib_id": "Device:R",
+   "value": "10k",
+   "sheet": "mcu.kicad_sch",
+   "mpn": "10k",
+   "footprint": "Resistor_SMD:R_0402_1005Metric"
+  },
+  "U703": {
+   "lib_id": "74xGxx:74LVC1G11",
+   "value": "74LVC1G11",
+   "sheet": "mcu.kicad_sch",
+   "mpn": "74LVC1G11",
+   "footprint": "Package_TO_SOT_SMD:SOT-23-6"
+  },
+  "U704": {
+   "lib_id": "74xGxx:74LVC1G08",
+   "value": "74LVC1G08",
+   "sheet": "mcu.kicad_sch",
+   "mpn": "74LVC1G08",
+   "footprint": "Package_TO_SOT_SMD:SOT-23-5"
+  },
+  "U705": {
+   "lib_id": "74xGxx:74LVC1G11",
+   "value": "74LVC1G11",
+   "sheet": "mcu.kicad_sch",
+   "mpn": "74LVC1G11",
+   "footprint": "Package_TO_SOT_SMD:SOT-23-6"
+  },
+  "J702": {
+   "lib_id": "Connector_Generic:Conn_01x04",
+   "value": "N310 GPIO / TX interlock",
+   "sheet": "mcu.kicad_sch",
+   "mpn": "N310 GPIO / TX interlock",
+   "footprint": ""
+  },
+  "U706": {
+   "lib_id": "Sensor_Temperature:TMP102xxDRL",
+   "value": "TMP117AIDRVR",
+   "sheet": "mcu.kicad_sch",
+   "mpn": "TMP117AIDRVR",
+   "footprint": "Package_SON:WSON-6-1EP_2x2mm_P0.65mm_EP1x1.6mm"
+  },
+  "U707": {
+   "lib_id": "Sensor_Temperature:TMP102xxDRL",
+   "value": "TMP117AIDRVR",
+   "sheet": "mcu.kicad_sch",
+   "mpn": "TMP117AIDRVR",
+   "footprint": "Package_SON:WSON-6-1EP_2x2mm_P0.65mm_EP1x1.6mm"
+  },
+  "R703": {
+   "lib_id": "Device:R",
+   "value": "2.2k",
+   "sheet": "mcu.kicad_sch",
+   "mpn": "2.2k",
+   "footprint": "Resistor_SMD:R_0402_1005Metric"
+  },
+  "R704": {
+   "lib_id": "Device:R",
+   "value": "2.2k",
+   "sheet": "mcu.kicad_sch",
+   "mpn": "2.2k",
+   "footprint": "Resistor_SMD:R_0402_1005Metric"
+  }
+ }
+}

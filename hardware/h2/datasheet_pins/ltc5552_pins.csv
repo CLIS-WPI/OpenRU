@@ -1,0 +1,14 @@
+pin,name,kicad_type,description,ds_page
+1,GND,power_in,"Ground; must be soldered to RF ground",2;9
+2,IF+,bidirectional,"Differential IF terminal (+); DC voltage 0V; IF out (downconv) or IF in (upconv); DC to 6GHz depending on external balun",2;9
+3,IF-,bidirectional,"Differential IF terminal (-); DC voltage 0V; NOTE Pin Functions GND list also names pin 3 (datasheet inconsistency; pinout/test circuit/IF section say IF-)",2;9
+4,GND,power_in,"Ground; must be soldered to RF ground",2;9
+5,RF,bidirectional,"Single-ended 50ohm RF port; internally DC-grounded via RF transformer primary (~2.5ohm); series DC-block cap required if DC present",2;9;12
+6,GND,power_in,"Ground; must be soldered to RF ground",2;9
+7,EN,input,"Enable; >1.2V on, <0.3V off; internal 376kohm pull-down",2;9
+8,GND,power_in,"Ground; must be soldered to RF ground",2;9
+9,VCC,power_in,"Power supply; regulated 3.3V with bypass cap close to pin; 132mA typ",2;9
+10,GND,power_in,"Ground; must be soldered to RF ground",2;9
+11,LO,input,"LO input, 50ohm 1-20GHz; DC ~1.6V, series DC-block cap required (C1=18pF); no ESD protection on this pin",2;9;13
+12,GND,power_in,"Ground; must be soldered to RF ground",2;9
+13,EP,power_in,"Exposed pad = GND; must be soldered to PCB (electrical ground + thermal)",2;9

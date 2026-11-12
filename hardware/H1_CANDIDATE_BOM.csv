@@ -5,9 +5,9 @@ Front end (cost-down) PA,QPA0813,Qorvo,16,26.96,Digi-Key qty 250,431.36,Digi-Key
 Front end (cost-down) LNA,PMA3-14LN+,Mini-Circuits,16,20.39,Digi-Key qty 500,326.24,"20,447 in stock",CANDIDATE,NF 1.2 dB / gain 23.1 dB at 8 GHz; 6 V 67 mA (needs 6 V rail),minicircuits.com/pdfs/PMA3-14LN+.pdf
 Front end (cost-down) T/R switch,ADRF5019BCPZN,Analog Devices,16,12.19,Digi-Key qty 500,195.04,"3,672 in stock",CANDIDATE,IL 0.8-1.0 dB to 10 GHz; 27 dBm hot-switch (snippet); +3.3/-2.5 V,digikey.com/en/products/detail/analog-devices-inc/ADRF5019BCPZN/10659106
 Front end (cost-down) bias gate,load switch / bias sequencer,TBD,16,UNVERIFIED,,UNVERIFIED,,TBD,needed because discrete PA/LNA have no ADTR1107-style gate interface; sequencing must keep PA off on MCU fault,
-Converter mixer,LTC5552IUDB,Analog Devices,4,67.00,Digi-Key qty 1,268.00,"3,730 in stock",CANDIDATE - PREFERRED,RF 3-20 GHz; LO 0 dBm typ; CL 8 dB @10 GHz; used bidirectionally (upmix at 8.4 GHz UNVERIFIED),LTC5552 datasheet; digikey.com
+Converter mixer,LTC5552IUDB,Analog Devices,4,67.00,Digi-Key qty 1,268.00,"3,730 in stock",SUPERSEDED BY LTC5553 (H2-A - h2/reports/H2A_MIXER_DECISION.md),RF 3-20 GHz; LO 0 dBm typ; CL 8 dB @10 GHz; differential IF needs balun,LTC5552 datasheet; digikey.com
 Converter mixer (alt),HMC773ALC3B,Analog Devices,4,136.22,Digi-Key (qty basis not shown),544.88,,ALTERNATIVE,LO 13 dBm per mixer -> needs ~20 dBm LO driver,HMC773ALC3B Rev D
-Converter switches,ADRF5019BCPZN,Analog Devices,8,12.19,Digi-Key qty 500,97.52,"3,672 in stock",CANDIDATE,RF-side and IF-side TDD switches for bidirectional mixer,as above
+Converter switches,ADRF5019BCPZN,Analog Devices,8,12.19,Digi-Key qty 500,97.52,"3,672 in stock",REMOVED IN H2-A,RF-side and IF-side TDD switches for bidirectional mixer - not needed: passive LTC5553 + N310 TX/RX port T/R switch,as above
 RF filter,BFCN-8350+,Mini-Circuits,4,7.23,Digi-Key qty 1,28.92,"0 stock; 1,000 due 08-Dec-2026",CANDIDATE,8250-8450 MHz; IL 1.8 dB typ,minicircuits.com/pdfs/BFCN-8350+.pdf
 LO/image reject,HFCN-7150+,Mini-Circuits,4,5.40,Digi-Key qty 1,21.60,"2,433 in stock",CANDIDATE,HPF; ~19 dB at 6.65 GHz typ; cascade estimate only,minicircuits.com/pdfs/HFCN-7150+.pdf
 IF filter,1.75-1.85 GHz BPF,TBD,4,UNVERIFIED,,UNVERIFIED,,TBD,,

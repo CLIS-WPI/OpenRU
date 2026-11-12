@@ -1,0 +1,34 @@
+pin,name,kicad_type,description,ds_page
+21,SUM,passive,SUM PORT,EP4RKU+ REV.C ECO-028633 Pad Connections
+14,P1,passive,PORT 1,EP4RKU+ REV.C ECO-028633 Pad Connections
+10,P2,passive,PORT 2,EP4RKU+ REV.C ECO-028633 Pad Connections
+31,P3,passive,PORT 3,EP4RKU+ REV.C ECO-028633 Pad Connections
+27,P4,passive,PORT 4,EP4RKU+ REV.C ECO-028633 Pad Connections
+9,GND,power_in,Ground,EP4RKU+ REV.C ECO-028633 Pad Connections
+11,GND,power_in,Ground,EP4RKU+ REV.C ECO-028633 Pad Connections
+13,GND,power_in,Ground,EP4RKU+ REV.C ECO-028633 Pad Connections
+15,GND,power_in,Ground,EP4RKU+ REV.C ECO-028633 Pad Connections
+20,GND,power_in,Ground,EP4RKU+ REV.C ECO-028633 Pad Connections
+22,GND,power_in,Ground,EP4RKU+ REV.C ECO-028633 Pad Connections
+26,GND,power_in,Ground,EP4RKU+ REV.C ECO-028633 Pad Connections
+28,GND,power_in,Ground,EP4RKU+ REV.C ECO-028633 Pad Connections
+30,GND,power_in,Ground,EP4RKU+ REV.C ECO-028633 Pad Connections
+32,GND,power_in,Ground,EP4RKU+ REV.C ECO-028633 Pad Connections
+EP,GND,power_in,Ground,EP4RKU+ REV.C ECO-028633 Pad Connections
+1,GND,power_in,"NOT USED, GROUND EXTERNALLY",EP4RKU+ REV.C ECO-028633 Pad Connections
+2,GND,power_in,"NOT USED, GROUND EXTERNALLY",EP4RKU+ REV.C ECO-028633 Pad Connections
+3,GND,power_in,"NOT USED, GROUND EXTERNALLY",EP4RKU+ REV.C ECO-028633 Pad Connections
+4,GND,power_in,"NOT USED, GROUND EXTERNALLY",EP4RKU+ REV.C ECO-028633 Pad Connections
+5,GND,power_in,"NOT USED, GROUND EXTERNALLY",EP4RKU+ REV.C ECO-028633 Pad Connections
+6,GND,power_in,"NOT USED, GROUND EXTERNALLY",EP4RKU+ REV.C ECO-028633 Pad Connections
+7,GND,power_in,"NOT USED, GROUND EXTERNALLY",EP4RKU+ REV.C ECO-028633 Pad Connections
+8,GND,power_in,"NOT USED, GROUND EXTERNALLY",EP4RKU+ REV.C ECO-028633 Pad Connections
+12,GND,power_in,"NOT USED, GROUND EXTERNALLY",EP4RKU+ REV.C ECO-028633 Pad Connections
+16,GND,power_in,"NOT USED, GROUND EXTERNALLY",EP4RKU+ REV.C ECO-028633 Pad Connections
+17,GND,power_in,"NOT USED, GROUND EXTERNALLY",EP4RKU+ REV.C ECO-028633 Pad Connections
+18,GND,power_in,"NOT USED, GROUND EXTERNALLY",EP4RKU+ REV.C ECO-028633 Pad Connections
+19,GND,power_in,"NOT USED, GROUND EXTERNALLY",EP4RKU+ REV.C ECO-028633 Pad Connections
+23,GND,power_in,"NOT USED, GROUND EXTERNALLY",EP4RKU+ REV.C ECO-028633 Pad Connections
+24,GND,power_in,"NOT USED, GROUND EXTERNALLY",EP4RKU+ REV.C ECO-028633 Pad Connections
+25,GND,power_in,"NOT USED, GROUND EXTERNALLY",EP4RKU+ REV.C ECO-028633 Pad Connections
+29,GND,power_in,"NOT USED, GROUND EXTERNALLY",EP4RKU+ REV.C ECO-028633 Pad Connections

@@ -27,3 +27,4 @@ TX,gap,ADTR1107 shortfall vs sim per-feed,,,,-4.6 to -6.6 dB,,,DERIVED,tile at f
 TX,gap,discrete shortfall vs sim per-feed,,,,-9.6 to -11.6 dB,,,DERIVED,tile at feeds 19.3-21.3 dBm (corrected H1.1)
 TX,note,backoff 8-10 dB from OP1dB is an assumption for 100 MHz OFDM without DPD; EVM/ACLR must be measured on the bench,,,,,,,ASSUMPTION,
 TX,note,LO leakage (6.6 GHz) and image (4.8 GHz) rejection: BFCN-8350+ ~20-24 dB at 6.05-6.75 GHz + HFCN-7150+ ~19 dB at 6.65 GHz -> ~40 dB cascade ESTIMATE (not datasheet),,,,,,,DERIVED,minicircuits BFCN-8350+/HFCN-7150+ typical data
+NOTE,H2-A,superseded by h2/reports/H2A_RF_CASCADE_BUDGET.csv (LTC5553 + BFCN-1840+ - converter SPDTs removed; feed-referred RX NF 4.05 dB),,,,,,,DERIVED,H2-A

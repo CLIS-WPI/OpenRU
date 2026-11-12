@@ -1,0 +1,23 @@
+path,product,f_low_GHz,f_high_GHz,location,rejection available / note
+TX,0xLO + 1xIF,1.75,1.85,out of band,
+TX,0xLO + 2xIF,3.5,3.7,out of band,
+TX,0xLO + 5xIF,8.75,9.25,NEAR BAND,
+TX,1xLO + 0xIF,6.6,6.6,out of band,
+TX,1xLO - 0xIF,6.6,6.6,out of band,
+TX,1xLO - 1xIF,4.75,4.85,out of band,
+TX,1xLO + 2xIF,10.1,10.3,out of band,
+TX,1xLO - 2xIF,2.9,3.1,out of band,
+TX,2xLO + 0xIF,13.2,13.2,out of band,
+TX,2xLO - 0xIF,13.2,13.2,out of band,
+TX,2xLO + 1xIF,14.95,15.05,out of band,
+TX,2xLO - 1xIF,11.35,11.45,out of band,
+TX,2xLO + 2xIF,16.7,16.9,out of band,
+TX,2xLO - 2xIF,9.5,9.7,out of band,
+TX,2xLO - 3xIF,7.65,7.95,NEAR BAND,
+TX/RX,LO leakage,6.6,6.6,out of band,BFCN-8350+ ~22 dB (interp.) + HFCN-7150+ 18.85 dB
+TX,image LO-IF,4.75,4.85,out of band,"HFCN-7150+ 38.96 dB @4.54 GHz, 29.87 dB @5.1 GHz; BFCN-8350+ 20.28 dB @4.3 GHz"
+RX,image RF = LO-IF,4.75,4.85,out of band,same filters before the mixer + ADTR1107/ADAR1000 band edges (6/8 GHz)
+TX,2xLO,13.2,13.2,out of band,BFCN-8350+ upper stop band 10.3-15.05 GHz 18 dB typ
+TX,N310 2nd harmonic of IF,3.5,3.7,out of band,BFCN-1840+ stop band 3.5-5.7 GHz 25 dB typ
+TX,2xLO-IF,11.35,11.45,out of band,BFCN-8350+ upper stop band
+TX,LO+2xIF,10.1,10.3,out of band,BFCN-8350+ upper stop band 10.3-15.05 GHz

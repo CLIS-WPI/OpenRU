@@ -1,0 +1,5 @@
+pin,name,kicad_type,description,ds_page
+1,RF_IN,passive,RF IN,BFCN-1840+ REV.E M151107 Pin Connections
+3,RF_OUT,passive,RF OUT,BFCN-1840+ REV.E M151107 Pin Connections
+2,GND,power_in,Ground,BFCN-1840+ REV.E M151107 Pin Connections
+4,GND,power_in,Ground,BFCN-1840+ REV.E M151107 Pin Connections

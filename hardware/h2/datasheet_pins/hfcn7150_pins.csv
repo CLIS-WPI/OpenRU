@@ -1,0 +1,7 @@
+pin,name,kicad_type,description,ds_page
+1,RF_IN,passive,RF IN,HFCN-7150+ REV.J ECO-023938 Pin Connections
+3,RF_OUT,passive,RF OUT,HFCN-7150+ REV.J ECO-023938 Pin Connections
+2,GND,power_in,Ground,HFCN-7150+ REV.J ECO-023938 Pin Connections
+4,GND,power_in,Ground,HFCN-7150+ REV.J ECO-023938 Pin Connections
+5,GND,power_in,Ground,HFCN-7150+ REV.J ECO-023938 Pin Connections
+6,GND,power_in,Ground,HFCN-7150+ REV.J ECO-023938 Pin Connections
