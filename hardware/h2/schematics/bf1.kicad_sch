@@ -2577,6 +2577,15 @@
 	)
 	(uuid "040a4e3b-4f4f-4a4d-bda4-16ec2800796e")
 )
+	(text "H2-B GATE-BIAS LIMIT (safety): EXT_PAx_BIAS_OFF/ON and EXT_LNA_BIAS_OFF/ON must stay <= 0x5D (~-1.75 V nominal, V = -code x 4.8/255). NEVER use ADAR1000 Rev B p45 values 0x85 (~-2.5 V) or 0x68 (~-1.96 V): ADTR1107 Rev C abs max VGG_PA -2..0 V, VGG_LNA -2..+0.2 V. Measure PA_BIASx with VDD_PA OFF before enabling the drain."
+	(at 210 40 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+	)
+	(uuid "0b4006c1-0d91-4c74-a47a-9aa189e56031")
+)
 	(wire
 	(pts
 		(xy 179.07 111.76) (xy 176.53 111.76)

@@ -136,6 +136,27 @@ for c in (1, 2, 3, 4):
     sw = pin_net.get((f"U{620 + c}", "1"))
     add("safety", f"chain {c} PA drain", f"+5V_PA_C{c} from U{620 + c} VOUT only", f"{a} / {sw}", a == sw == f"+5V_PA_C{c}", "PA drain gated per chain")
 
+# 4b. H2-B circuits (pin numbers: Device R/C/L 1/2; ADF4371 CPOUT 2, VTUNE 5; AVA-183A+ VD1 8, VD2 7;
+#     TPS22810 WSON VOUT 1, QOD 2, CT 3, VIN 6; TPS3430 CWD 2, SET0 3, CRST 4, SET1 6, VDD1 1)
+P = lambda r, p: pin_net.get((r, p), "<none>")
+h2b = [
+    ("loop filter", "CPOUT-C1-R2-R3", P("U501", "2") == P("C509", "1") == P("R507", "1") == P("R508", "1") != "<none>", "tools/loop_filter.py (DERIVED)"),
+    ("loop filter", "R2-C2 series", P("R507", "2") == P("C510", "1") != "<none>", "3rd-order passive"),
+    ("loop filter", "R3-C3-VTUNE", P("R508", "2") == P("C511", "1") == P("U501", "5") != "<none>", "3rd-order passive"),
+    ("loop filter", "C1/C2/C3 to GND", P("C509", "2") == P("C510", "2") == P("C511", "2") == "GND", "3rd-order passive"),
+    ("LO amp bias", "VD1-C4(0.1u)-L1", P("U502", "8") == P("C512", "1") == P("L505", "1") != "<none>", "AVA-183A+ Fig 2"),
+    ("LO amp bias", "VD2-C3-C2-C1-L1-+5V_LO", P("U502", "7") == P("L505", "2") == P("C513", "1") == P("C514", "1") == P("C515", "1") == "+5V_LO", "AVA-183A+ Fig 2"),
+    ("watchdog", "CWD 10k to VDD, CRST 10k to VDD", P("R705", "1") == P("R706", "1") == "+1V8_DIG" and P("R705", "2") == P("U702", "2") and P("R706", "2") == P("U702", "4"), "TPS3430 Table 6.6"),
+    ("watchdog", "SET0 = SET1 = GND (cannot be disabled)", P("U702", "3") == P("U702", "6") == "GND", "TPS3430 Table 6.6"),
+]
+for c in (1, 2, 3, 4):
+    u = f"U{620 + c}"
+    h2b += [("PA switch", f"{u} QOD tied to VOUT", P(u, "2") == P(u, "1") == f"+5V_PA_C{c}", "TPS22810 pin table option 2"),
+            ("PA switch", f"{u} CT 2200 pF to GND", P(u, "3") == P(f"C{620 + c}", "1") and P(f"C{620 + c}", "2") == "GND", "TPS22810 test condition"),
+            ("PA switch", f"{u} CIN 1 uF on VIN", P(u, "6") == P(f"C{624 + c}", "1") and P(f"C{624 + c}", "2") == "GND", "TPS22810 CIN")]
+for kind, item, ok, basis in h2b:
+    add(kind, item, "connected as specified", "ok" if ok else "MISMATCH", ok, basis)
+
 # 5. unconnected pins must all be declared UNRESOLVED
 unc = sorted(k for k, n in pin_net.items() if n.startswith("unconnected-"))
 declared = {u["ref"] for u in log["unresolved"]}

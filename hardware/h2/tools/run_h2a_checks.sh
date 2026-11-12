@@ -4,6 +4,8 @@
 #   KICAD_SYMBOL_DIR -> KiCad 9 symbol libraries
 #   PY -> a Python 3.11+ with mcp-server-kicad==0.21.1 installed
 set -euo pipefail
+# H2-A generator: rebuilding DELETES schematics/ and every later (H2-B+) edit made with the KiCad MCP tools.
+if [ "${FORCE_H2A_REBUILD:-0}" != "1" ]; then echo "refusing: H2-B edits live in schematics/ (set FORCE_H2A_REBUILD=1 to regenerate H2-A)"; exit 1; fi
 H2=$(cd "$(dirname "$0")/.." && pwd)
 SCH=$H2/schematics; REP=$H2/reports
 rm -rf "$SCH"; mkdir -p "$SCH" "$REP"

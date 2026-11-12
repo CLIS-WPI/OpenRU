@@ -1,7 +1,9 @@
 # H2-A — preliminary RF tile schematic (OpenRU-X6, 4T4R / 16 feeds)
 
 This is a **preliminary engineering schematic**. It is not a released design, and layout is NO-GO.
-Start with `reports/H2A_SCHEMATIC_REVIEW.md`.
+Start with `reports/H2A_SCHEMATIC_REVIEW.md`, then the H2-B reports (`reports/H2B_*`).
+
+**H2-B (branch `hardware/h2b-electrical`):** the schematic is now edited directly with the KiCad MCP tools, and the KiCad files are the source of truth. The H2-A generator (`tools/build_schematics.py`, `tools/run_h2a_checks.sh`) is frozen: the check script refuses to run unless `FORCE_H2A_REBUILD=1`, because a rebuild would delete the H2-B edits. Re-verify with ERC and a netlist export through MCP, then run `tools/verify_netlist.py`.
 
 | Path | What |
 |---|---|
