@@ -2,12 +2,14 @@ from pathlib import Path
 
 import numpy as np
 
+from openru_x6.channel import ChannelModel
 from openru_x6.config import CONFIG_DIR, load_radio, load_scenario
 from openru_x6.experiments import REQUIRED_LONG_HORIZON, SUITE_REQUIRED
 from openru_x6.experiments.common import load_suite
 from openru_x6.experiments.p1d import _constraint_pass
 from openru_x6.experiments.p1e import _first_detection
-from openru_x6.phy import _sionna_uses_torch, nr_grid_audit, resource_multiplier
+from openru_x6.phy import (MCS_TABLE, _sionna_uses_torch, bler_curve, link_adaptation,
+                           nr_grid_audit, resource_multiplier)
 from openru_x6.polarization import jones_matrices
 from openru_x6.rf import array_response, array_response_geometry, build_feed_map, direction_from_angles
 from openru_x6.sensors import SensorFaultInjector, SensorFaultSpec
@@ -37,23 +39,81 @@ def test_default_polarization_is_backward_compatible():
     assert np.allclose(legacy, geom * pol)
 
 
-def test_jones_matrices_are_power_normalized_and_shape_safe():
+def _jones_cfg(xpd_db: float, xpr_db: float):
     radio = load_radio()
-    cfg = radio.polarization.model_copy(update={
-        "model": "jones", "xpd_db": 10.0, "xpr_db": 20.0,
+    return radio.polarization.model_copy(update={
+        "model": "jones", "xpd_db": xpd_db, "xpr_db": xpr_db,
         "orientation_std_deg": 0.0, "calibration_amplitude_error_db": 0.0,
         "calibration_phase_error_deg": 0.0,
     })
+
+
+def test_jones_matrices_are_power_normalized_and_shape_safe():
+    cfg = _jones_cfg(xpd_db=10.0, xpr_db=20.0)
     J = jones_matrices(cfg, 3, 2, 2, np.random.default_rng(7))
     assert J.shape == (3, 2, 2, 2)
     power = np.abs(J) ** 2
-    assert np.allclose(power.sum(axis=(2, 3)), 2.0, atol=1e-12)
-    # Lower XPD must create more cross-polar leakage than higher XPD.
-    leak10 = np.mean(np.abs(J[..., 0, 1]) ** 2)
-    cfg20 = cfg.model_copy(update={"xpd_db": 30.0})
-    J20 = jones_matrices(cfg20, 3, 2, 2, np.random.default_rng(7))
-    leak30 = np.mean(np.abs(J20[..., 0, 1]) ** 2)
-    assert leak10 >= leak30
+    # Each transmit polarization column has unit mean power.
+    assert np.allclose(power.sum(axis=2), 1.0, atol=1e-12)
+
+    # XPD controls the V transmit column leak into H receive: J[..., 1, 0].
+    leak_v10 = np.mean(np.abs(J[..., 1, 0]) ** 2)
+    J30 = jones_matrices(_jones_cfg(30.0, 20.0), 3, 2, 2, np.random.default_rng(7))
+    leak_v30 = np.mean(np.abs(J30[..., 1, 0]) ** 2)
+    assert leak_v10 > leak_v30
+
+    # XPR controls the H transmit column leak into V receive: J[..., 0, 1].
+    leak_h10 = np.mean(np.abs(J[..., 0, 1]) ** 2)
+    Jx30 = jones_matrices(_jones_cfg(10.0, 30.0), 3, 2, 2, np.random.default_rng(7))
+    leak_h30 = np.mean(np.abs(Jx30[..., 0, 1]) ** 2)
+    assert leak_h10 > leak_h30
+
+
+def test_jones_channel_realization_is_finite():
+    radio = load_radio()
+    cfg = radio.model_copy(update={"polarization": _jones_cfg(20.0, 20.0)})
+    fm = build_feed_map(cfg.array, cfg.cell.carrier_freq_hz)
+    ch = ChannelModel(cfg, fm, "cpu", 7)
+    pos = np.array([[80.0, 20.0, 1.5], [120.0, -30.0, 1.5]])
+    realization = ch.realize(pos, blocked=np.zeros(2, dtype=bool),
+                             rng=np.random.default_rng(3))
+    h = realization.H.detach().cpu().numpy()
+    assert np.all(np.isfinite(h))
+    assert np.any(np.abs(h) > 0.0)
+
+
+def test_bler_thresholds_are_exactly_ten_percent():
+    thresholds = np.asarray([t for _, t in MCS_TABLE], dtype=float)
+    mcs = np.arange(len(MCS_TABLE))
+    b = bler_curve(thresholds, mcs)
+    assert np.allclose(b, 0.1, atol=1e-12)
+    assert np.all((b >= 0.0) & (b <= 1.0))
+
+
+def test_bler_is_monotone_and_bounded_at_extremes():
+    sinr = np.linspace(-20.0, 40.0, 241)
+    b = bler_curve(sinr, np.zeros_like(sinr, dtype=int))
+    assert np.all(np.diff(b) <= 1e-15)
+    assert np.all((b >= 0.0) & (b <= 1.0))
+    assert bler_curve(np.array([-200.0]), np.array([0]))[0] == 1.0
+    assert bler_curve(np.array([200.0]), np.array([0]))[0] < 1e-100
+
+
+def test_link_adaptation_uses_the_corrected_bler():
+    radio = load_radio()
+    thresholds = np.asarray([t for _, t in MCS_TABLE], dtype=float)
+    out = link_adaptation(thresholds, radio.cell.bandwidth_hz, radio.mimo)
+    for m, (chosen, b) in enumerate(zip(out["mcs"], out["bler"])):
+        assert chosen == m
+        assert b <= radio.mimo.bler_target + 1e-12
+        assert abs(b - bler_curve(np.array([thresholds[m]]),
+                                   np.array([chosen]))[0]) < 1e-15
+    low = link_adaptation(np.array([-20.0]), radio.cell.bandwidth_hz, radio.mimo)
+    high = link_adaptation(np.array([40.0]), radio.cell.bandwidth_hz, radio.mimo)
+    assert low["mcs"][0] == 0
+    assert high["mcs"][0] == len(MCS_TABLE) - 1
+    assert high["bler"][0] < 1e-6
+    assert high["rate_bps"][0] > low["rate_bps"][0]
 
 
 def test_sionna_api_detection_prefers_concrete_torch_classes():
@@ -112,6 +172,14 @@ def test_sensor_injector_does_not_mutate_caller_data():
     missing = SensorFaultInjector([SensorFaultSpec("missing", onset_slot=0, duration_slots=2,
                                                    tile=4, feature="temp_c")])
     assert np.isnan(missing.step(tel, 0, rng)["per_tile"][4]["temp_c"])
+
+
+def test_p1d_published_run_counts_are_explicit():
+    p1d = load_suite("long_horizon")["p1d"]
+    total = len(p1d["seeds"]) * ((len(p1d["policies"]) - 1) + len(p1d["constraints"]))
+    constrained = len(p1d["seeds"]) * len(p1d["constraints"])
+    assert total == 48
+    assert constrained == 24
 
 
 def test_detection_and_constraint_helpers_are_explicit():

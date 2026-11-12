@@ -148,13 +148,39 @@ def run(radio, energy, security, suite, out_dir: Path, store) -> object:
     checks["constrained_feasibility_reported"] = bool(constrained and all(
         r["constraint_pass"] is not None for r in constrained))
     checks["data_collected"] = len(store.rows) > 0
+    expected_total = len(seeds) * ((len(policies) - 1) + len(constraints))
+    expected_constrained = len(seeds) * len(constraints)
+    checks["run_counts_match_config"] = bool(
+        len(rows) == expected_total and len(constrained) == expected_constrained)
     metrics["runs"] = len(rows)
+    metrics["total_runs"] = len(rows)
+    metrics["expected_total_runs"] = expected_total
+    metrics["constrained_runs"] = len(constrained)
+    metrics["expected_constrained_runs"] = expected_constrained
+    metrics["constrained_feasible_runs"] = int(sum(
+        1 for r in constrained if r["constraint_pass"]))
     metrics["fault_detections"] = int(detected)
     metrics["control_commands"] = int(command_counts)
+    metrics["runs_with_authorized_recovery"] = int(sum(
+        1 for r in rows if r["fault_detected"] and r["actions_authorized"] > 0))
     if constrained:
         metrics["constrained_feasible_rate"] = float(np.mean(
             [1.0 if r["constraint_pass"] else 0.0 for r in constrained]))
         metrics["constrained_mean_energy_j"] = float(np.mean([r["energy_j"] for r in constrained]))
+        metrics["constrained_mean_deadline_miss_fraction"] = float(np.mean(
+            [r["deadline_miss_fraction"] for r in constrained]))
+        metrics["constrained_min_deadline_miss_fraction"] = float(np.min(
+            [r["deadline_miss_fraction"] for r in constrained]))
+        metrics["constrained_max_deadline_miss_fraction"] = float(np.max(
+            [r["deadline_miss_fraction"] for r in constrained]))
+        metrics["constrained_mean_p99_completed_slots"] = float(np.mean(
+            [r["latency_p99_completed_slots"] for r in constrained]))
+        metrics["constrained_min_p99_completed_slots"] = float(np.min(
+            [r["latency_p99_completed_slots"] for r in constrained]))
+        metrics["constrained_max_p99_completed_slots"] = float(np.max(
+            [r["latency_p99_completed_slots"] for r in constrained]))
+        metrics["constrained_mean_service_interruption_slots"] = float(np.mean(
+            [r["service_interruption_slots"] for r in constrained]))
     return make_result("P1D", "QoS-constrained closed-loop energy and fault recovery",
                        t0, checks, metrics,
                        reason="Closed-loop runs include injected RF fault, stale/biased telemetry and constraint accounting.")

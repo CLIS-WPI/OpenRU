@@ -147,14 +147,14 @@ Published Rev10 baseline (pre-P1), local H100 run, 2026-11-11:
 | Smoke config digest | `e00ba9df0f1b575a` |
 | Image | `sha256:927fd2d6cc07b27cce32c6e435db285c8f57eeb6675c5a584c275900afb5a4dd` |
 
-P1 branch regression, fresh container run, 2026-11-11:
+P1 branch correction regression, fresh container run, 2026-11-11:
 
 | Item | Result |
 |---|---|
-| Tests | **47 passed** in the pinned container; 46 non-property tests passed locally |
-| Smoke suite | 6/6 PASS, 2,681 metric rows, 34.2 s, digest `cf44501c4f9daa81` |
-| Full suite | 12/12 PASS, 99,041 metric rows, 592.5 s, digest `2200ad495a88f95c` |
-| P1 reduced suite | 5/5 PASS, 9,454 metric rows, 1,221.8 s, digest `d432664706af1f75` |
+| Tests | **52 passed** in the pinned container; 51 non-property tests passed locally |
+| Smoke suite | 6/6 PASS, 2,681 metric rows, 33.1 s, digest `cf44501c4f9daa81` |
+| Full suite | 12/12 PASS, 99,041 metric rows, 596.6 s, digest `2200ad495a88f95c` |
+| P1 reduced suite | 5/5 PASS, 9,455 metric rows, 906.0 s, digest `d432664706af1f75` |
 | Image | unchanged `sha256:927fd2d6cc07b27cce32c6e435db285c8f57eeb6675c5a584c275900afb5a4dd` |
 | E04 full | PASS; 1,024 actions attempted and verified, 0 rolled back/failed/unrouted |
 | INTEGRATION full | PASS; 20/20 seeds detected and isolated; audit valid |
@@ -174,13 +174,15 @@ At 128 UEs the modeled 64-chain mode delivered 1,154.98 Mbps at 455.90 W versus
 cases. Goodput and modeled power rose by approximately the same proportion; this
 is **not** an energy-efficiency or hardware-cost justification for 64 chains.
 
-P1 results are deliberately mixed: paired 500-slot runs show 64 chains raising
-mean goodput from 444.57 to 473.78 Mbps but also raising energy per bit from
-804.7 to 980.1 nJ/bit. All 48 constrained P1-D runs remained infeasible under
-the tested QoS thresholds, and P1-E's healthy sensor-fault cases produced a
-high false-alarm rate. These are reported as negative findings, not smoothed
-away. See `docs/P1_VALIDATION.md` for details. P1 is a separate, reduced local
-suite; it does not replace the published Rev10 full-suite baseline.
+P1 results are deliberately mixed: corrected paired 500-slot runs show 64 chains
+raising mean goodput from 503.54 to 525.67 Mbps (+0.187 dB) but also raising
+energy per bit from 700.6 to 875.1 nJ/bit. Only **24 of the 48 P1-D runs were
+QoS-constrained**, and **0/24 met the tested constraints**; P1-E's healthy
+sensor-fault cases produced **28/48 false alarms (58.3%)**, while its
+105,000/hour figure is a short-run extrapolation, not a measured rate. These are
+reported as negative findings, not smoothed away. See `docs/P1_VALIDATION.md` and
+`docs/P1_FINAL_DECISION.md`. P1 is a separate, reduced local suite; it does not
+replace the published Rev10 full-suite baseline.
 
 ## Reproducibility
 

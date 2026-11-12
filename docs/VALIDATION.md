@@ -103,4 +103,5 @@ matrix. P1-B separates the NR resource audit from the Sionna coded-link check.
 P1-C keeps the scalar channel default and adds an optional Jones/XPD sweep. P1-D
 routes closed-loop energy/recovery actions through `ControlPlane`. P1-E uses
 disjoint calibration/evaluation seeds and does not give labels to the detector.
-No P1 output is `HARDWARE_MEASURED`.
+No P1 output is `HARDWARE_MEASURED`. See `docs/P1_FINAL_DECISION.md` for the
+bounded software, 4T4R architecture and PCB-fabrication decisions.

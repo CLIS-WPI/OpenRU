@@ -188,14 +188,18 @@ def run(radio, energy, security, suite, out_dir: Path, store) -> object:
             [r["detection_delay_slots"] for r in phys if r["detection_delay_slots"] is not None]))
         if any(r["detection_delay_slots"] is not None for r in phys) else None,
         "false_alarm_cases": false_alarm_slots,
-        "false_alarms_per_hour": false_alarm_slots / max(hours, 1e-9),
+        "false_alarm_case_fraction": (false_alarm_slots / len(healthy)
+                                      if healthy else float("nan")),
+        "false_alarms_per_hour_extrapolated": false_alarm_slots / max(hours, 1e-9),
         "sensor_detection_recall": float(np.mean(
             [1.0 if r["detected"] else 0.0 for r in sens])) if sens else float("nan"),
     })
     write_json(out_dir / "p1e_metrics.json", {
         "metrics": metrics,
         "confusion_matrix": confusion,
-        "note": "Ground-truth labels are used only for scoring; the detector receives telemetry only.",
+        "note": ("Ground-truth labels are used only for scoring; the detector receives telemetry only. "
+                 "The per-hour false-alarm value is an arithmetic extrapolation from short "
+                 "simulated cases, not a measured operational false-alarm rate."),
     })
 
     seed_sets = [set(cal_seeds), set(val_seeds), set(eval_seeds)]

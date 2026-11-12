@@ -55,32 +55,35 @@ Inspect `summary.json`, `p1a_result.json` ... `p1e_result.json`,
 
 ## Latest local result
 
-Run: `python -m openru_x6.cli run-suite --suite long_horizon --out results/p1_long`  
-Status: **5/5 PASS**; 9,454 metric rows; 1,221.8 s; config digest
-`d432664706af1f75`. Evidence summary: 9,453 `SIMULATED`, 1 `PHY_VALIDATED`,
+Run: `python -m openru_x6.cli run-suite --suite long_horizon --out results/long_horizon`
+
+Status: **5/5 PASS**; 9,455 metric rows; 906.0 s; config digest
+`d432664706af1f75`. Evidence summary: 9,454 `SIMULATED`, 1 `PHY_VALIDATED`,
 0 `OCUDU_TESTED`, 0 `HARDWARE_MEASURED`.
 
 | Workstream | Main finding |
 |---|---|
-| P1-A | 32-chain mean 444.57 Mbps; 64-chain 473.78 Mbps; +0.276 dB. Energy per bit rose from 804.7 to 980.1 nJ/bit. Paired goodput CIs were positive in both pivotal conditions. |
-| P1-B | 98.28 MHz, 273-PRB grid audited; 0.492 resource factor; delivered/capacity 0.491. Sionna BLER was 1.0 at low SNR and 0.0 at high SNR in the modelled batch. |
-| P1-C | Jones mean 479.49 Mbps versus 550.08 Mbps simple reference; XPD 10/20/30 dB changed goodput only slightly across three seeds. This is a sensitivity result, not calibrated polarization evidence. |
-| P1-D | 48 runs, 48 detections, 678 control commands; constrained feasible rate **0.0**. Mean constrained deadline-miss fraction 0.315-0.382 and P99 191-227 slots under the tested thresholds. |
-| P1-E | Physical-fault recall 1.0 and localization 1.0 on injected cases; sensor-degraded recall 0.744. Healthy cases with sensor faults produced 28/48 false alarms, or 105,000/hour in this harness. |
+| P1-A | Corrected paired result: 32-chain mean 503.54 Mbps; 64-chain 525.67 Mbps; +0.187 dB. Energy per bit rose from 700.6 to 875.1 nJ/bit. Paired goodput CIs were positive in both pivotal conditions. |
+| P1-B | 98.28 MHz, 273-PRB grid audited; 0.492 resource factor; delivered/capacity 0.374. Sionna BLER was 1.0 at 0-4 dB, 0.5625 at 6 dB and 0.0 at 8 dB; the same-SE abstraction gave 0.592 at 6 dB and 0.077 at 8 dB, so it is conservative at high SNR in this small batch. |
+| P1-C | Corrected Jones mean 590.29 Mbps versus 675.66 Mbps simple reference; XPD 10/20/30 dB changed goodput only slightly across three seeds. This is a sensitivity result, not calibrated polarization evidence. |
+| P1-D | 48 total runs, of which **24 were QoS-constrained**; **0/24 were feasible**. Mean constrained deadline-miss fraction 0.311 (range 0.114-0.463), mean P99 173 slots (range 89-264), mean service interruption 18 slots, mean energy 41.18 J. All 48 injected faults were detected and recovered through authorized commands. |
+| P1-E | Physical-fault recall 1.0 and localization 1.0 on 56 injected cases; sensor-degraded recall 0.744 on 336 cases. Healthy cases with sensor faults produced **28/48 false alarms (58.3%)**. The 105,000/hour value is an arithmetic extrapolation from short simulated cases, not a measured operational rate. |
 
 The P1-D feasibility failure and P1-E false-alarm rate are negative findings.
 They mean the current scheduler/policy and detector are not ready for a
-deployment claim. The 20,000-slot profile is one run, not a seed ensemble.
+deployment claim. The 20,000-slot profile is one run, not a seed ensemble. See
+`docs/P1_FINAL_DECISION.md` for the resulting software, architecture and PCB
+readiness decisions.
 
 
 ## Container and regression checks
 
-- Fresh `docker compose` smoke: 6/6 PASS, 2,681 rows, 34.2 s.
-- Fresh `docker compose` full: 12/12 PASS, 99,041 rows, 592.5 s. Deterministic
+- Fresh `docker compose` smoke: 6/6 PASS, 2,681 rows, 33.1 s.
+- Fresh `docker compose` full: 12/12 PASS, 99,041 rows, 596.6 s. Deterministic
   metrics match the Rev10 baseline; only timing/stochastic rows and the config
   digest changed.
-- E00 and P1-B were rerun in the pinned Sionna 2.2/Torch container. P1-B used
-  `sionna.phy(torch)` and passed. The local P1-A/P1-C/P1-D/P1-E results used the
-  local TensorFlow-backed Sionna 1.2.1 environment where relevant.
-- Regression suite: **47 passed** in the pinned container; 46 non-property tests
-  pass locally. The property test module requires `hypothesis`.
+- All fresh P1 results came from the pinned Sionna 2.2.0/Torch container on GPU 1.
+  P1-B used `sionna.phy(torch)` and passed.
+- Regression suite: **52 passed** in the pinned container; 51 non-property tests
+  pass locally. The property test module requires `hypothesis`, which is not
+  installed in the local environment.

@@ -24,12 +24,20 @@ MCS_TABLE: list[tuple[float, float]] = [
 OVERHEAD = 0.88
 
 
-def bler_curve(sinr_db: np.ndarray, mcs_index: np.ndarray, slope_db: float = 0.7) -> np.ndarray:
+def bler_curve(sinr_db: np.ndarray, mcs_index: np.ndarray,
+               slope_db: float = 0.7) -> np.ndarray:
+    """Logistic BLER with the tabulated threshold defined at BLER = 0.1.
+
+    ``MCS_TABLE`` thresholds are the SINR at which BLER reaches 0.1.  The
+    stable form below enforces that definition exactly:
+    ``BLER = 1 / (1 + 9 * exp((SINR - threshold) / slope))``.
+    """
     sinr_db = np.asarray(sinr_db, dtype=float)
     mcs = np.asarray(mcs_index, dtype=int)
-    thr = np.array([MCS_TABLE[min(int(m), len(MCS_TABLE) - 1)][1] for m in mcs.ravel()]).reshape(mcs.shape)
-    shift = slope_db * np.log(9.0)  # BLER=0.1 at the tabulated threshold
-    return 1.0 / (1.0 + np.exp((sinr_db - thr - shift) / slope_db))
+    thr = np.array([MCS_TABLE[min(int(m), len(MCS_TABLE) - 1)][1]
+                    for m in mcs.ravel()]).reshape(mcs.shape)
+    z = np.log(9.0) + (sinr_db - thr) / float(slope_db)
+    return np.exp(-np.logaddexp(0.0, z))
 
 
 def resource_multiplier(resource: dict[str, Any] | None) -> float:
@@ -135,7 +143,7 @@ def link_adaptation(sinr_db: np.ndarray, bandwidth_hz: float, cfg: MimoConfig,
         chosen = 0
         for m, (se_m, thr) in enumerate(MCS_TABLE):
             b = float(bler_curve(np.array([sinr_db[k]]), np.array([m]))[0])
-            if b <= cfg.bler_target:
+            if b <= cfg.bler_target + 1e-12:
                 chosen = m
             else:
                 break
