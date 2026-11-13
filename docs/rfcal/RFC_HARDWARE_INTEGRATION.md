@@ -23,9 +23,10 @@ The recommended staged decision is:
    or a shielded near-field probe. Report feed phase as externally calibrated,
    not as an H2 self-calibration result.
 2. **Do not add H3 to v0.1.** The H2-A schematic is preliminary and is a
-   layout NO-GO. The ADAR1000 is not qualified at 8.4 GHz, the antenna/feed
-   interface is unresolved, and the `CPLR_OUT` coupler has not been measured at
-   the operating point.
+   layout NO-GO. The later H2-E bench-readiness package does not change the tile
+   schematic or clear that gate. The ADAR1000 is not qualified at 8.4 GHz, the
+   antenna/feed interface is unresolved, and the `CPLR_OUT` coupler has not been
+   measured at the operating point.
 3. **Fund an H3 one-chain prototype as a v0.2 investigation.** Put a per-chain
    4:1 switch/combiner on the four `CPLR_OUT` taps, keep the detector path
    observable, and measure one selected feed at a time with a shared complex
@@ -63,6 +64,27 @@ The H2-A review states that the design is preliminary, has 22 deliberate ERC
 opens, a placeholder power tree, missing bypass values, unresolved footprints,
 and no antenna/feed EM design. The H2-A gate is **NO-GO for layout**. This RFC
 does not change that gate.
+
+H2-A remains the historical baseline for the RF/cal interface statements in
+this RFC. The subsequent H2-E and H2-E.1 work is a separate bench-readiness
+package, not a revised RF interface:
+
+- H2-E (`hardware/h2e-bench-prep`, `203c69f`) leaves the main OpenRU tile
+  schematic unchanged and adds a one-chain Candidate-A safety fixture schematic
+  only. It has no fixture PCB layout, nothing was purchased, fabricated, or
+  energised, and no ADTR1107 is on a test article. Its tile-layout status is
+  still **NO-GO**.
+- H2-E.1 (`hardware/h2e1-procurement-audit`, `3062b65`) resolves the fixture
+  A-SENSE and R57/R58 procurement items. The corresponding A-SENSE tile change
+  is recommended, not applied, and the tile PCB layout is not started. The
+  fixture is not build-ready: it still has no PCB layout, and nothing was
+  purchased, fabricated, or energised. The main tile schematic is unchanged and
+  the tile layout remains **NO-GO**.
+
+H2-E therefore does not qualify the ADAR1000 at 8.4 GHz, release the antenna or
+feed reference plane, validate the `CPLR_OUT` coupler, or provide any measured
+calibration evidence. It prepares a safer bench article and must not be cited as
+an RF calibration capability.
 
 ## 3. H2 interfaces
 
@@ -378,7 +400,7 @@ See `docs/rfcal/IMPAIRMENT_REPORT.md` for the generated report and
 | H3-5 | Passive feed/antenna phase | H3 cannot observe it | Factory table or near-field fixture |
 | H3-6 | Receive path | `CPLR_OUT` is not an RX observation | Add RX coupler or measure RX separately |
 | H3-7 | N310 reference phase | Random per start/retune | Fresh chain loopback and reference channel |
-| H3-8 | H2-A layout NO-GO | H3 cannot be laid out on an unfrozen H2 | Close power, ERC, footprints, antenna EM |
+| H3-8 | H2-A layout NO-GO | H3 cannot be laid out on an unfrozen H2 | Close power, ERC, footprints, antenna EM; H2-E fixture readiness does not unblock the tile layout |
 | H3-9 | ADAR1000 8.4 GHz qualification | Reported specifications are not guaranteed | Bench characterization at the operating point |
 | H3-10 | Safety/control | Switch/PA state can create unintended radiation | Hardware/firmware interlock review; no register writes here |
 
@@ -439,6 +461,8 @@ The full report in this repository was generated with the default 5 seeds,
 
 - `hardware/h2/reports/H2A_SCHEMATIC_REVIEW.md`
 - `hardware/h2/reports/H2A_UNRESOLVED_ISSUES.md`
+- `hardware/h2/reports/H2E_BENCH_READINESS.md` (branch `hardware/h2e-bench-prep`, `203c69f`)
+- `hardware/h2/reports/H2E1_PROCUREMENT_READINESS.md` (branch `hardware/h2e1-procurement-audit`, `3062b65`)
 - `hardware/h2/schematics/cal.kicad_sch`
 - `hardware/h2/schematics/fe1.kicad_sch` through `fe4.kicad_sch`
 - `hardware/h2/schematics/bf1.kicad_sch` through `bf4.kicad_sch`
