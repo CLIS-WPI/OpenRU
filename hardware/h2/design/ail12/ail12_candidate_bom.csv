@@ -1,0 +1,24 @@
+ref,qty,value,MPN,manufacturer,package,function,status,evidence
+U20,1,TPS259470LRPWR,TPS259470LRPWR,TI,VQFN-HR RPW-10 2x2 mm,+5V_IL disconnect eFuse (adjustable OVLO; latch-off applies to OT / ILM faults only),NEW; stock and price NOT checked,SLVSFC9C orderable addendum: Active
+R80,1,2.2 ohm 1% 1206,"pulse-rated 1206, MPN TBD",TBD,1206,U1 OUT -> eFuse IN slew limiter (SRIN(R)/SRIN(F) abs max),NEW; pulse rating NOT verified (<= 0.77 W for <= 0.72 ms at OVLO recovery),calc.py s5
+C40,1,1 uF 25 V X7R,CL10B105KA8NNNC,Samsung,0603,eFuse IN local capacitor (with R80),NEW (same MPN as fixture C1),fixture BOM
+C2,1,4.7 uF 25 V X5R,CL21A475KAQNNNE,Samsung,0805,U1 local output capacitor (kept on U1 OUT = IL_LDO),CHANGED from CL10A475KP8NNNC (10 V; over-stressed at 13.2 V); MPN NOT verified,calc.py s6
+C41,1,2.2 nF 50 V C0G,GRM1555C1H222JA01D,Murata,0402,dVdt (rating >= VIN + 5 V = 18.2 V),NEW; MPN NOT verified,SLVSFC9C 6.3
+C42,1,47 uF 16 V X5R,GRM32ER61C476ME15L,Murata,1210,+5V_IL hold-up / overshoot absorber (with C3 + 6 x 100 nF),NEW; MPN and DC-bias curve NOT verified,calc.py s7 (ASSUMED derating)
+R81,1,100 k 0.1% 25 ppm,ERA-3AEB104V,Panasonic,0603,EN/UVLO divider top (from IL_LDO),NEW; stock NOT verified,calc.py s3
+R82,1,37.4 k 0.1% 25 ppm,ERA-3AEB3742V,Panasonic,0603,EN/UVLO divider bottom (on 4.32-4.52 V; EN 3.61 V at 13.2 V),NEW; stock NOT verified,calc.py s3
+R83,1,10.0 k 0.1% 25 ppm,ERA-3AEB103V,Panasonic,0603,OVLO divider top (from IL_LDO),NEW (same MPN as fixture R55),calc.py s1
+R84,1,2.94 k 0.1% 25 ppm,ERA-3AEB2941V,Panasonic,0603,OVLO divider bottom (trip 5.18-5.41 V); NO clamp,NEW; stock NOT verified,calc.py s1-s2
+R85,1,6.49 k 0.1% 25 ppm,ERA-3AEB6491V,Panasonic,0603,ILM (RILM <= 6650 ohm ROC),NEW; stock NOT verified,calc.py s4
+R86,1,100 k 1%,RC0603FR-07100KL,Yageo,0603,AUXOFF pull-up to +5V_IL,NEW (fixture MPN family),calc.py s9
+R87,1,1.0 M 1%,RC0603FR-071ML,Yageo,0603,AUXOFF divider to GND (high level <= 4.62 V < 5 V ROC). If the AUXOFF solder joint opens R86 keeps Q20 on: AUXOFF path lost silently (latent; U3 UV remains),NEW,calc.py s9
+Q20,1,2N7002LT1G,2N7002LT1G,onsemi,SOT-23,AUXOFF inverter (Q_A),NEW (fixture MPN),2N7002L-D
+R88,1,10 k 1%,RC0603FR-0710KL,Yageo,0603,inverter node IL_AUXN pull-up to +5V_IL,NEW (fixture MPN),calc.py s9
+Q21,1,2N7002LT1G,2N7002LT1G,onsemi,SOT-23,IL_AUXN -> U3 MR (Q_B; tD re-enable hold-off),NEW (fixture MPN),2N7002L-D
+Q22,1,2N7002LT1G,2N7002LT1G,onsemi,SOT-23,IL_AUXN -> P (Q_C; direct P sink),NEW (fixture MPN),2N7002L-D
+TP30,1,TP,5000,Keystone,THT loop,U20 FLT (open-drain; not used for P - FLT stays high on OVLO),NEW,SLVSFC9C Table 7-3
+TP31,1,TP,5000,Keystone,THT loop,IL_AUXOFF,NEW,-
+TP32,1,TP,5000,Keystone,THT loop,IL_AUXN,NEW,-
+TP33,1,TP,5000,Keystone,THT loop,IL_LDO (U1 OUT / eFuse divider node),NEW,-
+(removed),0,BZX84C1V5,-,-,-,proposed OVLO clamp,REMOVED: no 1V5 type in the BZX84 series; nearest 2V4 cannot hold 1.5 V and leaks 50 uA at 1 V,calc.py s2
+(removed),0,BSS84,-,-,-,proposed AUXOFF -> P PMOS (source P),REMOVED: source follower cannot pull P below |VGS(th)| >= 0.9 V,calc.py s8

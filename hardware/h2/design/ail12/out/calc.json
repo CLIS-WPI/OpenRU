@@ -1,0 +1,98 @@
+{
+ "ovlo_trip_rise_V": {
+  "value": [
+   5.178741096637958,
+   5.281632653061224,
+   5.412085267825143
+  ],
+  "tag": "DERIVED"
+ },
+ "ovlo_trip_fall_V": {
+  "value": [
+   4.710334251887103,
+   4.797482993197279,
+   4.938583122561619
+  ],
+  "tag": "DERIVED"
+ },
+ "ovlo_margin_to_ldo_max_V": {
+  "value": 0.0987410966379576,
+  "tag": "DERIVED"
+ },
+ "ovlo_pin_at_13V2": {
+  "value": 3.0153274142508604,
+  "tag": "DERIVED"
+ },
+ "ovlo_recovery_ambiguous": {
+  "value": true,
+  "tag": "DERIVED"
+ },
+ "bzx84c1v5": {
+  "value": "not found; removed",
+  "tag": "DS"
+ },
+ "en_pin_at_13V2": {
+  "value": 3.6113473522917547,
+  "tag": "DERIVED"
+ },
+ "ilim_A": {
+  "value": [
+   0.4366563944530046,
+   0.5137134052388289,
+   0.5907704160246532
+  ],
+  "tag": "DERIVED"
+ },
+ "sr_in_rise_bound_Vus": {
+  "value": 14.056531703590526,
+  "tag": "DERIVED"
+ },
+ "sr_in_fall_bound_Vus": {
+  "value": 8.624055682879213,
+  "tag": "DERIVED"
+ },
+ "proposal_rshort_min_for_100Vus_mohm": {
+  "value": 57.015714087053254,
+  "tag": "DERIVED"
+ },
+ "c_out_uF": {
+  "value": [
+   19.383399999999998,
+   33.425,
+   62.22999999999999
+  ],
+  "tag": "DERIVED/ASSUMED"
+ },
+ "bss84_guarantees_P_le_0V8": {
+  "value": false,
+  "tag": "DERIVED"
+ },
+ "u3_fallback_ms": {
+  "value": 11.507687666666671,
+  "tag": "DERIVED/ASSUMED"
+ },
+ "tail_us": {
+  "value": 16.499042332021787,
+  "tag": "DERIVED"
+ },
+ "budget_worst_us": {
+  "value": 46.4991260599693,
+  "tag": "DERIVED"
+ },
+ "tmax_analytic_13.2_5.5": {
+  "value": 2.3430372276473497,
+  "tag": "DERIVED"
+ },
+ "tmax_analytic_13.2_6.0": {
+  "value": 5.305010554747309,
+  "tag": "DERIVED"
+ },
+ "tmax_analytic_18.2_5.5": {
+  "value": 1.4353759755508222,
+  "tag": "DERIVED"
+ },
+ "tmax_analytic_18.2_6.0": {
+  "value": 3.207374480410892,
+  "tag": "DERIVED"
+ }
+}

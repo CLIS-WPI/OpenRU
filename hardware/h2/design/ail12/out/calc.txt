@@ -1,0 +1,80 @@
+# A-IL12 analytic checks (DERIVED unless tagged otherwise)
+
+## 1 OVLO divider 10.0k/2.94k (0.1 %, 25 ppm/K): k = 0.22598/0.22720/0.22843
+- trip rising 5.179/5.282/5.412 V, falling 4.710/4.797/4.939 V
+- margin rising-min to U1 OUT max 5.08 V: 99 mV (no false trip in normal operation)
+- OVLO pin at IN = 13.2 V: 3.02 V  (ROC max 1.5 V: EXCEEDED; abs max 6.5 V: ok)
+- OVLO pin at IN = 18.2 V: 4.16 V  (ROC max 1.5 V: EXCEEDED; abs max 6.5 V: ok)
+- OVLO pin stays inside the 0.5-1.5 V ROC only up to IN = 6.57 V. Above that the pin is outside the characterised range (EC rows only cover 0.5-1.5 V). Abs max 6.5 V is kept up to 28.5 V. TI behaviour for 1.5 < VOVLO <= 6.5 V: UNSPECIFIED (question for TI).
+- divider power at 13.2 V: 13.5 mW total (0603 0.1 W ok)
+- RECOVERY: OVLO releases only when U1 OUT < falling trip 4.710-4.939 V. With U1 back in regulation (4.92-5.08 V) the release is NOT determined: at most corners U1 OUT stays above the falling trip and the eFuse stays off (hysteresis acts as a de-facto latch until IN is cycled); at the corner VOV(F) max + k min + U1 OUT min (4.939 > 4.92) it auto-recovers after tSWOV (90 us TYP). Neither latching nor recovery is guaranteed.
+
+## 2 Proposed OVLO clamp "BZX84C1V5"
+- BZX84 series (Diodes DS18001; onsemi BZX84C2V4LT1/D) starts at 2V4. No 1V5 type is listed: the MPN is treated as NON-EXISTENT/UNVERIFIED (Nexperia page not retrievable from here).
+- Nearest real part BZX84C2V4: VZ 2.2-2.6 V at 5 mA -> cannot hold the pin <= 1.5 V ROC; IR up to 50 uA at 1.0 V, i.e. up to 12 % of the 408 uA divider current at the trip point -> raises the OVLO trip by an unbounded, temperature-dependent amount.
+- A shunt reference (TLV431-class, 1.24 V) overlaps the OVLO rising threshold (max 1.223 V) within its own tolerance and could block the trip. Decision: NO clamp. The pin stays <= 3.0 V at 13.2 V (< 6.5 V abs max).
+
+## 3 EN/UVLO divider 100k/37.4k: k 0.2722; on 4.32-4.52 V, off 3.93-4.12 V
+- EN pin at IN = 13.2 V: 3.61 V (ROC 5 V, abs max 6.5 V)
+- EN pin at IN = 18.2 V: 4.98 V (ROC 5 V, abs max 6.5 V)
+- EN tied directly to IN (as the TPS7A25 EN is) would put 13.2 V on a 6.5 V abs-max pin in the fault: not allowed.
+
+## 4 ILIM resistor
+- 6.65 kOhm is the RILM ROC maximum (6650 Ohm); any + tolerance leaves the ROC. Candidate: 6.49 kOhm 0.1 % (max 6.497 kOhm).
+- ILIM (Eq. 7) 0.514 A typ. Guaranteed limits exist only at the EC test points; scaling the 6.65 k row (+-15 %) gives 0.437-0.591 A (DERIVED, not guaranteed). Fast-trip ISC = 2.01 x ILIM (DS-TYP only) ~ 1.03 A. U1 ICL min 0.325 A < ILIM: a downstream overload is limited by U1, not the eFuse.
+
+## 5 eFuse IN slew-rate abs max (SRIN(R) 100 V/us, SRIN(F) 10 V/us)
+- With R_in 2.2 Ohm + C_in (1 uF 25 V X7R, eff min 0.27 uF ASSUMED): rising <= 14.1 V/us, falling (U1 OUT hard-shorted to GND) <= 8.6 V/us. Upper bounds for any R_short.
+- Proposal (IN = U1 OUT, only C2 4.7 uF 10 V, eff min 1.44 uF): initial slew = (VIN - 5 V)/(R_short C2). Exceeds 100 V/us for R_short < 57 mOhm (any short harder than that VIOLATES SRIN(R)). R_short is unbounded.
+- Cost: +5V_IL drop at 15 mA (ASSUMED max) 34 mV. R_in pulse at OVLO recovery (current-limited start, <= 0.59 A): 0.77 W for <= 0.72 ms -> 0.56 mJ (use a 1206 pulse-rated part; rating NOT verified).
+
+## 6 Capacitor voltage ratings in the fault (IN side reaches VIN, 13.2 V; sim peak with cable L: see sim)
+- Fixture C2 CL10A475KP8NNNC is 10 V: OVER-STRESSED at 12-13.2 V. Candidate: CL21A475KAQNNNE 4.7 uF 25 V X5R 0805.
+- dVdt capacitor rating >= VIN + 5 V = 18.2 V -> 2.2 nF 50 V C0G. C_in 1 uF 25 V. +5V_IL caps stay low-voltage.
+
+## 7 Capacitance (F) after the disconnect (DC-bias retention ASSUMED, see params.py)
+- c_out: min 19.38 / nom 33.42 / max 62.23 uF
+- c2: min 1.98 / nom 3.17 / max 5.17 uF
+- c_in: min 0.27 / nom 0.47 / max 1.10 uF
+- c5: min 3.44 / nom 6.00 / max 11.00 uF
+- U1 (TPS7A2550) sees C2 locally (4.7 uF nominal >= 2.2 uF with TI 50 % derating rule). With the eFuse on it also sees C_in, +5V_IL and C5 via R1: 68.0 uF nominal <= 100 uF COUT max.
+- Before the change C2 + C3 (2 x 4.7 uF) sat directly on U1 OUT; C3 now sits on +5V_IL behind the eFuse.
+- dVdt 2.2 nF: SR 0.26-1.77 V/ms (DERIVED from typ table x IdVdt limits); inrush <= 110.0 mA; ramp to 5 V 2.8-19.2 ms.
+
+## 8 Proposal: AUXOFF -> BSS84 gate, source = P, drain = GND
+- The PMOS conducts only while VSG = V(P) - V(AUXOFF) > |VGS(th)|. With AUXOFF at 0 V, P cannot fall below |VGS(th)|: min |VGS(th)| = 0.9 V at 250 uA, 25 C (DS) > 0.8 V. At the real sink current (~1.9 mA through R2) P settles higher still.
+  |Vth| 0.9 V, AUXOFF low 0.0 V: P = 1.28 V (level-1 fit to RDS(on) max; BEHAVIOURAL)
+  |Vth| 0.9 V, AUXOFF low 0.3 V: P = 1.56 V (level-1 fit to RDS(on) max; BEHAVIOURAL)
+  |Vth| 2.0 V, AUXOFF low 0.0 V: P = 2.28 V (level-1 fit to RDS(on) max; BEHAVIOURAL)
+  |Vth| 2.0 V, AUXOFF low 0.3 V: P = 2.56 V (level-1 fit to RDS(on) max; BEHAVIOURAL)
+- RESULT: P <= 0.8 V is NOT guaranteed; it is guaranteed NOT to be reached at 25 C (P >= 0.9 V). Hot-temperature VGS(th) is not specified. The BSS84 can still pull P below 0.8 x VCB (CD trip ~3.9 V), so the CD path may shut the PA; P itself stays in an undefined logic region.
+
+## 9 Corrected interface (AUXOFF -> 100k/1M -> Q_A 2N7002 -> X (10k to +5V_IL) -> Q_B on U3 MR, Q_C on P)
+- AUXOFF high level 4.62 V <= 5 V ROC (pull-up to +5V_IL alone would be up to 5.08 V).
+- Q_A on: VGS >= 4.18 V (at +5V_IL = U3 UV min) vs VGS(th) max 2.5 V. rDS(on) is specified only at VGS 5 V (7.5 Ohm, 25 C; 13.5 Ohm 125 C).
+- Q_A off needs V(AUXOFF low) < VGS(th) min 1.0 V (25 C). AUXOFF VOL is NOT specified (0 V typ with VIN > UVP; 0.67-1.0 V unpowered at 26-242 uA) -> UNBOUNDED; bench gate.
+- P <= 0.8 V through Q_C needs rDS <= 411 Ohm (7.5 Ohm max at VGS 5 V; VGS ~ +5V_IL here). Guaranteed path: U3 RESET VOL <= 0.25 V at >= 3 mA (VDD >= 2 V) once MR is seen low; tPD(MR) 500 ns TYP only.
+- MR <= 0.3 V (VMR_L) through Q_B against RMR 100 k (typ only): needs rDS <= 4724 Ohm if RMR were 20 % lower than typ (RMR min NOT specified).
+- Added +5V_IL load in normal operation: 0.005 + 0.51 mA (R_X with Q_A on).
+
+## 10 Back-power paths into +5V_IL
+- +5V_PA -> R39/R40 -> U9 IN+ ESD -> +5V_IL: Thevenin 1.87 V / 3.63 kOhm -> <= 0.43 mA into a dead rail (< 10 mA input-current abs max); lifts +5V_IL <= ~1.6 V unloaded: below TPS3703 UVLO 1.7 V (RESET held low) and U10 UVLO (3.88 V).
+- J4 gate / negative-rail emulation through 49.9 k: <= 0.1 mA each.
+- U4 SENSE (3.16k/1.00k from +5V_PA): SENSE behaviour with VDD = 0 NOT specified (ISENSE given only at 5 V).
+- eFuse in OVLO with VIN > VOUT: forward off-state leakage NOT specified (IOUTLKG(OVLO) 443 uA is the VOUT > VIN direction). +5V_IL cannot rise while leakage < its load; load with P low >= 6.6 mA (R2 + VCB + ASSUMED 3 mA). Swept in the sim as HYPOTHETICAL.
+- +5V_IL -> U1 OUT when VIN collapses: blocked by eFuse reverse-current blocking (no DC reverse current; tRCB 1 us TYP).
+- AUXOFF pull-up into an unpowered eFuse: <= 51 uA through 100k (no active pull-down when unpowered).
+
+## 11 Timing (H2-D tail from P sink asserted to drain < 0.5 V: 16.50 us, budget.py)
+- Guaranteed fallback: +5V_IL must decay to U3 UV at 5 % overdrive (4.37 V). With C <= 73 uF and load >= 4.5 mA (ASSUMED; P is still high so R2 does not load) this takes up to 11.5 ms, then tPD 30 us. From the short onset this is >> 50 us.
+- Under the existing R4 definition (onset = monitored rail 5 % beyond its threshold) the +5V_IL row stays 46.5 us. During the decay +5V_IL is within ROC, so the permit logic remains valid; the PA stays enabled on a regulator that has already failed until then.
+- If the onset is the short itself, the AUXOFF path must assert P within 50 - 16.5 = 33.5 us. AUXOFF de-assertion delay has NO specification -> not provable.
+
+## 12 H2-D budget re-evaluated with VCB_MIN 4.736 V (was 4.77 V; R_in + Ron drop at 15 mA)
+- crowbar delay 2.778-3.218 us (was 2.778-3.218); BBM falling 1.278 us (was 1.278); worst R4 row 46.50 us (was 46.50).
+
+## 13 Max permissible eFuse turn-off delay (analytic, FT ignored, R_in present)
+- U1 OUT at 13.2 V, limit 5.5 V, C_out min 19.4 uF: t_off <= 2.3 us (HYPOTHETICAL-delay bound; compare tOVLO 1.2 us TYP, no max)
+- U1 OUT at 13.2 V, limit 6.0 V, C_out min 19.4 uF: t_off <= 5.3 us (HYPOTHETICAL-delay bound; compare tOVLO 1.2 us TYP, no max)
+- U1 OUT at 18.2 V, limit 5.5 V, C_out min 19.4 uF: t_off <= 1.4 us (HYPOTHETICAL-delay bound; compare tOVLO 1.2 us TYP, no max)
+- U1 OUT at 18.2 V, limit 6.0 V, C_out min 19.4 uF: t_off <= 3.2 us (HYPOTHETICAL-delay bound; compare tOVLO 1.2 us TYP, no max)

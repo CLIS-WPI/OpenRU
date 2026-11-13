@@ -1,0 +1,67 @@
+{
+ "env": {
+  "python": "3.12.3",
+  "numpy": "2.5.4",
+  "scipy": "1.18.1",
+  "matplotlib": "3.11.2",
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.39",
+  "quick": false,
+  "n_runs": 61,
+  "n_sweep": 55,
+  "n_bisect": 10,
+  "wall_s": 196.7,
+  "command": "python3 -I run_sim.py"
+ },
+ "limits": [
+  {
+   "case": "hard_cmin",
+   "limit_V": 5.5,
+   "max_t_off_us": 3.4169403792361592
+  },
+  {
+   "case": "hard_cmin",
+   "limit_V": 6.0,
+   "max_t_off_us": 5.680271636376824
+  },
+  {
+   "case": "hard_nom",
+   "limit_V": 5.5,
+   "max_t_off_us": 4.118725965676265
+  },
+  {
+   "case": "hard_nom",
+   "limit_V": 6.0,
+   "max_t_off_us": 8.182435844891133
+  },
+  {
+   "case": "hard_noL_cmin",
+   "limit_V": 5.5,
+   "max_t_off_us": 3.009223710939358
+  },
+  {
+   "case": "hard_noL_cmin",
+   "limit_V": 6.0,
+   "max_t_off_us": 6.029921736005803
+  },
+  {
+   "case": "rs1_edge1us_cmin",
+   "limit_V": 5.5,
+   "max_t_off_us": 5.749704957035412
+  },
+  {
+   "case": "rs1_edge1us_cmin",
+   "limit_V": 6.0,
+   "max_t_off_us": 10.131185729292444
+  },
+  {
+   "case": "proposal_hard_cmin",
+   "limit_V": 5.5,
+   "max_t_off_us": 1.0600806235012032
+  },
+  {
+   "case": "proposal_hard_cmin",
+   "limit_V": 6.0,
+   "max_t_off_us": 1.656718111555726
+  }
+ ]
+}

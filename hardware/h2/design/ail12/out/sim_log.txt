@@ -1,0 +1,814 @@
+## TR_N1_startup
+       373.068 us  eFuse UV cleared
+       873.068 us  eFuse slew-controlled start
+       908.325 us  CD fires: Q_sd on
+      3679.183 us  MR low
+      5761.577 us  U10 UVLO cleared (+5V_IL > 4.36 V)
+      6329.079 us  eFuse fully on, AUXOFF released
+      6329.081 us  MR released
+    146329.081 us  U3 RESET released (tD elapsed)
+    146329.483 us  CD released
+    146367.219 us  SHDN_c > V(SHUTR) max
+    146367.219 us  U10 enable: PA supply restart begins
+
+## TR_N2_shutdown
+      6366.593 us  U3 RESET asserted (uv)
+      6366.649 us  CD fires: Q_sd on
+      6366.659 us  SHDN_c < V(SHUTF)
+      6368.159 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+      7026.090 us  eFuse UV asserted
+      7027.182 us  MR low
+      8013.873 us  U10 UVLO (+5V_IL < 3.88 V): FET off
+     12673.103 us  MR released
+     22724.893 us  MR low
+
+## TR_N3_brownout_3V
+      3760.237 us  U3 RESET asserted (uv)
+      3760.293 us  CD fires: Q_sd on
+      3760.303 us  SHDN_c < V(SHUTF)
+      3761.803 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+      4419.697 us  eFuse UV asserted
+      4420.788 us  MR low
+      5407.518 us  U10 UVLO (+5V_IL < 3.88 V): FET off
+     10066.748 us  MR released
+     20021.247 us  eFuse UV cleared
+     20118.539 us  MR low
+     20521.247 us  eFuse slew-controlled start
+     20522.754 us  MR released
+     20637.187 us  MR low
+     20689.756 us  eFuse fully on, AUXOFF released
+     20689.765 us  MR released
+     20748.098 us  U10 UVLO cleared (+5V_IL > 4.36 V)
+    160794.722 us  U3 RESET released (tD elapsed)
+    160795.124 us  CD released
+    160832.859 us  SHDN_c > V(SHUTR) max
+    160832.859 us  U10 enable: PA supply restart begins
+
+## N4_brownout_5V4
+
+
+## N5_highline_13V2
+
+
+## G2_rs0.01_edge0.01us
+         0.000 us  U1 pass-element short begins
+         0.004 us  OVLO comparator trips
+         0.748 us  fast-trip comparator trips
+         1.204 us  eFuse FET off (OVLO)
+         1.204 us  AUXOFF pulled low
+         2.031 us  MR low
+         2.236 us  CD fires: Q_sd on
+         2.247 us  SHDN_c < V(SHUTF)
+         2.531 us  U3 RESET asserted (mr)
+         3.747 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+
+## G2_rs0.01_edge1us
+         0.000 us  U1 pass-element short begins
+         0.043 us  OVLO comparator trips
+         0.820 us  fast-trip comparator trips
+         1.243 us  eFuse FET off (OVLO)
+         1.243 us  AUXOFF pulled low
+         2.070 us  MR low
+         2.275 us  CD fires: Q_sd on
+         2.286 us  SHDN_c < V(SHUTF)
+         2.570 us  U3 RESET asserted (mr)
+         3.786 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+
+## G2_rs0.01_edge100us
+         0.000 us  U1 pass-element short begins
+         0.441 us  OVLO comparator trips
+         1.641 us  eFuse FET off (OVLO)
+         1.641 us  AUXOFF pulled low
+         2.472 us  MR low
+         2.677 us  CD fires: Q_sd on
+         2.688 us  SHDN_c < V(SHUTF)
+         2.972 us  U3 RESET asserted (mr)
+         4.188 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+
+## G2_rs0.01_edge10000us
+         0.000 us  U1 pass-element short begins
+         4.842 us  OVLO comparator trips
+         6.042 us  eFuse FET off (OVLO)
+         6.042 us  AUXOFF pulled low
+         6.875 us  MR low
+         7.080 us  CD fires: Q_sd on
+         7.091 us  SHDN_c < V(SHUTF)
+         7.375 us  U3 RESET asserted (mr)
+         8.591 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+      3468.184 us  U10 UVLO (+5V_IL < 3.88 V): FET off
+      8127.386 us  MR released
+
+## G2_rs0.1_edge0.01us
+         0.000 us  U1 pass-element short begins
+         0.014 us  OVLO comparator trips
+         0.831 us  fast-trip comparator trips
+         1.214 us  eFuse FET off (OVLO)
+         1.214 us  AUXOFF pulled low
+         2.042 us  MR low
+         2.246 us  CD fires: Q_sd on
+         2.258 us  SHDN_c < V(SHUTF)
+         2.542 us  U3 RESET asserted (mr)
+         3.758 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+
+## G2_rs0.1_edge1us
+         0.000 us  U1 pass-element short begins
+         0.138 us  OVLO comparator trips
+         1.034 us  fast-trip comparator trips
+         1.338 us  eFuse FET off (OVLO)
+         1.338 us  AUXOFF pulled low
+         2.166 us  MR low
+         2.371 us  CD fires: Q_sd on
+         2.382 us  SHDN_c < V(SHUTF)
+         2.666 us  U3 RESET asserted (mr)
+         3.882 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+
+## G2_rs0.1_edge100us
+         0.000 us  U1 pass-element short begins
+         1.418 us  OVLO comparator trips
+         2.618 us  eFuse FET off (OVLO)
+         2.618 us  AUXOFF pulled low
+         3.451 us  MR low
+         3.656 us  CD fires: Q_sd on
+         3.667 us  SHDN_c < V(SHUTF)
+         3.951 us  U3 RESET asserted (mr)
+         5.167 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+
+## G2_rs0.1_edge10000us
+         0.000 us  U1 pass-element short begins
+        21.165 us  OVLO comparator trips
+        22.365 us  eFuse FET off (OVLO)
+        22.365 us  AUXOFF pulled low
+        23.192 us  MR low
+        23.397 us  CD fires: Q_sd on
+        23.408 us  SHDN_c < V(SHUTF)
+        23.692 us  U3 RESET asserted (mr)
+        24.908 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+      3552.731 us  U10 UVLO (+5V_IL < 3.88 V): FET off
+      8211.933 us  MR released
+
+## G2_rs1_edge0.01us
+         0.000 us  U1 pass-element short begins
+         0.100 us  OVLO comparator trips
+         1.300 us  eFuse FET off (OVLO)
+         1.300 us  AUXOFF pulled low
+         2.131 us  MR low
+         2.336 us  CD fires: Q_sd on
+         2.347 us  SHDN_c < V(SHUTF)
+         2.631 us  U3 RESET asserted (mr)
+         3.847 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+
+## G2_rs1_edge1us
+         0.000 us  U1 pass-element short begins
+         0.441 us  OVLO comparator trips
+         1.641 us  eFuse FET off (OVLO)
+         1.641 us  AUXOFF pulled low
+         2.472 us  MR low
+         2.677 us  CD fires: Q_sd on
+         2.688 us  SHDN_c < V(SHUTF)
+         2.972 us  U3 RESET asserted (mr)
+         4.188 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+
+## G2_rs1_edge100us
+         0.000 us  U1 pass-element short begins
+         4.842 us  OVLO comparator trips
+         6.042 us  eFuse FET off (OVLO)
+         6.042 us  AUXOFF pulled low
+         6.875 us  MR low
+         7.080 us  CD fires: Q_sd on
+         7.091 us  SHDN_c < V(SHUTF)
+         7.375 us  U3 RESET asserted (mr)
+         8.591 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+
+## G2_rs1_edge10000us
+         0.000 us  U1 pass-element short begins
+       111.607 us  OVLO comparator trips
+       112.807 us  eFuse FET off (OVLO)
+       112.807 us  AUXOFF pulled low
+       113.613 us  MR low
+       113.819 us  CD fires: Q_sd on
+       113.830 us  SHDN_c < V(SHUTF)
+       114.113 us  U3 RESET asserted (mr)
+       115.330 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+      3882.874 us  U10 UVLO (+5V_IL < 3.88 V): FET off
+      8542.080 us  MR released
+
+## G2_rs10_edge0.01us
+         0.000 us  U1 pass-element short begins
+         1.021 us  OVLO comparator trips
+         2.221 us  eFuse FET off (OVLO)
+         2.221 us  AUXOFF pulled low
+         3.056 us  MR low
+         3.260 us  CD fires: Q_sd on
+         3.271 us  SHDN_c < V(SHUTF)
+         3.556 us  U3 RESET asserted (mr)
+         4.771 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+
+## G2_rs10_edge1us
+         0.000 us  U1 pass-element short begins
+         1.516 us  OVLO comparator trips
+         2.716 us  eFuse FET off (OVLO)
+         2.716 us  AUXOFF pulled low
+         3.550 us  MR low
+         3.755 us  CD fires: Q_sd on
+         3.766 us  SHDN_c < V(SHUTF)
+         4.050 us  U3 RESET asserted (mr)
+         5.266 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+
+## G2_rs10_edge100us
+         0.000 us  U1 pass-element short begins
+        21.165 us  OVLO comparator trips
+        22.365 us  eFuse FET off (OVLO)
+        22.365 us  AUXOFF pulled low
+        23.192 us  MR low
+        23.397 us  CD fires: Q_sd on
+        23.408 us  SHDN_c < V(SHUTF)
+        23.692 us  U3 RESET asserted (mr)
+        24.908 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+
+## G2_rs10_edge10000us
+         0.000 us  U1 pass-element short begins
+       516.483 us  OVLO comparator trips
+       517.683 us  eFuse FET off (OVLO)
+       517.683 us  AUXOFF pulled low
+       518.470 us  MR low
+       518.674 us  CD fires: Q_sd on
+       518.685 us  SHDN_c < V(SHUTF)
+       518.970 us  U3 RESET asserted (mr)
+       520.185 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+      4537.026 us  U10 UVLO (+5V_IL < 3.88 V): FET off
+      9196.234 us  MR released
+
+## TR_G2_hard_nominal
+         0.000 us  U1 pass-element short begins
+         0.004 us  OVLO comparator trips
+         0.748 us  fast-trip comparator trips
+         1.204 us  eFuse FET off (OVLO)
+         1.204 us  AUXOFF pulled low
+         2.031 us  MR low
+         2.236 us  CD fires: Q_sd on
+         2.247 us  SHDN_c < V(SHUTF)
+         2.531 us  U3 RESET asserted (mr)
+         3.747 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+
+## G2_hard_12V
+         0.000 us  U1 pass-element short begins
+         0.005 us  OVLO comparator trips
+         0.878 us  fast-trip comparator trips
+         1.205 us  eFuse FET off (OVLO)
+         1.205 us  AUXOFF pulled low
+         2.033 us  MR low
+         2.237 us  CD fires: Q_sd on
+         2.249 us  SHDN_c < V(SHUTF)
+         2.533 us  U3 RESET asserted (mr)
+         3.749 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+
+## G2_hard_noL
+         0.000 us  U1 pass-element short begins
+         0.004 us  OVLO comparator trips
+         0.055 us  fast-trip comparator trips
+         0.555 us  eFuse FET off (fast-trip)
+         1.204 us  eFuse FET off (OVLO)
+         1.204 us  AUXOFF pulled low
+         2.026 us  MR low
+         2.231 us  CD fires: Q_sd on
+         2.242 us  SHDN_c < V(SHUTF)
+         2.526 us  U3 RESET asserted (mr)
+         3.742 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+
+## G3_icc0.1_tcc0us_csrc10u
+         0.000 us  U1 pass-element short begins
+         0.004 us  OVLO comparator trips
+         0.751 us  fast-trip comparator trips
+         1.204 us  eFuse FET off (OVLO)
+         1.204 us  AUXOFF pulled low
+         2.031 us  MR low
+         2.236 us  CD fires: Q_sd on
+         2.247 us  SHDN_c < V(SHUTF)
+         2.531 us  U3 RESET asserted (mr)
+         3.747 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+      3540.369 us  U10 UVLO (+5V_IL < 3.88 V): FET off
+
+## G3_icc0.1_tcc0us_csrc470u
+         0.000 us  U1 pass-element short begins
+         0.004 us  OVLO comparator trips
+         0.748 us  fast-trip comparator trips
+         1.204 us  eFuse FET off (OVLO)
+         1.204 us  AUXOFF pulled low
+         2.031 us  MR low
+         2.236 us  CD fires: Q_sd on
+         2.247 us  SHDN_c < V(SHUTF)
+         2.531 us  U3 RESET asserted (mr)
+         3.747 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+      3541.096 us  U10 UVLO (+5V_IL < 3.88 V): FET off
+
+## G3_icc0.1_tcc100us_csrc10u
+         0.000 us  U1 pass-element short begins
+         0.004 us  OVLO comparator trips
+         0.748 us  fast-trip comparator trips
+         1.204 us  eFuse FET off (OVLO)
+         1.204 us  AUXOFF pulled low
+         2.031 us  MR low
+         2.236 us  CD fires: Q_sd on
+         2.247 us  SHDN_c < V(SHUTF)
+         2.531 us  U3 RESET asserted (mr)
+         3.747 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+      3540.970 us  U10 UVLO (+5V_IL < 3.88 V): FET off
+
+## G3_icc0.1_tcc100us_csrc470u
+         0.000 us  U1 pass-element short begins
+         0.004 us  OVLO comparator trips
+         0.748 us  fast-trip comparator trips
+         1.204 us  eFuse FET off (OVLO)
+         1.204 us  AUXOFF pulled low
+         2.031 us  MR low
+         2.236 us  CD fires: Q_sd on
+         2.247 us  SHDN_c < V(SHUTF)
+         2.531 us  U3 RESET asserted (mr)
+         3.747 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+      3541.097 us  U10 UVLO (+5V_IL < 3.88 V): FET off
+
+## G3_icc0.5_tcc0us_csrc10u
+         0.000 us  U1 pass-element short begins
+         0.004 us  OVLO comparator trips
+         0.751 us  fast-trip comparator trips
+         1.204 us  eFuse FET off (OVLO)
+         1.204 us  AUXOFF pulled low
+         2.031 us  MR low
+         2.236 us  CD fires: Q_sd on
+         2.247 us  SHDN_c < V(SHUTF)
+         2.531 us  U3 RESET asserted (mr)
+         3.747 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+      3540.447 us  U10 UVLO (+5V_IL < 3.88 V): FET off
+
+## G3_icc0.5_tcc0us_csrc470u
+         0.000 us  U1 pass-element short begins
+         0.004 us  OVLO comparator trips
+         0.748 us  fast-trip comparator trips
+         1.204 us  eFuse FET off (OVLO)
+         1.204 us  AUXOFF pulled low
+         2.031 us  MR low
+         2.236 us  CD fires: Q_sd on
+         2.247 us  SHDN_c < V(SHUTF)
+         2.531 us  U3 RESET asserted (mr)
+         3.747 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+      3541.096 us  U10 UVLO (+5V_IL < 3.88 V): FET off
+
+## G3_icc0.5_tcc100us_csrc10u
+         0.000 us  U1 pass-element short begins
+         0.004 us  OVLO comparator trips
+         0.748 us  fast-trip comparator trips
+         1.204 us  eFuse FET off (OVLO)
+         1.204 us  AUXOFF pulled low
+         2.031 us  MR low
+         2.236 us  CD fires: Q_sd on
+         2.247 us  SHDN_c < V(SHUTF)
+         2.531 us  U3 RESET asserted (mr)
+         3.747 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+      3540.970 us  U10 UVLO (+5V_IL < 3.88 V): FET off
+
+## G3_icc0.5_tcc100us_csrc470u
+         0.000 us  U1 pass-element short begins
+         0.004 us  OVLO comparator trips
+         0.748 us  fast-trip comparator trips
+         1.204 us  eFuse FET off (OVLO)
+         1.204 us  AUXOFF pulled low
+         2.031 us  MR low
+         2.236 us  CD fires: Q_sd on
+         2.247 us  SHDN_c < V(SHUTF)
+         2.531 us  U3 RESET asserted (mr)
+         3.747 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+      3541.097 us  U10 UVLO (+5V_IL < 3.88 V): FET off
+
+## G3_icc2_tcc0us_csrc10u
+         0.000 us  U1 pass-element short begins
+         0.004 us  OVLO comparator trips
+         0.749 us  fast-trip comparator trips
+         1.204 us  eFuse FET off (OVLO)
+         1.204 us  AUXOFF pulled low
+         2.031 us  MR low
+         2.236 us  CD fires: Q_sd on
+         2.247 us  SHDN_c < V(SHUTF)
+         2.531 us  U3 RESET asserted (mr)
+         3.747 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+      3540.666 us  U10 UVLO (+5V_IL < 3.88 V): FET off
+
+## G3_icc2_tcc0us_csrc470u
+         0.000 us  U1 pass-element short begins
+         0.004 us  OVLO comparator trips
+         0.748 us  fast-trip comparator trips
+         1.204 us  eFuse FET off (OVLO)
+         1.204 us  AUXOFF pulled low
+         2.031 us  MR low
+         2.236 us  CD fires: Q_sd on
+         2.247 us  SHDN_c < V(SHUTF)
+         2.531 us  U3 RESET asserted (mr)
+         3.747 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+      3541.097 us  U10 UVLO (+5V_IL < 3.88 V): FET off
+
+## G3_icc2_tcc100us_csrc10u
+         0.000 us  U1 pass-element short begins
+         0.004 us  OVLO comparator trips
+         0.748 us  fast-trip comparator trips
+         1.204 us  eFuse FET off (OVLO)
+         1.204 us  AUXOFF pulled low
+         2.031 us  MR low
+         2.236 us  CD fires: Q_sd on
+         2.247 us  SHDN_c < V(SHUTF)
+         2.531 us  U3 RESET asserted (mr)
+         3.747 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+      3540.970 us  U10 UVLO (+5V_IL < 3.88 V): FET off
+
+## G3_icc2_tcc100us_csrc470u
+         0.000 us  U1 pass-element short begins
+         0.004 us  OVLO comparator trips
+         0.748 us  fast-trip comparator trips
+         1.204 us  eFuse FET off (OVLO)
+         1.204 us  AUXOFF pulled low
+         2.031 us  MR low
+         2.236 us  CD fires: Q_sd on
+         2.247 us  SHDN_c < V(SHUTF)
+         2.531 us  U3 RESET asserted (mr)
+         3.747 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+      3541.097 us  U10 UVLO (+5V_IL < 3.88 V): FET off
+
+## G4_cmin_th0
+         0.000 us  U1 pass-element short begins
+         0.003 us  OVLO comparator trips
+         0.641 us  fast-trip comparator trips
+         1.141 us  eFuse FET off (fast-trip)
+         1.203 us  eFuse FET off (OVLO)
+         1.203 us  AUXOFF pulled low
+         2.026 us  MR low
+         2.231 us  CD fires: Q_sd on
+         2.242 us  SHDN_c < V(SHUTF)
+         2.526 us  U3 RESET asserted (mr)
+         3.742 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+
+## G4_cmin_th2
+         0.000 us  U1 pass-element short begins
+         0.005 us  OVLO comparator trips
+         0.641 us  fast-trip comparator trips
+         1.141 us  eFuse FET off (fast-trip)
+         1.205 us  eFuse FET off (OVLO)
+         1.205 us  AUXOFF pulled low
+         2.027 us  MR low
+         2.232 us  CD fires: Q_sd on
+         2.243 us  SHDN_c < V(SHUTF)
+         2.527 us  U3 RESET asserted (mr)
+         3.743 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+
+## G4_cmax_th0
+         0.000 us  U1 pass-element short begins
+         0.006 us  OVLO comparator trips
+         1.206 us  eFuse FET off (OVLO)
+         1.206 us  AUXOFF pulled low
+         2.040 us  MR low
+         2.245 us  CD fires: Q_sd on
+         2.256 us  SHDN_c < V(SHUTF)
+         2.540 us  U3 RESET asserted (mr)
+         3.756 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+
+## G4_cmax_th2
+         0.000 us  U1 pass-element short begins
+         0.008 us  OVLO comparator trips
+         1.208 us  eFuse FET off (OVLO)
+         1.208 us  AUXOFF pulled low
+         2.043 us  MR low
+         2.248 us  CD fires: Q_sd on
+         2.259 us  SHDN_c < V(SHUTF)
+         2.543 us  U3 RESET asserted (mr)
+         3.759 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+
+## G4_hot_n7002
+         0.000 us  U1 pass-element short begins
+         0.004 us  OVLO comparator trips
+         0.748 us  fast-trip comparator trips
+         1.204 us  eFuse FET off (OVLO)
+         1.204 us  AUXOFF pulled low
+         1.471 us  MR low
+         1.682 us  CD fires: Q_sd on
+         1.693 us  SHDN_c < V(SHUTF)
+         1.971 us  U3 RESET asserted (mr)
+         3.193 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+
+## G4_ilmax_lowload
+         0.000 us  U1 pass-element short begins
+         0.007 us  OVLO comparator trips
+         1.207 us  eFuse FET off (OVLO)
+         1.207 us  AUXOFF pulled low
+         2.040 us  MR low
+         2.244 us  CD fires: Q_sd on
+         2.255 us  SHDN_c < V(SHUTF)
+         2.540 us  U3 RESET asserted (mr)
+         3.755 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+
+## TR_G5_corrected
+         0.000 us  U1 pass-element short begins
+         0.004 us  OVLO comparator trips
+         0.748 us  fast-trip comparator trips
+         1.204 us  eFuse FET off (OVLO)
+         1.204 us  AUXOFF pulled low
+         2.031 us  MR low
+         2.236 us  CD fires: Q_sd on
+         2.247 us  SHDN_c < V(SHUTF)
+         2.531 us  U3 RESET asserted (mr)
+         3.747 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+      3541.097 us  U10 UVLO (+5V_IL < 3.88 V): FET off
+      8200.299 us  MR released
+
+## TR_G5_bss84_vth2.0
+         0.000 us  U1 pass-element short begins
+         0.004 us  OVLO comparator trips
+         0.748 us  fast-trip comparator trips
+         1.204 us  eFuse FET off (OVLO)
+         1.204 us  AUXOFF pulled low
+         1.260 us  CD fires: Q_sd on
+         1.272 us  SHDN_c < V(SHUTF)
+         2.772 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+      2086.501 us  U3 RESET asserted (uv)
+      3770.605 us  U10 UVLO (+5V_IL < 3.88 V): FET off
+
+## G5_bss84_vth0.9
+         0.000 us  U1 pass-element short begins
+         0.004 us  OVLO comparator trips
+         0.748 us  fast-trip comparator trips
+         1.204 us  eFuse FET off (OVLO)
+         1.204 us  AUXOFF pulled low
+         1.260 us  CD fires: Q_sd on
+         1.271 us  SHDN_c < V(SHUTF)
+         2.771 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+      1980.416 us  U3 RESET asserted (uv)
+      3666.263 us  U10 UVLO (+5V_IL < 3.88 V): FET off
+
+## TR_G5_none_U3only
+         0.000 us  U1 pass-element short begins
+         0.007 us  OVLO comparator trips
+         1.207 us  eFuse FET off (OVLO)
+         1.207 us  AUXOFF pulled low
+      9263.494 us  U3 RESET asserted (uv)
+      9263.550 us  CD fires: Q_sd on
+      9263.560 us  SHDN_c < V(SHUTF)
+      9265.060 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+
+## G5_corrected_auxol0.7
+         0.000 us  U1 pass-element short begins
+         0.004 us  OVLO comparator trips
+         0.748 us  fast-trip comparator trips
+         1.204 us  eFuse FET off (OVLO)
+         1.204 us  AUXOFF pulled low
+         1.471 us  MR low
+         1.653 us  CD fires: Q_sd on
+         1.664 us  SHDN_c < V(SHUTF)
+         1.971 us  U3 RESET asserted (mr)
+         3.164 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+      3540.696 us  U10 UVLO (+5V_IL < 3.88 V): FET off
+     13665.633 us  MR released
+
+## G7_clear1ms_corrected_nominal
+         0.000 us  U1 pass-element short begins
+         0.004 us  OVLO comparator trips
+         0.748 us  fast-trip comparator trips
+         1.204 us  eFuse FET off (OVLO)
+         1.204 us  AUXOFF pulled low
+         2.031 us  MR low
+         2.236 us  CD fires: Q_sd on
+         2.247 us  SHDN_c < V(SHUTF)
+         2.531 us  U3 RESET asserted (mr)
+         3.747 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+      1000.000 us  U1 short removed
+      3541.097 us  U10 UVLO (+5V_IL < 3.88 V): FET off
+      8200.299 us  MR released
+     18252.091 us  MR low
+
+## TR_G7_clear1ms_corrected_reccorner
+         0.000 us  U1 pass-element short begins
+         0.006 us  OVLO comparator trips
+         0.740 us  fast-trip comparator trips
+         1.206 us  eFuse FET off (OVLO)
+         1.206 us  AUXOFF pulled low
+         2.051 us  MR low
+         2.259 us  CD fires: Q_sd on
+         2.270 us  SHDN_c < V(SHUTF)
+         2.551 us  U3 RESET asserted (mr)
+         3.770 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+      1000.000 us  U1 short removed
+      3295.120 us  U10 UVLO (+5V_IL < 3.88 V): FET off
+      7954.312 us  MR released
+     18006.103 us  MR low
+     18131.860 us  OVLO comparator releases
+     18221.860 us  eFuse restarts after OVLO (current-limited, dVdt bypassed)
+     18222.687 us  MR released
+     18337.094 us  MR low
+     18385.817 us  eFuse fully on, AUXOFF released
+     18385.827 us  MR released
+     18452.903 us  U10 UVLO cleared (+5V_IL > 4.36 V)
+    158512.779 us  U3 RESET released (tD elapsed)
+    158513.180 us  CD released
+    158552.460 us  SHDN_c > V(SHUTR) max
+    158552.460 us  U10 enable: PA supply restart begins
+
+## TR_G7_clear1ms_bss84_reccorner
+         0.000 us  U1 pass-element short begins
+         0.006 us  OVLO comparator trips
+         0.740 us  fast-trip comparator trips
+         1.206 us  eFuse FET off (OVLO)
+         1.206 us  AUXOFF pulled low
+         1.262 us  CD fires: Q_sd on
+         1.273 us  SHDN_c < V(SHUTF)
+         2.773 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+      1000.000 us  U1 short removed
+      1812.057 us  U3 RESET asserted (uv)
+      3495.711 us  U10 UVLO (+5V_IL < 3.88 V): FET off
+     18131.866 us  OVLO comparator releases
+     18221.866 us  eFuse restarts after OVLO (current-limited, dVdt bypassed)
+     18385.032 us  eFuse fully on, AUXOFF released
+     18451.939 us  U10 UVLO cleared (+5V_IL > 4.36 V)
+    158511.550 us  U3 RESET released (tD elapsed)
+    158511.951 us  CD released
+    158551.207 us  SHDN_c > V(SHUTR) max
+    158551.207 us  U10 enable: PA supply restart begins
+
+## TR_G7_clear20ms_corrected_reccorner
+         0.000 us  U1 pass-element short begins
+         0.006 us  OVLO comparator trips
+         0.740 us  fast-trip comparator trips
+         1.206 us  eFuse FET off (OVLO)
+         1.206 us  AUXOFF pulled low
+         2.051 us  MR low
+         2.259 us  CD fires: Q_sd on
+         2.270 us  SHDN_c < V(SHUTF)
+         2.551 us  U3 RESET asserted (mr)
+         3.770 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+      3295.123 us  U10 UVLO (+5V_IL < 3.88 V): FET off
+      7954.316 us  MR released
+     18006.108 us  MR low
+     20000.000 us  U1 short removed
+     37131.860 us  OVLO comparator releases
+     37221.860 us  eFuse restarts after OVLO (current-limited, dVdt bypassed)
+     37229.875 us  CD released
+     37236.769 us  MR released
+     37244.355 us  CD fires: Q_sd on
+     37351.708 us  MR low
+     37399.399 us  eFuse fully on, AUXOFF released
+     37399.410 us  MR released
+     37468.180 us  U10 UVLO cleared (+5V_IL > 4.36 V)
+    177528.742 us  U3 RESET released (tD elapsed)
+    177529.143 us  CD released
+    177568.422 us  SHDN_c > V(SHUTR) max
+    177568.422 us  U10 enable: PA supply restart begins
+
+## TR_G7_clear20ms_bss84_reccorner
+         0.000 us  U1 pass-element short begins
+         0.006 us  OVLO comparator trips
+         0.740 us  fast-trip comparator trips
+         1.206 us  eFuse FET off (OVLO)
+         1.206 us  AUXOFF pulled low
+         1.262 us  CD fires: Q_sd on
+         1.273 us  SHDN_c < V(SHUTF)
+         2.773 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+      1812.057 us  U3 RESET asserted (uv)
+      3495.712 us  U10 UVLO (+5V_IL < 3.88 V): FET off
+     20000.000 us  U1 short removed
+     37131.860 us  OVLO comparator releases
+     37221.860 us  eFuse restarts after OVLO (current-limited, dVdt bypassed)
+     37230.400 us  CD released
+     37244.075 us  CD fires: Q_sd on
+     37399.391 us  eFuse fully on, AUXOFF released
+     37468.089 us  U10 UVLO cleared (+5V_IL > 4.36 V)
+    177528.420 us  U3 RESET released (tD elapsed)
+    177528.821 us  CD released
+    177568.077 us  SHDN_c > V(SHUTR) max
+    177568.077 us  U10 enable: PA supply restart begins
+
+## G7_clear1ms_corrected_reccorner_swov0
+         0.000 us  U1 pass-element short begins
+         0.006 us  OVLO comparator trips
+         0.740 us  fast-trip comparator trips
+         1.206 us  eFuse FET off (OVLO)
+         1.206 us  AUXOFF pulled low
+         2.051 us  MR low
+         2.259 us  CD fires: Q_sd on
+         2.270 us  SHDN_c < V(SHUTF)
+         2.551 us  U3 RESET asserted (mr)
+         3.770 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+      1000.000 us  U1 short removed
+      3295.120 us  U10 UVLO (+5V_IL < 3.88 V): FET off
+      7954.312 us  MR released
+     18006.103 us  MR low
+     18131.860 us  OVLO comparator releases
+     18131.860 us  eFuse restarts after OVLO (current-limited, dVdt bypassed)
+     18132.348 us  MR released
+     18246.741 us  MR low
+     18295.491 us  eFuse fully on, AUXOFF released
+     18295.501 us  MR released
+     18362.534 us  U10 UVLO cleared (+5V_IL > 4.36 V)
+    158422.393 us  U3 RESET released (tD elapsed)
+    158422.795 us  CD released
+    158462.074 us  SHDN_c > V(SHUTR) max
+    158462.074 us  U10 enable: PA supply restart begins
+
+## TR_G8_proposal_hard
+         0.000 us  U1 pass-element short begins
+         0.001 us  fast-trip comparator trips
+         0.003 us  OVLO comparator trips
+         0.501 us  eFuse FET off (fast-trip)
+         1.203 us  eFuse FET off (OVLO)
+         1.203 us  AUXOFF pulled low
+         1.260 us  CD fires: Q_sd on
+         1.271 us  SHDN_c < V(SHUTF)
+         2.771 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+
+## G8_proposal_rs0.1
+         0.000 us  U1 pass-element short begins
+         0.004 us  fast-trip comparator trips
+         0.011 us  OVLO comparator trips
+         0.504 us  eFuse FET off (fast-trip)
+         1.211 us  eFuse FET off (OVLO)
+         1.211 us  AUXOFF pulled low
+         1.267 us  CD fires: Q_sd on
+         1.278 us  SHDN_c < V(SHUTF)
+         2.778 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+
+## G8_proposal_hard_noFT
+         0.000 us  U1 pass-element short begins
+         0.003 us  OVLO comparator trips
+         1.203 us  eFuse FET off (OVLO)
+         1.203 us  AUXOFF pulled low
+         1.260 us  CD fires: Q_sd on
+         1.271 us  SHDN_c < V(SHUTF)
+         2.771 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+         5.959 us  OVLO comparator releases
+         6.144 us  eFuse UV asserted
+         6.929 us  eFuse UV cleared
+         7.102 us  OVLO comparator trips
+         8.302 us  eFuse FET off (OVLO)
+         8.302 us  AUXOFF pulled low
+
+## G8_proposal_hard_cmin_noFT
+         0.000 us  U1 pass-element short begins
+         0.004 us  OVLO comparator trips
+         1.204 us  eFuse FET off (OVLO)
+         1.204 us  AUXOFF pulled low
+         1.260 us  CD fires: Q_sd on
+         1.272 us  SHDN_c < V(SHUTF)
+         2.772 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+         5.982 us  OVLO comparator releases
+         6.202 us  eFuse UV asserted
+         6.870 us  eFuse UV cleared
+         7.065 us  OVLO comparator trips
+         8.265 us  eFuse FET off (OVLO)
+         8.265 us  AUXOFF pulled low
+
+## H_leak0mA
+         0.000 us  U1 pass-element short begins
+         0.004 us  OVLO comparator trips
+         0.750 us  fast-trip comparator trips
+         1.204 us  eFuse FET off (OVLO)
+         1.204 us  AUXOFF pulled low
+         2.029 us  MR low
+         2.234 us  CD fires: Q_sd on
+         2.245 us  SHDN_c < V(SHUTF)
+         2.529 us  U3 RESET asserted (mr)
+         3.745 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+      5234.264 us  U10 UVLO (+5V_IL < 3.88 V): FET off
+     12249.848 us  MR released
+     28269.138 us  MR low
+
+## H_leak1mA
+         0.000 us  U1 pass-element short begins
+         0.004 us  OVLO comparator trips
+         0.750 us  fast-trip comparator trips
+         1.204 us  eFuse FET off (OVLO)
+         1.204 us  AUXOFF pulled low
+         2.029 us  MR low
+         2.234 us  CD fires: Q_sd on
+         2.245 us  SHDN_c < V(SHUTF)
+         2.529 us  U3 RESET asserted (mr)
+         3.745 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+      6196.341 us  U10 UVLO (+5V_IL < 3.88 V): FET off
+     14635.527 us  MR released
+
+## H_leak5mA
+         0.000 us  U1 pass-element short begins
+         0.004 us  OVLO comparator trips
+         0.750 us  fast-trip comparator trips
+         1.204 us  eFuse FET off (OVLO)
+         1.204 us  AUXOFF pulled low
+         2.029 us  MR low
+         2.234 us  CD fires: Q_sd on
+         2.245 us  SHDN_c < V(SHUTF)
+         2.529 us  U3 RESET asserted (mr)
+         3.745 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
+     22892.521 us  U10 UVLO (+5V_IL < 3.88 V): FET off
+
+## H_leak10mA
+         0.000 us  U1 pass-element short begins
+         0.004 us  OVLO comparator trips
+         0.750 us  fast-trip comparator trips
+         1.204 us  eFuse FET off (OVLO)
+         1.204 us  AUXOFF pulled low
+         2.029 us  MR low
+         2.234 us  CD fires: Q_sd on
+         2.245 us  SHDN_c < V(SHUTF)
+         2.529 us  U3 RESET asserted (mr)
+         3.745 us  U10 FET off (tSD max after SHDN_c < 0.8 V)
