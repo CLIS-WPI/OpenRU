@@ -7,7 +7,8 @@ Writes: h2c_results.md, h2c_*.png, d_worst_*.cir. Exit 1 if any SAFETY check fai
 alternatives) are simulated with the same checks and reported -- their failures are shown, never hidden.
 
 Safety criteria (project lead, revision 2):
-  G    VGG_PA within -2.0 V .. 0 V (+10 mV numerical / DAC-impedance tolerance) at all times, ADAR1000 powered or not
+  G    VGG_PA within -2.0 V .. 0 V at all times, ADAR1000 powered or not. H2-E correction: the former +10 mV allowance above the
+       0 V abs max had no manufacturer basis and is removed; the recorded H2-C/D results (+2 mV) therefore FAIL criterion G
   A    drain (VOUT) < 0.5 V whenever any gate > -1.5 V outside armed TX (and outside the 50 us after a fault / stop)
   T50  drain < 0.5 V within 50 us of any interlock fault (HARD criterion)
   (a)  TPS22810 switch open (tOFF complete) <= 10 us after the fault crosses its threshold
@@ -27,7 +28,7 @@ VECS = ("vin aux v18 v3rf v5pa vneg n5v n3v3 pg_3v3rf enn neg_rails_ok il_ref ga
         "il_en sw_en_d mcu_pa_en wdt_ok il_clr_n pa_armed pa_drain_en vout gate1 gate2 gate3 gate4 ipa1 ipa2 ipa3 ipa4 "
         "icb cbg ilsrc supvdd isup pg_tsink sup_act il_q3g").split()
 VDRAIN, VGATE, GRACE = 0.5, -1.5, 50e-6
-T_REACT, E_MAX, I_MAX, VG_HI, VG_LO = 10e-6, 0.25e-3, 0.6 * 1.01, 0.010, -2.0
+T_REACT, E_MAX, I_MAX, VG_HI, VG_LO = 10e-6, 0.25e-3, 0.6 * 1.01, 0.0, -2.0  # H2-E: no allowance above the 0 V abs max
 VIL = 0.35 * 1.65  # LVC VIL at VCC 1.65 V (SCES794G p6)
 ms = 1e-3
 TD_SW = 130.7e-6   # TPS22810 tD (model) -- VOUT starts rising this long after the switch enable
@@ -213,7 +214,7 @@ def check_safety(s, tx, faults, rearm):
                    "ok" if not bad.any() else
                    f"violated {t[bad][0] / ms:.4f}..{t[bad][-1] / ms:.4f} ms, max VOUT {s['vout'][bad].max():.2f} V",
                    "safety"))
-    res.insert(0, ("G: VGG_PA within -2.0 .. 0 V (+10 mV)", s["gmax"].max() <= VG_HI and s["gmin"].min() >= VG_LO,
+    res.insert(0, ("G: VGG_PA within -2.0 .. 0 V", s["gmax"].max() <= VG_HI and s["gmin"].min() >= VG_LO,
                    f"max {s['gmax'].max() * 1e3:+.0f} mV at {t[np.argmax(s['gmax'])] / ms:.3f} ms, "
                    f"min {s['gmin'].min():.3f} V", "safety"))
     inval = ~supplies_valid(s)

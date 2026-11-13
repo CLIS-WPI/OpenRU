@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "candA_fixture")(type "KiCad")(uri "${KIPRJMOD}/candA_fixture.kicad_sym")(options "")(descr ""))
+)

@@ -27,7 +27,7 @@ Evidence classes:
 |---|---|---|---|
 | R4 50 µs bounded by DS maxima | **No.** Contributors with no max: TPS22810 tOFF, TPS386000 assert delay, LM339B response, LVC below 1.65 V | **Yes for every fault class with VIN ≥ 4.5 V.** Worst case 46.5 µs. PLACEHOLDER terms: crowbar RDS(on) over temperature (0.6 µs effect) and Q_sd/Q_t on-resistance (< 0.1 µs) | **No.** TPS22918 tOFF is typical only. Excluding it, the budget is 38.7 µs |
 | R3 BBM from bounded parameters | **No.** Sim shows 1.5–4.0 µs overlap at supervisor delay ≥ 20 µs | **Yes:** falling edge ≥ 1.28 µs and rising edge ≥ 2.71 µs (DERIVED). 0 overlap in 272 SIM-BEHAV runs | No external crowbar. Internal QOD-vs-FET ordering is not specified (≤ 0.18 A) |
-| Consequence if BBM is lost anyway | 8–13 A unbounded, TSD auto-restart | Bounded by the eFuse: ≤ 20 A for ≤ 1.5 µs, then current limit at 2.16 A max and latch | n/a |
+| Consequence if BBM is lost anyway | 8–13 A unbounded, TSD auto-restart | Duration bounded (≤ 1.5 µs if SHDN asserted); peak overlap current NOT guaranteed (TPS1663 short-circuit current ≈45 A is typical only; then current limit 2.16 A max and latch [H2-E correction] | n/a |
 | Satisfies all of R1–R6 on verified characteristics | No | **No.** Residual items in §7 | No |
 
 **Recommendation (R7):** carry **candidate A** into detailed design. Its evidence is stronger than H2-C's:
@@ -225,7 +225,7 @@ Common terms used in the per-fault rows:
 
 **If BBM is lost anyway** (e.g. C_t open or R_t short, both single faults):
 
-- the overlap is ≤ 1.5 µs (tSD max) at ≤ 5.5 V/(0.168 + 0.053) Ω ≈ 25 A, i.e. ≤ 0.2 mJ;
+- the overlap lasts ≤ 1.5 µs (tSD max) once SHDN is asserted. **[H2-E correction]** Its peak current is NOT guaranteed: 5.5 V/(0.168 + 0.053) Ω ≈ 25 A is an estimate using maximum resistances, but lower resistance gives higher current and the crowbar-FET / eFuse RDS(on) minima are not specified; the TPS1663 short-circuit current (≈45 A) is a typical value, not a guaranteed maximum. The energy (≈0.2 mJ) is likewise an estimate;
 - after that, the eFuse fast-trip (≤ 4.5 µs at > 2·I(OL)) and the 2.16 A current limit with latch bound any continued conduction.
 - Compare H2-C, where TPS22810 has no current limit and auto-restarts.
 
@@ -271,7 +271,7 @@ Order 1 unless stated.
 | TE1 / TE4: drain energised or not discharged | P bridged to +5V_IL (PCB short) | No | Layout keep-out. P readback plus a power-up proof test (MCU disarm → P must read low) |
 | | TPS16630 pass-FET short | Drain stays at +5V_PA; the crowbar then fires into U651 (OCL 8–12 A, about 29 W in R_CB) until U651 UVP (60 %, 256 µs **DS-TYP**) | Gate PWR_EN_5VPA with P in hardware (second, diverse disconnect); IMON/PGOOD readback; bench pulse test of R_CB |
 | | All four comparator/NMOS gate-lost channels of one package dead *and* a gate lost (order 2) | | Power-up proof test: write one gate to 0 V with the drain disarmed and check that P stays low |
-| TE3: crowbar vs enabled supply | C_t open, R_t short, Q_t open, CA/CB stuck, LVC stuck high, crowbar FET D–S or G–D short | **Yes.** ≤ 1.5 µs × 25 A per event; a permanent short is caught by fast-trip + latch at arm | Crowbar-gate readback while armed (must be low); proof test at power-up |
+| TE3: crowbar vs enabled supply | C_t open, R_t short, Q_t open, CA/CB stuck, LVC stuck high, crowbar FET D–S or G–D short | **Yes.** ≤ 1.5 µs per event (peak current not guaranteed — see §3.4 correction); a permanent short is caught by fast-trip + latch at arm | Crowbar-gate readback while armed (must be low); proof test at power-up |
 | | TPS16630 at VIN < 4.5 V (5P0 / brown-out) | **Not specified** | Bench item T1b |
 | TE4 (late) | R_CB fully open, crowbar FET open, VCB hold-up open | No | Latent. Power-up crowbar self-test (arm into dummy-free chain, then disarm and time VOUT via MCU ADC) |
 | TE2 (gate bias) | Unchanged from H2-C: F63, F64, F58, F66, Ua13 | No | R6, handled separately. A's IL_REF monitor removes the F-REF path |
@@ -379,7 +379,7 @@ The permit is the same as A. Per chain, B adds a TPS16630 and 4 TPS22918 (SOT-23
 | MCU GPIOs on safety nets | PA0, PA1, PA3 direct | 47 kΩ readback only; ARM can only release | Same |
 | TPS3430 high in brown-out (DU1) | Unsafe | Unreachable (guard ≥ 3.89 V) | Same |
 | ENN floating / PB4 pull-up | Open | 100 kΩ / 10 kΩ pull-downs (also applicable to H2-C) | Same |
-| Shoot-through single-component cut sets | F44–F46, F49, F52: about 13 A, unbounded, TSD cycling | Still order 1, but **bounded** (≤ 25 A × 1.5 µs, then latch) and **detectable** (gate readback) | Eliminated (no crowbar) |
+| Shoot-through single-component cut sets | F44–F46, F49, F52: about 13 A, unbounded, TSD cycling | Still order 1, but **duration-bounded** (≤ 1.5 µs, then latch; peak current not guaranteed) and **detectable** (gate readback) | Eliminated (no crowbar) |
 | Peak discharge current / energy per chain | 8.5–10.6 A / ≤ 0.25 mJ | 24 A / 0.36 mJ (R_CB 0.168 Ω) | 0.18 A per PA / ≈ 1.8 µJ |
 | ADI reference compliance on VDD_PA | Yes | Yes | **No** (decoupling moved) |
 | Parts added | — | ≈ +45 ICs/FETs | ≈ +55 ICs |

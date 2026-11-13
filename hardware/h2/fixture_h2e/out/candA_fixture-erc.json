@@ -1,0 +1,19 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-12T19:02:57-0500",
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "9.0.9",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/2a301c69-2d71-4a91-99a7-69f9c42da2d2",
+            "violations": []
+        }
+    ],
+    "source": "candA_fixture.kicad_sch"
+}

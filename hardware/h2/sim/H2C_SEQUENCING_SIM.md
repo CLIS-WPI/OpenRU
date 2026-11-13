@@ -565,3 +565,13 @@ The fault time is the moment the monitored quantity crosses its interlock thresh
 - **Only one chain has 4 explicit gates.** The 16-gate wired-OR is represented by 4 gates.
 - **Rails not modelled.** RF drive, +5V_LO / +3V3_LO and LO rails are not modelled, because they are not in the interlock path.
 - **Fixed firmware timing.** Firmware events are at fixed times, not reactive. The MCU is assumed to be running from 8 ms.
+
+## H2-E correction (2026-11-12)
+
+Criterion G previously allowed VGG_PA up to +10 mV above the ADTR1107 0 V absolute maximum. There is no manufacturer
+basis for that allowance, so it has been removed (`VG_HI = 0.0`).
+
+The recorded worst case of **+2 mV** (PA_BIAS at 0 V through the assumed 100 Ω DAC output impedance while the gate
+divider injects current) therefore **fails** criterion G. It is either a model artifact or a real small positive
+excursion; which one depends on the ADAR1000 PA_BIAS output impedance at code 0x00, which is unspecified (ADI question).
+The suite was not re-run in H2-E.

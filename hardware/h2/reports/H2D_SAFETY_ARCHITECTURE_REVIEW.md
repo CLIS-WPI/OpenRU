@@ -58,7 +58,7 @@ parameters.
 | Drain switch | TPS22810 (tOFF NS; no current limit; QOD lost in TSD/UVLO) | TPS16630 eFuse per chain: SHDN→FET off ≤ 1.5 µs (DS-G), ILIM 1.84–2.16 A, fast-trip, latch, OVP | TPS16630 + TPS22918 per PA (tOFF NS) |
 | Crowbar break-before-make | RC + 25 °C thresholds; overlap 1.5–4 µs in sim; unbounded | crowbar timed from SHDN with a 1 % / C0G RC: **BBM ≥ 1.28 µs on fault, ≥ 2.71 µs on re-arm**, from DS-G limits, inside eFuse VIN 4.5–60 V | no crowbar; R4 rests on TPS22918 tOFF (NS) |
 | Worst-case R4 budget (50 µs) | not boundable | rail UV/OV 46.5 µs; gate lost 16.6 µs; +5V_PA OV ≤ 31.2 µs; watchdog/eFuse fault 16.7 µs; +5V_IL loss 16.9 µs | 38.7 µs + tOFF(NS) |
-| Overlap if timing fails | about 13 A, unlimited | bounded by eFuse: ≤ 25 A for ≤ 1.5 µs, then current limit and latch | n/a |
+| Overlap if timing fails | about 13 A, unlimited | duration ≤ 1.5 µs (if SHDN asserted), then current limit and latch; **peak current not guaranteed** (H2-E correction: TPS1663 ≈45 A short-circuit current is typical) | n/a |
 
 **Selected target architecture: A.** Its evidence is stronger than H2-C: R1/R3/R4 close on DS-G limits except the
 items in §5, and every overlap is current-bounded.
@@ -112,8 +112,8 @@ temperature-specified part was found (§5). Crowbar resistor: 6 × 1 Ω (0.168 �
 
 **Residual possible crowbar/supply conduction in A:**
 1. +5V_PA brown-out below the eFuse's 4.5 V rated VIN (unbounded until T1b).
-2. Single faults that defeat the timer (timer C open, timer R short, crowbar stuck on). Bounded at ≤ 25 A for ≤ 1.5 µs,
-   then current limit and latch; detectable by crowbar-gate readback.
+2. Single faults that defeat the timer (timer C open, timer R short, crowbar stuck on). Duration ≤ 1.5 µs, then current limit and latch.
+   Peak current is NOT guaranteed (≈25 A is an estimate; TPS1663 short-circuit current ≈45 A is typical) — H2-E correction.; detectable by crowbar-gate readback.
 3. Shorted eFuse FET: the crowbar fires into U651 until its UVP trips (256 µs, typical). Fix: gate PWR_EN_5VPA by the
    permit in hardware.
 

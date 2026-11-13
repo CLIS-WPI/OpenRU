@@ -63,6 +63,7 @@ datasets/
 *.svg
 *.pdf
 !hardware/h2/reports/*.pdf
+!hardware/h2/fixture_h2e/out/*.pdf
 !reports/templates/*
 
 # Editors and OS

@@ -199,7 +199,7 @@ Pass/fail limits refer to the design values in ARCH_COMPARE. "GB" means guardban
 - **Setup:** ADAR1000 evaluation board only, **no ADTR1107**. Each PA_BIAS output is loaded with 10 nF and, separately, with 49.9 kΩ to GND (the H2 Rg).
 - **Supplies:**
   - AVDD3 (3.3 V) and AVDD1 (−5 V) from independent bench supplies;
-  - AVDD1 adjustable −4.75…−5.25 V, plus an abs-max stress at −5.5 V for 1 s;
+  - AVDD1 adjustable −4.75…−5.25 V only (recommended operating range). **No absolute-maximum stress is applied** [H2-E correction: the earlier −5.5 V / 1 s stress was removed]. The DAC output at an out-of-range AVDD1 is a question for ADI, not a bench test;
   - AVDD1 −6.7 V **not** applied.
 - **Steps:**
   1. Program codes 0x00, 0x5D, 0x85 and 0xFF.
@@ -241,7 +241,7 @@ Pass/fail limits refer to the design values in ARCH_COMPARE. "GB" means guardban
   - Also apply a slow 5.0 → 6.0 V ramp at 1 V/ms.
 - **Measure:** VOUT_c peak; time above 5.5 V; TLV3202 fast-OV trip time; TPS16630 OVP; crowbar action.
 - **Pass:**
-  - VOUT_c ≤ 5.5 V at all times, or above 5.5 V for ≤ 2 µs, with the peak value reported to ADI (M6);
+  - VOUT_c ≤ 5.5 V at all times (ADTR1107 VDD_PA abs max). **No excursion above 5.5 V is acceptable** unless ADI provides a written VDD_PA transient rating (M6). Any measured excursion is a FAIL and is reported to ADI. [H2-E correction: the earlier "≤ 2 µs above 5.5 V" allowance had no manufacturer basis]
   - the eFuse latches off;
   - P stays low.
 
