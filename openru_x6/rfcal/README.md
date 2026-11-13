@@ -25,7 +25,8 @@ observations. In this model:
 - `ideal_16iq_nonrealizable` is a comparison baseline only.
 
 See `docs/rfcal/CALIBRATION_OBSERVABILITY.md` for the schematic audit and
-proposed switched-feed procedure.
+proposed switched-feed procedure, and `docs/rfcal/RFC_HARDWARE_INTEGRATION.md`
+for the H2/H3 interface and integration decision record.
 
 ## Topology
 
@@ -121,6 +122,25 @@ Quick smoke sweep:
 python -m openru_x6.rfcal validate --quick --output results/rfcal_quick
 ```
 
+Run the hardware-impairment and uncertainty sweep:
+
+```bash
+python -m openru_x6.rfcal impairments --output results/rfcal_impairments
+```
+
+Quick impairment smoke sweep:
+
+```bash
+python -m openru_x6.rfcal impairments --quick --output results/rfcal_impairments_quick
+```
+
+The `impairments` command writes `impairments.json`,
+`impairment_reference_summary.json`, `impairment_runs.csv`, and
+`impairment_report.md`. It adds synthetic reference drift, switch leakage,
+phase noise, mutual coupling, and correlated calibration errors, and audits the
+angular-search resolution floor. These are simulated sensitivities, not
+measured hardware distributions.
+
 Use `--architectures` to restrict the observability sweep, for example:
 
 ```bash
@@ -166,6 +186,8 @@ Both `scripts/rfcal_validate.py` and `scripts/rfcal_demo.sh` wrap the same CLI.
 - `validation.py`: scalar baseline sweeps and reports.
 - `observability_validation.py`: observability-aware vector/Jones sweeps and
   scalar-baseline comparison.
+- `impairments.py`: synthetic hardware-impairment, uncertainty, and
+  angular-search resolution sweeps.
 - `cli.py`: `python -m openru_x6.rfcal` entry point.
 
 ## Calibration modes

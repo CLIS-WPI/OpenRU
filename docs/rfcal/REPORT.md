@@ -19,10 +19,15 @@ The validation exercises the hardware-independent model for the documented H1
 - Per-path/chain calibration, fault detection, and failed-chain scenarios.
 - Beam pointing, co-pol and cross-pol gain, XPD, peak sidelobe, and
   quantization loss.
+- First-order reference drift, switch leakage, phase noise, mutual coupling,
+  correlated chain errors, and angular-search resolution in a separate
+  impairment sweep.
 
-The model does not write RFIC registers, control a transmitter, or include
-mutual coupling, measured element patterns, measured polarization leakage,
-temperature drift, phase noise, ADC effects, or RF compression.
+The model does not write RFIC registers or control a transmitter. The main
+sweep does not include measured element patterns, measured polarization
+leakage, temperature drift, ADC effects, or RF compression. The impairment
+sweep adds synthetic versions of several of these mechanisms; they are
+engineering assumptions, not measurements.
 
 ## Run configuration
 
@@ -53,8 +58,9 @@ The current H2 hardware cannot identify 16 independent feed complex responses.
 It can identify a relative complex chain common-path response at the CAL
 coupler and per-feed amplitude. Feed phase requires a factory/bench per-feed
 table, a shielded near-field probe, or an H3 per-feed switch/combiner. See
-`docs/rfcal/CALIBRATION_OBSERVABILITY.md` for the schematic audit and proposed
-procedure; the full generated tables are in
+`docs/rfcal/CALIBRATION_OBSERVABILITY.md` for the schematic audit, and
+`docs/rfcal/RFC_HARDWARE_INTEGRATION.md` for the H2/H3 interface and staged
+recommendation. The full generated observability tables are in
 `docs/rfcal/OBSERVABILITY_REPORT.md`.
 
 ## Base-case vector results
@@ -86,6 +92,10 @@ error. The combined phase-only scenario applies only chain phase on
 synthetic model. The proposed switched loopback and factory table are
 effectively at the simulation floor; the near-field probe is limited by its
 configured probe path and SNR.
+
+The reported `0.0100 deg` switched result was obtained with a `0.25 deg` search
+step. It is a grid/model floor, not a physical accuracy claim. The impairment
+sweep below reports the resolution floor explicitly.
 
 ## Calibration accuracy by SNR
 
@@ -137,6 +147,42 @@ feeds. The vector model gives about 9.03-9.09 dB for a matched single-polarized
 receiver because the 16 ports form 8 dual-polarized sites and each port receives
 one orthogonal field component. The two gains are not interchangeable. The
 scalar baseline must not be presented as the current H2 vector capability.
+
+## Impairment and uncertainty results
+
+A separate sweep adds first-order synthetic hardware errors to the switched
+model. It uses 5 seeds and 3 steering angles per case (`15` samples), a
+`0.01 deg` fine-search step, and a `3.0 deg` search half-span.
+
+| Case | Pointing mean (deg) | Pointing std (deg) | Pointing p95 (deg) | Cal phase mean (deg) |
+|---|---:|---:|---:|---:|
+| H3 no impairment | 0.0771 | 0.0300 | 0.1334 | 0.4987 |
+| H2 no impairment | 1.4296 | 0.5534 | 2.0310 | 4.9716 |
+| Independent reference drift, 0.5 deg | 0.2387 | 0.2009 | 0.6123 | 0.6871 |
+| Common reference drift, 0.5 deg | 0.0771 | 0.0300 | 0.1334 | 0.4987 |
+| Switch leakage, -20 dB, simultaneous | 0.8463 | 0.1351 | 1.0582 | 4.0681 |
+| Switch leakage, -20 dB, one at a time | 0.0771 | 0.0300 | 0.1334 | 0.4987 |
+| Independent phase noise, 2 deg | 0.6335 | 0.3442 | 1.1309 | 2.1244 |
+| Common phase noise, 2 deg | 0.0771 | 0.0300 | 0.1334 | 0.4987 |
+| Mutual coupling, -20 dB | 0.7689 | 0.4935 | 1.6930 | 9.0357 |
+| Mutual coupling, -30 dB | 0.1736 | 0.0558 | 0.2807 | 1.5682 |
+| Combined moderate | 0.5619 | 0.2215 | 0.9319 | 4.2570 |
+
+The resolution study uses an ideal calibrated beam and intentional off-grid
+search windows:
+
+| Search step (deg) | Grid bound (deg) | Pointing mean (deg) | Pointing max (deg) |
+|---:|---:|---:|---:|
+| 0.010 | 0.0071 | 0.0043 | 0.0044 |
+| 0.050 | 0.0354 | 0.0217 | 0.0218 |
+| 0.100 | 0.0707 | 0.0434 | 0.0436 |
+| 0.250 | 0.1768 | 0.1086 | 0.1089 |
+| 0.500 | 0.3536 | 0.2172 | 0.2178 |
+
+The `0.0043 deg` value at a `0.010 deg` step is a numerical floor, not a
+hardware accuracy. The full generated report is
+`docs/rfcal/IMPAIRMENT_REPORT.md`; the compact summary is
+`docs/rfcal/impairment_reference_summary.json`.
 
 ## Polarization results
 
@@ -226,6 +272,7 @@ that distinction explicitly.
 ```bash
 python -m openru_x6.rfcal validate --output /tmp/rfcal_validation
 python -m openru_x6.rfcal audit --output /tmp/rfcal_validation/audit.json
+python -m openru_x6.rfcal impairments --output /tmp/rfcal_impairments
 ```
 
 Pinned container:
@@ -242,9 +289,12 @@ The `validate` command writes the scalar-baseline files
 `report.md`) and the observability files
 (`observability_validation.json`, `observability_reference_summary.json`,
 `observability_runs.csv`, `observability_report.md`,
-`observability_audit.json`). The compact committed summaries are
-`docs/rfcal/reference_summary.json` and
-`docs/rfcal/observability_reference_summary.json`.
+`observability_audit.json`). The `impairments` command writes
+`impairments.json`, `impairment_reference_summary.json`,
+`impairment_runs.csv`, and `impairment_report.md`. The compact committed
+summaries are `docs/rfcal/reference_summary.json`,
+`docs/rfcal/observability_reference_summary.json`, and
+`docs/rfcal/impairment_reference_summary.json`.
 
 ## Evidence boundary
 

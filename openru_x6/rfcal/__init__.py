@@ -28,6 +28,14 @@ from .hierarchical import (
     hierarchical_calibration_accuracy,
     simulate_hierarchical_measurements,
 )
+from .impairments import (
+    DEFAULT_IMPAIRMENT_CASES,
+    ImpairmentCase,
+    ImpairmentConfig,
+    ImpairmentValidationConfig,
+    ImpairmentValidationReport,
+    run_impairment_validation,
+)
 from .measurement import (
     FaultSpec,
     MeasurementConfig,
@@ -94,6 +102,7 @@ __all__ = [
     "Codebook",
     "CodebookConfig",
     "DEFAULT_ARCHITECTURES",
+    "DEFAULT_IMPAIRMENT_CASES",
     "FACTORY_VNA_FEED_TABLE",
     "FaultSpec",
     "Feed",
@@ -103,6 +112,10 @@ __all__ = [
     "HierarchicalMeasurementConfig",
     "HierarchicalMeasurementSet",
     "IDEAL_16IQ",
+    "ImpairmentCase",
+    "ImpairmentConfig",
+    "ImpairmentValidationConfig",
+    "ImpairmentValidationReport",
     "MeasurementArchitecture",
     "MeasurementConfig",
     "MeasurementSet",
@@ -150,6 +163,7 @@ __all__ = [
     "quantization_loss_polarized_db",
     "quantize_weights",
     "receiver_port_weights",
+    "run_impairment_validation",
     "run_observability_validation",
     "run_validation",
     "simulate_hierarchical_measurements",

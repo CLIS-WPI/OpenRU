@@ -125,4 +125,6 @@ The synthetic model confirms the architectural conclusion but cannot replace
 measured CAL-path, detector, switch, coupler, antenna, or RFIC data. Feed phase
 results for `factory_vna_feed_table`, `near_field_probe`, and
 `proposed_switched_feed_loopback` are model predictions, not measured hardware
-performance.
+performance. See `docs/rfcal/RFC_HARDWARE_INTEGRATION.md` for the H2/H3
+interface control record, the `CPLR_OUT` tap analysis, and the staged
+recommendation.

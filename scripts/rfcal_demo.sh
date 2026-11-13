@@ -12,5 +12,6 @@ OUT="${1:-results/rfcal_demo}"
 "${PYTHON}" -m openru_x6.rfcal codebook --output "${OUT}/codebook.json"
 "${PYTHON}" -m openru_x6.rfcal audit --output "${OUT}/observability_audit.json"
 "${PYTHON}" -m openru_x6.rfcal validate --quick --output "${OUT}/validation"
+"${PYTHON}" -m openru_x6.rfcal impairments --quick --output "${OUT}/impairments"
 
 printf 'RF calibration demo outputs: %s\n' "${OUT}"
