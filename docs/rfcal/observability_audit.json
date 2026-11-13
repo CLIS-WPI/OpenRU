@@ -1,0 +1,172 @@
+{
+  "available_architecture": {
+    "chain_cal_gain_error_std_db": 0.05,
+    "chain_cal_phase_error_std_deg": 0.5,
+    "chain_loopback": true,
+    "chain_phase_observable": true,
+    "description": "H2 as drawn: per-chain CAL coupler/combiner loopback plus ADTR1107 CPLR_OUT power detectors.",
+    "feed_amplitude_observable": true,
+    "feed_phase_observable": false,
+    "name": "h2_available",
+    "notes": "Feeds a common CAL tone into each chain coupler or samples the chain sum. Per-element phase is not observable.",
+    "per_feed_complex": false,
+    "per_feed_complex_gain_error_std_db": 0.0,
+    "per_feed_complex_method": null,
+    "per_feed_complex_phase_error_std_deg": 0.0,
+    "per_feed_power": true,
+    "power_noise_std_db": 0.1,
+    "realizable_on_current_h2": true,
+    "requires_external_fixture": false,
+    "requires_hardware_change": false
+  },
+  "conclusion": "The current H2 hardware cannot identify 16 independent feed complex responses. It can identify a relative complex chain common-path response at the CAL coupler and per-feed amplitude. Feed phase requires a factory/bench per-feed table, a shielded near-field probe, or an H3 per-feed switch/combiner.",
+  "evidence_label": "SCHEMATIC_AUDIT",
+  "findings": [
+    {
+      "claim": "The H2 tile has a per-chain complex CAL loopback.",
+      "evidence": [
+        "hardware/H1_CLOCK_CALIBRATION.md: L3 cal coupler on each RF0..RF3 to a 4:1 combiner and CAL SMA.",
+        "hardware/h2/schematics/cal.kicad_sch: J801 'SMA CAL (inject / sample)', U801 EP4RKU+ SUM/P1..P4, CAL_SUM and CAL_INJ1..4.",
+        "hardware/h2/schematics/chain1.kicad_sch: 'cal coupler <-> ADAR1000 UBF1'."
+      ],
+      "status": "confirmed"
+    },
+    {
+      "claim": "The H2 tile does not provide per-feed complex IQ.",
+      "evidence": [
+        "hardware/h2/schematics/cal.kicad_sch: only CAL_SUM/CAL_INJ1..4 connect to the 4:1 network; there is no per-feed complex receiver.",
+        "hardware/h2/schematics/fe1.kicad_sch: ADTR1107 CPLR_OUT (pin 12) feeds C1_DET1..C1_DET4.",
+        "hardware/h2/schematics/bf1.kicad_sch: C1_DET1..C1_DET4 go to ADAR1000 DET1..DET4."
+      ],
+      "status": "confirmed"
+    },
+    {
+      "claim": "The per-element detectors are power-only.",
+      "evidence": [
+        "hardware/H1_CLOCK_CALIBRATION.md: ADTR1107 CPLR_OUT to ADAR1000 DET1-4 is amplitude only; detectors cannot do phase calibration.",
+        "hardware/h2/schematics/cal.kicad_sch: 'Per-element: ADTR1107 CPLR_OUT -> ADAR1000 DETx (power only, -20..+10 dBm). Element phase cal needs a near-field/OTA probe in a shielded setup (no OTA at 8.4 GHz).'"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "claim": "N310 chain phase is random after every start or retune.",
+      "evidence": [
+        "hardware/H1_CLOCK_CALIBRATION.md: N310 phase is random between runs; chain-to-chain IF phase must be re-measured at every N310 start/retune.",
+        "hardware/h2/schematics/cal.kicad_sch: 'N310 relative channel phase is random per start/retune -> run CAL-port RX/TX loopback after every N310 init or LO retune.'"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "claim": "The H1 L1 feed layer requires a cabled VNA or reference RX per feed.",
+      "evidence": [
+        "hardware/H1_CLOCK_CALIBRATION.md: L1 feed-to-feed calibration method is 'cabled VNA or reference RX per feed', stored in an MCU table."
+      ],
+      "status": "confirmed"
+    }
+  ],
+  "hardware_measured": false,
+  "identifiability": {
+    "architecture": "h2_available",
+    "chain_relative_complex_response": true,
+    "feed_amplitude": true,
+    "feed_phase": false,
+    "n_chains": 4,
+    "n_feeds": 16,
+    "observable_complex_chain_responses": 4,
+    "observable_feed_complex_responses": 0,
+    "observable_feed_power_measurements": 16,
+    "per_feed_complex_response": false,
+    "realizable_on_current_h2": true,
+    "requires_external_fixture": false,
+    "requires_hardware_change": false,
+    "unidentifiable": [
+      "feed phase for all 16 feeds"
+    ]
+  },
+  "schema_version": "1.0",
+  "supported_architectures": {
+    "factory_vna_feed_table": {
+      "architecture": "factory_vna_feed_table",
+      "chain_relative_complex_response": true,
+      "feed_amplitude": true,
+      "feed_phase": true,
+      "n_chains": 4,
+      "n_feeds": 16,
+      "observable_complex_chain_responses": 4,
+      "observable_feed_complex_responses": 16,
+      "observable_feed_power_measurements": 16,
+      "per_feed_complex_response": true,
+      "realizable_on_current_h2": true,
+      "requires_external_fixture": true,
+      "requires_hardware_change": false,
+      "unidentifiable": []
+    },
+    "h2_available": {
+      "architecture": "h2_available",
+      "chain_relative_complex_response": true,
+      "feed_amplitude": true,
+      "feed_phase": false,
+      "n_chains": 4,
+      "n_feeds": 16,
+      "observable_complex_chain_responses": 4,
+      "observable_feed_complex_responses": 0,
+      "observable_feed_power_measurements": 16,
+      "per_feed_complex_response": false,
+      "realizable_on_current_h2": true,
+      "requires_external_fixture": false,
+      "requires_hardware_change": false,
+      "unidentifiable": [
+        "feed phase for all 16 feeds"
+      ]
+    },
+    "ideal_16iq_nonrealizable": {
+      "architecture": "ideal_16iq_nonrealizable",
+      "chain_relative_complex_response": true,
+      "feed_amplitude": true,
+      "feed_phase": true,
+      "n_chains": 4,
+      "n_feeds": 16,
+      "observable_complex_chain_responses": 4,
+      "observable_feed_complex_responses": 16,
+      "observable_feed_power_measurements": 16,
+      "per_feed_complex_response": true,
+      "realizable_on_current_h2": false,
+      "requires_external_fixture": true,
+      "requires_hardware_change": true,
+      "unidentifiable": []
+    },
+    "near_field_probe": {
+      "architecture": "near_field_probe",
+      "chain_relative_complex_response": true,
+      "feed_amplitude": true,
+      "feed_phase": true,
+      "n_chains": 4,
+      "n_feeds": 16,
+      "observable_complex_chain_responses": 4,
+      "observable_feed_complex_responses": 16,
+      "observable_feed_power_measurements": 16,
+      "per_feed_complex_response": true,
+      "realizable_on_current_h2": true,
+      "requires_external_fixture": true,
+      "requires_hardware_change": false,
+      "unidentifiable": []
+    },
+    "proposed_switched_feed_loopback": {
+      "architecture": "proposed_switched_feed_loopback",
+      "chain_relative_complex_response": true,
+      "feed_amplitude": true,
+      "feed_phase": true,
+      "n_chains": 4,
+      "n_feeds": 16,
+      "observable_complex_chain_responses": 4,
+      "observable_feed_complex_responses": 16,
+      "observable_feed_power_measurements": 16,
+      "per_feed_complex_response": true,
+      "realizable_on_current_h2": false,
+      "requires_external_fixture": false,
+      "requires_hardware_change": true,
+      "unidentifiable": []
+    }
+  },
+  "topology_name": "openru-x6-h1-4t4r"
+}

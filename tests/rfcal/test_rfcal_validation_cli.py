@@ -61,6 +61,11 @@ def test_validation_outputs_json_csv_and_markdown(tmp_path: Path) -> None:
         "report.md",
         "calibration_example.json",
         "calibration_example.csv",
+        "observability_validation.json",
+        "observability_reference_summary.json",
+        "observability_runs.csv",
+        "observability_report.md",
+        "observability_audit.json",
     ):
         assert (output / name).stat().st_size > 0
     payload = json.loads((output / "reference_summary.json").read_text(encoding="utf-8"))
@@ -71,6 +76,18 @@ def test_validation_outputs_json_csv_and_markdown(tmp_path: Path) -> None:
     assert "RF Calibration Validation" in (output / "report.md").read_text(
         encoding="utf-8"
     )
+    observability_payload = json.loads(
+        (output / "observability_reference_summary.json").read_text(encoding="utf-8")
+    )
+    assert observability_payload["evidence_label"] == "SIMULATED"
+    assert observability_payload["hardware_measured"] is False
+    assert observability_payload["audit"]["identifiability"]["feed_phase"] is False
+    assert "records" not in observability_payload
+    observability_markdown = (output / "observability_report.md").read_text(
+        encoding="utf-8"
+    )
+    assert "Observability-Aware RF Calibration Validation" in observability_markdown
+    assert "Scalar per-feed-IQ baseline" in observability_markdown
 
 
 def test_cli_topology_simulate_calibrate_and_codebook(tmp_path: Path) -> None:
@@ -134,6 +151,15 @@ def test_cli_topology_simulate_calibrate_and_codebook(tmp_path: Path) -> None:
     assert calibration["simulated"]
     assert len(calibration["paths"]) == 16
     assert np.isfinite(calibration["target_response_real"])
+
+
+def test_cli_audit_writes_observability_evidence(tmp_path: Path) -> None:
+    output = tmp_path / "audit.json"
+    assert main(["audit", "--output", str(output)]) == 0
+    payload = json.loads(output.read_text(encoding="utf-8"))
+    assert payload["evidence_label"] == "SCHEMATIC_AUDIT"
+    assert payload["identifiability"]["feed_phase"] is False
+    assert payload["findings"]
 
 
 def test_cli_rejects_unknown_output_format(tmp_path: Path) -> None:

@@ -180,9 +180,14 @@ class ValidationReport:
 
     def to_markdown(self) -> str:
         lines = [
-            "# RF Calibration Validation",
+            "# Scalar RF Calibration Validation Baseline",
             "",
             "**Evidence label: SIMULATED.** No hardware measurements are present.",
+            "",
+            "This baseline assumes 16 independent complex feed observations. The",
+            "current H2 does not provide that measurement; see",
+            "`docs/rfcal/OBSERVABILITY_REPORT.md` for the observable architecture",
+            "results.",
             "",
             f"- Topology: `{self.topology_name}`",
             f"- Carrier: `{self.carrier_freq_hz / 1e9:.3f} GHz`",
