@@ -1,0 +1,11 @@
+case,limit_V,max_t_off_us
+hard_cmin,5.5,3.41694
+hard_cmin,6,5.68027
+hard_nom,5.5,4.11873
+hard_nom,6,8.18244
+hard_noL_cmin,5.5,3.00922
+hard_noL_cmin,6,6.02992
+rs1_edge1us_cmin,5.5,5.7497
+rs1_edge1us_cmin,6,10.1312
+proposal_hard_cmin,5.5,1.06008
+proposal_hard_cmin,6,1.65672
