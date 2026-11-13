@@ -11,6 +11,11 @@ from typing import Sequence
 
 from .beamforming import CodebookConfig, generate_codebook
 from .calibration import CalibrationConfig, calibrate
+from .impairments import (
+    DEFAULT_IMPAIRMENT_CASES,
+    ImpairmentValidationConfig,
+    run_impairment_validation,
+)
 from .measurement import (
     FaultSpec,
     MeasurementConfig,
@@ -98,6 +103,34 @@ def build_parser() -> argparse.ArgumentParser:
     _add_topology_argument(audit_parser)
     audit_parser.add_argument("--output", type=Path, required=True)
     audit_parser.set_defaults(handler=_cmd_audit)
+
+    impairments_parser = subparsers.add_parser(
+        "impairments",
+        help="run the synthetic hardware-impairment and uncertainty sweep",
+    )
+    _add_topology_argument(impairments_parser)
+    impairments_parser.add_argument("--output", type=Path, required=True)
+    impairments_parser.add_argument(
+        "--quick", action="store_true", help="small deterministic sweep for smoke tests"
+    )
+    impairments_parser.add_argument("--seeds", type=int, default=5)
+    impairments_parser.add_argument(
+        "--angles",
+        default="-30,0;0,0;30,0",
+        help="semicolon-separated az,el pairs in degrees",
+    )
+    impairments_parser.add_argument("--search-step", type=float, default=0.01)
+    impairments_parser.add_argument("--search-span", type=float, default=3.0)
+    impairments_parser.add_argument(
+        "--resolution-steps", default="0.5,0.25,0.1,0.05,0.01"
+    )
+    impairments_parser.add_argument("--resolution-span", type=float, default=2.0)
+    impairments_parser.add_argument(
+        "--cases",
+        default="",
+        help="comma-separated impairment case names; omit for all cases",
+    )
+    impairments_parser.set_defaults(handler=_cmd_impairments)
 
     validate_parser = subparsers.add_parser(
         "validate", help="run the reproducible synthetic calibration sweep"
@@ -236,6 +269,46 @@ def _cmd_audit(args: argparse.Namespace) -> int:
     path.write_text(json.dumps(audit, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     print(f"wrote observability audit to {path}")
     print(audit["conclusion"])
+    return 0
+
+
+def _cmd_impairments(args: argparse.Namespace) -> int:
+    topology = load_topology(args.topology)
+    if args.quick:
+        config = ImpairmentValidationConfig.quick()
+    else:
+        cases = DEFAULT_IMPAIRMENT_CASES
+        if args.cases.strip():
+            wanted = {
+                item.strip() for item in args.cases.split(",") if item.strip()
+            }
+            cases = tuple(case for case in cases if case.name in wanted)
+            missing = wanted - {case.name for case in cases}
+            if missing:
+                raise ValueError(
+                    "unknown impairment cases: " + ", ".join(sorted(missing))
+                )
+        config = ImpairmentValidationConfig(
+            seeds=tuple(range(args.seeds)),
+            angles=tuple(_parse_angles(args.angles)),
+            search_step_deg=args.search_step,
+            search_span_deg=args.search_span,
+            resolution_search_steps=tuple(_parse_floats(args.resolution_steps)),
+            resolution_search_span_deg=args.resolution_span,
+            cases=cases,
+        )
+    report = run_impairment_validation(topology, config)
+    output_dir = _ensure_dir(args.output)
+    report.to_json(output_dir / "impairments.json", include_records=True)
+    report.to_json(
+        output_dir / "impairment_reference_summary.json", include_records=False
+    )
+    report.to_csv(output_dir / "impairment_runs.csv")
+    report.to_markdown_file(output_dir / "impairment_report.md")
+    print(
+        f"wrote impairment validation to {output_dir} in {report.runtime_s:.3f} s "
+        f"({len(report.records)} beam records, {len(config.cases)} cases)"
+    )
     return 0
 
 
