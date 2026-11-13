@@ -1681,7 +1681,7 @@
     }
   ],
   "hardware_measured": false,
-  "runtime_s": 17.988408884964883,
+  "runtime_s": 17.907441856106743,
   "schema_version": "1.0",
   "simulated": true,
   "topology_name": "openru-x6-h1-4t4r"

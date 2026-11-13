@@ -8,6 +8,12 @@ from typing import Any
 import numpy as np
 
 from .beamforming import array_factor, direction_vector
+from .polarization import (
+    PolarizationConfig,
+    array_factor_polarized,
+    array_gain_polarized_db,
+    orthogonal_jones,
+)
 from .topology import Topology
 
 _FLOOR_DB = -300.0
@@ -270,3 +276,241 @@ def truth_calibration_accuracy(
         "phase_error_deg": float(np.sqrt(np.mean(phase_error**2))),
         "gain_error_db": float(np.sqrt(np.mean(gain_error**2))),
     }
+
+
+@dataclass(frozen=True)
+class PolarizedBeamMetrics:
+    """Co-pol and cross-pol metrics for one dual-polarized receive beam."""
+
+    target_az_deg: float
+    target_el_deg: float
+    peak_az_deg: float
+    peak_el_deg: float
+    pointing_error_deg: float
+    co_pol_gain_db: float
+    cross_pol_gain_db: float
+    cross_pol_discrimination_db: float
+    peak_sidelobe_db: float
+
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "target_az_deg": self.target_az_deg,
+            "target_el_deg": self.target_el_deg,
+            "peak_az_deg": self.peak_az_deg,
+            "peak_el_deg": self.peak_el_deg,
+            "pointing_error_deg": self.pointing_error_deg,
+            "co_pol_gain_db": self.co_pol_gain_db,
+            "cross_pol_gain_db": self.cross_pol_gain_db,
+            "cross_pol_discrimination_db": self.cross_pol_discrimination_db,
+            "peak_sidelobe_db": self.peak_sidelobe_db,
+        }
+
+
+def pointing_error_polarized(
+    topology: Topology,
+    weights: np.ndarray,
+    target_az_deg: float,
+    target_el_deg: float,
+    incident_jones: np.ndarray,
+    *,
+    polarization: PolarizationConfig | None = None,
+    path_response: np.ndarray | None = None,
+    search_span_az_deg: float = 10.0,
+    search_span_el_deg: float = 10.0,
+    search_step_deg: float = 0.25,
+) -> tuple[float, float, float]:
+    """Find the co-pol pattern peak near the target direction."""
+
+    if search_step_deg <= 0:
+        raise ValueError("search_step_deg must be positive")
+    az_axis = np.arange(
+        target_az_deg - search_span_az_deg,
+        target_az_deg + search_span_az_deg + search_step_deg * 0.5,
+        search_step_deg,
+    )
+    el_axis = np.arange(
+        target_el_deg - search_span_el_deg,
+        target_el_deg + search_span_el_deg + search_step_deg * 0.5,
+        search_step_deg,
+    )
+    az_grid, el_grid = np.meshgrid(az_axis, el_axis, indexing="xy")
+    pattern = np.abs(
+        array_factor_polarized(
+            topology,
+            weights,
+            az_grid,
+            el_grid,
+            incident_jones,
+            polarization=polarization,
+            path_response=path_response,
+        )
+    )
+    peak_index = np.unravel_index(int(np.argmax(pattern)), pattern.shape)
+    peak_az = float(az_grid[peak_index])
+    peak_el = float(el_grid[peak_index])
+    target_vector = direction_vector(target_az_deg, target_el_deg)
+    peak_vector = direction_vector(peak_az, peak_el)
+    cosine = float(np.clip(np.dot(target_vector, peak_vector), -1.0, 1.0))
+    return float(np.rad2deg(np.arccos(cosine))), peak_az, peak_el
+
+
+def peak_sidelobe_polarized_db(
+    topology: Topology,
+    weights: np.ndarray,
+    target_az_deg: float,
+    target_el_deg: float,
+    incident_jones: np.ndarray,
+    *,
+    polarization: PolarizationConfig | None = None,
+    path_response: np.ndarray | None = None,
+    az_min_deg: float = -90.0,
+    az_max_deg: float = 90.0,
+    step_deg: float = 0.25,
+    exclusion_deg: float | None = None,
+) -> float:
+    """Return the co-pol azimuth-cut peak sidelobe relative to the peak."""
+
+    if step_deg <= 0:
+        raise ValueError("step_deg must be positive")
+    if exclusion_deg is None:
+        exclusion_deg = _broadside_first_null_deg(topology)
+    az_axis = np.arange(az_min_deg, az_max_deg + step_deg * 0.5, step_deg)
+    pattern = np.abs(
+        array_factor_polarized(
+            topology,
+            weights,
+            az_axis,
+            np.full_like(az_axis, target_el_deg),
+            incident_jones,
+            polarization=polarization,
+            path_response=path_response,
+        )
+    )
+    peak = float(np.max(pattern))
+    if peak <= 0.0:
+        return _FLOOR_DB
+    outside_main = np.abs(az_axis - target_az_deg) > exclusion_deg
+    if not np.any(outside_main):
+        return _FLOOR_DB
+    sidelobe = float(np.max(pattern[outside_main]))
+    if sidelobe <= 0.0:
+        return _FLOOR_DB
+    return float(20.0 * np.log10(sidelobe / peak))
+
+
+def beam_metrics_polarized(
+    topology: Topology,
+    weights: np.ndarray,
+    target_az_deg: float,
+    target_el_deg: float,
+    incident_jones: np.ndarray,
+    *,
+    polarization: PolarizationConfig | None = None,
+    path_response: np.ndarray | None = None,
+    cross_incident_jones: np.ndarray | None = None,
+    search_span_az_deg: float = 10.0,
+    search_span_el_deg: float = 10.0,
+    search_step_deg: float = 0.25,
+    sidelobe_exclusion_deg: float | None = None,
+) -> PolarizedBeamMetrics:
+    """Compute pointing, co/cross-pol gain, XPD, and sidelobe metrics."""
+
+    incident = np.asarray(incident_jones, dtype=np.complex128)
+    cross_incident = (
+        np.asarray(cross_incident_jones, dtype=np.complex128)
+        if cross_incident_jones is not None
+        else orthogonal_jones(incident)
+    )
+    error_deg, peak_az, peak_el = pointing_error_polarized(
+        topology,
+        weights,
+        target_az_deg,
+        target_el_deg,
+        incident,
+        polarization=polarization,
+        path_response=path_response,
+        search_span_az_deg=search_span_az_deg,
+        search_span_el_deg=search_span_el_deg,
+        search_step_deg=search_step_deg,
+    )
+    co_gain_db = array_gain_polarized_db(
+        topology,
+        weights,
+        target_az_deg,
+        target_el_deg,
+        incident,
+        polarization=polarization,
+        path_response=path_response,
+    )
+    cross_gain_db = array_gain_polarized_db(
+        topology,
+        weights,
+        target_az_deg,
+        target_el_deg,
+        cross_incident,
+        polarization=polarization,
+        path_response=path_response,
+    )
+    discrimination_db = (
+        float(co_gain_db - cross_gain_db)
+        if co_gain_db > _FLOOR_DB and cross_gain_db > _FLOOR_DB
+        else float("inf")
+    )
+    sidelobe_db = peak_sidelobe_polarized_db(
+        topology,
+        weights,
+        target_az_deg,
+        target_el_deg,
+        incident,
+        polarization=polarization,
+        path_response=path_response,
+        step_deg=search_step_deg,
+        exclusion_deg=sidelobe_exclusion_deg,
+    )
+    return PolarizedBeamMetrics(
+        target_az_deg=float(target_az_deg),
+        target_el_deg=float(target_el_deg),
+        peak_az_deg=peak_az,
+        peak_el_deg=peak_el,
+        pointing_error_deg=error_deg,
+        co_pol_gain_db=float(co_gain_db),
+        cross_pol_gain_db=float(cross_gain_db),
+        cross_pol_discrimination_db=float(discrimination_db),
+        peak_sidelobe_db=float(sidelobe_db),
+    )
+
+
+def quantization_loss_polarized_db(
+    topology: Topology,
+    ideal_weights: np.ndarray,
+    quantized_weights: np.ndarray,
+    az_deg: float,
+    el_deg: float,
+    incident_jones: np.ndarray,
+    *,
+    polarization: PolarizationConfig | None = None,
+    path_response: np.ndarray | None = None,
+) -> float:
+    """Return co-pol target-direction gain loss from quantization."""
+
+    ideal_gain = array_gain_polarized_db(
+        topology,
+        weights=ideal_weights,
+        az_deg=az_deg,
+        el_deg=el_deg,
+        incident_jones=incident_jones,
+        polarization=polarization,
+        path_response=path_response,
+    )
+    quantized_gain = array_gain_polarized_db(
+        topology,
+        weights=quantized_weights,
+        az_deg=az_deg,
+        el_deg=el_deg,
+        incident_jones=incident_jones,
+        polarization=polarization,
+        path_response=path_response,
+    )
+    if ideal_gain <= _FLOOR_DB or quantized_gain <= _FLOOR_DB:
+        return float("inf")
+    return float(ideal_gain - quantized_gain)

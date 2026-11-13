@@ -18,6 +18,12 @@ from .measurement import (
     MismatchConfig,
     simulate_measurements,
 )
+from .observability import audit_h2_observability
+from .observability_validation import (
+    ObservabilityValidationConfig,
+    run_observability_validation,
+)
+from .polarization import PolarizationConfig
 from .quantization import QuantizerConfig
 from .topology import Topology, load_topology
 from .validation import ValidationConfig, run_validation
@@ -85,6 +91,14 @@ def build_parser() -> argparse.ArgumentParser:
     calibrate_parser.add_argument("--faults-json", type=Path)
     calibrate_parser.set_defaults(handler=_cmd_calibrate)
 
+    audit_parser = subparsers.add_parser(
+        "audit",
+        help="write the H1/H2 calibration-observability audit as JSON",
+    )
+    _add_topology_argument(audit_parser)
+    audit_parser.add_argument("--output", type=Path, required=True)
+    audit_parser.set_defaults(handler=_cmd_audit)
+
     validate_parser = subparsers.add_parser(
         "validate", help="run the reproducible synthetic calibration sweep"
     )
@@ -104,6 +118,14 @@ def build_parser() -> argparse.ArgumentParser:
     )
     validate_parser.add_argument("--captures", type=int, default=4)
     validate_parser.add_argument("--samples", type=int, default=64)
+    validate_parser.add_argument(
+        "--architectures",
+        default=",".join(ObservabilityValidationConfig().architectures),
+        help="comma-separated calibration architectures for the observability sweep",
+    )
+    validate_parser.add_argument("--incident-pol-deg", type=float, default=0.0)
+    validate_parser.add_argument("--cross-pol-db", type=float, default=25.0)
+    validate_parser.add_argument("--cross-pol-phase-deg", type=float, default=90.0)
     validate_parser.set_defaults(handler=_cmd_validate)
 
     return parser
@@ -206,21 +228,56 @@ def _cmd_calibrate(args: argparse.Namespace) -> int:
     return 0
 
 
+def _cmd_audit(args: argparse.Namespace) -> int:
+    topology = load_topology(args.topology)
+    audit = audit_h2_observability(topology)
+    path = Path(args.output)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(audit, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    print(f"wrote observability audit to {path}")
+    print(audit["conclusion"])
+    return 0
+
+
 def _cmd_validate(args: argparse.Namespace) -> int:
     topology = load_topology(args.topology)
     if args.quick:
         config = ValidationConfig.quick()
+        observability_config = ObservabilityValidationConfig.quick()
     else:
+        angles = tuple(_parse_angles(args.angles))
+        snr_levels = tuple(_parse_floats(args.snr_levels))
+        mismatch_scales = tuple(_parse_floats(args.mismatch_scales))
         config = ValidationConfig(
             seeds=tuple(range(args.seeds)),
             fault_seeds=tuple(range(args.fault_seeds)),
-            snr_db_levels=tuple(_parse_floats(args.snr_levels)),
-            mismatch_scales=tuple(_parse_floats(args.mismatch_scales)),
-            angles=tuple(_parse_angles(args.angles)),
+            snr_db_levels=snr_levels,
+            mismatch_scales=mismatch_scales,
+            angles=angles,
             n_captures=args.captures,
             n_samples=args.samples,
         )
+        observability_config = ObservabilityValidationConfig(
+            seeds=tuple(range(args.seeds)),
+            fault_seeds=tuple(range(args.fault_seeds)),
+            snr_db_levels=snr_levels,
+            mismatch_scales=mismatch_scales,
+            angles=angles,
+            n_captures=args.captures,
+            n_samples=args.samples,
+            architectures=tuple(
+                item.strip()
+                for item in args.architectures.split(",")
+                if item.strip()
+            ),
+            polarization=PolarizationConfig(
+                cross_pol_db=args.cross_pol_db,
+                cross_pol_phase_deg=args.cross_pol_phase_deg,
+            ),
+            incident_polarization_deg=args.incident_pol_deg,
+        )
     report = run_validation(topology, config)
+    observability_report = run_observability_validation(topology, observability_config)
     output_dir = _ensure_dir(args.output)
     report.to_json(output_dir / "validation.json", include_records=True)
     report.to_json(output_dir / "reference_summary.json", include_records=False)
@@ -229,10 +286,27 @@ def _cmd_validate(args: argparse.Namespace) -> int:
     if report.calibration_example is not None:
         report.calibration_example.to_json(output_dir / "calibration_example.json")
         report.calibration_example.to_csv(output_dir / "calibration_example.csv")
+    observability_report.to_json(
+        output_dir / "observability_validation.json", include_records=True
+    )
+    observability_report.to_json(
+        output_dir / "observability_reference_summary.json", include_records=False
+    )
+    observability_report.to_csv(output_dir / "observability_runs.csv")
+    observability_report.to_markdown_file(output_dir / "observability_report.md")
+    (output_dir / "observability_audit.json").write_text(
+        json.dumps(observability_report.audit, indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+    )
     print(
-        f"wrote validation to {output_dir} in {report.runtime_s:.3f} s "
+        f"wrote scalar-baseline validation to {output_dir} in {report.runtime_s:.3f} s "
         f"({len(report.records)} beam records, "
         f"{len(report.fault_records)} fault records)"
+    )
+    print(
+        f"wrote observability validation in {observability_report.runtime_s:.3f} s "
+        f"({len(observability_report.records)} beam records, "
+        f"{len(observability_report.fault_records)} fault records)"
     )
     return 0
 
