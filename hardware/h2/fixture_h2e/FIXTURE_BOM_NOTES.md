@@ -87,3 +87,27 @@ Inventory on these pages is rendered client-side, so EVM stock is UNVERIFIED.
 
 - **WSK2512:** KiCad's `T1.19mm` is the terminal length T for the 0.005–0.2 Ω range, so it is correct for 10 mΩ. The body height is H = 0.635 mm.
 - **Datasheet URL:** the parts list uses the 1x2 header datasheet URL (61300211121.pdf) for the 1x10 and 1x6 headers, and that URL returned 404.
+
+## H2-E.1 update (2026-11-12)
+
+- **Schematic MPN fields synced.** The 7 CHANGED lines (C1, C2–C4, C5, C10, C33, J2, R55/R56) and TP10–TP24 now match
+  this BOM. `tools/check_bom_sync.py out/candA_fixture.xml FIXTURE_BOM.csv` reports 0 mismatches.
+- **A-SENSE:**
+  - U4 is now **TPS3703A7120DSERQ1**: ti.com InStock, $1.151, qty break UNVERIFIED.
+  - R10/R11 are now 3.16 k / 1.00 k (ERA-3AEB3161V / ERA-3AEB102V).
+  - **D1 BAS116 is removed.**
+  - U3 keeps TPS3703A7330DSER: ti.com OOS, LCSC 37, so 3 are needed for 3 boards.
+- **R58:**
+  - **No stocked 1.01 k source exists.** It is an E192 value; KOA RN73R1JTTD1011B25, Vishay TNPW06031K01BEEA and
+    Stackpole RNCF0603BTE1K01 list it as standard, but no stock was visible.
+  - **Applied:** R57/R58 are now 18.0 k / 2.00 k (ERA-3AEB183V / ERA-3AEB202V), same k = 0.1. Revalidation is in
+    `../design/h2e1/h2e1_checks.py`.
+- **U10:**
+  - TPS16630RGER, RGERG4, RGET and PWPR are still OOS.
+  - **TPS16630PWPT (HTSSOP-20) is InStock** ($2.428) and electrically identical per SLVSET9G; only the thermal figures
+    differ.
+  - It is not drawn: it needs a new symbol and footprint, to be done together with the layout approval.
+  - TPS16632 and TPS16637 are not equivalent (their OVP differs).
+- **New stock flag:** TLV3201AIDBVR (U9, U11) is 0 at ti.com; LCSC is in stock.
+- **Totals (by delta, indicative):** $52.16 per board, $156.50 for 3 boards, $165.74 for 3 boards incl. MOQ. Lines that
+  are still not costed are unchanged.

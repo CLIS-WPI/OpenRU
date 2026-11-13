@@ -1,19 +1,18 @@
 ref,qty,manufacturer,MPN,description,package,KiCad footprint,datasheet URL,fit
-C1,1,Murata,GRM188R71E105KA12D,1uF 25V X7R 10%,0603,Capacitor_SMD:C_0603_1608Metric,https://www.murata.com/en-global/products/productdetail?partno=GRM188R71E105KA12D,fit
-C2 C3 C4,3,Murata,GRM188R61A475KE15D,4.7uF 10V X5R 10%,0603,Capacitor_SMD:C_0603_1608Metric,https://www.murata.com/en-global/products/productdetail?partno=GRM188R61A475KE15D,fit
-C5,1,Murata,GRM31CR71A106KA01L,10uF 10V X7R 10%,1206,Capacitor_SMD:C_1206_3216Metric,https://www.murata.com/en-global/products/productdetail?partno=GRM31CR71A106KA01L,fit
+C1,1,Samsung,CL10B105KA8NNNC,1uF 25V X7R 10%,0603,Capacitor_SMD:C_0603_1608Metric,https://www.lcsc.com/product-detail/C29936.html,fit
+C2 C3 C4,3,Samsung,CL10A475KP8NNNC,4.7uF 10V X5R 10%,0603,Capacitor_SMD:C_0603_1608Metric,https://www.lcsc.com/product-detail/C1705.html,fit
+C5,1,Samsung,CL31B106KPHNNNE,10uF 10V X7R 10%,1206,Capacitor_SMD:C_1206_3216Metric,https://www.lcsc.com/product-detail/C96449.html,fit
 C6 C7 C8 C9,4,Murata,GRM32ER61A476KE20L,"47uF 10V X5R 10% (bulk option, DNP)",1210,Capacitor_SMD:C_1210_3225Metric,https://www.murata.com/en-global/products/productdetail?partno=GRM32ER61A476KE20L,DNP
-C10,1,Murata,GRM188R71H104KA93D,100nF 50V X7R 10%,0603,Capacitor_SMD:C_0603_1608Metric,https://www.murata.com/en-global/products/productdetail?partno=GRM188R71H104KA93D,fit
+C10,1,Samsung,CL10B104KB8NNNC,100nF 50V X7R 10%,0603,Capacitor_SMD:C_0603_1608Metric,https://www.lcsc.com/product-detail/C1591.html,fit
 C11 C35,2,Murata,GRM1555C1H101JA01D,100pF 50V C0G 5%,0402,Capacitor_SMD:C_0402_1005Metric,https://www.murata.com/en-global/products/productdetail?partno=GRM1555C1H101JA01D,fit
 C12 C13 C14 C19 C20 C21 C22 C24 C26 C28,10,Murata,GRM155R71C104KA88D,100nF 16V X7R 10%,0402,Capacitor_SMD:C_0402_1005Metric,https://www.murata.com/en-global/products/productdetail?partno=GRM155R71C104KA88D,fit
 C15 C16 C17 C18 C34,5,Murata,GRM155R71H103KA88D,10nF 50V X7R 10%,0402,Capacitor_SMD:C_0402_1005Metric,https://www.murata.com/en-global/products/productdetail?partno=GRM155R71H103KA88D,fit
 C23,1,Murata,GRM155R71H223KA12D,22nF 50V X7R 10%,0402,Capacitor_SMD:C_0402_1005Metric,https://www.murata.com/en-global/products/productdetail?partno=GRM155R71H223KA12D,fit
 C25 C27,2,Murata,GRM1555C1H102JA01D,1nF 50V C0G 5%,0402,Capacitor_SMD:C_0402_1005Metric,https://www.murata.com/en-global/products/productdetail?partno=GRM1555C1H102JA01D,fit
 C29 C30 C31 C32,4,Murata,GRM155R61A475MEAAD,4.7uF 10V X5R 20% (tile VDD_PA part class),0402,Capacitor_SMD:C_0402_1005Metric,https://www.murata.com/en-global/products/productdetail?partno=GRM155R61A475MEAAD,fit
-C33,1,Samsung,CL05B105KP5NNNC,1uF 10V X7R 10%,0402,Capacitor_SMD:C_0402_1005Metric,https://product.samsungsem.com/mlcc/CL05B105KP5NNNC.do,fit
-D1,1,onsemi,BAS116LT1G,Low-leakage switching diode 75V (SENSE clamp for T12),SOT-23,Package_TO_SOT_SMD:SOT-23,https://www.onsemi.com/download/data-sheet/pdf/bas116lt1-d.pdf,fit
+C33,1,Murata,GRM155Z71A105KE01D,1uF 10V X7R 10%,0402,Capacitor_SMD:C_0402_1005Metric,https://www.lcsc.com/product-detail/C528974.html,fit
 J1,1,Phoenix Contact,1715721,"MKDS 1,5/ 2-5,08 terminal block 2p",THT 5.08,"TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",https://www.phoenixcontact.com/en-pc/products/1715721,fit
-J2,1,Phoenix Contact,1714971,"MKDS 3/ 2-5,08 terminal block 2p",THT 5.08,TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-3-2-5.08_1x02_P5.08mm_Horizontal,https://www.phoenixcontact.com/en-pc/products/1714971,fit
+J2,1,Phoenix Contact,1711725,"MKDS 3/ 2-5,08 terminal block 2p",THT 5.08,TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-3-2-5.08_1x02_P5.08mm_Horizontal,https://buerklin.com/en/p/phoenix-contact/pcb-terminal-blocks/1711725/63P4323,fit
 J3,1,Wurth Elektronik,61301011121,Pin header 1x10 2.54 mm vertical,THT,Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical,https://www.we-online.com/catalog/datasheet/61300211121.pdf,fit
 J4,1,Wurth Elektronik,61301011121,Pin header 1x10 2.54 mm vertical,THT,Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical,https://www.we-online.com/catalog/datasheet/61300211121.pdf,fit
 J5,1,Wurth Elektronik,61300611121,Pin header 1x6 2.54 mm vertical,THT,Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical,https://www.we-online.com/catalog/datasheet/61300211121.pdf,fit
@@ -30,8 +29,10 @@ R2,1,Yageo,RC0603FR-072K2L,2.2k 1% 100ppm/K thick film 0.1W,0603,Resistor_SMD:R_
 R3 R5 R16 R17 R18 R64 R84 R85 R86 R87 R94,11,Yageo,RC0603FR-07100KL,100k 1% 100ppm/K thick film 0.1W,0603,Resistor_SMD:R_0603_1608Metric,https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf,fit
 R4 R9 R48,3,Yageo,RC0603FR-0710KL,10k 1% 100ppm/K thick film 0.1W,0603,Resistor_SMD:R_0603_1608Metric,https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf,fit
 R6,1,Yageo,RC0603FR-0749R9L,49.9R (50R termination option) 1% 100ppm/K thick film 0.1W,0603,Resistor_SMD:R_0603_1608Metric,https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf,DNP
-R7 R10 R40,3,Panasonic,ERA-3AEB5491V,5.49k 0.1% 25ppm/K thin film 0.1W,0603,Resistor_SMD:R_0603_1608Metric,https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf,fit
-R8 R11 R37 R39 R42,5,Panasonic,ERA-3AEB1072V,10.7k 0.1% 25ppm/K thin film 0.1W,0603,Resistor_SMD:R_0603_1608Metric,https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf,fit
+R7 R40,2,Panasonic,ERA-3AEB5491V,5.49k 0.1% 25ppm/K thin film 0.1W,0603,Resistor_SMD:R_0603_1608Metric,https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf,fit
+R10,1,Panasonic,ERA-3AEB3161V,3.16k 0.1% 25ppm/K thin film 0.1W,0603,Resistor_SMD:R_0603_1608Metric,https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf,fit
+R8 R37 R39 R42,4,Panasonic,ERA-3AEB1072V,10.7k 0.1% 25ppm/K thin film 0.1W,0603,Resistor_SMD:R_0603_1608Metric,https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf,fit
+R11,1,Panasonic,ERA-3AEB102V,1.00k 0.1% 25ppm/K thin film 0.1W,0603,Resistor_SMD:R_0603_1608Metric,https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf,fit
 R12,1,Yageo,RC0603FR-0710KL,10k (200 ms option) 1% 100ppm/K thick film 0.1W,0603,Resistor_SMD:R_0603_1608Metric,https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf,DNP
 R13 R14 R49 R61 R62,5,Yageo,RC0603JR-070RL,0R jumper 0603,0603,Resistor_SMD:R_0603_1608Metric,https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf,fit
 R15,1,Yageo,RC0603FR-072K2L,2.2k (T10 isolated pull-up) 1% 100ppm/K thick film 0.1W,0603,Resistor_SMD:R_0603_1608Metric,https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf,DNP
@@ -52,9 +53,9 @@ R47,1,Yageo,RC0603FR-0720KL,20k 1% 100ppm/K thick film 0.1W,0603,Resistor_SMD:R_
 R50,1,Panasonic,ERA-3AEB2551V,2.55k 0.1% 25ppm/K thin film 0.1W,0603,Resistor_SMD:R_0603_1608Metric,https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf,fit
 R51,1,Panasonic,ERA-3AEB1022V,10.2k 0.1% 25ppm/K thin film 0.1W,0603,Resistor_SMD:R_0603_1608Metric,https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf,fit
 R52 R53 R71 R72 R73 R74 R75,7,Yageo,RC0603FR-0747KL,47k 1% 100ppm/K thick film 0.1W,0603,Resistor_SMD:R_0603_1608Metric,https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf,fit
-R55 R56,2,Panasonic,ERA-3AEB1002V,10.0k 0.1% 25ppm/K thin film 0.1W,0603,Resistor_SMD:R_0603_1608Metric,https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf,fit
-R57,1,Panasonic,ERA-3AEB9091V,9.09k 0.1% 25ppm/K thin film 0.1W,0603,Resistor_SMD:R_0603_1608Metric,https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf,fit
-R58,1,Panasonic,ERA-3AEB1011V,1.01k 0.1% 25ppm/K thin film 0.1W,0603,Resistor_SMD:R_0603_1608Metric,https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf,fit
+R55 R56,2,Panasonic,ERA-3AEB103V,10.0k 0.1% 25ppm/K thin film 0.1W,0603,Resistor_SMD:R_0603_1608Metric,https://www.lcsc.com/product-detail/C190610.html,fit
+R57,1,Panasonic,ERA-3AEB183V,18.0k 0.1% 25ppm/K thin film 0.1W,0603,Resistor_SMD:R_0603_1608Metric,https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf,fit
+R58,1,Panasonic,ERA-3AEB202V,2.00k 0.1% 25ppm/K thin film 0.1W,0603,Resistor_SMD:R_0603_1608Metric,https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf,fit
 R59,1,Yageo,RC0603FR-074K32L,4.32k 1% 100ppm/K thick film 0.1W,0603,Resistor_SMD:R_0603_1608Metric,https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf,fit
 R65 R66 R67 R68 R69 R70,6,Vishay,RCS12061R00FKEA,1R 1% 0.5W anti-surge thick film,1206,Resistor_SMD:R_1206_3216Metric,https://www.vishay.com/docs/20065/rcs.pdf,fit
 R76 R77 R78 R79 R80 R81 R82 R83,8,Yageo,RC2512FK-0744R2L,44.2R 1% 1W thick film (2 in parallel = 22.1R),2512,Resistor_SMD:R_2512_6332Metric,https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf,fit
@@ -66,7 +67,8 @@ TP23 TP24,2,Keystone,5001,"Test point loop black, miniature THT (GND star sense)
 TP25 TP26,2,n/a,PCB pad only,"Thermocouple pad 3x3 mm (TP25 at Q13 crowbar FET, TP26 at U10 eFuse)",pad,TestPoint:TestPoint_Pad_3.0x3.0mm,,fit
 U1,1,Texas Instruments,TPS7A2550DRVR,"LDO 300mA fixed 5.0V, 2.4-18V in, +-1%",WSON-6 DRV 2x2,Package_SON:WSON-6-1EP_2x2mm_P0.65mm_EP1x1.6mm,https://www.ti.com/lit/ds/symlink/tps7a25.pdf,fit
 U2,1,Texas Instruments,TPS7A2518DRVR,"LDO 300mA fixed 1.8V, 2.4-18V in, +-1%",WSON-6 DRV 2x2,Package_SON:WSON-6-1EP_2x2mm_P0.65mm_EP1x1.6mm,https://www.ti.com/lit/ds/symlink/tps7a25.pdf,fit
-U3 U4,2,Texas Instruments,TPS3703A7330DSER,"Window supervisor 3.3V +-7%, OD RESET, tD 10/200ms",WSON-6 DSE 1.5x1.5,Package_SON:WSON-6_1.5x1.5mm_P0.5mm,https://www.ti.com/lit/ds/symlink/tps3703.pdf,fit
+U3,1,Texas Instruments,TPS3703A7330DSER,"Window supervisor 3.3V +-7%, OD RESET, tD 10/200ms",WSON-6 DSE 1.5x1.5,Package_SON:WSON-6_1.5x1.5mm_P0.5mm,https://www.ti.com/lit/ds/symlink/tps3703.pdf,fit
+U4,1,Texas Instruments,TPS3703A7120DSERQ1,"Window supervisor 1.2V +-7%, OD RESET, tD 10/200ms, AEC-Q100 (A-SENSE fix)",WSON-6 DSE 1.5x1.5,Package_SON:WSON-6_1.5x1.5mm_P0.5mm,https://www.ti.com/product/TPS3703-Q1,fit
 U5,1,Texas Instruments,TPS3430WDRCR,"Window watchdog, OD WDO",VSON-10 DRC 3x3,Package_SON:Texas_DRC0010J,https://www.ti.com/lit/ds/symlink/tps3430.pdf,fit
 U6 U7 U8 U12,4,Texas Instruments,TLV3202AIDGKR,Dual 40ns push-pull comparator,VSSOP-8 DGK,Package_SO:VSSOP-8_3x3mm_P0.65mm,https://www.ti.com/lit/ds/symlink/tlv3202.pdf,fit
 U9 U11,2,Texas Instruments,TLV3201AIDBVR,40ns push-pull comparator,SOT-23-5 DBV,Package_TO_SOT_SMD:SOT-23-5,https://www.ti.com/lit/ds/symlink/tlv3201.pdf,fit

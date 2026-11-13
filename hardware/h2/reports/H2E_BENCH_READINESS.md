@@ -122,3 +122,15 @@ above its threshold limit.
 | Fixture (E5 onward) | **Schematic ready, not build-ready.** Blockers: U10 stock, R58 value, schematic MPN sync, PCB layout of the fixture (not started; needs approval), and unpriced lines |
 | Candidate A on the tile | Not started. Gated by E1–E5 and the ✱ questions. Open item A-SENSE added |
 | OpenRU tile PCB layout | **NO-GO** |
+
+> **H2-E.1 update (2026-11-12):** see `H2E1_PROCUREMENT_READINESS.md`.
+> - **A-SENSE:** resolved in the fixture with TPS3703A7120-Q1 behind 3.16 k / 1.00 k; D1 removed.
+> - **Schematic MPNs:** synced with the BOM.
+> - **R58:** R57/R58 moved to 18.0 k / 2.00 k (same ratio).
+> - **U10:** TPS16630PWPT identified as the in-stock alternative; not drawn.
+> - **E1:** HOLD ceiling corrected to 1.778 µs.
+> - **E2:** kill bound 119 mΩ.
+> - **E3:** new E3c gate.
+> - **E5:** t_chain measured with RS3 shorted.
+> - **HOLD:** never a PASS.
+> - **Totals in §3:** superseded ($52.16 per board).

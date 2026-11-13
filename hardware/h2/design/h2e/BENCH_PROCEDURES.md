@@ -63,6 +63,11 @@ Outcome definitions (apply to every gate below):
   re-run with (measured gated statistic + U) and still closes R3/R4, and the deviation is reported to the vendor.
 - **NO-GO:** the hard requirement (50 µs, BBM > 0, abs max) is violated, or the budget cannot close.
 
+**H2-E.1 rule — HOLD is never a PASS.** A HOLD result is reported as "HOLD — not passed" in every table, summary
+and CSV. It does not satisfy the matching BENCH_PLAN T-test, does not count toward "A is viable", and is not
+described as safety evidence. A HOLD becomes GO only through the written budget re-run (and, where the gate says so,
+a written vendor answer). If neither exists, it stays HOLD and A stays unproven.
+
 "Gated statistic" X_g is defined in §2.5 (worst observed, or tolerance bound, whichever is worse), and U is the
 expanded uncertainty of §2.4. Uncertainty is always applied **against** the design.
 
@@ -86,7 +91,7 @@ expanded uncertainty of §2.4. Uncertainty is always applied **against** the des
 
 | Gate | GO | HOLD | NO-GO |
 |---|---|---|---|
-| E1a t_off: X_g + U_t | ≤ 1.50 µs (DS max holds under H2 conditions) | 1.50–2.08 µs (0.75 × d_min 2.778 µs, BENCH_PLAN T1a) | > 2.08 µs, or any single event ≥ 2.778 µs − U_t (BBM falling margin ≤ 0 by datasheet d_min) |
+| E1a t_off: X_g + U_t | ≤ 1.50 µs (DS max holds under H2 conditions) | 1.50–1.778 µs (H2-E.1: ceiling = d_min 2.778 − 1.0 µs, so BENCH_PLAN T7 "delay_min − tSD ≥ 1.0 µs" can still pass; T1a itself is FAILED in this band until TI answers Q1) | > 1.778 µs, or any single event ≥ 2.778 µs − U_t (BBM falling margin ≤ 0 by datasheet d_min) |
 | E1b leakage, SHDN low, VIN 0–4.5 V | ≤ 10 mA at every point | — | > 10 mA at any point (the FET conducts below ROC with SHDN low: R1/R3 hole at brown-out) |
 
 ### 1.3 E2: crowbar MOSFET VGS(th), RDS(on), IDSS over temperature (BENCH_PLAN T5)
@@ -105,7 +110,7 @@ expanded uncertainty of §2.4. Uncertainty is always applied **against** the des
 
 | Gate | GO | HOLD | NO-GO |
 |---|---|---|---|
-| RDS(on) max at +85 °C, VGS 3.8 V: X_g + U | ≤ 58 mΩ (PLACEHOLDER holds) | 58–120 mΩ (budget re-run; margin consumed) | > 120 mΩ |
+| RDS(on) max at +85 °C, VGS 3.8 V: X_g + U | ≤ 58 mΩ (PLACEHOLDER holds) | 58–119 mΩ (budget re-run; margin consumed) | > 119 mΩ (H2-E.1: exact bound 119.4 mΩ, rounded down) |
 | VGS(th) min at +85 °C: X_g − U (lower tolerance bound) | ≥ 0.50 V (≥ 0.4 V above the ≤ 0.1 V gate-off level) | 0.30–0.50 V | < 0.30 V |
 | VGS(th) max at −40 °C: X_g + U | ≤ 2.0 V (≥ 1.8 V overdrive at VOH 3.8 V) | 2.0–2.5 V | > 2.5 V |
 | IDSS at VGS 0.1 V, VDS 5.5 V, +85 °C | ≤ 1 mA | — | > 1 mA |
@@ -136,6 +141,16 @@ but not above the GO floor 0.50 V.
 | X_g(t_det from 5 % point) + U_t, every overdrive ≥ 5 % and every ramp | ≤ 30 µs | 30 µs < X_g + U_t ≤ 50 µs − (E5 chain X_g + U_t) | > 50 µs − (E5 chain X_g + U_t), or > 33.5 µs if E5 not yet run (consumes the 3.5 µs margin) |
 | 2 % step overdrive | record only; feeds TI Q6 and the onset definition | — | — |
 | Missed detection (RESET never asserts within 10 ms at ≥ 5 % overdrive) | — | — | any occurrence |
+| E3c (H2-E.1) slow +5V_PA collapse ≤ 1 V/ms, UV side, referred to +5V_PA through the divider: RESET ≤ 0.8 V before +5V_PA falls below 4.50 V + U_V (eFuse VIN ROC) | always | — | any event where RESET is still high at +5V_PA ≤ 4.50 V + U_V, unless E1b is GO at that VIN |
+
+H2-E.1 notes on E3:
+- **Device under test.** The +5V_PA monitor is now **TPS3703A7120DSERQ1** (1.2 V, ±7 %, 3.16 k / 1.00 k divider;
+  A-SENSE fix, `design/h2e1/H2E1_PROCUREMENT_AUDIT.md` §1). The +5V_IL monitor stays TPS3703A7330DSER. E3 must be run on **both**
+  exact MPNs. Results from the EVM device are family data only (§7).
+- **Why E3c.** The 5 %-overdrive point below the A7120-Q1 UV minimum is 4.36 V, under the eFuse 4.5 V ROC. The
+  datasheet tPD does not bound the slow-ramp case.
+- **E3 HOLD is provisional.** The HOLD ceiling depends on the E5 chain result, so an E3 HOLD stays open until E5 is
+  measured. Until then the 33.5 µs ceiling applies.
 
 ### 1.5 E4: VOL at the real sink current (BENCH_PLAN T4)
 
@@ -177,7 +192,7 @@ but not above the GO floor 0.50 V.
 |---|---|---|---|
 | BBM_fall: lower tolerance bound of (t_cb − t_off) − U_t | ≥ 1.0 µs (BENCH_PLAN T7) | 0 < … < 1.0 µs | ≤ 0, or any single event with I_eFuse_out ≥ 50 mA while VGS ≥ V_th,lim |
 | BBM_rise: lower tolerance bound − U_t | ≥ 2.0 µs | 0 < … < 2.0 µs | ≤ 0 |
-| t_chain: X_g + U_t | ≤ 16.5 µs | 16.5–20.0 µs (fits only if E3 X_g + U_t ≤ 50 − t_chain) | > 20.0 µs (with the 30 µs DS detection, R4 is exceeded) |
+| t_chain: X_g + U_t (H2-E.1: measured with the RS3 force pads shorted; with RS3 in the loop the placeholder budget alone gives 17.07 µs. Do not subtract a calculated shunt term) | ≤ 16.5 µs | 16.5–20.0 µs (fits only if E3 X_g + U_t ≤ 50 − t_chain) | > 50 − max(30 µs, E3 X_g + U_t), i.e. > 20.0 µs at the DS detection value |
 | VOUT_c max (any time): X_g + U_V | ≤ 5.5 V | — | > 5.5 V (abs max, §4) |
 | E5b crowbar peak: X_g | ≤ 27 A (BENCH_PLAN T6) | 27–33 A | > 33 A (≥ V/R_CB,min: the loop model is wrong) |
 
@@ -586,7 +601,7 @@ run_id,datetime_utc,operator,procedure_id,step,event_idx,fixture_sn,fixture_rev,
 | Need | EVM | Status |
 |---|---|---|
 | TPS1663 / TPS16630 | **TPS16630-32EVM** (user guide SLVUBI9A) | listed on the TPS1663 product page; "TPS16630EVM", "TPS1663EVM" return 404. TPS2663-166EVM also exists (different device family, not used) |
-| TPS3703 | **TPS3703Q1-A4120EVM** (user guide SNVU635) | automotive -Q1 variant; option must be decoded; no commercial-grade TPS3703 EVM found |
+| TPS3703 | **TPS3703Q1-A4120EVM** (user guide SNVU635) | H2-E.1: U1 = TPS3703A4120DSERQ1 (1.2 V, ±4 %), soldered, DSE land, no SENSE divider. **Not the H2 device**: rework U1 to TPS3703A7120DSERQ1 / TPS3703A7330DSER, R1 → 2.2 kΩ, remove or record C2 10 nF; check the C3/latch-jumper contradictions in SNVU635 on the board (`h2e1/H2E1_PROCUREMENT_AUDIT.md` §5). No commercial-grade TPS3703 EVM exists |
 | TPS3430 | **TPS3430EVM** | listed |
 | TLV3202 | none | product page lists only reference designs; use a SOT/MSOP adapter or the fixture |
 | CSD16301Q2 | none | Kelvin socket/adapter on SMU |

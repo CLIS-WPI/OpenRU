@@ -1,0 +1,22 @@
+H2-E as drawn: TPS3703A7330, 5.49k/10.7k, BAS116 to +5V_IL
+  k 0.6609; UV 4.603/4.644/4.693 V; OV 5.296/5.343/5.399 V (min/nom/max)
+  SENSE at +5V_PA 12 / 13.2 V: 7.93 / 8.72 V; ROC kept up to +5V_PA = 8.3 V
+  margins: UVmax->rail min +0.157 V, rail max->OVmin +0.116 V, OVmax->5.5 V +0.101 V, UVmin->eFuse ROC +0.103 V
+Option 1: TPS3703B6050, 18.0k/2.00k, no clamp
+  k 0.1000; UV 4.631/4.700/4.796 V; OV 5.222/5.300/5.408 V (min/nom/max)
+  SENSE at +5V_PA 12 / 13.2 V: 1.20 / 1.32 V; ROC kept up to +5V_PA = 55.0 V
+  margins: UVmax->rail min +0.054 V, rail max->OVmin +0.042 V, OVmax->5.5 V +0.092 V, UVmin->eFuse ROC +0.131 V
+Option 2 (SELECTED): TPS3703A7120-Q1, 3.16k/1.00k, no clamp
+  k 0.2404; UV 4.592/4.643/4.698 V; OV 5.283/5.341/5.406 V (min/nom/max)
+  SENSE at +5V_PA 12 / 13.2 V: 2.88 / 3.17 V; ROC kept up to +5V_PA = 22.9 V
+  margins: UVmax->rail min +0.152 V, rail max->OVmin +0.103 V, OVmax->5.5 V +0.094 V, UVmin->eFuse ROC +0.092 V
+
+budget: rail row 46.50 us, chain after P 16.499 us, d_min 2.778 us, BBM fall 1.278 us, BBM rise 2.713 us
+E1 HOLD ceiling 0.75*d_min = 2.083 us leaves BBM_fall 0.694 us < 1.0 us (T7) -> corrected ceiling d_min - 1.0 = 1.778 us
+E2 kill bound: discharge allowance 16.40 us -> R_loop <= 0.2878 ohm -> RDS(on) <= 0.1194 ohm
+E5 t_chain with RS3 in loop at placeholder RDS: 17.07 us (> 16.5 GO limit) -> measure with RS3 force pads shorted
+E3 HOLD band if E5 chain = 16.5: 30 .. 33.50 us; E5 t_chain NO-GO edge with DS 30 us: 20.0 us
+E3 slow ramp: 5 % overdrive below UV(min) is 4.362 V < eFuse ROC 4.5 V -> add gate E3c
+CA divider k 0.10000 -> 0.10000; bias error 9.0 uV vs VIO 6000 uV in budget; VCB load 0.472 -> 0.238 mA (lower load: VCB_MIN unchanged-safe)
+R10 3.16k dissipation at +5V_PA 13.2 V: 32 mW (0.1 W rating)
+ALL CHECKS PASS

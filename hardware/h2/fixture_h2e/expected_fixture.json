@@ -314,15 +314,6 @@
   },
   "value": "47u/10V DNP"
  },
- "D1": {
-  "footprint": "Package_TO_SOT_SMD:SOT-23",
-  "lib_id": "candA_fixture:BAS116LT1G",
-  "pins": {
-   "1": "IL_SNS2",
-   "3": "IL_5V"
-  },
-  "value": "BAS116LT1G"
- },
  "J1": {
   "footprint": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
   "lib_id": "Connector:Screw_Terminal_01x02",
@@ -668,7 +659,7 @@
    "1": "PWR_5V_PA",
    "2": "IL_SNS2"
   },
-  "value": "5.49k 0.1%"
+  "value": "3.16k 0.1%"
  },
  "R11": {
   "footprint": "Resistor_SMD:R_0603_1608Metric",
@@ -677,7 +668,7 @@
    "1": "IL_SNS2",
    "2": "PWR_GND"
   },
-  "value": "10.7k 0.1%"
+  "value": "1.00k 0.1%"
  },
  "R12": {
   "footprint": "Resistor_SMD:R_0603_1608Metric",
@@ -1127,7 +1118,7 @@
    "1": "IL_VCB",
    "2": "IL_CA_REF"
   },
-  "value": "9.09k 0.1%"
+  "value": "18.0k 0.1%"
  },
  "R58": {
   "footprint": "Resistor_SMD:R_0603_1608Metric",
@@ -1136,7 +1127,7 @@
    "1": "IL_CA_REF",
    "2": "PWR_GND"
   },
-  "value": "1.01k 0.1%"
+  "value": "2.00k 0.1%"
  },
  "R59": {
   "footprint": "Resistor_SMD:R_0603_1608Metric",
@@ -1859,7 +1850,7 @@
    "5": "PWR_GND",
    "6": "IL_MR2"
   },
-  "value": "TPS3703A7330DSER"
+  "value": "TPS3703A7120DSERQ1"
  },
  "U5": {
   "footprint": "Package_SON:Texas_DRC0010J",

@@ -5080,7 +5080,7 @@
 			(hide yes)
 		)
 	)
-	(property "MPN" "1714971"
+	(property "MPN" "1711725"
 	(id 0)
 	(at 60.96 50.8 0)
 	(effects
@@ -5233,7 +5233,7 @@
 			(hide yes)
 		)
 	)
-	(property "MPN" "GRM188R71E105KA12D"
+	(property "MPN" "CL10B105KA8NNNC"
 	(id 0)
 	(at 127 50.8 0)
 	(effects
@@ -5302,7 +5302,7 @@
 			(hide yes)
 		)
 	)
-	(property "MPN" "GRM188R61A475KE15D"
+	(property "MPN" "CL10A475KP8NNNC"
 	(id 0)
 	(at 142.24 50.8 0)
 	(effects
@@ -5455,7 +5455,7 @@
 			(hide yes)
 		)
 	)
-	(property "MPN" "GRM188R61A475KE15D"
+	(property "MPN" "CL10A475KP8NNNC"
 	(id 0)
 	(at 203.2 50.8 0)
 	(effects
@@ -5524,7 +5524,7 @@
 			(hide yes)
 		)
 	)
-	(property "MPN" "GRM188R61A475KE15D"
+	(property "MPN" "CL10A475KP8NNNC"
 	(id 0)
 	(at 218.44 50.8 0)
 	(effects
@@ -5662,7 +5662,7 @@
 			(hide yes)
 		)
 	)
-	(property "MPN" "GRM31CR71A106KA01L"
+	(property "MPN" "CL31B106KPHNNNE"
 	(id 0)
 	(at 248.92 50.8 0)
 	(effects
@@ -6047,7 +6047,7 @@
 			(hide yes)
 		)
 	)
-	(property "MPN" "GRM188R71H104KA93D"
+	(property "MPN" "CL10B104KB8NNNC"
 	(id 0)
 	(at 325.12 50.8 0)
 	(effects
@@ -7910,7 +7910,7 @@
 			)
 		)
 	)
-	(property "Value" "TPS3703A7330DSER"
+	(property "Value" "TPS3703A7120DSERQ1"
 		(at 304.8 110.49 0)
 		(effects
 			(font
@@ -7936,7 +7936,7 @@
 			(hide yes)
 		)
 	)
-	(property "MPN" "TPS3703A7330DSER"
+	(property "MPN" "TPS3703A7120DSERQ1"
 	(id 0)
 	(at 304.8 106.68 0)
 	(effects
@@ -7991,7 +7991,7 @@
 			)
 		)
 	)
-	(property "Value" "5.49k 0.1%"
+	(property "Value" "3.16k 0.1%"
 		(at 335.28 105.41 0)
 		(effects
 			(font
@@ -8017,7 +8017,7 @@
 			(hide yes)
 		)
 	)
-	(property "MPN" "ERA-3AEB5491V"
+	(property "MPN" "ERA-3AEB3161V"
 	(id 0)
 	(at 335.28 101.6 0)
 	(effects
@@ -8060,7 +8060,7 @@
 			)
 		)
 	)
-	(property "Value" "10.7k 0.1%"
+	(property "Value" "1.00k 0.1%"
 		(at 350.52 105.41 0)
 		(effects
 			(font
@@ -8086,7 +8086,7 @@
 			(hide yes)
 		)
 	)
-	(property "MPN" "ERA-3AEB1072V"
+	(property "MPN" "ERA-3AEB102V"
 	(id 0)
 	(at 350.52 101.6 0)
 	(effects
@@ -8254,78 +8254,6 @@
 		(project "candA_fixture"
 			(path "/2a301c69-2d71-4a91-99a7-69f9c42da2d2"
 				(reference "C13")
-				(unit 1)
-			)
-		)
-	)
-)
-	(symbol
-	(lib_name "BAS116LT1G")
-	(lib_id "candA_fixture:BAS116LT1G")
-	(at 411.48 106.68 0)
-	(unit 1)
-	(exclude_from_sim no)
-	(in_bom yes)
-	(on_board yes)
-	(dnp no)
-	(uuid "64a463fd-d1d8-4bfc-9556-871d4e5776d9")
-	(property "Reference" "D1"
-		(at 411.48 102.87 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-	)
-	(property "Value" "BAS116LT1G"
-		(at 411.48 110.49 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-	)
-	(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-		(at 411.48 106.68 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(hide yes)
-		)
-	)
-	(property "Datasheet" "~"
-		(at 411.48 106.68 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(hide yes)
-		)
-	)
-	(property "MPN" "BAS116LT1G"
-	(id 0)
-	(at 411.48 106.68 0)
-	(effects
-		(font
-			(size 1.27 1.27)
-		)
-		(hide yes)
-	)
-)
-	(pin "1"
-	(uuid "a3620e20-ca3d-43da-a866-e6383e7af67e")
-)
-	(pin "2"
-	(uuid "4a5e0134-ee08-4424-ac07-847300933835")
-)
-	(pin "3"
-	(uuid "7360b7d3-14c7-4b0f-ad87-1900145e57d4")
-)
-	(instances
-		(project "candA_fixture"
-			(path "/2a301c69-2d71-4a91-99a7-69f9c42da2d2"
-				(reference "D1")
 				(unit 1)
 			)
 		)
@@ -13093,7 +13021,7 @@
 			(hide yes)
 		)
 	)
-	(property "MPN" "ERA-3AEB1002V"
+	(property "MPN" "ERA-3AEB103V"
 	(id 0)
 	(at 91.44 269.24 0)
 	(effects
@@ -13162,7 +13090,7 @@
 			(hide yes)
 		)
 	)
-	(property "MPN" "ERA-3AEB1002V"
+	(property "MPN" "ERA-3AEB103V"
 	(id 0)
 	(at 106.68 269.24 0)
 	(effects
@@ -13205,7 +13133,7 @@
 			)
 		)
 	)
-	(property "Value" "9.09k 0.1%"
+	(property "Value" "18.0k 0.1%"
 		(at 121.92 273.05 0)
 		(effects
 			(font
@@ -13231,7 +13159,7 @@
 			(hide yes)
 		)
 	)
-	(property "MPN" "ERA-3AEB9091V"
+	(property "MPN" "ERA-3AEB183V"
 	(id 0)
 	(at 121.92 269.24 0)
 	(effects
@@ -13274,7 +13202,7 @@
 			)
 		)
 	)
-	(property "Value" "1.01k 0.1%"
+	(property "Value" "2.00k 0.1%"
 		(at 137.16 273.05 0)
 		(effects
 			(font
@@ -13300,7 +13228,7 @@
 			(hide yes)
 		)
 	)
-	(property "MPN" "ERA-3AEB1011V"
+	(property "MPN" "ERA-3AEB202V"
 	(id 0)
 	(at 137.16 269.24 0)
 	(effects
@@ -15438,7 +15366,7 @@
 			(hide yes)
 		)
 	)
-	(property "MPN" "CL05B105KP5NNNC"
+	(property "MPN" "GRM155Z71A105KE01D"
 	(id 0)
 	(at 116.84 320.04 0)
 	(effects
@@ -17991,7 +17919,7 @@
 			(hide yes)
 		)
 	)
-	(property "MPN" "Keystone 5000"
+	(property "MPN" "5000"
 	(id 0)
 	(at 137.16 365.76 0)
 	(effects
@@ -18057,7 +17985,7 @@
 			(hide yes)
 		)
 	)
-	(property "MPN" "Keystone 5000"
+	(property "MPN" "5000"
 	(id 0)
 	(at 149.86 365.76 0)
 	(effects
@@ -18123,7 +18051,7 @@
 			(hide yes)
 		)
 	)
-	(property "MPN" "Keystone 5000"
+	(property "MPN" "5000"
 	(id 0)
 	(at 162.56 365.76 0)
 	(effects
@@ -18189,7 +18117,7 @@
 			(hide yes)
 		)
 	)
-	(property "MPN" "Keystone 5000"
+	(property "MPN" "5000"
 	(id 0)
 	(at 175.26 365.76 0)
 	(effects
@@ -18255,7 +18183,7 @@
 			(hide yes)
 		)
 	)
-	(property "MPN" "Keystone 5000"
+	(property "MPN" "5000"
 	(id 0)
 	(at 187.96 365.76 0)
 	(effects
@@ -18321,7 +18249,7 @@
 			(hide yes)
 		)
 	)
-	(property "MPN" "Keystone 5000"
+	(property "MPN" "5000"
 	(id 0)
 	(at 200.66 365.76 0)
 	(effects
@@ -18387,7 +18315,7 @@
 			(hide yes)
 		)
 	)
-	(property "MPN" "Keystone 5000"
+	(property "MPN" "5000"
 	(id 0)
 	(at 213.36 365.76 0)
 	(effects
@@ -18453,7 +18381,7 @@
 			(hide yes)
 		)
 	)
-	(property "MPN" "Keystone 5000"
+	(property "MPN" "5000"
 	(id 0)
 	(at 226.06 365.76 0)
 	(effects
@@ -18519,7 +18447,7 @@
 			(hide yes)
 		)
 	)
-	(property "MPN" "Keystone 5000"
+	(property "MPN" "5000"
 	(id 0)
 	(at 238.76 365.76 0)
 	(effects
@@ -18585,7 +18513,7 @@
 			(hide yes)
 		)
 	)
-	(property "MPN" "Keystone 5000"
+	(property "MPN" "5000"
 	(id 0)
 	(at 251.46 365.76 0)
 	(effects
@@ -18651,7 +18579,7 @@
 			(hide yes)
 		)
 	)
-	(property "MPN" "Keystone 5000"
+	(property "MPN" "5000"
 	(id 0)
 	(at 264.16 365.76 0)
 	(effects
@@ -18717,7 +18645,7 @@
 			(hide yes)
 		)
 	)
-	(property "MPN" "Keystone 5000"
+	(property "MPN" "5000"
 	(id 0)
 	(at 276.86 365.76 0)
 	(effects
@@ -18783,7 +18711,7 @@
 			(hide yes)
 		)
 	)
-	(property "MPN" "Keystone 5000"
+	(property "MPN" "5000"
 	(id 0)
 	(at 289.56 365.76 0)
 	(effects
@@ -18849,7 +18777,7 @@
 			(hide yes)
 		)
 	)
-	(property "MPN" "Keystone 5001"
+	(property "MPN" "5001"
 	(id 0)
 	(at 302.26 365.76 0)
 	(effects
@@ -18915,7 +18843,7 @@
 			(hide yes)
 		)
 	)
-	(property "MPN" "Keystone 5001"
+	(property "MPN" "5001"
 	(id 0)
 	(at 314.96 365.76 0)
 	(effects
@@ -19717,19 +19645,19 @@
 		(path "/2a301c69-2d71-4a91-99a7-69f9c42da2d2/146f38e9-2a01-4f96-b962-6985bb13f648"
 			(reference "U4")
 			(unit 1)
-			(value "TPS3703A7330DSER")
+			(value "TPS3703A7120DSERQ1")
 			(footprint "Package_SON:WSON-6_1.5x1.5mm_P0.5mm")
 		)
 		(path "/2a301c69-2d71-4a91-99a7-69f9c42da2d2/ba8025bc-8021-4a42-9ae4-95f73e7299e2"
 			(reference "R10")
 			(unit 1)
-			(value "5.49k 0.1%")
+			(value "3.16k 0.1%")
 			(footprint "Resistor_SMD:R_0603_1608Metric")
 		)
 		(path "/2a301c69-2d71-4a91-99a7-69f9c42da2d2/ebc8e788-b648-46ae-8529-dcf8a5c9c3e0"
 			(reference "R11")
 			(unit 1)
-			(value "10.7k 0.1%")
+			(value "1.00k 0.1%")
 			(footprint "Resistor_SMD:R_0603_1608Metric")
 		)
 		(path "/2a301c69-2d71-4a91-99a7-69f9c42da2d2/751e69e3-ab3b-4c05-acf7-57c6d2cbc97d"
@@ -19743,12 +19671,6 @@
 			(unit 1)
 			(value "100n")
 			(footprint "Capacitor_SMD:C_0402_1005Metric")
-		)
-		(path "/2a301c69-2d71-4a91-99a7-69f9c42da2d2/64a463fd-d1d8-4bfc-9556-871d4e5776d9"
-			(reference "D1")
-			(unit 1)
-			(value "BAS116LT1G")
-			(footprint "Package_TO_SOT_SMD:SOT-23")
 		)
 		(path "/2a301c69-2d71-4a91-99a7-69f9c42da2d2/183836c0-6119-4c6c-921f-b4cf417db598"
 			(reference "R41")
@@ -20161,13 +20083,13 @@
 		(path "/2a301c69-2d71-4a91-99a7-69f9c42da2d2/12bdf1ce-9136-47ed-9259-ec075c77fa0f"
 			(reference "R57")
 			(unit 1)
-			(value "9.09k 0.1%")
+			(value "18.0k 0.1%")
 			(footprint "Resistor_SMD:R_0603_1608Metric")
 		)
 		(path "/2a301c69-2d71-4a91-99a7-69f9c42da2d2/a4f3d17e-3791-4215-be6d-8d4bed97d5e8"
 			(reference "R58")
 			(unit 1)
-			(value "1.01k 0.1%")
+			(value "2.00k 0.1%")
 			(footprint "Resistor_SMD:R_0603_1608Metric")
 		)
 		(path "/2a301c69-2d71-4a91-99a7-69f9c42da2d2/1f0be38d-d4f1-4c07-9639-4336dace6906"
@@ -22557,16 +22479,6 @@
 )
 	(wire
 	(pts
-		(xy 406.4 106.68) (xy 403.86 106.68)
-	)
-	(stroke
-		(width 0)
-		(type default)
-	)
-	(uuid "971f7082-399d-4899-a5ac-bc1d5da5f850")
-)
-	(wire
-	(pts
 		(xy 251.46 365.76) (xy 251.46 368.3)
 	)
 	(stroke
@@ -24024,16 +23936,6 @@
 		(type default)
 	)
 	(uuid "a7f4e85f-746f-4452-a654-203795994920")
-)
-	(wire
-	(pts
-		(xy 416.56 106.68) (xy 419.1 106.68)
-	)
-	(stroke
-		(width 0)
-		(type default)
-	)
-	(uuid "785d4f66-d6c3-4aca-b09f-980189eef9f2")
 )
 	(wire
 	(pts
@@ -27566,16 +27468,6 @@
 		(uuid "3ce7c118-6f78-443d-b770-7cdd94d05484")
 	)
 	(label "IL_SNS2"
-		(at 403.86 106.68 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "9a46be16-1f09-4fe2-932f-ad4083def3e5")
-	)
-	(label "IL_SNS2"
 		(at 251.46 368.3 270)
 		(effects
 			(font
@@ -29034,16 +28926,6 @@
 			(justify left bottom)
 		)
 		(uuid "a7aa9a21-68f8-4e00-9ce1-b4629dc716d8")
-	)
-	(label "IL_5V"
-		(at 419.1 106.68 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "50182b94-4e5f-489c-bca7-a8564f85afc2")
 	)
 	(label "IL_5V"
 		(at 441.96 95.25 90)
